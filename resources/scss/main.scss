@@ -1,6 +1,510 @@
-$black: #393939;
 
-*{
-    margin:0;
-    padding:0;
+@import "./_mixin.scss";
+@import "./_variable.scss";
+@import "./_indexing.scss";
+@import "./_reset.scss";
+@import "./_common.scss";
+
+
+/*****Header Menu*****/
+#headerMenu{
+	background-color:$blue-dark;
+	color:$white;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:11;
+	.site-logo{
+		max-width:300px;
+		width:100%;
+		padding-left:35px;
+		img{
+			max-width:100%;		
+		}
+	}
+	.h-82{		
+		height:82px;
+	}
+	.h-icons{
+		margin-right:42px;		
+		position:relative;
+		@include transition-all(0.3s);
+		right:0px;
+			bottom:0px;
+		&:hover{
+			right:-3px;
+			bottom:-3px;
+		}
+		&:last-child{
+			margin-right:0;
+		}
+		&.menu_bar_icon{
+			width:25px;
+			height:25px;
+			.hambarger{
+				height:2px;
+				width:21px;
+				background-color:$white;
+				display:block;
+				position:absolute;
+				@include transform-translate-50;
+				@include transition-all(0.5s);				
+				&::before,&::after{
+					content:'';
+					position:absolute;
+					height:2px;
+					width:21px;
+					background-color:$white;
+					display:block;					
+				@include transition-all(0.5s);
+				}
+				&::before{
+					top:-8px;
+				}
+				&::after{
+					top:8px;
+				}
+			}
+			&.active{
+				.hambarger{
+					background-color:rgba(0,0,0,0);
+					&::before{
+						top:0;
+						@include transform-rotate(45deg);
+					}
+					&::after{
+						top:0;
+						@include transform-rotate(135deg);
+					}
+				}
+			}
+		}
+	
+	}
+	.h-icons2{
+		padding-left:42px;
+		@include transition-all(0.3s);
+		position:relative;
+		top:0;
+		&:hover{
+			color:#ffffff;
+			text-shadow: 0 0 5px #000000;
+			top:3px;
+			@include transition-all(0.3s);
+			img,i{
+				@include transform-scale(1.1);
+			}
+		}
+		&:first-child{
+			padding-left:0px;
+		}
+		.icon-mdi{
+			font-size: 25px;
+			line-height: 0;
+		}
+	}
+	.profile-photoss{		
+		.logout-icon {
+			bottom: 0px;
+			right: -10px;
+			.lgt_icons{
+				background-color:#0C4266;
+				width:24px;
+				height:24px;
+				@include b-radius(50%);
+				&.looping{
+					animation: rotate 750ms 300ms infinite;
+				}
+			}
+		}
+		.profile_pic{
+			img{
+				width:50px;
+				height:50px;
+				@include b-radius(50%);
+				border:2px solid $white;
+				@include transition-all(0.3s);
+				&:hover{
+					border:2px solid $blue-dark;
+				}
+			}
+		}
+	}
 }
+@keyframes rotate {
+	to {
+				@include transform-rotate(180deg);
+	}
+}
+/*****Body Items*****/
+#bodyItem{
+	min-height:100vh;
+	overflow-x:hidden;
+	background-color:$gray-light1;
+	/*category side bar*/	
+	.sidebar_nav{
+		width:250px;
+		$nav_height:calc(100vh - 82px);
+		height:$nav_height;
+		top:82px;
+		overflow-x:hidden;
+		position:fixed;
+		left:-250px;
+		opacity: 0;
+		@include transition-all(0.6s);
+		@include gradientTopBottom($blue-normal, $blue-bold);
+		// background: linear-gradient(180deg, $blue-normal 0%, $blue-bold 100%);
+		color:transparent;
+		&.nav-active{
+			opacity:1;
+			color:$white;
+			left:0;
+		}	
+		#navAccordion	{
+			min-height:$nav_height;
+			color:$white;
+			.item-header{
+				padding-top:8px;
+				padding-bottom:8px;
+                min-height: 55px;	
+				background-color:$blue-dark;					
+				@include transition-all(0.3s);
+				position:relative;
+				z-index:1;
+				overflow:hidden;
+                .nav_item_title{
+                    color:$white;
+                    font-size:17px;
+                }
+                .carret-icon{
+                    @include transform-rotate(180deg);
+                    @include transition-all(0.3s);	                    					
+                }
+                .icon-mdi{
+                    font-size:20px;
+                    color:$white;
+                }
+				&::before{
+					content:'';
+					position:absolute;
+					height:100%;
+					width:0px;
+					left:0;
+					opacity:0.3;					
+					background-color:$blue-bold;
+					@include transition-all(0.3s);
+					z-index:-1;			
+				}
+				&:hover{
+					&::before{
+						width:100%;	
+						opacity:1;		
+					}
+				}
+				&.collapsed{
+					background-color:$blue-light;
+					.carret-icon{
+						@include transform-rotate(0deg);
+						@include transition-all(0.3s);						
+					}					
+				}
+                			
+			}
+			.itemss{
+				li{
+					a{
+						font-size:15px;
+						margin-top:15px;
+						display:inline-block;
+						position:relative;
+						left:0;
+						@include transition-all(0.3s);
+						&:hover{
+							// @include transform-scale(1.2);
+							color:#ffffff;
+							left:8px;
+							@include text-shadow-scale($text-shadow2, 1.1);
+						}
+					}
+                    &::before {
+                        content: "\2022";
+                        color: $blue-light;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 13px;
+                        margin-left: -10px;
+                        vertical-align:text-bottom;
+                    }
+				}               
+			}
+			.nav_foot_content {
+				margin-top:160px;
+				.short-logo{
+					width:115px;
+					height:115px;
+					@include b-radius(50%);
+					@include transition-all(0.3s);	
+					background-color: $blue-dark;
+					text-align:center;
+					line-height:115px;	
+					@include box-shadow(0px 4px 24px rgba(0, 45, 74, 0.6));
+					&:hover{
+						@include transform-scale(1.05);
+					}
+				}
+				.up_link{
+					@include transition-all(0.3s);
+						&:hover{
+							color:#ffffff;
+							@include text-shadow-scale($text-shadow2, 1.1);
+						}
+				}
+			}
+			
+		}
+	
+	}
+	.main_item{
+		width:100%;
+		background-color:$gray-light1;
+		@include transition-all(0.5s);
+		&.main_item-active{
+			width:calc(100% - 250px); 
+			margin-left:250px;
+		}
+		.body-header-content{	
+			margin-top:82px;		
+			.info-icons{
+				img{
+					@include transition-all(0.2s);
+					@include b-radius(50%);
+					&:hover{
+						box-shadow:$btn-shadow;
+						@include transform-scale(1.1);
+					}
+				}
+			}
+			p{
+				font-size:15px;
+			}
+		}		
+	}
+}
+
+/***************************/
+/* 1. Dashboard */
+/***************************/
+#bodyItem .main_item.dashboard{
+	background-color: $blue-bold;
+	min-height: 100vh;
+	h2{
+		font-size: 40px;
+		font-family: $font-roboto;
+		color:$white;
+	}
+}
+.dashboardItem{
+	&.content-container{
+		background-color: transparent;
+		@include box-shadow(none);
+	}
+	.content-inner{
+		max-width:1109px;
+	}
+	.d_item_header{
+		a{
+			color:$blue-normal;
+			text-decoration:underline;
+		}
+	}
+	.p_bg{
+		&::before{
+			content:'';
+			background-color: #D6F6FF;
+			opacity: 0.7;
+			width:39px;
+			height:35px;
+			@include b-radius(50%);
+			position:absolute;
+			top:0;
+			right:0;
+			@include transform-translate-custom(0%, -44%);			
+		}
+	}
+	.profile_card{
+		max-width:674px;
+		width:100%;
+		@include transition-all(0.3s);
+		@include gradientTopBottom($blue-light, $blue-bold);
+		@include box-shadow(-3px 3px 6px -1px rgba(255,255,255,0.5));
+		position:relative;
+		z-index:1;
+		*{
+			color:$white;
+		}
+		.p_title{
+			font-size:18px;
+		}
+		.icon-mdi{
+			font-size:25px;
+			margin-top:-6px;
+		}
+		.profile_pic_d img{
+			width:92px;
+			height:92px;
+			border:2px solid $blue-normal;
+			display:block;
+		}
+		.profile_info_d{
+			p{
+				font-size:18px;
+				span{
+					font-weight:bold;
+				}
+			}
+			.name_d{
+				font-size:22px;
+			}
+			.email_d{
+				font-size:15px;
+			}
+		}
+		&:hover{
+			@include box-shadow(3px 3px 6px -1px black);
+		}		
+	}
+	.c_service{
+		background-color: $white-main;
+		.cs_items{
+			padding:10px 30px;
+			[class*="col-"]{
+				&::after{
+					content:'';
+					width:2px;
+					height:96px;
+					display:inline-block;
+					background-color: $black-light;
+					position:absolute;
+					right:10px;
+					top:0;
+				}
+				&:last-child{
+					&::after{
+						width:0px;
+					}
+				}
+			}
+			.cs_item{				
+				.icon-bg{
+					font-size:75px;
+					color:$blue-opacity;
+					line-height: 1;
+					margin-left:-10px;
+				}
+				p{
+					text-align:center;
+					font-size:18px;
+					padding-right:15px;
+					span{
+						font-size:28px;
+					}
+					&.nc_item{
+						color:$black-main;
+						text-align:center;
+						margin-top:-38px;
+					}
+					&.fcs{
+						font-size: 15px;
+					}
+				}				
+			}
+		}
+	}
+	.l_transection{
+		.ph-area{
+			background-color:$gray-light1;
+			table{
+				border-collapse: separate;
+				border-spacing: 0;
+				table-layout: fixed;
+				tbody{
+					tr{
+						td{
+							background:#ffffff;
+							@include b-radius(10px);
+							padding:10px;
+							height:45px;
+							border:4px solid $gray-light1;
+							.pic_small{
+								width:21px;
+								height:21px;
+								@include b-radius(50%);
+								display:inline-block;
+								margin-right:10px;
+								vertical-align: middle;
+							}							
+							&:first-child{
+								width:calc(100% - 110px);
+								text-align:left;
+							}
+							&:last-child{
+								width:110px;
+							}
+						}
+						&:hover{
+							td{
+								background-color:$blue-opacity;
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+	.daily_sales{
+		background-color: $white-main;
+		min-height:264px;
+		position:relative;
+		.ds_icon_bg{
+			font-size:265px;
+			position:absolute;
+			color:rgba(188, 241, 255, 0.18);
+			left:10px;
+			top:-65px;
+		}
+		.ds_itmes{
+			position:relative;
+			z-index: 1;
+			margin-top: 35px;
+			.ds_percent{
+				font-size:100px;
+				color:$blue-bold;
+				line-height:1;				
+				span{
+					font-size:50px;
+					margin-left:-10px;
+				}
+			}
+			.ds_up{
+				color:$blue-light;
+				font-size: 18px;
+				line-height:1;
+			}
+		}	
+		
+		.ds_ftr{
+			font-size: 10px;
+			color:$gray;
+			position:absolute;
+			left:0;
+			bottom:5px;
+			width:100%;
+			z-index:1;
+			padding:0px 10px;
+			text-align:center;
+		}
+	}
+}
+/*==============Responsive CSS===============*/
+@import "./_responsive.scss";

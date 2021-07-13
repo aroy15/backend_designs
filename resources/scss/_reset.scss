@@ -1,0 +1,37 @@
+/***************************/
+/* Reset code */
+/***************************/
+*{
+ box-sizing:border-box;
+}
+body{    
+ color:$black;
+}
+body,.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+ font-family: $font-nunito;
+}
+h3{
+    font-size:18px;
+    color:$black-main;
+}
+header,main,section,aside,article,footer{
+ display:block;
+}
+button,input,textarea, select, input:focus,textarea:focus,button:focus, select:focus, .btn,.btn:focus{
+ outline:0 !important;
+ box-shadow: none !important;
+ border-width:0 !important;
+}
+input[type="text"]:focus{
+ border-width:1px !important;
+}
+a, a:hover{
+ text-decoration:none;
+ color:inherit;
+}
+li{
+ list-style: none;
+}
+input,textarea,select{
+ background-color:$gray-light1 !important;
+}

@@ -1,0 +1,458 @@
+/***************************/
+/*********MEDIA QUERY*******/
+/***************************/
+/* 1080px height like 1200x1080 & 1500 to 1920 x 1080px*/
+@media(min-height:1000px){
+
+}
+/** min Width 1600px for 1920px**/
+@media(min-width:1600px){
+	
+}
+/*Laptop*/
+@media(max-width:1366px){
+	#socialCustomize {
+		#social-tabContent {
+			#social-settings {
+				.choose-bgcolor {
+					.color-group {
+						li{
+							max-width:65px;
+							height:65px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#newSupportTickets{
+		&.content-container {
+			max-width: 1200px;
+		}
+	}
+	#campaignManagement{
+		.campaign-carousel{
+			&.owl-carousel{
+				.cam-item{
+					margin: auto 0px;
+				}
+			}
+		}
+	}
+}
+/*Medium devices (laptop, less than 1300px)*/
+@media(max-width: 1350px){
+	#headerMenu{
+		.site-logo{
+			padding-left:20px;
+			img{
+				padding-right:20px;
+			}
+		}
+		.h-icons{
+			margin-right:20px;
+		}
+		.h-icons2{
+			padding-left:20px;
+			font-size:12px;
+		}
+	}
+	#socialCustomize {
+		#social-tabContent {
+			#social-settings {
+				.choose-bgcolor {
+					.color-group {
+						li{
+							max-width:50px;
+							height:50px;
+							margin:2px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#totalStatisticsTwo{ 
+		.engagement {
+			.progress-ts {
+				width: 245px;
+			}
+			.barOverflow, .percent-img img{
+				height:138px;
+			}
+			.bar {
+    left: calc(50% - 156px);
+    width: 312px;
+				height: 312px;
+			}
+		}
+	}
+	#campaignManagement{
+		.campaign-carousel{
+			&.owl-carousel{
+				.owl-next{
+					right:0;
+				}
+				.owl-prev{
+					left:0;
+				}
+			} 
+		}
+	} 
+}
+@media(max-width: 1199px){
+	.site-logo{
+		width:210px;
+		img{
+			max-width:100%;
+		}
+	}
+
+	#teamUserManagement{
+		.permissions{
+			.checkboxes-area{
+				.checkbox-inner{
+					width:33.333%;
+				}
+			}
+		}
+	}
+	#buildContainer .upload-download .upload-icon-div label.upload-inner {
+		margin-right: -120px;
+	}	
+}
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991px) {
+	#headerMenu{		
+		height:150px;
+	}
+	#bodyItem{
+		.sidebar_nav{
+			top:150px;
+			height: calc(100vh - 150px);
+		}
+		.main_item{			
+			.body-header-content{
+				margin-top:150px;
+			}
+		}
+	}
+ #buildContainer{
+  .upload-download{
+   .upload-icon-div{
+    label.upload-inner{
+     max-width: 221px;
+     height: 154px;
+     margin-left: auto;
+     text-align: center;
+     margin-top: 0px;
+     margin-right: auto;
+    }
+   }
+   .downUp-btnGroup{
+    max-width:430px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    .downUp-btn{
+     width:calc(50% - 11px);
+     height:60px;
+     font-size:15px;
+    }
+   }
+  }
+  .input-fillup {
+   max-width: 420px;
+   width: 100%;
+   margin: auto;
+  }
+ }
+ 
+	#contractDetails_paymentHistory{
+		.contract-details{
+			.pkg-limita{
+				.dash-line{
+					&::after{
+						margin-left: 8px;				
+					}	
+				}			
+				.pkga{
+					p{
+						&::after{
+							width: 30px;				
+						}
+					}
+				}
+				.limitsa{
+					p{
+						&::after{
+							width: 70px;		
+						}
+					}
+				}
+			}
+		}
+	}
+	#socialCustomize{
+		.mobile-format{
+			&.mt-mobile-frame{
+				margin-top:50px !important;
+			}
+		}
+	}
+	#teamUserManagement{
+		.permissions{
+			.checkboxes-area{
+				.checkbox-inner{
+					width:50%;
+				}
+			}
+		}
+	}
+	#campaignManagement{
+		.cam-info-post{
+			max-width: 350px;
+			width: 100%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	// auto follow/unfollow, like, comment, approved common classes
+	.afulc_container {
+		.afulc_inner {
+			.afulc_leftarea {
+    // width: 100%;
+    max-width: calc(100% - 50px);
+    margin-left: calc(-100% + 50px);
+			}
+			.afulc_rightarea{
+				max-width: calc(100% + 110px);
+				margin-right: calc(-100% + 50px);
+				.afulc_content_container{
+					.afulc_content_inner{
+						min-width: auto;
+						width: 100%;						
+						.row.afulc_post_area{
+							visibility: hidden;
+						}	
+						&.active{
+							max-width: 100%;
+							.row.afulc_post_area{
+								visibility: visible;
+							}								
+						}											
+					}
+				} 
+				.afulc_left_arrow{
+					position:relative;
+					left:-17px;
+				}
+				.afulc_collapse_btn {
+					top: 130px;
+					left: 20px;
+					z-index:3;
+				}
+			} 
+		}
+	}
+}
+@media (max-width: 767px) {
+	#bodyItem{
+		.sidebar_nav{
+			left:0;
+			opacity:1;
+			color:$white;
+			z-index:10;
+			box-shadow:9px 0px 12px -2px rgba(0,0,0,0.5);
+			&.nav-active{
+				left:-250px;
+				opacity:0;
+				color:transparent;
+			}
+		}
+		.main_item{			
+			&.main_item-active{
+				margin-left:0px ;
+				width:100%;
+			}
+		}
+	}
+	#socialCustomize{
+		.btn-50-150{
+			width:128px;
+		}
+	}
+	#supportTickets{
+		.tickets-container{
+			.count-ticket{
+				text-align:center;
+			}
+			.tickets{
+				max-width:300px;
+				width:100%;
+				margin:0 auto;
+			}
+		}
+		.s-live-chat{
+			.live-chating{
+				max-width:700px;
+				width:100%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.msg-form{
+				max-width:700px;
+				width: calc(100% - 30px);	
+				margin:0 auto;		
+				.msg-in-div{
+					width: calc(100% - 220px);
+				}				
+				.submit-area{
+					width:220px;
+					.msg-submit-btn{
+						max-width:120px;
+					}
+				}
+			}
+		} 
+	}
+	#teamUserManagement{
+		.permissions{
+			.checkboxes-area{
+				.checkbox-inner{
+					width:100%;
+				}
+			}
+		}
+	}
+	#campaignManagement{
+		.campaign-carousel{
+			&.owl-carousel{
+				.owl-prev,.owl-next{
+					left: 0px;				
+				}
+				.owl-next{
+					right:0px;
+					left:auto;
+				}
+			}
+		}
+	}
+	#mediaCenter .left-pass {
+		&::after {
+			display:none;
+		}
+	}
+}
+@media (max-width: 575px) {
+	#headerMenu{
+		height:180px;
+	 .h-icons2 {
+			padding-left: 15px;
+			font-size: 2.8vw;
+			&:first-child{
+				padding-left:0;
+			}
+		}
+		.profile-photoss{
+			.user-name{
+				font-size:14px;
+			}
+		}
+	}
+	#bodyItem{
+		.sidebar_nav{
+			top:180px;
+			height: calc(100vh - 180px);
+		}
+		.main_item{			
+			.body-header-content{
+				margin-top:180px; 
+			}
+		}
+	}
+ #affiliateStats{
+  .link-group{
+   > [class*="col-"]{
+    background-color:transparent;
+    padding:15px;
+   }
+  } 
+ }
+ .btn-50-150 {
+  min-width: 100px;
+  width:auto;
+  margin: 4px;
+	}
+	#contractDetails_paymentHistory{
+		.payment-history{
+			table{
+				td{
+					font-size:2.6vw;
+				}
+			}
+		}
+	}
+	#socialCustomize{
+		.print-icon{
+			top:80px;
+		}
+		#social-tabContent{
+			#social-statistics{
+				.customer-link{
+					.customer-link-input{
+						height: 60px;
+						font-size: 4vw;
+						padding: 10px 35px 10px 20px;
+					}
+					.copy-icon {
+						top: 18px;
+						right: 15px;
+					}
+				}
+				.social-curve{
+					.social-curve-title{
+						font-size:3.5vw;
+					}
+					.viwes-clicks-rate{
+						.s-information{
+							min-height: 25vw;
+							.titles{
+								font-size:2.8vw !important;
+							}
+							.numbers{
+								font-size:6vw !important;
+							}
+						}
+					}
+				}				
+				.date-wise-click{
+					.d-information{
+						min-height: 30vw;
+						.titles{
+							font-size:3vw;
+						}
+						.social{
+							font-size:5vw;
+							.text{
+								font-size:3.5vw;
+							}
+						}
+						.numbers{
+							font-size: 8vw;
+						}
+					}
+				}
+			}
+		}
+	}
+	#mediaCenter .left-pass {
+		.icon-area .icon-link {
+			font-size:11px;
+			.icon {
+				width: 53px;
+				height: 53px;
+			}				
+		}
+	}
+}
