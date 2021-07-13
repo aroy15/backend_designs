@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width:960px;
+    width:100%;
+    padding:20px;
+    margin:0 auto;
+}
+.barChart{
+    max-width:400px;
+    width:100%;
+    margin:0 auto;
+}
