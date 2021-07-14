@@ -16,6 +16,10 @@
  left:50%;
  top:50%;
 }
+@mixin transform-translate-topCenter{
+	top:50%;
+	transform: translateY(-50%);
+}
 @mixin transform-translate-custom($xaxis,$yaxis){
 	transform:translate($xaxis,$yaxis);
 	-webkit-transform:translate($xaxis,$yaxis);

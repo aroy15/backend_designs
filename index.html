@@ -38,7 +38,7 @@
 		  <img src="resources/img/Logo-UC.png" alt="Site logo">
 		  </a>
 	   </div>
-	   <div class="col-7 col-lg-5 col-xl-6 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
+	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
 		  <a href="#" class="h-icons2 h-support">
 			<span class="icon-mdi">
 				<span class="mdi mdi-headset"></span>
@@ -58,10 +58,10 @@
 			<span class="d-block">Documentation</span>
 		  </a> 
 	   </div>
-	   <div class="profile-photoss col-5 col-lg-3 col-xl-2 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end">
+	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
 		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
 		  <span class="position-relative d-block order-1 order-sm-2">
-		  <a href="#" class="d-block profile_pic"><img src="resources/img/small-profile-pic.png" alt="profile picture"></a>
+		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
 		  <a href="#" class="logout-icon position-absolute">
 		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
 		  </a>
@@ -74,7 +74,7 @@
 <!--=== Body Item  ===-->
 <div id="bodyItem" class="body-item position-relative">
 	<!--=== Side bar ===-->
-	<nav id="sidebarNav" class="sidebar_nav nav-active custom-scroll-bar">
+	<nav id="sidebarNav" class="sidebar_nav nav-active">
 		<!-- Categories -->
 		<div id="navAccordion" class="d-flex flex-column transition-5">
 			<!-- Dashboard -->
@@ -234,7 +234,7 @@
 		</div>
 		<!--==*******All Frame setup on this here*********== -->
 		<!--=== Dashboard ===-->
-		<div id="deshboardItem" class="content-container dashboardItem p-4 p-lg-5 b-r-8">
+		<div id="deshboardItem" class="content-container dashboardItem p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -244,17 +244,18 @@
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">
 				<div class="row">
-					<div class="col-lg-5 p_bg">
-						<div class="profile_card p-3 pb-4 b-r-5">
+					<!-- Profile Card -->
+					<div class="col-xl-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
+						<div class="profile_card">
 							<div class="d-flex justify-content-between mb-2">
 								<span class="p_title">Your Profile</span>
-								<button class="icon-mdi btn-transparent t_shadow_scale_2">
+								<button class="icon-mdi btn-transparent t_shadow_scale_1">
 									<span class="mdi mdi-account-edit-outline"></span>
 								</button>
 							</div>
-							<div class="d-flex">
+							<div class="d-flex profile_content">
 								<div class="profile_pic_d">
-									<img src="./resources/img/profile-1.png" class="b-r-50" alt="profile">
+									<img src="./resources/img/profile-pic.png" class="b-r-50" alt="profile">
 								</div>
 								<div class="profile_info_d pl-3">
 									<p class="name_d mb-3">Mrs. Emely Gurrero</p>
@@ -265,15 +266,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-7">
+					<!-- customer service -->
+					<div class="col-xl-7 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
 						<div class="c_service b-r-5 p-3">
 							<div class="d_item_header d-flex justify-content-between">
 								<h3>Customer Service</h3>
-								<a href="#" class="t_shadow_scale_1">open Ticketsytem</a>
+								<a href="#" class="scale_hover_half">open Ticketsytem</a>
 							</div>
 							<div class="cs_items">
 								<div class="row">
-									<div class="col-xl-4 col-md-6">
+									<div class="col-lg-4 col-md-6">
 										<div class="cs_item">
 											<div class="icon-bg">
 												<span class="mdi mdi-clipboard-alert"></span>
@@ -282,7 +284,7 @@
 											<p class="fcs mb-0">assigned to you</p>
 										</div>
 									</div>
-									<div class="col-xl-4 col-md-6">
+									<div class="col-lg-4 col-md-6">
 										<div class="cs_item">
 											<div class="icon-bg">
 												<span class="mdi mdi-alarm"></span>
@@ -291,7 +293,7 @@
 											<p class="fcs mb-0">waiting for support</p>
 										</div>
 									</div>
-									<div class="col-xl-4 col-md-6">
+									<div class="col-lg-4 col-md-6">
 										<div class="cs_item">
 											<div class="icon-bg">
 												<span class="mdi mdi-check-all"></span>
@@ -305,69 +307,72 @@
 						</div>
 					</div>
 				</div>
-				<div class="row mt-4 pt-2">
-					<div class="col-lg-5">
-						<div class="l_transection">
-							<div class="ph-area b-r-8 p-3">
-								<div class="d_item_header d-flex justify-content-between mb-3">
-									<h3>Latest Transection</h3>
-									<a href="#" class="t_shadow_scale_1">see invoices</a>
-								</div>
-								<table class="w-100 text-center">
-									<tbody>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										<tr>
-											<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-											<td>121,30<span> €</span>
-										</tr>
-										
-									</tbody>
-								</table>
+				<div class="row">
+					<!-- Transection table -->
+					<div class="col-xl-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
+						<div class="latest_transection  b-r-8 p-3">
+							<div class="d_item_header d-flex justify-content-between mb-3">
+								<h3>Latest Transection</h3>
+								<a href="#" class="scale_hover_half">see invoices</a>
 							</div>
+							<table class="w-100 text-center">
+								<tbody>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+									<tr>
+										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
+										<td>121,30<span> €</span>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
-					<div class="col-lg-7">
+					<div class="col-xl-7 mb-4 pb-3">
 						<div class="row">
-							<div class="col-lg-7">
+							<!-- Daily Sales -->
+							<div class="col-lg-7 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
 								<div class="daily_sales b-r-5 p-3">
 									<div class="d_item_header d-flex justify-content-between mb-3 position-relative z-index-1">
 										<h3>Daily Sales</h3>
-										<a href="#" class="t_shadow_scale_1">Accounting</a>
+										<a href="#" class="scale_hover_half">Accounting</a>
 									</div>
 									<span class="ds_icon_bg">
 										<span class="mdi mdi-cash-multiple"></span>
@@ -381,7 +386,80 @@
 									<p class="ds_ftr mb-0">*Compared to the average daily sales</p>
 								</div>
 							</div>
-							<div class="col-lg-5"></div>
+							<!-- User growth -->
+							<div class="col-lg-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
+								<div class="user_growth b-r-5 p-3">
+									<div class="d_item_header d-flex justify-content-between mb-2 position-relative z-index-1">
+										<h3>User growth</h3>
+									</div>
+									<span class="ug_icon_bg">
+										<span class="mdi mdi-account-star-outline"></span>
+									</span>
+									<div class="ug_itmes text-center">
+										<div class="ug_circle">
+											<p class="ug_percent mb-0">
+												<span class="mdi mdi-plus"></span>
+												<span>3</span>	
+												<span class="prct"> %</span>
+											</p>
+										</div>
+										
+									</div>									
+									<p class="ug_ftr mb-0">*Compared to the average daily sales</p>
+								</div>
+							</div>													
+						</div>
+						<div class="row">
+							<!-- Server information -->
+							<div class="col-12 d-flex justify-content-center justify-content-xl-start">
+								<div class="server_info b-r-5 p-3">
+									<div class="d_item_header d-flex justify-content-between mb-3 position-relative z-index-1">
+										<h3>Server - Informations</h3>
+										<a href="#" class="scale_hover_half">System-Settings</a>
+									</div>
+									<p class="system_title pl-2">
+										System-Status: <span>Maintenance mode is currently deactivated.</span>
+									</p>
+									<div class="system_items px-3 px-xl-4">
+										<div class="sys_item ">
+											<div class="sys_name float-left text-uppercase">ram</div>
+											<div class="sys_bar_container float-left">
+												<span class="sys_bar d-block">
+													<sapn class="sys_inner_bar ram d-block" style="width:80%;"></span>
+												</span>
+											</div>
+											<div class="sys_percent float-left">80%</div>
+										</div>
+										<div class="sys_item">
+											<div class="sys_name float-left text-uppercase">cpu</div>
+											<div class="sys_bar_container float-left">
+												<span class="sys_bar d-block">
+													<sapn class="sys_inner_bar cpu d-block" style="width:23%;"></span>
+												</span>
+											</div>
+											<div class="sys_percent float-left">23%</div>
+										</div>
+										<div class="sys_item">
+											<div class="sys_name float-left text-uppercase">storage</div>
+											<div class="sys_bar_container float-left">
+												<span class="sys_bar d-block">
+													<sapn class="sys_inner_bar storage-1 d-block" style="width:88%;"></span>
+												</span>
+											</div>
+											<div class="sys_percent float-left">88%</div>
+										</div>
+										<div class="sys_item">
+											<div class="sys_name float-left text-uppercase">storage</div>
+											<div class="sys_bar_container float-left">
+												<span class="sys_bar d-block">
+													<sapn class="sys_inner_bar storage-2 d-block" style="width:31%;"></span>
+												</span>
+											</div>
+											<div class="sys_percent float-left">31%</div>
+										</div>
+									</div>
+								</div>
+							</div>	
 						</div>
 					</div>
 				</div>

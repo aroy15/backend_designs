@@ -61,6 +61,12 @@
 .btn-transparent{
 	background-color: transparent;
 }
+.scale_hover_half{
+	@include transition-all(0.3s);
+	&:hover{
+		@include transform-scale(1.05);
+	}
+}
 .scale_hover_1{
 	@include transition-all(0.3s);
 	&:hover{
