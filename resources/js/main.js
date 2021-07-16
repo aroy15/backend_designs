@@ -272,7 +272,7 @@ if( $('body').find('#dist_net_chart').length){
   var distNetChart = document.getElementById('dist_net_chart').getContext('2d');
 
   /* Instagram Gradient Color */
-  var dist_bg_instagram = distNetChart.createLinearGradient(0, 150, 0, 360);
+  var dist_bg_instagram = distNetChart.createLinearGradient(0, 100, 0, 250);
   dist_bg_instagram.addColorStop(0.0865, '#4C5FD7');
   dist_bg_instagram.addColorStop(0.2841, '#7232BD');
   dist_bg_instagram.addColorStop(0.4926, '#C32AA3');
@@ -280,7 +280,7 @@ if( $('body').find('#dist_net_chart').length){
   dist_bg_instagram.addColorStop(1, '#FFDC7D');
   
   /* Google Mybusiness Gradient color */
-  var dist_bg_google = distNetChart.createLinearGradient(0, 150, 0, 350);
+  var dist_bg_google = distNetChart.createLinearGradient(0, 100, 0, 250);
   dist_bg_google.addColorStop(0, '#4285F4');
   dist_bg_google.addColorStop(0.1562, '#4683EF');
   dist_bg_google.addColorStop(0.2188, '#D7463C');
