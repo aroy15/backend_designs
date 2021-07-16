@@ -4,6 +4,7 @@
 0.1.    Common Classes
 0.2.    Sidebar & Menu bar
 1.      Dashboard
+2.      Target Group Dashboard
 
 **/
 /***************************/
@@ -96,10 +97,10 @@ input, textarea, select {
 }
 
 .content-container .content-inner {
-  max-width: 1100px;
+  max-width: 1121px;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 @-webkit-keyframes preloadRotate {
@@ -238,6 +239,150 @@ input, textarea, select {
 
 .z-index-1 {
   z-index: 1;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.blue_border {
+  border: 1px solid #BCF1FF;
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.blue_border h3 {
+  color: #393939;
+  font-size: 18px;
+}
+
+/*Background Icon with Text Data*/
+.bg_icon_div {
+  max-width: 155px;
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.bg_icon_div .bg_icon {
+  color: #BCF1FF;
+  font-size: 70px;
+  position: absolute;
+}
+
+.bg_icon_div .bg_icon .mdi-link-variant {
+  position: relative;
+  left: 15px;
+}
+
+.bg_icon_div .bg_num, .bg_icon_div .bg_foot {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_icon_div .bg_num {
+  font-size: 30px;
+  top: 50px;
+}
+
+.bg_icon_div .bg_num span {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.bg_icon_div .bg_foot {
+  margin-top: 50px;
+}
+
+/*========= chart.js common style ======*/
+.chart_container {
+  border: 1px solid #BCF1FF;
+  padding: 20px 10px 0px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.chart_container h3 {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: #393939;
+  font-size: 18px;
+}
+
+ul.pieLegend {
+  padding: 10px 10px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+ul.pieLegend li {
+  max-width: 205px;
+  width: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+ul.pieLegend li:hover {
+  text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+ul.pieLegend li span.rec_Lgnd {
+  margin-right: 5px;
+  width: 17px;
+  min-width: 17px;
+  height: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+ul.pieLegend li p {
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+
+ul.pieLegend li p span.chart-data {
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+/*Chart Js additional data remove*/
+ul.pieLegend li:not(.anjon) {
+  display: none !important;
 }
 
 /*==========Full Screen Icon Design=========*/
@@ -564,12 +709,11 @@ input, textarea, select {
 }
 
 #bodyItem .sidebar_nav {
+  min-width: 250px;
   width: 250px;
-  height: calc(100% - 82px);
-  top: 82px;
-  overflow: hidden;
-  position: absolute;
-  left: -250px;
+  overflow-x: hidden;
+  margin-left: -250px;
+  margin-top: 82px;
   opacity: 0;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -584,7 +728,7 @@ input, textarea, select {
 #bodyItem .sidebar_nav.nav-active {
   opacity: 1;
   color: rgba(255, 255, 255, 0.9);
-  left: 0;
+  margin-left: 0;
 }
 
 #bodyItem .sidebar_nav #navAccordion {
@@ -766,11 +910,14 @@ input, textarea, select {
 
 #bodyItem .main_item.main_item-active {
   width: calc(100% - 250px);
-  margin-left: 250px;
 }
 
 #bodyItem .main_item .body-header-content {
   margin-top: 82px;
+}
+
+#bodyItem .main_item .body-header-content .bh_title {
+  font-size: 24px;
 }
 
 #bodyItem .main_item .body-header-content .info-icons img {
@@ -828,6 +975,7 @@ input, textarea, select {
 
 .dashboardItem .content-inner {
   max-width: 1109px;
+  padding: 20px;
 }
 
 .dashboardItem .d_item_header a {
@@ -1246,6 +1394,159 @@ input, textarea, select {
   font-size: 12px;
 }
 
+/***************************/
+/* 2. Target Group Dashboard | chart.js */
+/***************************/
+.target_group_sec.content-container .content-inner {
+  max-width: 1190px;
+}
+
+.target_group_sec .age_chart_container > p {
+  font-size: 14px;
+  color: #A3A3A3;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.target_group_sec .age_chart_container .age_target {
+  height: 400px;
+}
+
+.target_group_sec .age_chart_container .bottom_text {
+  font-size: 9px;
+  color: #A3A3A3;
+  max-width: 80px;
+  width: 100%;
+  margin-left: auto;
+  text-align: right;
+  top: -11px;
+  position: relative;
+  margin-top: -16px;
+}
+
+.target_group_sec .sub_can_container {
+  overflow: hidden;
+}
+
+.target_group_sec .sub_can_container.chart_container h3 {
+  font-size: 14px;
+}
+
+.target_group_sec .sub_can_container .chart_sub_cancel {
+  height: 300px;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend {
+  margin-top: 20px;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(6) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(5) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(4) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(3) {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.target_group_sec .sub_can_container .chart_SC_legend ul.pieLegend li:nth-child(1) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.target_group_sec .dist_net_chart_container p {
+  color: #A3A3A3;
+  font-size: 9px;
+  max-width: 48px;
+  width: 100%;
+  position: relative;
+  margin-bottom: -10px;
+  padding: 14px 0px;
+  left: -3px;
+}
+
+.target_group_sec .dist_net_chart_container .dist_net {
+  height: 290px;
+  padding-left: 10px;
+}
+
+.target_group_sec .payment_chart_container .payment_method {
+  height: 300px;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(6) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(5) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(4) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(3) {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.target_group_sec .payment_chart_container .p_method_legend ul.pieLegend li:nth-child(1) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.target_group_sec .dist_chart_container2 p {
+  color: #A3A3A3;
+  font-size: 9px;
+  max-width: 58px;
+  width: 100%;
+  position: relative;
+  margin-bottom: -11px;
+  padding: 14px 0px;
+}
+
+.target_group_sec .dist_chart_container2 .dist_net2 {
+  height: 350px;
+  padding-left: 10px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -1253,6 +1554,24 @@ input, textarea, select {
 /* 1080px height like 1200x1080 & 1500 to 1920 x 1080px*/
 /** min Width 1600px for 1920px**/
 /*Laptop*/
+@media (max-width: 1366px) {
+  .target_group_sec .age_chart_container .age_target {
+    height: 300px;
+  }
+  .target_group_sec .sub_can_container.chart_container h3 {
+    font-size: 14px;
+  }
+  .target_group_sec .sub_can_container .chart_sub_cancel {
+    height: 209px;
+  }
+  .target_group_sec .sub_can_container .chart_SC_legend {
+    margin-top: 0px;
+  }
+  ul.pieLegend {
+    margin-bottom: 10px;
+  }
+}
+
 /*Medium devices (laptop, less than 1300px)*/
 @media (max-width: 1350px) {
   #headerMenu .site-logo {
@@ -1308,8 +1627,7 @@ input, textarea, select {
     height: 150px;
   }
   #bodyItem .sidebar_nav {
-    top: 150px;
-    height: calc(100% - 150px);
+    margin-top: 150px;
   }
   #bodyItem .main_item .body-header-content {
     margin-top: 150px;
@@ -1318,7 +1636,7 @@ input, textarea, select {
 
 @media (max-width: 767px) {
   #bodyItem .sidebar_nav {
-    left: 0;
+    margin-left: 0;
     opacity: 1;
     color: rgba(255, 255, 255, 0.9);
     z-index: 10;
@@ -1326,9 +1644,12 @@ input, textarea, select {
             box-shadow: 9px 0px 12px -2px rgba(0, 0, 0, 0.5);
   }
   #bodyItem .sidebar_nav.nav-active {
-    left: -250px;
+    margin-left: -250px;
     opacity: 0;
     color: transparent;
+  }
+  #bodyItem .main_item {
+    margin-left: 0px;
   }
   #bodyItem .main_item.main_item-active {
     margin-left: 0px;
@@ -1351,8 +1672,7 @@ input, textarea, select {
     font-size: 14px;
   }
   #bodyItem .sidebar_nav {
-    top: 180px;
-    height: calc(100vh - 180px);
+    margin-top: 180px;
   }
   #bodyItem .main_item .body-header-content {
     margin-top: 180px;

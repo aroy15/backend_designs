@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend Designs</title>
+		<!-- Fav Icon -->
+		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Material Design Iccons -->
-    <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
-    <!-- Booststrap 4 css -->
-    <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
-    <!-- Main/Custom CSS -->
-    <link rel="stylesheet" href="./resources/css/main.css">
+		<!-- Material Design Iccons -->
+		<link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+		<!-- Booststrap 4 css -->
+		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+		<!-- Main/Custom CSS -->
+		<link rel="stylesheet" href="./resources/css/main.css">
 </head>
 <body>
  <!--=== Header Menu ===--> 
@@ -72,7 +74,7 @@
 <!--===End of Header Menu ===-->
 
 <!--=== Body Item  ===-->
-<div id="bodyItem" class="body-item position-relative">
+<div id="bodyItem" class="body-item position-relative d-flex">
 	<!--=== Side bar ===-->
 	<nav id="sidebarNav" class="sidebar_nav nav-active">
 		<!-- Categories -->
@@ -128,7 +130,7 @@
 					<ul class="itemss pl-4 pr-3">
 						<li><a href="#">Overview</a></li>
 						<li><a href="#">Invoices</a></li>
-						<li><a href="#">Target Group</a></li>
+						<li><a href="./target_group_dashboard.html">Target Group</a></li>
 					</ul>
 				</div>
 			</div>
@@ -143,8 +145,8 @@
 					</a>
 				</div>
 				<!-- Coupons -->
-			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<div class="side_nav_item mb-3">
+					<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 						<span class="carret-icon icon-mdi"></span>
 						<span class="nav_item_title">Coupons</span>
 						<span class="icon-mdi">
@@ -152,66 +154,76 @@
 						</span>
 					</a>
 				</div>
-			<!-- Support -->
-			<div class="side_nav_item mb-3">
-				<div id="navHeadingFour">
-					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
-						<span class="nav_item_title">Support</span>
+				<!-- Support -->
+				<div class="side_nav_item mb-3">
+					<div id="navHeadingFour">
+						<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+							<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							<span class="nav_item_title">Support</span>
+							<span class="icon-mdi">
+								<span class="mdi mdi-headset"></span>
+							</span>
+						</button>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
+						<ul class="itemss pl-4 pr-3">
+							<li><a href="#">Ticket-System</a></li>
+							<li><a href="#">Ticket Archive</a></li>
+							<li><a href="#">Helpdesk</a></li>
+							<li><a href="#">Questions & Answers (FAQ)</a></li>
+							<li><a href="#">Feature Requests</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Products & Packages -->
+				<div class="side_nav_item mb-3">
+					<div id="navHeadingFive">
+						<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+							<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							<span class="nav_item_title">Products & Packages</span>
+							<span class="icon-mdi">
+								<span class="mdi mdi-package-variant"></span>
+							</span>
+						</button>
+					</div>
+					<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
+						<ul class="itemss pl-4 pr-3">
+							<li><a href="#">Packages</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Server -->
+				<div class="side_nav_item mb-3">
+					<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">System-Information</span>
 						<span class="icon-mdi">
-							<span class="mdi mdi-headset"></span>
+							<span class="mdi mdi-server"></span>
 						</span>
-					</button>
+					</a>
 				</div>
-				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
-					<ul class="itemss pl-4 pr-3">
-						<li><a href="#">Ticket-System</a></li>
-						<li><a href="#">Ticket Archive</a></li>
-						<li><a href="#">Helpdesk</a></li>
-						<li><a href="#">Questions & Answers (FAQ)</a></li>
-						<li><a href="#">Feature Requests</a></li>
-					</ul>
+				<!-- Settings -->
+				<div class="side_nav_item mb-3">
+					<div id="navHeadingSix">
+						<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+							<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							<span class="nav_item_title">Settings</span>
+							<span class="icon-mdi">
+								<span class="mdi mdi-cog-outline"></span>
+							</span>
+						</button>
+					</div>
+					<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
+						<ul class="itemss pl-4 pr-3">
+							<li><a href="#">System Settings</a></li>
+							<li><a href="#">E-Mail Settings</a></li>
+							<li><a href="#">E-Mail Templates</a></li>
+							<li><a href="#">API Connections</a></li>
+							<li><a href="#">Languages</a></li>
+							<li><a href="#">Document Templates</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<!-- Products & Packages -->
-			<div class="side_nav_item mb-3">
-				<div id="navHeadingFive">
-					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
-						<span class="nav_item_title">Products & Packages</span>
-						<span class="icon-mdi">
-							<span class="mdi mdi-package-variant"></span>
-						</span>
-					</button>
-				</div>
-				<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
-					<ul class="itemss pl-4 pr-3">
-						<li><a href="#">Packages</a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- Settings -->
-			<div class="side_nav_item mb-3">
-				<div id="navHeadingSix">
-					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
-						<span class="nav_item_title">Settings</span>
-						<span class="icon-mdi">
-							<span class="mdi mdi-cog-outline"></span>
-						</span>
-					</button>
-				</div>
-				<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
-					<ul class="itemss pl-4 pr-3">
-						<li><a href="#">System Settings</a></li>
-						<li><a href="#">E-Mail Settings</a></li>
-						<li><a href="#">E-Mail Templates</a></li>
-						<li><a href="#">API Connections</a></li>
-						<li><a href="#">Languages</a></li>
-						<li><a href="#">Document Templates</a></li>
-					</ul>
-				</div>
-			</div>
 
 			<div class="nav_foot_content text-center">
 				<a href="#" class="d-block short-logo mx-auto">

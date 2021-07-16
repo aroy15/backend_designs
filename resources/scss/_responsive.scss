@@ -11,7 +11,32 @@
 }
 /*Laptop*/
 @media(max-width:1366px){
-
+	.target_group_sec{
+		// Target age group
+		.age_chart_container{
+			.age_target{
+				height:300px;
+			}
+		}
+		// subscription cancellation
+		.sub_can_container{
+			&.chart_container{
+				h3{
+					font-size: 14px;
+				}
+			}
+			.chart_sub_cancel{
+				height:209px;
+			}
+			.chart_SC_legend{
+				margin-top:0px;
+			}
+		}		
+	}
+	// Pie Chart Ligend
+	ul.pieLegend{
+		margin-bottom:10px;
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -73,8 +98,8 @@
 	}
 	#bodyItem{
 		.sidebar_nav{
-			top:150px;
-			height: calc(100% - 150px);
+			margin-top:150px;
+			// height: calc(100% - 150px);
 		}
 		.main_item{			
 			.body-header-content{
@@ -86,20 +111,21 @@
 @media (max-width: 767px) {
 	#bodyItem{
 		.sidebar_nav{
-			left:0;
+			margin-left:0;
 			opacity:1;
 			color:$white;
 			z-index:10;
 			box-shadow:9px 0px 12px -2px rgba(0,0,0,0.5);
 			&.nav-active{
-				left:-250px;
+				margin-left:-250px;
 				opacity:0;
 				color:transparent;
 			}
 		}
-		.main_item{			
+		.main_item{	
+			margin-left:0px;		
 			&.main_item-active{
-				margin-left:0px ;
+				margin-left:0px;
 				width:100%;
 			}
 		}
@@ -123,8 +149,8 @@
 	}
 	#bodyItem{
 		.sidebar_nav{
-			top:180px;
-			height: calc(100vh - 180px);
+			margin-top:180px;
+			// height: calc(100vh - 180px);
 		}
 		.main_item{			
 			.body-header-content{

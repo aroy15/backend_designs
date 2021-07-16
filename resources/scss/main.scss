@@ -10,11 +10,11 @@
 #headerMenu{
 	background-color:$blue-dark;
 	color:$white;
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	z-index:11;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
 	.site-logo{
 		max-width:300px;
 		width:100%;
@@ -144,13 +144,11 @@
 	background-color:$gray-light1;
 	/*category side bar*/	
 	.sidebar_nav{
-		width:250px;
-		$nav_height:calc(100% - 82px);
-		height:$nav_height;
-		top:82px;
-		overflow:hidden;
-		position:absolute;
-		left:-250px;
+		min-width:250px;
+		width:250px;	
+		overflow-x:hidden;
+		margin-left:-250px;
+		margin-top:82px;
 		opacity: 0;
 		@include transition-all(0.5s);
 		@include gradientTopBottom($blue-normal, $blue-bold);
@@ -159,7 +157,7 @@
 		&.nav-active{
 			opacity:1;
 			color:$white;
-			left:0;
+			margin-left:0;
 		}	
 		#navAccordion	{
 			color:$white;
@@ -269,11 +267,13 @@
 		background-color:$gray-light1;
 		@include transition-all(0.5s);
 		&.main_item-active{
-			width:calc(100% - 250px); 
-			margin-left:250px;
+			width:calc(100% - 250px);
 		}
 		.body-header-content{	
-			margin-top:82px;		
+			margin-top:82px;
+			.bh_title{
+				font-size:24px;
+			}		
 			.info-icons{
 				img{
 					@include transition-all(0.2s);
@@ -317,6 +317,7 @@
 	}
 	.content-inner{
 		max-width:1109px;
+		padding:20px;
 	}
 	.d_item_header{
 		a{
@@ -638,5 +639,99 @@
 		}
 	}
 }
+/***************************/
+/* 2. Target Group Dashboard | chart.js */
+/***************************/
+.target_group_sec{
+	&.content-container{
+		.content-inner{
+			max-width:1190px;
+		}
+	}
+	// Age Target group bar chart
+	.age_chart_container{
+		> p{
+			font-size:14px;
+			color:$gray;
+			padding-left:10px;
+			padding-bottom:10px;
+		}
+		.age_target{
+			height:400px;
+		}
+		.bottom_text{
+			font-size: 9px;
+			color: #A3A3A3;
+			max-width: 80px;
+			width: 100%;
+			margin-left: auto;
+			text-align: right;
+			top: -11px;
+			position: relative;
+			margin-top: -16px;
+		}
+		
+	}
+	// Subscription Cancellation pie Chart 
+	.sub_can_container{
+		overflow:hidden;		
+		&.chart_container{
+			h3{
+				font-size: 14px;
+			}
+		}
+		.chart_sub_cancel{
+			height:300px;
+		}
+		.chart_SC_legend{
+			margin-top:20px;			
+			@include ordering_html_legend_6();
+		}
+	}
+	// Distributation Network Bar Chart
+	.dist_net_chart_container{
+		p{
+			color: $gray;
+			font-size: 9px;
+			max-width: 48px;
+			width: 100%;
+			position: relative;
+			margin-bottom: -10px;
+			padding: 14px 0px;
+			left: -3px;
+		}
+		.dist_net{
+			height:290px;
+			padding-left:10px;
+		}
+	}
+
+	// Payment Method Pie Chart
+	.payment_chart_container{
+		.payment_method{
+			height:300px;
+		}
+		.p_method_legend{
+			@include ordering_html_legend_6();
+		}
+	}
+	// Distributation Network Bar Chart-2
+	.dist_chart_container2{
+		p{
+			color: $gray;
+			font-size: 9px;
+			max-width: 58px;
+			width: 100%;
+			position: relative;
+			margin-bottom: -11px;
+			padding: 14px 0px;
+		}
+		.dist_net2{
+			height:350px;
+			padding-left:10px;
+		}
+	}
+}
+
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

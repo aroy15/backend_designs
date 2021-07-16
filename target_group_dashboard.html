@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Group Designs</title>
+        <!-- Fav Icon -->
+		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Material Design Iccons -->
+        <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+        <!-- Booststrap 4 css -->
+        <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+        <!-- Main/Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css">
+</head>
+<body>
+ <!--=== Header Menu ===--> 
+ <header id="headerMenu" class="px-3">
+	<div class="row h-82 align-items-center  justify-content-between">
+	   <div class="col-lg-4 col-xl-4 d-flex order-3 order-lg-1 py-3 py-lg-0">
+		  <a href="javascript:void(0)" id="menuBar" class="h-icons menu_bar_icon">
+		  <span class="hambarger"></span>
+		  </a>
+		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
+		  <span class="top-left fs-bar"></span>
+		  <span class="top-left-horiz fs-bar"></span>
+		  <span class="top-right fs-bar"></span>
+		  <span class="top-right-horiz fs-bar"></span>
+		  <span class="bottom-left fs-bar"></span>
+		  <span class="bottom-left-horiz fs-bar"></span>
+		  <span class="bottom-right fs-bar"></span>
+		  <span class="bottom-right-horiz fs-bar"></span>
+		  </button>    
+		  <a href="index.html" class="site-logo">
+		  <img src="resources/img/Logo-UC.png" alt="Site logo">
+		  </a>
+	   </div>
+	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
+		  <a href="#" class="h-icons2 h-support">
+			<span class="icon-mdi">
+				<span class="mdi mdi-headset"></span>
+			</span>
+		  	<span class="d-block">Ticket System</span>
+		  </a>                            
+		  <a href="#" class="h-icons2 h-history">
+			 <span class="icon-mdi">
+				 <span class="mdi mdi-account-circle"></span>
+			</span>
+			 <span class="d-block">customers</span>
+		  </a>
+		  <a href="#" class="h-icons2 h-helpdesk">
+			<span class="icon-mdi">
+				<span class="mdi mdi-help-circle-outline"></span>
+			</span>
+			<span class="d-block">Documentation</span>
+		  </a> 
+	   </div>
+	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
+		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
+		  <span class="position-relative d-block order-1 order-sm-2">
+		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
+		  <a href="#" class="logout-icon position-absolute">
+		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
+		  </a>
+		  </span>         
+	   </div>
+	</div>
+ </header>
+<!--===End of Header Menu ===-->
+
+<!--=== Body Item  ===-->
+<div id="bodyItem" class="body-item position-relative d-flex">
+	<!--=== Side bar ===-->
+	<nav id="sidebarNav" class="sidebar_nav nav-active">
+		<!-- Categories -->
+		<div id="navAccordion" class="d-flex flex-column transition-5">
+			<!-- Dashboard -->
+			<div class="side_nav_item mb-3">
+				<a href="index.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Dashboard</span>
+					<span class="icon-mdi"><span class="mdi mdi-home"></span></span>
+				</a>
+			</div>
+			<!-- Roles & Right -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Roles & Right</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-gavel"></span>
+					</span>
+				</a>
+			</div>
+			<!-- User & Admins-->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingTwo">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">User & Admins</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-circle"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="navHeadingTwo" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Customers</a></li>
+						<li><a href="#">Administrator</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Accounting & Analytics -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingThree">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Accounting & Analytics</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-calculator"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="navHeadingThree" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">Invoices</a></li>
+						<li><a href="#">Target Group</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Inform Customers -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Inform Customers</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-group"></span>
+						</span>
+					</a>
+				</div>
+				<!-- Coupons -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Coupons</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-ticket-percent"></span>
+						</span>
+					</a>
+				</div>
+			<!-- Support -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFour">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Support</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-headset"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Ticket-System</a></li>
+						<li><a href="#">Ticket Archive</a></li>
+						<li><a href="#">Helpdesk</a></li>
+						<li><a href="#">Questions & Answers (FAQ)</a></li>
+						<li><a href="#">Feature Requests</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Products & Packages -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFive">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Products & Packages</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-package-variant"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Packages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Server -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">System-Information</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-server"></span>
+					</span>
+				</a>
+			</div>
+			<!-- Settings -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingSix">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Settings</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-cog-outline"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">System Settings</a></li>
+						<li><a href="#">E-Mail Settings</a></li>
+						<li><a href="#">E-Mail Templates</a></li>
+						<li><a href="#">API Connections</a></li>
+						<li><a href="#">Languages</a></li>
+						<li><a href="#">Document Templates</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav_foot_content text-center">
+				<a href="#" class="d-block short-logo mx-auto">
+					<img src="./resources/img/logo-short.png" class="img-fluid" alt="logo">
+				</a>
+				<a href="https://www.uploadcommander.de" class="up_link mt-4 pb-4 d-block">www.uploadcommander.de</a>
+			</div>			
+		</div>
+	</nav>
+	<!--=== End of Side bar ===-->
+	<!--=== Main Items ===-->
+	<main id="mainItem" class="main_item p-2 main_item-active">
+        <!--==*******All Frame setup on this here*********== -->
+		<div class="body-header-content mb-3 p-3 pl-xl-5">
+			<div class="d-flex">
+				<h2 class="bh_title">Target Group Dashboard</h2>
+			</div>
+		</div>		
+		<!--=== Target Group Content ===-->
+		<div id="TargetGroup" class="target_group_sec content-container p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
+			<!-- preloader container -->
+			<div class="preloader-js">
+				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
+					<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
+				</div>
+			</div>
+			<!--x- End of preloader container -x-->
+			<div class="content-inner">                
+				<div class="row">
+                    <!-- Age of the target group -->
+                    <div class="col-lg-7 mb-4">
+						<div class="age_chart_container chart_container">
+							<h3>Age of the target group</h3>
+							<p class="mb-0">users</p>
+							<div class="age_target">
+								<canvas id="ageTarget_chart"></canvas>
+							</div>
+							<div class="bottom_text">years</div>
+						</div>
+                    </div>
+                    <div class="col-lg-5 mb-4">
+						<div class="sub_can_container chart_container">
+							<h3>Reasons why customers cancelled their subscription</h3>
+							<div class="chart_sub_cancel">
+								<canvas id="chart_SubCancel"></canvas>
+							</div>
+							<div id="chart_SC_legend" class="chart_SC_legend"></div>
+						</div>
+					</div>					
+                </div>
+				<div class="row">
+					<div class="col-lg-7 mb-4">
+						<!-- Average Member -->
+						<div class="average_member blue_border">
+							<h3>Average Member</h3>
+							<div class="row">
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-face-shimmer"></span>
+										</div>
+										<p class="avg_num bg_num">42<span>years</span></p>
+										<p class="avg_foot bg_foot">Age of customers</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-currency-eur"></span>
+										</div>
+										<p class="avg_num bg_num">108,20<span>€</span></p>
+										<p class="avg_foot bg_foot">expenditure per month</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-account-supervisor"></span>
+										</div>
+										<p class="avg_num bg_num">8<span>users</span></p>
+										<p class="avg_foot bg_foot">number of active subusers</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-clipboard-alert"></span>
+										</div>
+										<p class="avg_num bg_num">4<span>Tickets</span></p>
+										<p class="avg_foot bg_foot">Opened support tickets</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-cloud-upload"></span>
+										</div>
+										<p class="avg_num bg_num">800<span>MB</span></p>
+										<p class="avg_foot bg_foot">occupied storage (media center)</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-4">
+									<div class="avg_item bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-link-variant"></span>
+										</div>
+										<p class="avg_num bg_num">4<span>Pcs.</span></p>
+										<p class="avg_foot bg_foot">connected Channels</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 mb-4">
+						<!-- Distribution according to networks -->
+						<div class="dist_net_chart_container chart_container">
+							<h3>Distribution according to networks</h3>
+							<p>Connected Channels</p>
+							<div class="dist_net">
+								<canvas id="dist_net_chart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-5 mb-4">
+						<div class="payment_chart_container chart_container">
+							<h3>Payment methods</h3>
+							<div class="payment_method">								
+								<canvas id="payment_methods"></canvas>
+							</div>
+							<div id="p_method_legend" class="p_method_legend"></div>
+						</div>						
+					</div>
+					<div class="col-lg-7 mb-4">
+						<!-- Distribution according to networks -->
+						<div class="dist_chart_container2 chart_container">
+							<h3>Distribution according to networks</h3>
+							<p>Proportion of payment completions</p>
+							<div class="dist_net2">
+								<canvas id="dist_net_chart2"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--=== End of Dashboard Template ===-->
+	</main>
+	<!--=== End of Main Items ===-->
+</div>
+<!--=== End of  Body Item ===-->
+
+    <!-- Script Here -->
+    <!-- jQuery -->
+    <script src="./vendors/js/jquery-3.3.1.min.js"></script>
+    <!-- popper js -->
+    <script src="./vendors/js/popper.min.js"></script>
+		<!-- bootstrap js -->
+    <script src="./vendors/js/bootstrap.min.js"></script>
+    <!-- chart js -->
+    <script src="./vendors/js/chart.min.js"></script>
+    <!-- chart js datalabels plugin -->
+    <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
+	<!-- chart label plugin -->
+    <!-- <script src="./vendors/js/chartjs-plugin-labels.js"></script> -->
+		<!-- Full Screen Plugin -->
+    <script src="./vendors/js/jquery.fullscreen-min.js"></script>
+	<!-- Preloader plugin -->
+	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
+	<!-- main/custom js -->
+	<script src="./resources/js/main.js"></script>
+</body>
+</html>

@@ -35,10 +35,10 @@
            }
        }
     .content-inner{
-     max-width:1100px;
+     max-width:1121px;
      width:100%;
      margin:auto;
-     padding:20px;
+     padding:40px 20px;
     } 
    }
    @keyframes preloadRotate {
@@ -93,6 +93,103 @@
 }
 .z-index-1{
 	z-index:1;
+}
+.line-through{
+	text-decoration: line-through;
+}
+.blue_border{
+	border:1px solid $blue-opacity;
+	padding:15px;
+	@include b-radius(5px);
+	h3{
+		color:$black;
+		font-size: 18px;
+	}
+}
+/*Background Icon with Text Data*/
+.bg_icon_div{
+	max-width:155px;
+	width:100%;
+	margin:10px auto;
+	position:relative;
+	text-align:center;
+	.bg_icon{
+		color: $blue-opacity;
+		font-size:70px;
+		position:absolute;
+		.mdi-link-variant{
+			position:relative;
+			left:15px;
+		}
+	}
+	.bg_num, .bg_foot{
+		position: relative;
+		z-index:1;
+	}
+	.bg_num{
+		font-size:30px;
+		top:50px;
+		span{
+			font-size:18px;
+			color:$black-main;
+			font-weight:bold;
+		}
+	}
+	.bg_foot{
+		margin-top:50px;
+	}
+}
+/*========= chart.js common style ======*/
+.chart_container{
+	border:1px solid $blue-opacity;
+	padding:20px 10px 0px 10px;
+	@include b-radius(5px);
+	h3{
+		padding-left:10px;
+		padding-bottom:10px;
+		color:$black;
+		font-size: 18px;
+	}
+}
+ul.pieLegend{
+	padding:10px 10px 0px 10px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	li{
+		max-width:205px;
+		width:100%;
+		flex-basis: 50%;
+		display:flex;
+		align-items:flex-start;
+		justify-content:flex-start;
+		padding:5px;
+		cursor:pointer;
+		@include transition-all(0.3s);
+		&:hover{
+			text-shadow:1px 0px 3px rgba(0,0,0,0.5);
+		}
+		span.rec_Lgnd{
+			margin-right:5px;
+			width:17px;
+			min-width:17px;
+			height:15px;
+			@include b-radius(5px);
+		}
+		p{
+			font-size:12px;
+			position:relative;
+			top:-2px;			
+			span.chart-data{
+				font-size:9px;
+				margin-top:3px;
+			}
+		}
+	}
+}
+/*Chart Js additional data remove*/
+ul.pieLegend li:not(.anjon){
+	display:none !important;
 }
 /*==========Full Screen Icon Design=========*/
 .full-screen-wrap {
@@ -149,6 +246,7 @@
 	position: relative;
 	bottom: 0;
 }
+
 /*==========End of Full Screen Icon Design=========*/
 /****Custom Scroll Bar Design*****/
 .custom-scroll-bar{
