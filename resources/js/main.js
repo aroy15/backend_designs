@@ -424,7 +424,7 @@ if( $('body').find('#payment_methods').length){
 if( $('body').find('#dist_net_chart2').length){
   var distNetChart2 = document.getElementById('dist_net_chart2').getContext('2d');
 
-  /* Instagram Gradient Color */
+  /* Gradient Color */
   var dist_net2_bg = distNetChart.createLinearGradient(0, 100, 0, 300);
   dist_net2_bg.addColorStop(0, '#42ADE2');
   dist_net2_bg.addColorStop(1, '#115A8A');
@@ -505,6 +505,376 @@ if( $('body').find('#dist_net_chart2').length){
   });  
 }
 /*========X=======*Ref = #anjon#05 | Distributation Network Bar Chart-2 ==========X======== */
+
+/*===============*Ref = #anjon#06 | Sales by Period Bar chart ================== */
+if($('body').find('#salesPeriod_chart').length){
+  // Monthly values
+  var monthLabel_sales= ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var monthData_sales = [1500, 2200, 2700,2800,4200,2900,1500,3100,1450,2200,3900,3200];
+  // Yearly values
+  var yearLabel_sales = [2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032];
+  var yearData_sales = [4500,5000,7000,15000,19000,5000,15000,17000,7000,9100,10000,8000];
+  // Weekly values
+  var weekLabel_sales = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var weekData_sales= [500,1500,1700,1200,450,1300,700];
+  // Daily values
+  var dailyLabel_sales = [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+  var dailyData_sales = [100,200,250,50,500,650,900,100,200,250,50,500,650,900,100,200,250,50,500,650,900,100,200,250,50,500,650,900,550,300,420];
+  // Step Size yAxis
+  var stepSizeMonthly_sales= 1000;
+  var stepSizeYearly_sales = 5000;
+  var stepSizeWeekly_sales= 500;
+  var stepSizeDaily_sales = 100;
+  // Connect with canvas ID
+  var sales_period_Chart_ID = document.getElementById("salesPeriod_chart");
+  var sales_period_chart = sales_period_Chart_ID.getContext('2d');
+    /* Gradient Color */
+    var sales_period_bg = sales_period_chart.createLinearGradient(0, 150, 0, 300);
+    sales_period_bg.addColorStop(0, '#42ADE2');
+    sales_period_bg.addColorStop(1, '#177BBD');
+
+    var sales_period_data = {
+      labels:monthLabel_sales,
+      datasets: [{
+          label: 'Sales Amount',
+          data: monthData_sales,
+          backgroundColor: sales_period_bg,
+          borderColor: 'transparent',
+          borderWidth: 0,
+          borderRadius:2,
+      }]
+    }
+    
+    var sales_periodChart = new Chart(sales_period_chart, {
+        type: 'bar',
+        data: sales_period_data,
+        plugins:[ChartDataLabels],
+        options: {
+          maintainAspectRatio:false,
+            layout:{
+                padding:10,
+            },
+            plugins:{
+              tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        var label = context.dataset.label || '';
+                        var amountValues = context.chart.data.datasets[0].data[context.dataIndex]; 
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                          /* Using currency formatter plugin */
+                            label += OSREC.CurrencyFormatter.format(amountValues, { currency: 'EUR' });
+                        }
+                        return label;                      
+                    }
+                  }
+              },
+                legend:{
+                  display:false,              
+                },
+                datalabels:{
+                  color:'#ffffff',
+                  rotation:-90,
+                  font:{
+                    size:12
+                  },
+                  align:'end',
+                  anchor:'start',
+                  padding: {top: 0, left: 10, right: 0, bottom: 0},
+                  formatter: function(value, context){
+                    var amountValue = context.chart.data.datasets[0].data[context.dataIndex]; 
+                    /* Using currency formatter plugin */
+                    return OSREC.CurrencyFormatter.format(amountValue, { currency: 'EUR' });
+                  },
+              }   
+            },   
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize:stepSizeMonthly_sales,
+                        callback: numberSuffixK,
+                    },
+                    suggestedMin: 0,
+                    suggestedMax:100,
+                    grid: {
+                      display: false
+                    }
+                },
+                x: {
+                    title: {
+                      display: false,
+                    },               
+                    grid: {
+                      display: false
+                    },
+                    ticks:{
+                      display:true,
+                    }            
+                }
+            },
+            // barThickness: 25,
+            maxBarThickness: 40,
+            minBarLength: 2,
+        },    
+    });  
+  //salesPeriodUpdate
+
+  $( "select#salesPeriodUpdate" )
+  .change(function() {
+    // Monthly
+    $( "select option#monthSales_P:selected" ).each(function() {
+      sales_periodChart.data.labels = monthLabel_sales;
+      sales_periodChart.data.datasets[0].data = monthData_sales;
+      sales_periodChart.options.scales.y.ticks.stepSize = stepSizeMonthly_sales;   
+      sales_periodChart.options.plugins.datalabels.font.size = 12;      
+      sales_periodChart.update();
+    });
+
+    // yearly
+    $( "select option#yearSales_P:selected" ).each(function() {
+      sales_periodChart.data.labels = yearLabel_sales;
+      sales_periodChart.data.datasets[0].data = yearData_sales;
+      sales_periodChart.options.scales.y.ticks.stepSize = stepSizeYearly_sales;
+      sales_periodChart.options.plugins.datalabels.font.size = 12;         
+      sales_periodChart.update();
+    });
+    // weekly
+    $( "select option#weekSales_P:selected" ).each(function() {
+      sales_periodChart.data.labels = weekLabel_sales;
+      sales_periodChart.data.datasets[0].data = weekData_sales;
+      sales_periodChart.options.scales.y.ticks.stepSize = stepSizeWeekly_sales;    
+      sales_periodChart.options.plugins.datalabels.font.size = 12;     
+      sales_periodChart.update();
+      
+    });
+    // Daily
+    $( "select option#dailySales_P:selected" ).each(function() {
+      sales_periodChart.data.labels = dailyLabel_sales;
+      sales_periodChart.data.datasets[0].data = dailyData_sales;
+      sales_periodChart.options.scales.y.ticks.stepSize = stepSizeDaily_sales;        
+      sales_periodChart.options.plugins.datalabels.font.size = 8;        
+      sales_periodChart.update();
+    });
+  })
+  .trigger( "change" );
+}
+/*========X=======*Ref = #anjon#06 | Sales by Period Bar chart ==========X======== */
+
+/*============*Ref = #anjon#07 | Sales figures by packages Pie Chart ======== */
+/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
+if( $('body').find('#sales_figure_chart').length){
+  var totalSalesData = [1700,650,650,2000];//5000
+  var sumOfTotalSales = totalSalesData.reduce(function(a, b){
+      return a + b;
+  }, 0);
+  var covertToPercentTotalSales=[
+    (totalSalesData[0]/sumOfTotalSales*100),
+    (totalSalesData[1]/sumOfTotalSales*100),
+    (totalSalesData[2]/sumOfTotalSales*100),
+    (totalSalesData[3]/sumOfTotalSales*100)
+  ];
+  var sales_figure_data = {
+    labels:['Package-1','Package-4','Package-2','Package-3'],
+    datasets: [{
+        label: 'Sales Figures',
+        totalsales_data:totalSalesData,
+        data: covertToPercentTotalSales,
+        backgroundColor: ['#BCF1FF','#177BBD','#115A8A','#42ADE2'],
+        borderColor: 'transparent',
+    }]
+  }
+  var sales_figure_ID = document.getElementById('sales_figure_chart').getContext('2d');
+  var sales_figure_Chart = new Chart(sales_figure_ID, {
+    type: 'pie',
+    data:sales_figure_data,
+    plugins: [htmlLegendPlugin, ChartDataLabels],
+    options: {
+      maintainAspectRatio:false, 
+      rotation:-15,
+      plugins: {
+        htmlLegend: {
+          // ID of the container to put the legend in
+          containerID: 'sales_figure_legend',
+        },
+        tooltip: {
+          callbacks: {
+              label: function(context) {
+                  var label = context.dataset.label || '';
+                  var totalSalesLabel_t = context.chart.data.datasets[0].totalsales_data[context.dataIndex]; 
+                  if (label) {
+                      label += ': ';
+                  }
+                  if (context.parsed.y !== null) {
+                      label +=   totalSalesLabel_t;
+                  }
+                  return label;                      
+              }
+            }
+        },
+        legend: {
+          display: false,
+        },
+        datalabels:{
+          color:'#ffffff',
+          align:'center',
+          anchor:'center',
+          padding: {top: 0, left: 10, right: 0, bottom: 0},
+          font:{
+            size:20
+          },
+          formatter: function(value, context){
+            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
+          }
+        }
+      }
+    },
+  });
+  
+  const sales_figure_inner_data = sales_figure_Chart.data.datasets[0].totalsales_data;
+  const sales_figure_legend = $('.sales_figure_legend .chart-data');
+  sales_figure_legend.each((index,element) => {
+    element.innerHTML = sales_figure_inner_data[index] + " Total Sales";
+  });
+}
+/*=====X===*Ref = #anjon#07 | Sales figures by packages Pie Chart ===X====== */
+
+/*===============*Ref = #anjon#08 | Users by Period Bar chart ================== */
+if($('body').find('#usersPeriod_chart').length){
+  // Monthly values
+  var monthLabel_Users= ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var monthData_Users = [250, 314, 390,402,580,407,277,476,262,354,533,452];
+  // Yearly values
+  var yearLabel_Users = [2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032];
+  var yearData_Users = [500,1000,700,1500,1100,500,700,600,1100,750,677,980];
+  // Weekly values
+  var weekLabel_Users = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var weekData_Users= [80,100,150,203,167,120,70];
+  // Daily values
+  var dailyLabel_Users = [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+  var dailyData_Users = [10,20,25,50,5,33,12,25,20,25,50,45,51,35,23,17,27,47,19,49,29,37,28,46,50,21,36,48,26,55,44];
+  // Step Size yAxis
+  var stepSizeMonthly_Users= 100;
+  var stepSizeYearly_Users = 500;
+  var stepSizeWeekly_Users= 50;
+  var stepSizeDaily_Users = 20;
+  // Connect with canvas ID
+  var Users_period_Chart_ID = document.getElementById("usersPeriod_chart");
+  var Users_period_chart = Users_period_Chart_ID.getContext('2d');
+    /* Gradient Color */
+    var Users_period_bg = Users_period_chart.createLinearGradient(0, 150, 0, 300);
+    Users_period_bg.addColorStop(0, '#42ADE2');
+    Users_period_bg.addColorStop(1, '#177BBD');
+
+    var Users_period_data = {
+      labels:monthLabel_Users,
+      datasets: [{
+          label: 'Users Amount',
+          data: monthData_Users,
+          backgroundColor: Users_period_bg,
+          borderColor: 'transparent',
+          borderWidth: 0,
+          borderRadius:2,
+      }]
+    }
+    
+    var Users_periodChart = new Chart(Users_period_chart, {
+        type: 'bar',
+        data: Users_period_data,
+        plugins:[ChartDataLabels],
+        options: {
+          maintainAspectRatio:false,
+            layout:{
+                padding:10,
+            },
+            plugins:{
+                legend:{
+                  display:false,              
+                },
+                datalabels:{
+                  color:'#ffffff',
+                  rotation:-90,
+                  font:{
+                    size:12
+                  },
+                  align:'end',
+                  anchor:'start',
+                  padding: {top: 0, left: 30, right: 0, bottom: 0},
+              }   
+            },   
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize:stepSizeMonthly_Users,
+                        callback: numberSuffixK,
+                    },
+                    suggestedMin: 0,
+                    suggestedMax:100,
+                    grid: {
+                      display: false
+                    }
+                },
+                x: {
+                    title: {
+                      display: false,
+                    },               
+                    grid: {
+                      display: false
+                    },
+                    ticks:{
+                      display:true,
+                    }            
+                }
+            },
+            // barThickness: 25,
+            maxBarThickness: 40,
+            minBarLength: 2,
+        },    
+    });  
+
+  $( "select#usersPeriodUpdate" )
+  .change(function() {
+    // Monthly
+    $( "select option#monthUsers_P:selected" ).each(function() {
+      Users_periodChart.data.labels = monthLabel_Users;
+      Users_periodChart.data.datasets[0].data = monthData_Users;
+      Users_periodChart.options.scales.y.ticks.stepSize = stepSizeMonthly_Users;   
+      Users_periodChart.options.plugins.datalabels.font.size = 12;      
+      Users_periodChart.update();
+    });
+
+    // yearly
+    $( "select option#yearUsers_P:selected" ).each(function() {
+      Users_periodChart.data.labels = yearLabel_Users;
+      Users_periodChart.data.datasets[0].data = yearData_Users;
+      Users_periodChart.options.scales.y.ticks.stepSize = stepSizeYearly_Users;
+      Users_periodChart.options.plugins.datalabels.font.size = 12;         
+      Users_periodChart.update();
+    });
+    // weekly
+    $( "select option#weekUsers_P:selected" ).each(function() {
+      Users_periodChart.data.labels = weekLabel_Users;
+      Users_periodChart.data.datasets[0].data = weekData_Users;
+      Users_periodChart.options.scales.y.ticks.stepSize = stepSizeWeekly_Users;    
+      Users_periodChart.options.plugins.datalabels.font.size = 12;     
+      Users_periodChart.update();
+      
+    });
+    // Daily
+    $( "select option#dailyUsers_P:selected" ).each(function() {
+      Users_periodChart.data.labels = dailyLabel_Users;
+      Users_periodChart.data.datasets[0].data = dailyData_Users;
+      Users_periodChart.options.scales.y.ticks.stepSize = stepSizeDaily_Users;        
+      Users_periodChart.options.plugins.datalabels.font.size = 8;        
+      Users_periodChart.update();
+    });
+  })
+  .trigger( "change" );
+}
+/*========X=======*Ref = #anjon#08 | Users by Period Bar chart ==========X======== */
 
 /* ==========*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data ============== */
 /* Connnected with Ref = #anjon#01, #anjon#04*/

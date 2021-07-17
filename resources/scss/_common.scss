@@ -58,8 +58,11 @@
 [class*="btn-"], [class*="-btn"],button{
 	cursor:pointer;
 } 
-.btn-transparent{
+.btn-transparent,.btn-transparent:focus,.btn-transparent:active{
 	background-color: transparent;
+	outline:0 !important;
+	box-shadow: none !important;
+	border-width:0 !important;
 }
 .scale_hover_half{
 	@include transition-all(0.3s);
@@ -150,6 +153,44 @@
 		color:$black;
 		font-size: 18px;
 	}
+	.chart_buttons{
+		.rotate_btn{
+			color:$blue-light;
+			font-size: 35px;
+			@include transition-all(0.3s);
+			&:hover{
+				@include transform-rotate(45deg);
+			}
+		}
+		.selectBtn{
+			position:relative;
+			width: 94px;
+			height: 39px;
+			display: inline-block;
+			cursor:pointer;
+			select{
+				color:$blue-light;
+				padding: 5px 26px 5px 10px;
+				border: 1px solid $blue-light !important;
+				background-image: url(../img/icons/arrow-down.png);
+				background-repeat: no-repeat;
+    			background-size: 13px;
+				background-position: calc(100% - 4px) 13px;
+				@include b-radius(5px);	
+				@include transition-all(0.3s);
+				cursor:pointer;
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				-o-appearance: none;				
+				&:hover{
+					background-color: $blue-light !important;
+					background-position: calc(100% - 4px) 4px;
+					color:$white-main;
+				}
+			}			
+		}		
+	}	
 }
 ul.pieLegend{
 	padding:10px 10px 0px 10px;
@@ -191,6 +232,8 @@ ul.pieLegend{
 ul.pieLegend li:not(.anjon){
 	display:none !important;
 }
+/*=====X==== chart.js common style ===X===*/
+
 /*==========Full Screen Icon Design=========*/
 .full-screen-wrap {
 	min-width: 24px;

@@ -295,9 +295,6 @@
 /* 1. Dashboard */
 /***************************/
 #bodyItem .main_item.dashboard{
-// 	background-image: url(img_flwr.gif), url(paper.gif);
-//   background-position: right bottom, left top;
-//   background-repeat: no-repeat, repeat;
 	background: url(../img/bg_images/dashboard_effect_1.png), 
 				url(../img/bg_images/dashboard_effect_2.png);
 	background-position: right 41%, 60px bottom;
@@ -643,6 +640,11 @@
 /* 2. Target Group Dashboard | chart.js */
 /***************************/
 .target_group_sec{
+	background: url(../img/bg_images/accounting-dashboard/1.png),
+				url(../img/bg_images/accounting-dashboard/4.png),
+				url(../img/bg_images/accounting-dashboard/5.png);
+	background-position: left 27%, 57.3% 10%, 100% 55%;
+	background-repeat:no-repeat;
 	&.content-container{
 		.content-inner{
 			max-width:1190px;
@@ -650,6 +652,7 @@
 	}
 	// Age Target group bar chart
 	.age_chart_container{
+		background-color: $white-main;
 		> p{
 			font-size:14px;
 			color:$gray;
@@ -674,6 +677,7 @@
 	}
 	// Subscription Cancellation pie Chart 
 	.sub_can_container{
+		background-color: $white-main;
 		overflow:hidden;		
 		&.chart_container{
 			h3{
@@ -690,6 +694,7 @@
 	}
 	// Distributation Network Bar Chart
 	.dist_net_chart_container{
+		background-color: $white-main;
 		p{
 			color: $gray;
 			font-size: 9px;
@@ -708,6 +713,7 @@
 
 	// Payment Method Pie Chart
 	.payment_chart_container{
+		background-color: $white-main;
 		.payment_method{
 			height:300px;
 		}
@@ -717,6 +723,7 @@
 	}
 	// Distributation Network Bar Chart-2
 	.dist_chart_container2{
+		background-color: $white-main;
 		p{
 			color: $gray;
 			font-size: 9px;
@@ -729,6 +736,247 @@
 		.dist_net2{
 			height:350px;
 			padding-left:10px;
+		}
+	}	
+}
+
+/***************************/
+/* 3. Accounting Dashboard | chart.js */
+/***************************/
+.accounting_Dashboard{
+	background: url(../img/bg_images/accounting-dashboard/1.png),
+				url(../img/bg_images/accounting-dashboard/2.png),
+				url(../img/bg_images/accounting-dashboard/3.png),
+				url(../img/bg_images/accounting-dashboard/4.png),
+				url(../img/bg_images/accounting-dashboard/5.png);
+	background-position: left 27%, left 42%, 38% 78%, 57% 10%, 100% 90%;
+	background-repeat:no-repeat;
+	// Sales Period Bar Chart
+	.sales_chart_container{
+		background-color: $white-main;
+		width:100%;
+		.sales_period{
+			height:350px;
+		}
+	}
+	// Current Active user
+	.crnt_active_user{
+		background-color: $white-main;
+		.user_circle{
+			width:138px;
+			height:138px;
+			margin:20px auto;
+			border:5px solid $blue-sky;
+			@include b-radius(50%);
+			.user_icon{
+				color:$blue-light;
+				font-size:43px;
+				position: relative;
+				top: 14px;
+				margin-top: 3px;
+				.mdi-currency-usd{
+					color:$blue-opacity;
+					font-size: 22px;
+					margin-left: -30px;
+					position: relative;
+					top: 2px;
+				}
+			}
+			.u_amount{
+				font-size:25px;
+				letter-spacing: -0.0105px;
+			}
+		}
+		p{
+			font-size:16px;
+		}
+	}
+	// Registered users
+	.reg_users{
+		background-color: $white-main;
+		h3{
+			line-height:1;
+		}
+		.reg_user_icon{
+			font-size:43px;
+			width:62px;
+			height:62px;
+			@include b-radius(50%);
+			border:3px solid $blue-opacity;
+			color:$blue-light;			
+			text-align:center;
+			line-height:62px;
+		}
+		.reg_text{
+			p{
+				font-size: 18px;
+    			line-height: 1;
+			}
+		}
+	}
+	//Sales figures by packages Pie Chart
+	.sales_figure_chart_container{
+		background-color: $white-main;
+		.sales_figureChart {
+			height: 320px;
+			margin: 13px 0px;
+		}
+		.sales_figure_legend{
+			ul.pieLegend li {
+				margin: 10px 0px;
+				&:nth-child(1){
+					order:1;
+				}
+				&:nth-child(2){
+					order:4;
+				}
+				&:nth-child(3){
+					order:2;
+				}
+				&:nth-child(4){
+					order:3;
+				}
+				span.rec_Lgnd{
+					margin-right: 10px;
+					width: 26px;
+					min-width: 26px;
+					height: 20px;
+				}
+				p {
+					font-size: 20px;
+					line-height:1;
+					span.chart-data{
+						font-size: 14px;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	// Sales by the last 10 Months
+	.sales_last_10_m{
+		background-color: $white-main;
+		.sales_item_header{
+			.l_10_m_btn{
+				color: $blue-light;
+				background: transparent;
+				border: 1px solid $blue-light !important;
+				display: inline-block;
+				border-radius: 5px;
+				font-size:15px;
+				@include transition-all(0.3s);
+				&:hover{
+					color: $white-main;
+					background: $blue-light;
+				}
+				.mdi-download{
+					font-size: 17px;
+					position: relative;
+					top: 2px;
+				}				
+			}
+		}
+		table.sales_item_table{
+			border-collapse: separate;
+			border-spacing: 0;
+			table-layout: fixed;
+			background: $gray-light1;
+			@include b-radius(8px);
+			padding:5px;
+			tr{
+				th,td{
+					&:nth-child(1){
+						width:46%;
+					}
+					&:nth-child(2), &:nth-child(3){
+						width:27%;
+					}
+				}
+				th{
+					font-size:14px;
+				}
+				td{
+					background: $white-main;
+					@include b-radius(8px);
+					padding: 7px;
+					height: 35px;
+					border: 4px solid $gray-light1;
+					font-size: 15px;
+					@include transition-all(0.3s);
+					&:nth-child(1){
+						text-align:left;
+					}			
+				}
+				&:hover td{
+					background: $blue-opacity;
+				}
+			}
+		}
+	}
+	// User Growth
+	.user_growth{
+		background-color: $white-main;
+		 .ug_icon_bg {
+			font-size: 262px;
+			position: absolute;
+			bottom: -120px;
+			right: 5px;
+			color: rgba(188, 241, 255, 0.18);
+			}
+		.ug_itmes {
+			position: relative;
+			z-index: 1;
+			max-width: 267px;
+			width: 100%;
+			margin: 0px auto 10px auto;
+			.ug_circle {
+				width: 100%;
+				padding: 0;
+				padding-top: calc(100% - 28px);
+    			border: 14px solid $blue-opacity;
+				@include b-radius(50%);
+				position: relative;
+				.ug_percent {
+					position: absolute;
+					@include transform-translate-50;
+					font-size: 90px;
+					color: $blue-bold;
+					span{
+						display: inline-block;
+					}
+					.prct, .mdi {
+						position: absolute;
+						font-size: 45px;
+						@include  transform-translate-topCenter;
+					}
+					.mdi{						
+						color: $blue-light;
+						left: -40px;
+					}
+					.prct{
+    					right: -40px;
+						padding-top: 22px;
+					}
+				}
+			}
+		}
+		.ug_ftr{
+			font-size: 15px;
+			color: $gray;
+			position: absolute;
+			left: 0;
+			bottom: 5px;
+			width: 100%;
+			z-index: 1;
+			padding: 0px 10px;
+			text-align: center;
+		}
+	}
+	// users by period Bar Chart
+	.users_P_chart_container{
+		background-color: $white-main;
+		.users_periodChart{
+			height:350px;
 		}
 	}
 }

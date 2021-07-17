@@ -12,6 +12,11 @@
 /*Laptop*/
 @media(max-width:1366px){
 	.target_group_sec{
+		background: url(../img/bg_images/accounting-dashboard/1.png),
+				url(../img/bg_images/accounting-dashboard/4.png),
+				url(../img/bg_images/accounting-dashboard/5.png);
+		background-position: left 27%, 59.5% 10%, 100% 55%;
+		background-repeat:no-repeat;
 		// Target age group
 		.age_chart_container{
 			.age_target{
@@ -36,6 +41,15 @@
 	// Pie Chart Ligend
 	ul.pieLegend{
 		margin-bottom:10px;
+	}
+	.accounting_Dashboard{
+		background: url(../img/bg_images/accounting-dashboard/1.png),
+				url(../img/bg_images/accounting-dashboard/2.png),
+				url(../img/bg_images/accounting-dashboard/3.png),
+				url(../img/bg_images/accounting-dashboard/4.png),
+				url(../img/bg_images/accounting-dashboard/5.png);
+		background-position: left 27%, left 42%, 34% 78%, 59% 10%, 100% 90%;
+		background-repeat: no-repeat;
 	}
 }
 /*Medium devices (laptop, less than 1300px)*/
@@ -69,6 +83,18 @@
 			font-size:240px;
 		}
 	}
+	.accounting_Dashboard{
+		// Sales figures by packages
+		.sales_figure_chart_container{
+			.sales_figure_legend ul.pieLegend li p {
+				font-size: 17px;
+				span.chart-data {
+					font-size: 11px;
+					display: block;
+				}
+			}
+		}		
+	}	
 
 }
 @media(max-width: 1199px){
@@ -89,7 +115,38 @@
 			}
 		}
 	}
-	
+	.accounting_Dashboard{
+		// Sales Period Bar Chart
+		.sales_chart_container{
+			max-width:654px;
+		}
+		.crnt_active_user,.reg_users{
+			max-width: 346px;
+		}
+		.sales_figure_legend ul.pieLegend li p {
+			font-size: 17px;
+			span.chart-data {
+				font-size: 11px;
+				display: block;
+			}
+		}
+		// Sales figures by packages
+		.sales_figure_chart_container{
+			max-width:419px;
+		}
+		// Sales by the last 10 Months
+		.sales_last_10_m{
+			max-width:575px;
+		}
+		// User growth
+		.user_growth{
+			max-width:344px;
+		}
+		// Users by Period
+		.users_P_chart_container{
+			max-width:654px;
+		}
+	}		
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {
@@ -172,4 +229,40 @@
 			}
 		}
 	}
+	.accounting_Dashboard{
+		// Sales Figure Chart
+		 .sales_figure_chart_container .sales_figure_legend ul.pieLegend {
+			padding:0px;
+			li p {
+				font-size: 15px;
+			}
+		}
+		// Sales by the last 10 Monthsul.pieLegend 
+		.sales_last_10_m{
+			.sales_item_header {
+				flex-direction:column;
+				text-align:center;
+			}
+			table.sales_item_table{
+				tr{
+					td{
+						background: $white-main;
+						@include b-radius(8px);
+						padding: 7px;
+						height: 35px;
+						border: 4px solid $gray-light1;
+						font-size: 13px;
+						@include transition-all(0.3s);
+						&:nth-child(1){
+							text-align:left;
+						}			
+					}
+					&:hover td{
+						background: $blue-opacity;
+					}
+				}
+			}
+		}
+	}
+	
 }

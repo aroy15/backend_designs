@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Group Designs</title>
+        <!-- Fav Icon -->
+		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Material Design Iccons -->
+        <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+        <!-- Booststrap 4 css -->
+        <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+        <!-- Main/Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css">
+</head>
+<body>
+ <!--=== Header Menu ===--> 
+ <header id="headerMenu" class="px-3">
+	<div class="row h-82 align-items-center  justify-content-between">
+	   <div class="col-lg-4 col-xl-4 d-flex order-3 order-lg-1 py-3 py-lg-0">
+		  <a href="javascript:void(0)" id="menuBar" class="h-icons menu_bar_icon">
+		  <span class="hambarger"></span>
+		  </a>
+		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
+		  <span class="top-left fs-bar"></span>
+		  <span class="top-left-horiz fs-bar"></span>
+		  <span class="top-right fs-bar"></span>
+		  <span class="top-right-horiz fs-bar"></span>
+		  <span class="bottom-left fs-bar"></span>
+		  <span class="bottom-left-horiz fs-bar"></span>
+		  <span class="bottom-right fs-bar"></span>
+		  <span class="bottom-right-horiz fs-bar"></span>
+		  </button>    
+		  <a href="index.html" class="site-logo">
+		  <img src="resources/img/Logo-UC.png" alt="Site logo">
+		  </a>
+	   </div>
+	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
+		  <a href="#" class="h-icons2 h-support">
+			<span class="icon-mdi">
+				<span class="mdi mdi-headset"></span>
+			</span>
+		  	<span class="d-block">Ticket System</span>
+		  </a>                            
+		  <a href="#" class="h-icons2 h-history">
+			 <span class="icon-mdi">
+				 <span class="mdi mdi-account-circle"></span>
+			</span>
+			 <span class="d-block">customers</span>
+		  </a>
+		  <a href="#" class="h-icons2 h-helpdesk">
+			<span class="icon-mdi">
+				<span class="mdi mdi-help-circle-outline"></span>
+			</span>
+			<span class="d-block">Documentation</span>
+		  </a> 
+	   </div>
+	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
+		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
+		  <span class="position-relative d-block order-1 order-sm-2">
+		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
+		  <a href="#" class="logout-icon position-absolute">
+		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
+		  </a>
+		  </span>         
+	   </div>
+	</div>
+ </header>
+<!--===End of Header Menu ===-->
+
+<!--=== Body Item  ===-->
+<div id="bodyItem" class="body-item position-relative d-flex">
+	<!--=== Side bar ===-->
+	<nav id="sidebarNav" class="sidebar_nav nav-active">
+		<!-- Categories -->
+		<div id="navAccordion" class="d-flex flex-column transition-5">
+			<!-- Dashboard -->
+			<div class="side_nav_item mb-3">
+				<a href="index.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Dashboard</span>
+					<span class="icon-mdi"><span class="mdi mdi-home"></span></span>
+				</a>
+			</div>
+			<!-- Roles & Right -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Roles & Right</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-gavel"></span>
+					</span>
+				</a>
+			</div>
+			<!-- User & Admins-->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingTwo">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">User & Admins</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-circle"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="navHeadingTwo" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Customers</a></li>
+						<li><a href="#">Administrator</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Accounting & Analytics -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingThree">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Accounting & Analytics</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-calculator"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="navHeadingThree" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">Invoices</a></li>
+						<li><a href="#">Target Group</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Inform Customers -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Inform Customers</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-group"></span>
+						</span>
+					</a>
+				</div>
+				<!-- Coupons -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Coupons</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-ticket-percent"></span>
+						</span>
+					</a>
+				</div>
+			<!-- Support -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFour">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Support</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-headset"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Ticket-System</a></li>
+						<li><a href="#">Ticket Archive</a></li>
+						<li><a href="#">Helpdesk</a></li>
+						<li><a href="#">Questions & Answers (FAQ)</a></li>
+						<li><a href="#">Feature Requests</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Products & Packages -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFive">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Products & Packages</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-package-variant"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Packages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Server -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">System-Information</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-server"></span>
+					</span>
+				</a>
+			</div>
+			<!-- Settings -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingSix">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Settings</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-cog-outline"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">System Settings</a></li>
+						<li><a href="#">E-Mail Settings</a></li>
+						<li><a href="#">E-Mail Templates</a></li>
+						<li><a href="#">API Connections</a></li>
+						<li><a href="#">Languages</a></li>
+						<li><a href="#">Document Templates</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav_foot_content text-center">
+				<a href="#" class="d-block short-logo mx-auto">
+					<img src="./resources/img/logo-short.png" class="img-fluid" alt="logo">
+				</a>
+				<a href="https://www.uploadcommander.de" class="up_link mt-4 pb-4 d-block">www.uploadcommander.de</a>
+			</div>			
+		</div>
+	</nav>
+	<!--=== End of Side bar ===-->
+	<!--=== Main Items ===-->
+	<main id="mainItem" class="main_item p-2 main_item-active">
+        <!--==*******All Frame setup on this here*********== -->
+		<div class="body-header-content mb-3 p-3 pl-xl-5">
+			<div class="d-flex">
+				<h2 class="bh_title">Accounting Dashboard</h2>
+			</div>
+		</div>		
+		<!--=== Accounting Dashboard ===-->
+		<div id="accountingDashboard" class="accounting_Dashboard content-container p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
+			<!-- preloader container -->
+			<div class="preloader-js">
+				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
+					<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
+				</div>
+			</div>
+			<!--x- End of preloader container -x-->
+			<div class="content-inner">                
+				<div class="row">
+                    <!-- Sales by Period bar Chart -->
+                    <div class="col-xl-7 mb-4 d-flex justify-content-center justify-content-xl-start">
+						<div class="sales_chart_container chart_container pt-2">
+							<div class="d-flex justify-content-between align-items-center pr-3">
+								<h3>Sales by period</h3>
+								<div class="chart_buttons d-flex align-items-center">
+									<button class="rotate_btn btn-transparent px-3">
+										<span class="mdi mdi-rotate-right"></span>
+									</button>
+									<span class="selectBtn">
+										<select name="" id="salesPeriodUpdate">
+											<option id="monthSales_P" value="monthly" selected>Monthly</option>
+											<option id="yearSales_P" value="yearly">Yearly</option>
+											<option id="weekSales_P" value="weekly">Weekly</option>
+											<option id="dailySales_P" value="daily">Daily</option>
+										</select>
+									</span>									
+								</div>
+							</div>
+							<div class="sales_period">
+								<canvas id="salesPeriod_chart"></canvas>
+							</div>
+						</div>
+                    </div>
+					<!-- Current Active User -->
+                    <div class="col-xl-5 mb-4 d-flex justify-content-center justify-content-xl-start flex-column flex-xl-row flex-xl-wrap align-content-xl-between">
+						<div class="crnt_active_user blue_border text-center w-100 mx-auto mx-xl-0">
+							<h3>Currently active users</h3>
+							<div class="user_circle">
+								<span class="user_icon d-block">
+									<span class="mdi mdi-account"></span>
+									<span class="mdi mdi-currency-usd"></span>
+								</span>
+								<span class="u_amount d-block">4325</span>
+							</div>
+							<p class="px-xl-5">This number of users refers to users who have booked a subscription at the present time</p>
+						</div>
+						<div class="reg_users blue_border mt-4 w-100 mx-auto mx-xl-0 d-flex align-items-center text-center">
+							<div class="reg_user_icon ml-2 mr-5">
+								<span class="mdi mdi-human"></span>
+							</div>
+							<div class="reg_text ml-xl-4">
+								<h3>Registered users</h3> 
+								<p class="mb-0">10.251</p>
+							</div>
+						</div>
+					</div>					
+                </div>
+				<div class="row">
+					<!-- Sales figures by packages Pie Chart-->
+					<div class="col-xl-5 mb-4 d-flex justify-content-center justify-content-xl-start">
+						<div class="sales_figure_chart_container chart_container w-100">
+							<h3>Sales figures by packages</h3>
+							<div class="sales_figureChart">								
+								<canvas id="sales_figure_chart"></canvas>
+							</div>
+							<div id="sales_figure_legend" class="sales_figure_legend"></div>
+						</div>						
+					</div>
+					<!-- Sales by the Last 10 Months -->
+					<div class="col-xl-7 mb-4 d-flex justify-content-center justify-content-xl-start">
+						<div class="sales_last_10_m blue_border w-100">
+							<div class="sales_item_header d-flex justify-content-between mb-3">
+								<h3>Sales by the last 10 Months</h3>
+								<button class="l_10_m_btn ml-3">
+									<span class="mdi mdi-download"></span>
+									<span class="l_10_btn_text">Download All Month</span>
+								</button>
+							</div>
+							<table class="sales_item_table w-100 text-center">
+								<thead>
+									<th>Month</th>
+									<th>Sales</th>
+									<th>Total users</th>
+								</thead>							
+								<tbody>
+									<tr>
+										<td>November 2020</td>
+										<td>4121,30 €</td>
+										<td>102077</td>
+									</tr>
+									<tr>
+										<td>October 2020</td>
+										<td>5102,99 €</td>
+										<td>9560</td>
+									</tr>
+									<tr>
+										<td>September 2020</td>
+										<td>4235,32 €</td>
+										<td>9203</td>
+									</tr>
+									<tr>
+										<td>August 2020</td>
+										<td>3245,12 €</td>
+										<td>9004</td>
+									</tr>
+									<tr>
+										<td>July 2020</td>
+										<td>2245,48 €</td>
+										<td>8502</td>
+									</tr>
+									<tr>
+										<td>June 2020</td>
+										<td>4141,11 €</td>
+										<td>8100</td>
+									</tr>
+									<tr>
+										<td>May 2020</td>
+										<td>5188,88 €</td>
+										<td>7254</td>
+									</tr>
+									<tr>
+										<td>April 2020</td>
+										<td>4128,22 €</td>
+										<td>7123</td>
+									</tr>
+									<tr>
+										<td>March 2020</td>
+										<td>314,20 €</td>
+										<td>6920</td>
+									</tr>
+									<tr>
+										<td>February 2020</td>
+										<td>990,75 €</td>
+										<td>6701</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>						
+					</div>
+				</div>
+				<div class="row">
+					<!-- User growth -->
+					<div class="col-xl-4 mb-4 d-flex justify-content-center justify-content-xl-start">
+						<div class="user_growth blue_border w-100 position-relative">
+							<div class="mb-2 position-relative z-index-1">
+								<h3>User growth</h3>
+							</div>
+							<span class="ug_icon_bg">
+								<span class="mdi mdi-account-star-outline"></span>
+							</span>
+							<div class="ug_itmes my-5 text-center">
+								<div class="ug_circle">
+									<p class="ug_percent mb-0">
+										<span class="mdi mdi-plus"></span>
+										<span>3</span>	
+										<span class="prct"> %</span>
+									</p>
+								</div>
+								
+							</div>									
+							<p class="ug_ftr mb-0">*by the last 10 Month</p>
+						</div>
+					</div>
+					<!-- Users by period -->
+					<div class="col-xl-8 mb-4 d-flex justify-content-center justify-content-xl-start">
+						<div class="users_P_chart_container chart_container ml-xl-4 pt-2 w-100">
+							<div class="d-flex justify-content-between align-items-center pr-3">
+								<h3>Users by period</h3>
+								<div class="chart_buttons d-flex align-items-center">
+									<button class="rotate_btn btn-transparent px-3">
+										<span class="mdi mdi-rotate-right"></span>
+									</button>
+									<span class="selectBtn">
+										<select name="" id="usersPeriodUpdate">
+											<option id="monthUsers_P" value="monthly" selected>Monthly</option>
+											<option id="yearUsers_P" value="yearly">Yearly</option>
+											<option id="weekUsers_P" value="weekly">Weekly</option>
+											<option id="dailyUsers_P" value="daily">Daily</option>
+										</select>
+									</span>									
+								</div>
+							</div>
+							<div class="users_periodChart">
+								<canvas id="usersPeriod_chart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--=== End of Dashboard Template ===-->
+	</main>
+	<!--=== End of Main Items ===-->
+</div>
+<!--=== End of  Body Item ===-->
+
+    <!-- Script Here -->
+    <!-- jQuery -->
+    <script src="./vendors/js/jquery-3.3.1.min.js"></script>
+    <!-- popper js -->
+    <script src="./vendors/js/popper.min.js"></script>
+		<!-- bootstrap js -->
+    <script src="./vendors/js/bootstrap.min.js"></script>
+    <!-- chart js -->
+    <script src="./vendors/js/chart.min.js"></script>
+    <!-- chart js datalabels plugin -->
+    <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
+	<!-- Currency formatter plugin -->
+    <script src="./vendors/js/currencyFormatter.min.js"></script>
+		<!-- Full Screen Plugin -->
+    <script src="./vendors/js/jquery.fullscreen-min.js"></script>
+	<!-- Preloader plugin -->
+	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
+	<!-- main/custom js -->
+	<script src="./resources/js/main.js"></script>
+</body>
+</html>
