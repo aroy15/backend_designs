@@ -134,7 +134,7 @@
 }
 @keyframes rotate {
 	to {
-				@include transform-rotate(180deg);
+		@include transform-rotate(180deg);
 	}
 }
 /*****Body Items*****/
@@ -146,7 +146,7 @@
 	.sidebar_nav{
 		min-width:250px;
 		width:250px;	
-		overflow-x:hidden;
+		overflow:hidden;
 		margin-left:-250px;
 		margin-top:82px;
 		opacity: 0;
@@ -161,6 +161,9 @@
 		}	
 		#navAccordion	{
 			color:$white;
+			.side_nav_item{
+				width:250px;
+			}
 			.item-header{
 				padding-top:8px;
 				padding-bottom:8px;
@@ -235,32 +238,30 @@
                     }
 				}               
 			}
-			.nav_foot_content {
-				margin-top:160px;
-				.short-logo{
-					width:115px;
-					height:115px;
-					@include b-radius(50%);
-					@include transition-all(0.3s);	
-					background-color: $blue-dark;
-					text-align:center;
-					line-height:115px;	
-					@include box-shadow(0px 4px 24px rgba(0, 45, 74, 0.6));
-					&:hover{
-						@include transform-scale(1.05);
-					}
-				}
-				.up_link{
-					@include transition-all(0.3s);
-						&:hover{
-							color:#ffffff;
-							@include text-shadow-scale($text-shadow2, 1.1);
-						}
+		}
+		.nav_foot_content {
+			margin-top:160px;
+			.short-logo{
+				width:115px;
+				height:115px;
+				@include b-radius(50%);
+				@include transition-all(0.3s);	
+				background-color: $blue-dark;
+				text-align:center;
+				line-height:115px;	
+				@include box-shadow(0px 4px 24px rgba(0, 45, 74, 0.6));
+				&:hover{
+					@include transform-scale(1.05);
 				}
 			}
-			
+			.up_link{
+				@include transition-all(0.3s);
+					&:hover{
+						color:#ffffff;
+						@include text-shadow-scale($text-shadow2, 1.1);
+					}
+			}
 		}
-	
 	}
 	.main_item{
 		width:100%;
@@ -295,7 +296,7 @@
 /* 1. Dashboard */
 /***************************/
 #bodyItem .main_item.dashboard{
-	background: url(../img/bg_images/dashboard_effect_1.png), 
+	background-image: url(../img/bg_images/dashboard_effect_1.png), 
 				url(../img/bg_images/dashboard_effect_2.png);
 	background-position: right 41%, 60px bottom;
 	background-repeat:no-repeat,no-repeat;
@@ -640,7 +641,7 @@
 /* 2. Target Group Dashboard | chart.js */
 /***************************/
 .target_group_sec{
-	background: url(../img/bg_images/accounting-dashboard/1.png),
+	background-image: url(../img/bg_images/accounting-dashboard/1.png),
 				url(../img/bg_images/accounting-dashboard/4.png),
 				url(../img/bg_images/accounting-dashboard/5.png);
 	background-position: left 27%, 57.3% 10%, 100% 55%;
@@ -744,7 +745,7 @@
 /* 3. Accounting Dashboard | chart.js */
 /***************************/
 .accounting_Dashboard{
-	background: url(../img/bg_images/accounting-dashboard/1.png),
+	background-image: url(../img/bg_images/accounting-dashboard/1.png),
 				url(../img/bg_images/accounting-dashboard/2.png),
 				url(../img/bg_images/accounting-dashboard/3.png),
 				url(../img/bg_images/accounting-dashboard/4.png),
@@ -853,7 +854,7 @@
 			}
 		}
 	}
-	// Sales by the last 10 Months
+	// Sales by the last 10 Months Table
 	.sales_last_10_m{
 		background-color: $white-main;
 		.sales_item_header{
@@ -981,5 +982,241 @@
 	}
 }
 
+/***************************/
+/* 4. Request A Feature */
+/***************************/
+.request_feature{
+	.request_feature_items{
+		background-color: $gray-light1;
+		table{
+			tr{
+				th,td{				
+					height: 63px;
+					font-weight:300;
+					&:nth-child(1){
+						width:72px;
+					}
+					&:nth-child(2){
+						width: 26%;
+					} 
+					
+					&:nth-child(3){
+						width: 65%;
+					} 
+					&:nth-child(4),	&:nth-child(5){
+						width:86px;
+					}
+				}
+				th{
+					font-size:15px;
+				}
+				td{
+					&:nth-child(3){
+						font-size: 18px;
+						font-weight:200;
+						color:$black-gray;
+					}
+				}
+			}
+			tfoot{				
+				tr{
+					td{
+						height:40px;
+						padding:5px 0px 0px 0px;
+						background-color:transparent;
+						&.show_entries{
+							font-size: 14px;
+							font-weight:400;
+							color:$black-gray;
+							@include b-radius(3px);						
+						}
+						&:nth-child(2){
+							color:$black-light;
+						}
+						.file_btn{
+							width:48px;
+							height:40px;
+							line-height:40px;
+							font-size:20px;
+							text-align:center;
+							@include b-radius(25px);
+							background-color:$white-main;
+							color:$blue-light;
+							display:inline-block;							
+						}
+					}
+					&:hover{
+						background-color:transparent;
+					}
+				}
+			}
+		}
+	}
+}
+/***************************/
+/* 5. Request A Feature Details*/
+/***************************/
+.request_feature_details{
+	.request_f_details_content{
+		.request_id_btn{
+			background-color:$blue-light;
+			color:$white-main;
+			padding:5px 25px;
+			@include b-radius(20px);
+			font-size: 15px;
+		}
+		// Text section
+		.details_text{
+			position:relative;
+			z-index:1;
+			h3{
+				color:$black-3939;
+				font-size:21px;
+				margin-bottom:0px;
+			}
+			.d_text_content{
+				color:$gray-666;				
+				p{
+					margin-bottom:0;
+				}
+			}
+			a{
+				margin-top: 20px;
+				font-size: 12px;
+				text-decoration: underline;
+				color: $blue-bold;
+				font-weight:400;
+				&:hover{
+					color:$blue-light;
+				}
+			}
+		}
+		.bg_lightbulb{
+			position: absolute;
+			bottom: 135px;
+			left: -155px;
+			font-size: 450px;
+			line-height: 1;
+			color:rgba(188, 241, 255, 0.18);
+		}
+
+		// Customer profile
+		.customerProfile_fr{
+			background-image:url(../img/bg_images/request_feature.png);
+			background-repeat:no-repeat;
+			background-position: right 23%;
+			background-color:$gray-light1;
+			position:relative;
+			&::after{
+				content:'';
+				width:40px;
+				height:40px;
+				background-color:rgba(214, 246, 255, 0.6);
+				@include b-radius(50%);
+				position:absolute;
+				bottom:-15px;
+				left:-15px;
+			}
+			.profile_pic_fr{
+				img{
+					width:130px;
+					height:130px;
+					padding:6px;
+					object-fit: cover;
+					background: linear-gradient(180deg, $blue-light 0%, $blue-bold 100%);
+					@include b-radius(50%);
+					margin:20px auto;
+					display:block;					
+				}
+			}
+			.c_name_fr{
+				font-size:17px;
+				font-weight:600;
+			}
+			.c_email_fr{
+				color:$blue-bold;
+			}
+			.c_num_fr,.c_regDate_fr{
+				font-weight:200;
+				margin-bottom:0px;
+				strong{
+					font-weight:600;
+				}
+			}
+			.c_date_time_fr {
+				font-weight: 600;
+				.mdi{
+					font-size:22px;
+					color:$blue-bold;
+					line-height:1;
+					position: relative;
+					bottom: -3px;
+				}
+			}
+			.switch_icon{
+				&.markAsRead{
+					.s_icon_area{
+						input[type="checkbox"]{
+							& ~ .switch_container {
+								.create_switch{
+									&+.s_text{
+										.read_fr{
+											display:none;
+										}
+										.unread_fr{
+											display:inline-block;
+										}									
+									}
+								}
+							}
+							&:checked ~ .switch_container {
+								.create_switch{
+									&+.s_text{
+										.read_fr{
+											display:inline-block;
+										}
+										.unread_fr{
+											display:none;
+										}
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			.op_cu_btn{
+				background-color:$blue-light;
+				color:$white;
+				font-size:15px;
+				font-weight: 300;
+				padding:4px 10px;
+				@include b-radius(5px);
+				.mdi{
+					font-size: 22px;
+					line-height: 1;
+					padding-right: 12px;
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
+		// footer buttons
+		.back_save_btn{
+			font-size:15px;
+			.back_ov_btn{
+				padding:8px 3px;
+				color:$white-main;
+				background: linear-gradient(180deg, rgba(226, 172, 66, 0.7) 0%, rgba(226, 66, 66, 0.7) 100%);
+			}
+			.save_st_btn{
+				background-color: $green-limeBtn;
+				color:$white-main;
+				padding:8px 22px;
+			}
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

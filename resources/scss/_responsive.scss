@@ -51,6 +51,10 @@
 		background-position: left 27%, left 42%, 34% 78%, 59% 10%, 100% 90%;
 		background-repeat: no-repeat;
 	}
+	// Request a Feature (details)
+	.request_feature_details .request_f_details_content .bg_lightbulb {
+		bottom: 92px;
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -146,7 +150,25 @@
 		.users_P_chart_container{
 			max-width:654px;
 		}
-	}		
+	}
+	.request_feature .request_feature_items {
+		// .search_box{
+		// 	max-width:100%;
+		// }
+		.table_container {
+			overflow:auto;
+			table{
+				min-width:600px;		
+			}
+		}		
+	}
+	.responsive_alert{
+		display:block;
+	}
+	// Modal design
+	.modal .modal-dialog {
+		max-width: 470px;
+	}
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {

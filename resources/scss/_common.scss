@@ -6,7 +6,7 @@
     max-width:1700px;
     width:100%;
     margin:auto;
-    background-color: $white;
+    background-color: $white-main;
        box-shadow:$basic-shadow;
        overflow:hidden;
        position:relative;
@@ -94,6 +94,20 @@
 		@include text-shadow-scale($text-shadow2, 1.2);
 	}
 }
+.shadow_hover_1{
+	@include transition-all(0.3s);
+	&:hover{
+		@include box-shadow(2px 2px 11px -3px rgba(0,0,0,0.5) !important);
+	}
+}
+.blue_btn_hover{
+	@include transition-all(0.2s);
+	&:hover{
+		background-color:$white-main !important;
+		color:$blue-light !important;
+		@include box-shadow(1px 1px 11px -3px rgba(0,0,0,0.5) !important);
+	}
+}
 .z-index-1{
 	z-index:1;
 }
@@ -109,7 +123,7 @@
 		font-size: 18px;
 	}
 }
-/*Background Icon with Text Data*/
+/*==Background Icon with Text Data==*/
 .bg_icon_div{
 	max-width:155px;
 	width:100%;
@@ -142,6 +156,325 @@
 		margin-top:50px;
 	}
 }
+/*==X==Background Icon with Text Data==X==*/
+.active_text{
+	&:not(:first-child){
+		display:none;
+	}
+}
+.active_qoute{
+	&:not(:last-child){
+		display:none;
+	}
+}
+/*=====Custom Select Box design====*/
+.nice-select{
+	border: solid 1px $blue-light;
+	color:$blue-light;
+	font-family: $font-nunito;
+	font-size: 12px;
+	$height: 36px;
+	height: $height;
+	line-height: $height;		
+	&.open, &:active, &:focus, &:hover{
+		border: solid 1px $blue-light;		
+	}
+	&.open{		
+		@include b-radius(5px 5px 0px 0px);
+	}
+	&::after {
+		border-bottom: 2px solid $blue-light;
+		border-right: 2px solid $blue-light;
+		height: 7px;
+		width: 7px;
+	}	
+	&:hover{
+		@include box-shadow(1px 1px 8px -3px rgba(0,0,0,0.5));	
+	}
+	.list {
+		@include b-radius(0px 0px 5px 5px);
+		box-shadow: 0 0 0 1px $blue-light;
+		margin-top: 2px;
+		width: 100%;
+		li{
+			&.option{
+				line-height: $height;
+   				min-height: $height;
+			}
+			&.option.focus{
+				background-color:$white-main;
+			}
+			&.option:hover{
+				background-color:$blue-light;
+				color:$white-main
+			}	
+		}
+	}	
+	&.white_select {
+		border: solid 1px $white-main;
+		color:$gray;	
+		background-color:$white-main;
+		&.open, &:active, &:focus, &:hover{
+			border: solid 1px $gray;		
+		}
+		&.open{		
+			@include b-radius(5px 5px 0px 0px);
+		}
+		&::after {
+			border-bottom: 2px solid $gray;
+			border-right: 2px solid $gray;
+			height: 7px;
+		}
+		.list {
+			box-shadow: 0 0 0 1px $gray;
+			li{
+				&.option:hover{
+					background-color:$blue-light;
+					color:$white-main;
+					
+				}	
+			}
+		}
+
+	}
+}
+/*==X===Custom Select Box design==X==*/
+/*=== Search box common design=== */
+.search_box{
+	max-width: 317px;
+    width: 100%;
+	.search_area{
+		max-width:317px;
+		width:100%;
+		.search{
+			height:36px;
+			@include b-radius(5px 0 0 5px);
+			max-width:100%;
+			background-color:#ffffff !important;
+			padding: 10px;
+			font-size: 15px;
+			width: 100%;
+			&::placeholder{
+				color:$gray;
+				font-size:15px;
+				font-weight:300;
+			}
+		}
+		.search_btn{
+			background-color:$blue-light;
+			cursor:pointer;
+			@include b-radius(0 5px 5px 0);
+			width:80px;
+			&:hover{
+				background-color:$blue-normal;
+			}
+		}
+	}
+}
+
+/*====Switch Icon Design====*/
+.switch_icon{
+	.s_icon_area{
+		input[type="checkbox"]{
+			width:0px;
+			height:0px;
+			opacity:0;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-o-appearance: none;
+				appearance: none;
+			&~.switch_container .create_switch{
+				min-width:44px;
+				height:25px;
+				@include b-radius(25px);
+				background-color: $red-light;
+				position:relative;
+				@include transition-all(0.3s);
+				overflow:hidden;
+				cursor: pointer;
+				&::after{
+					content:'';
+					width:21.5px;
+					height:21.5px;								
+					background-color: $white-main;
+					position:absolute;
+					left:2px;
+					top:2px;
+					@include b-radius(50%);
+					@include transition-all(0.3s);
+					@include box-shadow(0px 0px 10px 0px rgba(0,0,0,0.5));
+				}
+			}
+			&:checked~.switch_container .create_switch{
+				background-color: $blue-light;
+				&::after{
+					left:calc(100% - 23.5px);
+				}
+			}
+		}
+		.s_text{
+			padding-left:10px;
+			font-size:20px;
+			color:$blue-bold;
+			font-weight:600;
+		}
+	}
+}
+/*==X==Switch Icon Design==X==*/
+/*==X= Search box common design==X= */
+.responsive_alert{
+	font-size:12px;
+	display:none
+}
+/*========= Modal Design=======*/
+.modal{
+	.modal-dialog {
+		max-width: 645px;
+		.modal-content{			
+			background: linear-gradient(180deg, $blue-light 0%, $blue-bold 100%);
+			border:none;
+			color:$white;	
+			@include b-radius(10px);
+			overflow:hidden;		
+			.close{
+				position: absolute;
+				right:20px;
+				top:20px;
+				width:35px;
+				height:35px;
+				line-height:35px;
+				background-color:rgba(231, 231, 231, 0.6);
+				@include b-radius(50%);
+				color:$white;
+				opacity:1;
+				z-index:2;
+				font-size:23px;
+				&:hover{
+					background-color:rgba(231, 231, 231, 0.3);
+				}
+			}
+			.modal-body, .modal-footer{
+				position:relative;
+				z-index:1;
+			}
+			.modal-body{
+				h4{
+					font-size:30px;
+				}
+				p{
+					font-size:20px;
+				}
+			}
+			.modal-footer{
+				justify-content: center;				
+				.cancelBtn,.deleteYesBtn{
+					max-width:185px;
+					height:60px;
+					width:100%;
+					padding:10px 20px;
+					font-size:20px;
+					color:$white;
+					@include b-radius(5px);
+					overflow:hidden;
+					@include transition-all(0.3s);
+					border:4px solid transparent !important;
+					&:hover{
+						background-color: transparent;
+					}	
+				}
+				.cancelBtn{
+					background-color: $red-light;
+					&:hover{						
+						border-color: $red-light !important;
+						// color:$red-light;
+					}
+				}
+				.deleteYesBtn{
+					background-color: $green-limeBtn;
+					&:hover{
+						background-color: transparent;
+						border-color: $green-limeBtn !important;
+						// color: $green-limeBtn
+					}
+				}
+			}
+			.modal_bg_icon {
+				position: absolute;
+				left: -47px;
+				bottom: -28px;
+				font-size: 290px;
+				line-height: 1;
+				color: rgba(196, 196, 196, 0.1);
+			}
+		}
+	}
+	.modal-header,.modal-footer{
+		border:none;
+	}
+}
+/*===X====== Modal Design===X====*/
+/*===Table Common Design====*/
+.table_container{
+	table{
+		border-collapse: separate;
+		border-spacing: 0;
+		table-layout: fixed;
+		background: $gray-light1;
+		@include b-radius(5px);
+		padding:5px;
+		tr{
+			th,td{				
+				height: 63px;
+			}
+			th{
+				font-size:15px;
+				border:none;
+				position:relative;
+				&::after{
+					content:'';
+					width:100%;
+					display:block;
+					height:2px;
+					position:absolute;
+					bottom:10px;
+					left:0;
+					background-color: $blue-opacity;
+				}
+			}
+			td{
+				background: $white-main;
+				@include b-radius(8px);
+				padding: 7px;
+				font-size:15px;
+				border: 2px solid $gray-light1;				
+				@include transition-all(0.3s);
+				.view,.delete{
+					font-size:20px;
+					color:$blue-black;
+					&:hover{
+						color:$blue-dark;
+					}					
+				}
+				.red_alert{
+					color:$red-light;
+				}
+				.green_alert{
+					color:$green-lime;
+				}
+				&:nth-child(3){
+					font-size: 18px;
+					font-weight:200;
+					color:$black-gray;
+				}
+			}
+			&:hover td{
+				background: $blue-opacity;
+			}
+		}
+	}
+}
+/*===X==Table common Design ===X====*/
 /*========= chart.js common style ======*/
 .chart_container{
 	border:1px solid $blue-opacity;

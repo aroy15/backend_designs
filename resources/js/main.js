@@ -5,14 +5,61 @@ $(document).ready(function(){
      $("#sidebarNav").toggleClass("nav-active");
      $("#mainItem").toggleClass("main_item-active");
    });
+  // Logout Icons looping animation
+  $('.logout-icon').click(function(){
+    $('.lgt_icons').attr('src','./resources/img/icons/loop.png');
+    $('.lgt_icons').addClass('looping');  
+    setTimeout(function(){ 
+      $('.lgt_icons').attr('src','./resources/img/icons/logout.png');
+      $('.lgt_icons').removeClass('looping');   
+    }, 2000);
+  });
+  
+  /* nice-select plugin activation */
+  if($('body').find('select').length){
+    $('select').niceSelect();
+  }
 
-   // preloader jquery plugin active
-    if($('body').find('.preloader-js').length){
-      $('.preloader-js').preloadinator({
-        minTime: 600
+  /*===Request a Feature ====== */
+  if($('body').find('select#sort_requestFeature').length){
+    $( "select#sort_requestFeature" )
+    .change(function() {
+      // Monthly
+      $( "select option:selected" ).each(function() {
+        $('#sort_requestFeature + .nice-select .current').prepend('<span class="active_text">Sorted by category "</span>');
+        $('#sort_requestFeature + .nice-select .current').append('<span class="active_qoute">"</span>');
       });
-      setTimeout(function(){ $('.preloader-js').addClass('d-none'); }, 700);
-    }
+    }).trigger( "change" );
+
+    $('#sort_requestFeature + .nice-select .current').prepend('<span class="active_text">Sorted by category "</span>');
+    $('#sort_requestFeature + .nice-select .current').append('<span class="active_qoute">"</span>');
+  }
+
+    $('.request_fea_table button.delete').on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).closest('tr').data('id');
+      $('#modal_requestFeature').data('id', id).modal('show');
+    });
+
+    $('#btnDelteYes').click(function () {
+      var id = $('#modal_requestFeature').data('id');
+      $('[data-id=' + id + ']').remove();
+      $('#modal_requestFeature').modal('hide');
+    });
+  /*==X===Request a Feature ===X=== */
+  // preloader jquery plugin active
+  if($('body').find('.preloader-js').length){
+    $('.preloader-js').preloadinator({
+      minTime: 600
+    });
+    setTimeout(function(){ $('.preloader-js').addClass('d-none'); }, 700);
+  }
+
+  /* Added .dahsboard class on dashboard page main element*/
+  if( $('body').find('#deshboardItem').length){
+    $('#mainItem').addClass('dashboard');
+  }
+  
 });
 
 /*======= Fullscreen icon function =======*/
@@ -34,17 +81,8 @@ $(function() {
   $(document).bind("fullscreenerror", function(e) {
      console.log("Full screen error.");
     //  $("#status").text("Browser won't enter full screen mode for some reason.");
-  });
-  
-    // Logout Icons looping animation
-    $('.logout-icon').click(function(){
-      $('.lgt_icons').attr('src','./resources/img/icons/loop.png');
-      $('.lgt_icons').addClass('looping');  
-      setTimeout(function(){ 
-        $('.lgt_icons').attr('src','./resources/img/icons/logout.png');
-        $('.lgt_icons').removeClass('looping');   
-      }, 2000);
-    });
+  });  
+ 
 });
 /*===X=== End of Fullscreen icon function ====X==*/
 
