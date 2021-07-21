@@ -196,7 +196,7 @@
 			</div>
 			<!-- Server -->
 			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<a href="./systemInformation.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 					<span class="carret-icon icon-mdi"></span>
 					<span class="nav_item_title">System-Information</span>
 					<span class="icon-mdi">
@@ -220,9 +220,9 @@
 						<li><a href="#">System Settings</a></li>
 						<li><a href="#">E-Mail Settings</a></li>
 						<li><a href="#">E-Mail Templates</a></li>
-						<li><a href="#">API Connections</a></li>
-						<li><a href="#">Languages</a></li>
-						<li><a href="#">Document Templates</a></li>
+						<li><a href="./apiSettings.html">API Connections</a></li>
+						<li><a href="./languageOverview.html">Languages</a></li>
+						<li><a href="./documentTemplates.html">Document Templates</a></li>
 					</ul>
 				</div>
 			</div>						
@@ -259,10 +259,10 @@
 					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
 						<div class="selectBtn order-2 order-lg-1">
 							<select name="" id="sort_requestFeature" class="nice_select_blue">
-								<option value="messengerInbox">Messenger Inbox</option>
-								<option value="googleAds">Google Ads</option>
-								<option value="other" selected>Other</option>
+								<option value="all" selected>All</option>
+								<option value="google-alerts">Google Alerts</option>
 								<option value="other">Other</option>
+								<option value="messenger-inbox">Messenger Inbox</option>
 							</select>
 						</div>
 						<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
@@ -278,7 +278,7 @@
 						If table are not fully showing please swipe on table left-right
 					</div>
 					<div class="table_container request_fea_table">
-						<table class="w-100 text-center">
+						<table class="w-100 text-center" id="featureTable">
 							<thead>
 								<tr>
 									<th>ID</th>
@@ -289,7 +289,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr data-id="1">
+								<tr data-id="1" feature-category="messenger-inbox">
 									<td>1</td>
 									<td>Messenger Inbox</td>
 									<td>I want to have a new Login Function</td>
@@ -303,7 +303,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr data-id="2">
+								<tr data-id="2" feature-category="google-alerts">
 									<td>2</td>
 									<td>Google Alerts</td>
 									<td>Please add another Way to publish Postings</td>
@@ -317,7 +317,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr data-id="3">
+								<tr data-id="3" feature-category="other">
 									<td>3</td>
 									<td>Other</td>
 									<td>I have a great Idea for the Picture-Editor</td>
@@ -331,7 +331,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr data-id="4">
+								<tr data-id="4" feature-category="other">
 									<td>4</td>
 									<td>Other</td>
 									<td>Please change somethin in the Content-Libary</td>
@@ -346,30 +346,25 @@
 									</td>
 								</tr>
 							</tbody>
-							<tfoot>
-								<tr>
-									<td>
-										<a href="#" class="file_btn shadow_hover_1">
-											<span class="mdi mdi-file-document"></span>
-										</a>
-									</td>
-									<td colspan="2">
-										<span class="entries">1042 entries in total</span>
-									</td>
-									<td colspan="2" class="show_entries">
-										<span class="d-flex justify-content-between align-items-center">
-											<span>Show Entries :</span>
-											<select name="" id="" class="white_select">
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
-										</span>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
+						</table>						
+						<div class="table_bottom d-flex justify-content-between">
+							<a href="#" class="file_btn shadow_hover_1">
+								<span class="mdi mdi-file-document"></span>
+							</a>
+							<div class="entries">
+								<p class="mb-0">1042 entries in total</p>
+							</div>
+						
+							<div class="show_entries d-flex justify-content-between align-items-center">
+								<span>Show Entries :</span>
+								<select name="" id="" class="white_select">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+						</div>
 					</div>					
 				</div>
 			</div>
@@ -380,7 +375,7 @@
 </div>
 <!--=== End of  Body Item ===-->
 <!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center" id="modal_requestFeature" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+<div class="modal fade text-center modalContainer" id="modal_requestFeature" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content px-lg-4 px-xl-5">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">

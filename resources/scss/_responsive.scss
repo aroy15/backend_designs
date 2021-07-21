@@ -151,16 +151,11 @@
 			max-width:654px;
 		}
 	}
-	.request_feature .request_feature_items {
-		// .search_box{
-		// 	max-width:100%;
-		// }
-		.table_container {
-			overflow:auto;
-			table{
-				min-width:600px;		
-			}
-		}		
+	.table_container {
+		overflow:auto;
+		table, .table_bottom{
+			min-width:600px;		
+		}
 	}
 	.responsive_alert{
 		display:block;
@@ -183,6 +178,19 @@
 		.main_item{			
 			.body-header-content{
 				margin-top:150px;
+			}
+		}
+	}
+	/*Language Edit/Add*/
+	.language_EditAdd{
+		.languageEditAdd_inner{
+			.langNameCode{
+				.langName {
+					input{
+						min-width:100%;
+						width:100%;					
+					}
+				}
 			}
 		}
 	}

@@ -272,19 +272,24 @@
 		}
 		.body-header-content{	
 			margin-top:82px;
-			.bh_title{
-				font-size:24px;
-			}		
-			.info-icons{
-				img{
-					@include transition-all(0.2s);
+			.back_btn{
+				font-size:20px;
+				color:$blue-bold;				
+				min-width: 36px;
+    			width: 36px;
+				height:36px;
+				position:relative;
+				bottom:2px;
+				@include transition-all(0.3s);
+				&:hover{
+					background-color: $blue-light;
+					color:$white-main;
 					@include b-radius(50%);
-					&:hover{
-						box-shadow:$btn-shadow;
-						@include transform-scale(1.1);
-					}
 				}
 			}
+			.bh_title{
+				font-size:24px;
+			}	
 			p{
 				font-size:15px;
 			}
@@ -316,6 +321,7 @@
 	.content-inner{
 		max-width:1109px;
 		padding:20px;
+		min-height: auto;
 	}
 	.d_item_header{
 		a{
@@ -1018,38 +1024,6 @@
 					}
 				}
 			}
-			tfoot{				
-				tr{
-					td{
-						height:40px;
-						padding:5px 0px 0px 0px;
-						background-color:transparent;
-						&.show_entries{
-							font-size: 14px;
-							font-weight:400;
-							color:$black-gray;
-							@include b-radius(3px);						
-						}
-						&:nth-child(2){
-							color:$black-light;
-						}
-						.file_btn{
-							width:48px;
-							height:40px;
-							line-height:40px;
-							font-size:20px;
-							text-align:center;
-							@include b-radius(25px);
-							background-color:$white-main;
-							color:$blue-light;
-							display:inline-block;							
-						}
-					}
-					&:hover{
-						background-color:transparent;
-					}
-				}
-			}
 		}
 	}
 }
@@ -1058,13 +1032,6 @@
 /***************************/
 .request_feature_details{
 	.request_f_details_content{
-		.request_id_btn{
-			background-color:$blue-light;
-			color:$white-main;
-			padding:5px 25px;
-			@include b-radius(20px);
-			font-size: 15px;
-		}
 		// Text section
 		.details_text{
 			position:relative;
@@ -1153,69 +1120,375 @@
 					bottom: -3px;
 				}
 			}
-			.switch_icon{
-				&.markAsRead{
-					.s_icon_area{
-						input[type="checkbox"]{
-							& ~ .switch_container {
-								.create_switch{
-									&+.s_text{
-										.read_fr{
-											display:none;
-										}
-										.unread_fr{
-											display:inline-block;
-										}									
-									}
-								}
-							}
-							&:checked ~ .switch_container {
-								.create_switch{
-									&+.s_text{
-										.read_fr{
-											display:inline-block;
-										}
-										.unread_fr{
-											display:none;
-										}
-									}
-								}
-							}
-						}
-					}
-					
-				}
-			}
-			.op_cu_btn{
-				background-color:$blue-light;
-				color:$white;
-				font-size:15px;
-				font-weight: 300;
-				padding:4px 10px;
-				@include b-radius(5px);
-				.mdi{
-					font-size: 22px;
-					line-height: 1;
-					padding-right: 12px;
-					position: relative;
-					top: 3px;
-				}
-			}
 		}
 		// footer buttons
 		.back_save_btn{
 			font-size:15px;
-			.back_ov_btn{
-				padding:8px 3px;
-				color:$white-main;
-				background: linear-gradient(180deg, rgba(226, 172, 66, 0.7) 0%, rgba(226, 66, 66, 0.7) 100%);
-			}
-			.save_st_btn{
-				background-color: $green-limeBtn;
-				color:$white-main;
-				padding:8px 22px;
+		}
+	}
+}
+/***************************/
+/* 6. Document Templates*/
+/***************************/
+.document_templates{
+	.content-inner{
+		min-height:100vh;
+	}
+	.doc_temp_inner{
+		background-color: $gray-light1;
+		.search_box {
+			max-width: 477px;
+			width: 100%;
+		}
+		table{
+			tr{
+				th,td{				
+					height: 63px;
+					font-weight:300;
+					font-size:15px;
+					&:nth-child(1){
+						width:72px;
+					}
+					&:nth-child(2){
+						width: 26%;
+					} 
+					
+					&:nth-child(3){
+						width: 65%;
+					} 
+					&:nth-child(4),	&:nth-child(5){
+						width:86px;
+					}
+				}
 			}
 		}
+	}	
+	.blue_btn{
+		&:hover{
+			color:$white-main;
+		}
+	}
+}
+/***************************/
+/* 7. Document Templates Edit*/
+/***************************/
+.document_templatesEdit{
+	.doc_alert_text{
+		max-width:314px;
+		width:100%;
+		font-size:14px;
+		color:$gray-7070;
+		.icon_btn_blue{
+			padding: 8px 10px;
+			.mdi{
+				font-size: 20px;
+				padding-right: 0px;
+			}
+		}
+	}
+	.doc_text_editor{
+		min-height: 635px;
+		background-color: $gray-light1;		
+	}
+}
+
+/***************************/
+/* 8. Language Overview*/
+/***************************/
+.language_overview{
+	.content-inner{
+		min-height:100vh;
+	}
+	.language_Ov_inner{
+		background-color: $gray-light1;
+		.search_box {
+			max-width: 477px;
+			width: 100%;
+		}
+		.langOv_table{
+			table{
+				tr{
+					th,td{			
+						&:nth-child(1){
+							width:72px;
+						}
+						&:nth-child(2){
+							width: 65%;
+							font-size:18px;
+						} 
+						
+						&:nth-child(3){
+							width: 20%;
+						} 
+						&:nth-child(4),	&:nth-child(5){
+							width:100px;
+						}
+					}
+				}
+			}
+		}
+	}	
+	.blue_btn{
+		&:hover{
+			color:$white-main;
+		}
+	}
+}
+/***************************/
+/* 9. Language Edit/Add*/
+/***************************/
+.language_EditAdd{
+	.content-inner{
+		min-height:100vh;
+	}
+	.languageEditAdd_inner{
+		background-color: $gray-light1;
+		.switch_icon .s_icon_area .s_text{
+			font-size:15px;
+			color: $black-3939;
+			font-weight:300;
+		}
+		.langNameCode{
+			input{
+				height: 31px;
+				padding:5px 10px;
+				background-color: $white-main !important;
+				&::placeholder{
+					color:rgba(0, 0, 0, 0.3);
+				}
+			}
+			.langName {
+				input{
+					min-width:261px;
+					width:100%;					
+				}
+			}
+			.langCode {
+				input{
+					min-width:64px;
+					width:64px;					
+				}
+			}
+		}
+		.search_box {
+			max-width: 317px;
+			width: 100%;
+		}
+		.langAddEdit_table{
+			table{
+				tr{
+					th,td{
+						overflow: hidden;	
+						overflow-wrap: break-word;
+						&:nth-child(1){
+							width:15%;
+						}
+						&:nth-child(2){
+							width: 25%;
+						} 
+						
+						&:nth-child(3){
+							width: 35%;
+						} 
+						&:nth-child(4){
+							width:25%;
+						}
+					}
+					td{	
+						color:$black-main;							
+						&:nth-child(1),&:nth-child(2){
+							font-size:10px;
+						}
+					}
+				}
+				input{
+					width:100%;
+					border: 1px solid rgba(0, 0, 0, 0.2) !important;
+					height:auto;
+					min-height:55px;
+					font-size:12px;
+					font-weight:300;
+				}				
+			}
+		}
+	}
+}
+/***************************/
+/* 10. System-Information*/
+/***************************/
+.system_information{
+	.systemInfo_inner{
+		.s_item_area{
+			.s_item_group{
+				.bg_icon_div{
+					text-align:left;
+					.bg_icon{
+						top: 8px;
+					}
+					.bg_num{
+						text-align:left;
+						margin-left:10px;
+						span{
+							color:$black;
+							font-weight:400;
+						}
+					}
+					.bg_foot{
+						font-size:14px;
+					}
+					&:nth-child(1){
+						.bg_icon{
+							top: -15px;
+							left: -5px;
+							font-size:100px;
+						}
+					}					
+				}
+			}
+		}
+		// Hardware Info
+		.hardware_info.server_info{
+			background-color: $white-main;
+			.system_title{			
+				font-size: 18px;
+				font-family: $font-roboto;
+				span{
+					color: $green-light;
+				}
+			}
+			.system_items{
+				overflow: hidden;
+				.sys_item{
+					overflow: hidden;
+					padding: 4px 0px;
+					.sys_name{
+						width:100px;
+						padding-right:10px;
+						font-size: 18px;
+						color:$blue-bold;
+					}
+					.sys_bar_container{
+						width: calc(100% - 160px);
+						.sys_bar{
+							width:100%;
+							@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.25));
+							height:8px;
+							@include b-radius(5px);
+							margin-top: 9px;
+							.sys_inner_bar{
+								background-color: #E2AC42;
+								height:8px;
+								@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.25));
+								@include b-radius(5px 0px 0px 5px);
+								&.cpu{
+									background-color: #1BD12D;
+								}
+								&.storage-1{
+									background-color: #E24242;
+								}
+								&.storage-2{
+									background-color: #31C340;
+								}
+							}
+						}
+					}
+					.sys_percent{
+						width:60px;
+						padding-left:20px;
+						color:$gray-2;
+						font-family: $font-roboto;
+						font-size: 12px;
+					}
+				}
+			}
+		}	
+		//System Info
+		.system_info{
+			.bg_icon_div {
+				max-width:133px;
+				.bg_icon {
+					font-size: 100px;
+					top: -29px;
+				}
+				.bg_num{
+					left:10px;
+				}
+			}
+		}
+		//console Output
+		.live_console{
+			background-color: $gray-light1;
+			padding:10px;
+			h3{
+				color:$black;
+			}
+			.console_refreshBtn{
+				font-size:25px;
+				color:$blue-light;
+				@include transition-all(0.3s);
+				&:hover{
+					@include transform-rotate(120deg);
+				}
+			}
+			.console_output {				
+				padding:0px 10px;
+				overflow-x: hidden;
+				overflow-y: auto;
+				height:885px;
+				.console_text{	
+					background-color: $white-main;				
+					@include box-shadow(inset 1px 1px 9px rgba(0, 0, 0, 0.25));
+					@include b-radius(5px);
+					font-size:12px;
+					overflow: hidden;
+				}
+			}			
+			.export_console{
+				a{
+					font-size:15px;
+					color:$blue-bold;
+					text-decoration:underline;
+					display: inline-block;
+				}
+			}
+		} 
+	}
+}
+/***************************/
+/* 11. API - Settings*/
+/***************************/
+.api_settings{
+	.apiSettings_inner{
+		max-width:908px;
+		width:100%;
+		.apiSet_item{
+			&.blue_border{
+				border: 1px solid rgba(66, 173, 226, 0.4);
+			}
+			.collapseExpandBtn{
+				background-color: $blue-opacity;
+				width:28px;
+				height:28px;
+				line-height:28px;
+				text-align:center;
+				@include b-radius(50%);
+				color:$blue-light;
+				font-size:20px;
+				@include transition-all(0.3s);
+				&.collapsed{
+					@include transform-rotate(180deg);
+				}
+				.mdi{
+					position: relative;
+    				left: -2px;
+				}
+			}
+			.api_inputFields{
+				max-width:700px;
+				width:100%;
+			}
+		}
+		
 	}
 }
 /*==============Responsive CSS===============*/

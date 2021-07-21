@@ -35,3 +35,31 @@ li{
 input,textarea,select{
  background-color:$gray-light1 !important;
 }
+/*=====Input common design=====*/
+input{
+	background-color: $gray-light1;
+	font-size:15px;
+	height:46px;
+	padding:8px 11px;
+	@include b-radius(5px);	
+	&::placeholder{
+		color:rgba(0, 0, 0, 0.5);
+	}
+	&:focus{
+		border:1px solid $blue-light;
+	}
+}
+textarea{
+	min-height:92px;
+	@include b-radius(5px);
+	padding:15px;
+	font-size:15px;
+	resize: vertical;
+	&:focus{
+		border:1px solid $blue-light;
+	}
+	&::placeholder{
+		color:rgba(0, 0, 0, 0.5);
+	}
+}
+/*===X==Input common design===X==*/

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System-Information</title>
+        <!-- Fav Icon -->
+		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Material Design Iccons -->
+        <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+		<!-- select plugin -->
+		<link rel="stylesheet" href="./vendors/css/nice-select.css">
+		<!-- perfect scroll bar -->
+		<!-- <link rel="stylesheet" href="./vendors/css/perfect-scrollbar.css"> -->
+        <!-- Booststrap 4 css -->
+        <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+        <!-- Main/Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css">
+</head>
+<body>
+ <!--=== Header Menu ===--> 
+ <header id="headerMenu" class="px-3">
+	<div class="row h-82 align-items-center  justify-content-between">
+	   <div class="col-lg-4 col-xl-4 d-flex order-3 order-lg-1 py-3 py-lg-0">
+		  <a href="javascript:void(0)" id="menuBar" class="h-icons menu_bar_icon">
+		  <span class="hambarger"></span>
+		  </a>
+		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
+		  <span class="top-left fs-bar"></span>
+		  <span class="top-left-horiz fs-bar"></span>
+		  <span class="top-right fs-bar"></span>
+		  <span class="top-right-horiz fs-bar"></span>
+		  <span class="bottom-left fs-bar"></span>
+		  <span class="bottom-left-horiz fs-bar"></span>
+		  <span class="bottom-right fs-bar"></span>
+		  <span class="bottom-right-horiz fs-bar"></span>
+		  </button>    
+		  <a href="index.html" class="site-logo">
+		  <img src="resources/img/Logo-UC.png" alt="Site logo">
+		  </a>
+	   </div>
+	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
+		  <a href="#" class="h-icons2 h-support">
+			<span class="icon-mdi">
+				<span class="mdi mdi-headset"></span>
+			</span>
+		  	<span class="d-block">Ticket System</span>
+		  </a>                            
+		  <a href="#" class="h-icons2 h-history">
+			 <span class="icon-mdi">
+				 <span class="mdi mdi-account-circle"></span>
+			</span>
+			 <span class="d-block">customers</span>
+		  </a>
+		  <a href="#" class="h-icons2 h-helpdesk">
+			<span class="icon-mdi">
+				<span class="mdi mdi-help-circle-outline"></span>
+			</span>
+			<span class="d-block">Documentation</span>
+		  </a> 
+	   </div>
+	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
+		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
+		  <span class="position-relative d-block order-1 order-sm-2">
+		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
+		  <a href="#" class="logout-icon position-absolute">
+		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
+		  </a>
+		  </span>         
+	   </div>
+	</div>
+ </header>
+<!--===End of Header Menu ===-->
+
+<!--=== Body Item  ===-->
+<div id="bodyItem" class="body-item position-relative d-flex">
+	<!--=== Side bar ===-->
+	<nav id="sidebarNav" class="sidebar_nav nav-active d-flex flex-row flex-wrap align-content-between justify-content-center">
+		<!-- Categories -->
+		<div id="navAccordion" class="d-flex flex-column transition-5">
+			<!-- Dashboard -->
+			<div class="side_nav_item mb-3">
+				<a href="index.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Dashboard</span>
+					<span class="icon-mdi"><span class="mdi mdi-home"></span></span>
+				</a>
+			</div>
+			<!-- Roles & Right -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Roles & Right</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-gavel"></span>
+					</span>
+				</a>
+			</div>
+			<!-- User & Admins-->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingTwo">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">User & Admins</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-circle"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="navHeadingTwo" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Customers</a></li>
+						<li><a href="#">Administrator</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Accounting & Analytics -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingThree">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Accounting & Analytics</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-calculator"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="navHeadingThree" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="./accounting_dashboard.html">Overview</a></li>
+						<li><a href="#">Invoices</a></li>
+						<li><a href="./target_group_dashboard.html">Target Group</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Inform Customers -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Inform Customers</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-group"></span>
+						</span>
+					</a>
+				</div>
+				<!-- Coupons -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Coupons</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-ticket-percent"></span>
+						</span>
+					</a>
+				</div>
+			<!-- Support -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFour">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Support</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-headset"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Ticket-System</a></li>
+						<li><a href="#">Ticket Archive</a></li>
+						<li><a href="#">Helpdesk</a></li>
+						<li><a href="#">Questions & Answers (FAQ)</a></li>
+						<li><a href="./feature _requests.html">Feature Requests</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Products & Packages -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFive">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Products & Packages</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-package-variant"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Packages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Server -->
+			<div class="side_nav_item mb-3">
+				<a href="./systemInformation.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">System-Information</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-server"></span>
+					</span>
+				</a>
+			</div>
+			<!-- Settings -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingSix">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Settings</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-cog-outline"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">System Settings</a></li>
+						<li><a href="#">E-Mail Settings</a></li>
+						<li><a href="#">E-Mail Templates</a></li>
+						<li><a href="./apiSettings.html">API Connections</a></li>
+						<li><a href="./languageOverview.html">Languages</a></li>
+						<li><a href="./documentTemplates.html">Document Templates</a></li>
+					</ul>
+				</div>
+			</div>						
+		</div>
+		<!-- Nav footer Logo -->
+		<div class="nav_foot_content text-center">
+			<a href="#" class="d-block short-logo mx-auto">
+				<img src="./resources/img/logo-short.png" class="img-fluid" alt="logo">
+			</a>
+			<a href="https://www.uploadcommander.de" class="up_link mt-4 pb-4 d-block">www.uploadcommander.de</a>
+		</div>
+		<!--/ Nav footer Logo -->
+	</nav>
+	<!--=== End of Side bar ===-->
+	<!--=== Main Items ===-->
+	<main id="mainItem" class="main_item p-2 main_item-active">
+        <!--==*******All Frame setup on this here*********== -->
+		<div class="body-header-content mb-3 p-3 pl-xl-5">
+			<div class="d-flex">
+				<h2 class="bh_title">System-Information</h2>
+			</div>
+		</div>		
+		<!--=== Request a Feature ===-->
+		<div id="systemInformation" class="system_information content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+			<!-- preloader container -->
+			<div class="preloader-js">
+				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
+					<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
+				</div>
+			</div>
+			<!--x- End of preloader container -x-->
+			<div class="content-inner">                
+				<div class="systemInfo_inner p-3">
+					<!-- Server-Setup -->
+					<div class="s_item_area blue_border mb-4">
+						<h3>Server-Setup</h3>
+						<div class="s_item_group d-flex justify-content-xl-between flex-wrap">
+							<div class="bg_icon_div">
+								<div class="bg_icon">
+									<span class="mdi mdi-language-php"></span>
+								</div>
+								<p class="bg_num">Version</p>
+								<p class="bg_foot">7.0.1.202.1</p>
+							</div>
+							<div class="bg_icon_div">
+								<div class="bg_icon">
+									<span class="mdi mdi-database"></span>
+								</div>
+								<p class="bg_num">Database</p>
+								<p class="bg_foot">v1.253.1</p>
+							</div>
+							<div class="bg_icon_div">
+								<div class="bg_icon">
+									<span class="mdi mdi-clock-outline"></span>
+								</div>
+								<p class="bg_num">Date <span>& Time</span></p>
+								<p class="bg_foot">07/25/2021 - 17:01:59</p>
+							</div>
+							<div class="bg_icon_div pl-xl-2">
+								<div class="bg_icon">
+									<span class="mdi mdi-laptop"></span>
+								</div>
+								<p class="bg_num">IP-Adress</p>
+								<p class="bg_foot">128.01.02.201.5</p>
+							</div>
+							<div class="bg_icon_div pl-xl-5">
+								<div class="bg_icon">
+									<span class="mdi mdi-wifi-star"></span>
+								</div>
+								<p class="bg_num">Ping</p>
+								<p class="bg_foot">5 ms</p>
+							</div>
+						</div>
+					</div>	
+					<!--/Server Setup  -->
+					<div class="row">
+						<!-- Hardware-Informations -->
+						<div class="col-xl-7 mb-4">
+							<div class="hardware_info server_info blue_border b-r-5 p-3">
+								<h3 class="mb-4">Hardware-Informations</h3>
+								<div class="system_items px-3 px-xl-4">
+									<div class="sys_item ">
+										<div class="sys_name float-left text-uppercase">ram</div>
+										<div class="sys_bar_container float-left">
+											<span class="sys_bar d-block">
+												<sapn class="sys_inner_bar ram d-block" style="width:81%;"></sapn>
+											</span>
+										</div>
+										<div class="sys_percent float-left">81%</div>
+									</div>
+									<div class="sys_item">
+										<div class="sys_name float-left text-uppercase">cpu</div>
+										<div class="sys_bar_container float-left">
+											<span class="sys_bar d-block">
+												<sapn class="sys_inner_bar cpu d-block" style="width:23%;"></sapn>
+											</span>
+										</div>
+										<div class="sys_percent float-left">23%</div>
+									</div>
+									<div class="sys_item">
+										<div class="sys_name float-left text-uppercase">storage</div>
+										<div class="sys_bar_container float-left">
+											<span class="sys_bar d-block">
+												<sapn class="sys_inner_bar storage-1 d-block" style="width:88%;"></sapn>
+											</span>
+										</div>
+										<div class="sys_percent float-left">88%</div>
+									</div>
+									<div class="sys_item">
+										<div class="sys_name float-left text-uppercase">Other</div>
+										<div class="sys_bar_container float-left">
+											<span class="sys_bar d-block">
+												<sapn class="sys_inner_bar storage-2 d-block" style="width:31%;"></sapn>
+											</span>
+										</div>
+										<div class="sys_percent float-left">31%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/Hardware-Informations -->
+						<!-- System Info -->
+						<div class="col-xl-5 mb-4">
+							<div class="system_info blue_border">
+								<h3>System Info</h3>
+								<div class="s_item_group d-flex justify-content-xl-between flex-wrap">
+									<div class="bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-one-up"></span>
+										</div>
+										<p class="bg_num">Uptime</p>
+										<p class="bg_foot">105 Days</p>
+									</div>
+									<div class="bg_icon_div">
+										<div class="bg_icon">
+											<span class="mdi mdi-alert"></span>
+										</div>
+										<p class="bg_num">Version</p>
+										<p class="bg_foot">UC-OS 25.04</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/system-info -->
+					</div>
+					<!-- live console -->
+					<div class="live_console">						
+						<div class="d-flex justify-content-between">
+							<h3>Live-Console</h3>
+							<!-- refresh -->
+							<button class="console_refreshBtn btn-transparent">
+								<span class="mdi mdi-reload"></span>
+							</button>
+							<!--/refresh -->
+						</div>	
+						<div class="console_output custom-scroll-bar">
+							<div class="console_text p-2 p-md-3 p-lg-4">
+								Jul 15 11:55:43 mail kernel: [8723682.042101] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:55:45 mail kernel: [8723684.160580] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:55:54 mail kernel: [8723692.570894] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:55:55 mail kernel: [8723693.945811] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:30:af:08:00 SRC=123.231.251.226 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=118 ID=3194 DF PROTO=TCP SPT=52128 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:55:58 mail kernel: [8723696.261505] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:55:59 mail kernel: [8723698.161101] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:30:af:08:00 SRC=117.252.7.66 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=112 ID=28224 DF PROTO=TCP SPT=55125 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:56:01 mail CRON[6878]: (root) CMD ((curl https://uploadcommander.de/cron > /dev/nul))
+								Jul 15 11:56:01 mail CRON[6877]: (CRON) info (No MTA installed, discarding output)
+								Jul 15 11:56:03 mail kernel: [8723702.174497] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:23:91:08:00 SRC=1.160.184.158 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=117 ID=906 DF PROTO=TCP SPT=57774 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:56:04 mail kernel: [8723702.373540] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:07 mail kernel: [8723705.413561] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:56:20 mail kernel: [8723718.408366] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:23 mail kernel: [8723721.274854] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:24 mail kernel: [8723722.542130] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:24 mail systemd[1]: Starting user-0.slice.
+								Jul 15 11:56:24 mail systemd[1]: Created slice user-0.slice.
+								Jul 15 11:56:24 mail systemd[1]: Starting User Manager for UID 0...
+								Jul 15 11:56:24 mail systemd[1]: Starting Session 790919 of user root.
+								Jul 15 11:56:24 mail systemd[1]: Started Session 790919 of user root.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Paths.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Paths.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Timers.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Timers.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Sockets.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Sockets.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Basic System.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Basic System.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Default.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Default.
+								Jul 15 11:56:24 mail systemd[6910]: Startup finished in 43ms.
+								Jul 15 11:56:24 mail systemd[1]: Started User Manager for UID 0.
+								Jul 15 11:56:26 mail kernel: [8723724.770590] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:28 mail kernel: [8723726.560356] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:56:36 mail kernel: [8723734.577144] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:40 mail kernel: [8723738.284061] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:40 mail kernel: [8723739.061708] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328
+								
+								Jul 15 11:55:43 mail kernel: [8723682.042101] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:55:45 mail kernel: [8723684.160580] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:55:54 mail kernel: [8723692.570894] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:55:55 mail kernel: [8723693.945811] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:30:af:08:00 SRC=123.231.251.226 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=118 ID=3194 DF PROTO=TCP SPT=52128 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:55:58 mail kernel: [8723696.261505] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:55:59 mail kernel: [8723698.161101] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:30:af:08:00 SRC=117.252.7.66 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=112 ID=28224 DF PROTO=TCP SPT=55125 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:56:01 mail CRON[6878]: (root) CMD ((curl https://uploadcommander.de/cron > /dev/nul))
+								Jul 15 11:56:01 mail CRON[6877]: (CRON) info (No MTA installed, discarding output)
+								Jul 15 11:56:03 mail kernel: [8723702.174497] iptables_INPUT_dropped: IN=eth0 OUT= MAC=00:50:56:3e:17:a4:28:99:3a:4d:23:91:08:00 SRC=1.160.184.158 DST=167.86.69.147 LEN=52 TOS=0x00 PREC=0x00 TTL=117 ID=906 DF PROTO=TCP SPT=57774 DPT=445 WINDOW=8192 RES=0x00 SYN URGP=0 
+								Jul 15 11:56:04 mail kernel: [8723702.373540] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:07 mail kernel: [8723705.413561] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:56:20 mail kernel: [8723718.408366] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:23 mail kernel: [8723721.274854] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:24 mail kernel: [8723722.542130] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:24 mail systemd[1]: Starting user-0.slice.
+								Jul 15 11:56:24 mail systemd[1]: Created slice user-0.slice.
+								Jul 15 11:56:24 mail systemd[1]: Starting User Manager for UID 0...
+								Jul 15 11:56:24 mail systemd[1]: Starting Session 790919 of user root.
+								Jul 15 11:56:24 mail systemd[1]: Started Session 790919 of user root.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Paths.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Paths.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Timers.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Timers.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Sockets.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Sockets.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Basic System.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Basic System.
+								Jul 15 11:56:24 mail systemd[6910]: Starting Default.
+								Jul 15 11:56:24 mail systemd[6910]: Reached target Default.
+								Jul 15 11:56:24 mail systemd[6910]: Startup finished in 43ms.
+								Jul 15 11:56:24 mail systemd[1]: Started User Manager for UID 0.
+								Jul 15 11:56:26 mail kernel: [8723724.770590] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=355 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=335 
+								Jul 15 11:56:28 mail kernel: [8723726.560356] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 
+								Jul 15 11:56:36 mail kernel: [8723734.577144] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:40 mail kernel: [8723738.284061] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+								Jul 15 11:56:40 mail kernel: [8723739.061708] iptables_INPUT_dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:28:99:3a:4d:23:91:08:00 SRC=173.212.238.3 DST=255.255.255.255 LEN=348 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=67 DPT=68 LEN=328 
+							</div>
+						</div>
+						
+						<div class="export_console text-right mt-3 pr-4">
+							<a href="#" class="scale_hover_half">export</a>
+						</div>					
+					</div>
+					<!--/live console -->
+				</div>
+			</div>
+		</div>
+		<!--=== End of System Information ===-->
+	</main>
+	<!--=== End of Main Items ===-->
+</div>
+<!--=== End of  Body Item ===-->
+
+
+    <!-- Script Here -->
+    <!-- jQuery -->
+    <script src="./vendors/js/jquery-3.3.1.min.js"></script>
+    <!-- popper js -->
+    <script src="./vendors/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+    <script src="./vendors/js/bootstrap.min.js"></script>
+    <!-- chart js -->
+    <script src="./vendors/js/chart.min.js"></script>
+    <!-- chart js datalabels plugin -->
+    <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
+	<!-- Currency formatter plugin -->
+    <script src="./vendors/js/currencyFormatter.min.js"></script>
+	<!-- Nice select plugin -->
+	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- Perfect Scroll Bar -->
+	<!-- <script src="./vendors/js/perfect-scrollbar.js"></script> -->
+	<!-- Full Screen Plugin -->
+    <script src="./vendors/js/jquery.fullscreen-min.js"></script>
+	<!-- Preloader plugin -->
+	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
+	<!-- main/custom js -->
+	<script src="./resources/js/main.js"></script>
+</body>
+</html>

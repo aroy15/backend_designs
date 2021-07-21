@@ -196,7 +196,7 @@
 			</div>
 			<!-- Server -->
 			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<a href="./systemInformation.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 					<span class="carret-icon icon-mdi"></span>
 					<span class="nav_item_title">System-Information</span>
 					<span class="icon-mdi">
@@ -220,9 +220,9 @@
 						<li><a href="#">System Settings</a></li>
 						<li><a href="#">E-Mail Settings</a></li>
 						<li><a href="#">E-Mail Templates</a></li>
-						<li><a href="#">API Connections</a></li>
-						<li><a href="#">Languages</a></li>
-						<li><a href="#">Document Templates</a></li>
+						<li><a href="./apiSettings.html">API Connections</a></li>
+						<li><a href="./languageOverview.html">Languages</a></li>
+						<li><a href="./documentTemplates.html">Document Templates</a></li>
 					</ul>
 				</div>
 			</div>
@@ -241,7 +241,10 @@
 	<main id="mainItem" class="main_item p-2 main_item-active">
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex">
+			<div class="d-flex align-items-center">				
+				<button class="back_btn btn-transparent mr-2 shadow_hover_1">
+					<span class="mdi mdi-arrow-left"></span>
+				</button>
 				<h2 class="bh_title">Request a Feature</h2>
 			</div>
 		</div>		
@@ -256,7 +259,7 @@
 			<!--x- End of preloader container -x-->
 			<div class="content-inner" style="min-height:100vh">                
 				<div class="request_f_details_content p-3">		
-					<span class="request_id_btn d-inline-block mb-5">Request-ID: <span class="pl-3">02</span></span>
+					<span class="id_tab mb-5">Request-ID: <span class="pl-3">02</span></span>
 					<div class="row">
 						<!-- Details text -->
 						<div class="col-lg-7 col-xl-8 mb-5 mb-lg-0">
@@ -301,22 +304,18 @@
 										<input type="checkbox" checked>
 										<div class="switch_container d-flex justify-content-center align-items-center">
 											<div class="create_switch"></div>
-											<div class="s_text">
-												<span class="read_fr">Mark as read</span>
-												<span class="unread_fr">Mark as unread</span>
-											</div>
+											<div class="s_text">Mark as read</div>
 										</div>
 									</label>									
 								</div>
-								<button class="op_cu_btn shadow_hover_1">
+								<button class="icon_btn_blue shadow_hover_1">
 									<span class="mdi mdi-account-circle"></span>
-									<span class="op_cu_text">Open Customer</span>
+									<span>Open Customer</span>
 								</button>
 							</div>
 							<!-- back overview & save button -->
-							<div class="back_save_btn d-flex flex-wrap justify-content-center mt-5 pt-5">
-								<button class="back_ov_btn my-3 mx-2 b-r-5 shadow_hover_1">Back to Overview</button>
-								<button class="save_st_btn my-3 mx-2 b-r-5 shadow_hover_1">Save Status</button>
+							<div class="back_save_btn d-flex justify-content-center mt-5 pt-5">
+								<button class="green_lime_btn my-3 mx-2 shadow_hover_1">Save Status</button>
 							</div>
 							<!--/back overview & save button -->
 						</div>

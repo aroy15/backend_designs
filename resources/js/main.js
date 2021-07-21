@@ -19,8 +19,22 @@ $(document).ready(function(){
   if($('body').find('select').length){
     $('select').niceSelect();
   }
+  /*--x--/nice-select plugin activation--x---- */
+  /*===== bootstrap modal common script===== */
+  $('button.delete').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).closest('tr').data('id');
+    $('.modalContainer').data('id', id).modal('show');
+  });
+    /* yes button click function */
+    $('.deleteYesBtn').click(function () {
+      var id = $(this).parents('.modalContainer').data('id');
+      $('[data-id=' + id + ']').remove();
+      $(this).parents('.modalContainer').modal('hide');
+    });
+  /*===X== bootstrap modal common script==X===*/
 
-  /*===Request a Feature ====== */
+  /*===Request a Feature | modal included====== */
   if($('body').find('select#sort_requestFeature').length){
     $( "select#sort_requestFeature" )
     .change(function() {
@@ -34,19 +48,14 @@ $(document).ready(function(){
     $('#sort_requestFeature + .nice-select .current').prepend('<span class="active_text">Sorted by category "</span>');
     $('#sort_requestFeature + .nice-select .current').append('<span class="active_qoute">"</span>');
   }
-
-    $('.request_fea_table button.delete').on('click', function (e) {
-      e.preventDefault();
-      var id = $(this).closest('tr').data('id');
-      $('#modal_requestFeature').data('id', id).modal('show');
-    });
-
-    $('#btnDelteYes').click(function () {
-      var id = $('#modal_requestFeature').data('id');
-      $('[data-id=' + id + ']').remove();
-      $('#modal_requestFeature').modal('hide');
-    });
   /*==X===Request a Feature ===X=== */
+
+  /*=========Live Console============= */
+// if($('body').find('#consoleText').length){
+//  $('#consoleText').perfectScrollbar();
+// }
+
+  /*=====X====Live Console=======X====== */
   // preloader jquery plugin active
   if($('body').find('.preloader-js').length){
     $('.preloader-js').preloadinator({
@@ -67,7 +76,6 @@ $(function() {
   // $(".fullscreen-supported").toggle($(document).fullScreen() != null);
   // $(".fullscreen-not-supported").toggle($(document).fullScreen() == null);  
   $(document).bind("fullscreenchange", function(e) {
-     console.log("Full screen changed.");
      $(".full-screen-wrap .top-left").toggleClass('animMoveRight');
      $(".full-screen-wrap .top-left-horiz").toggleClass('animMoveDown');
      $(".full-screen-wrap .top-right").toggleClass('animMoveLeft');

@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Designs</title>
-		<!-- Fav Icon -->
+    <title>Document Templates</title>
+        <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-		<!-- Material Design Iccons -->
-		<link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+        <!-- Material Design Iccons -->
+        <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
 		<!-- select plugin -->
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
-		<!-- Booststrap 4 css -->
-		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
-		<!-- Main/Custom CSS -->
-		<link rel="stylesheet" href="./resources/css/main.css">
+        <!-- Booststrap 4 css -->
+        <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+        <!-- Main/Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css">
 </head>
 <body>
  <!--=== Header Menu ===--> 
@@ -239,14 +239,14 @@
 	<!--=== End of Side bar ===-->
 	<!--=== Main Items ===-->
 	<main id="mainItem" class="main_item p-2 main_item-active">
+        <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2>Hello Emely, welcome to the Backend!</h2>
+				<h2 class="bh_title">Document Templates</h2>
 			</div>
-		</div>
-		<!--==*******All Frame setup on this here*********== -->
-		<!--=== Dashboard ===-->
-		<div id="deshboardItem" class="content-container dashboardItem p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
+		</div>		
+		<!--=== Request a Feature ===-->
+		<div id="documentTamplates" class="document_templates content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -254,249 +254,170 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner">
-				<div class="row">
-					<!-- Profile Card -->
-					<div class="col-xl-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
-						<div class="profile_card">
-							<div class="d-flex justify-content-between mb-2">
-								<span class="p_title">Your Profile</span>
-								<button class="icon-mdi btn-transparent t_shadow_scale_1">
-									<span class="mdi mdi-account-edit-outline"></span>
+			<div class="content-inner">                
+				<div class="doc_temp_inner p-3">
+					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
+						<div class="selectBtn order-2 order-lg-1">
+							<!-- sorting doc templates -->
+							<select name="" id="sort_docTemp" class="nice_select_blue">
+								<option value="ascending" selected>Sorted by ascending ID</option>
+								<option value="descending">Sorted by descending ID</option>
+							</select>
+							<!--/sorting doc templates  -->
+						</div>
+						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
+							<div class="mb-4 mb-lg-0">
+								<a href="./documentTemplatesEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Template</a>
+							</div>
+							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
+								<input type="text" class="search form-control" placeholder="Search">
+								<button type="submit" class="search_btn">
+								  <img src="./resources/img/icons/search-icon.png" alt="Search">
 								</button>
-							</div>
-							<div class="d-flex profile_content">
-								<div class="profile_pic_d">
-									<img src="./resources/img/profile-pic.png" class="b-r-50" alt="profile">
-								</div>
-								<div class="profile_info_d pl-3">
-									<p class="name_d mb-3">Mrs. Emely Gurrero</p>
-									<p class="rank_d mb-0"><span>Rank:</span> Support Specialist</p>
-									<p class="reg_d mb-0"><span>Registered:</span> 25.04.2021</p>
-									<p class="email_d mb-0">emely.gurrero@uploadcommander.de</p>
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
-					<!-- customer service -->
-					<div class="col-xl-7 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
-						<div class="c_service b-r-5 p-3">
-							<div class="d_item_header d-flex justify-content-between">
-								<h3>Customer Service</h3>
-								<a href="#" class="scale_hover_half">open Ticketsytem</a>
-							</div>
-							<div class="cs_items">
-								<div class="row">
-									<div class="col-lg-4 col-md-6">
-										<div class="cs_item">
-											<div class="icon-bg">
-												<span class="mdi mdi-clipboard-alert"></span>
-											</div>
-											<p class="nc_item mb-0"><span>4</span> Tickets</p>
-											<p class="fcs mb-0">assigned to you</p>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-6">
-										<div class="cs_item">
-											<div class="icon-bg">
-												<span class="mdi mdi-alarm"></span>
-											</div>
-											<p class="nc_item mb-0"><span>24</span> Tickets</p>
-											<p class="fcs mb-0">waiting for support</p>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-6">
-										<div class="cs_item">
-											<div class="icon-bg">
-												<span class="mdi mdi-check-all"></span>
-											</div>
-											<p class="nc_item mb-0"><span>354</span> Tickets</p>
-											<p class="fcs mb-0">already answered by you</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="responsive_alert text-center py-3 text-dark">
+						If table are not fully showing please swipe the table left-right
 					</div>
-				</div>
-				<div class="row">
-					<!-- Transection table -->
-					<div class="col-xl-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
-						<div class="latest_transection  b-r-8 p-3">
-							<div class="d_item_header d-flex justify-content-between mb-3">
-								<h3>Latest Transection</h3>
-								<a href="#" class="scale_hover_half">see invoices</a>
+					<div class="table_container request_fea_table">
+						<table class="w-100 text-center">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Subject</th>
+									<th>Status</th>
+									<th>Function</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-id="1">
+									<td>1</td>
+									<td>Invoice Standart</td>
+									<td>Invoice Blue</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./documentTemplatesEdit.html" class="edit t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="2">
+									<td>2</td>
+									<td>Invoice Blue</td>
+									<td>Invoice Blue</td>
+									<td><span class="red_alert">inactive</span></td>
+									<td>
+										<a href="./documentTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="3">
+									<td>3</td>
+									<td>DSGVO-Data</td>
+									<td>Invoice Blue</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./documentTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="4">
+									<td>4</td>
+									<td>Other Document</td>
+									<td>Invoice Blue</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./documentTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>						
+						<div class="table_bottom d-flex justify-content-between">
+							<div>&nbsp;</div>
+							<div class="entries text-center">
+								<p class="mb-0">1042 entries in total</p>
+							</div>						
+							<div class="show_entries d-flex justify-content-between align-items-center">
+								<span>Show Entries :</span>
+								<select name="" id="" class="white_select">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
 							</div>
-							<table class="w-100 text-center">
-								<tbody>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-									<tr>
-										<td><img class="pic_small" src="./resources/img/jane.png" alt="jane"> Jane Doe</td>
-										<td>121,30<span> €</span>
-									</tr>
-								</tbody>
-							</table>
 						</div>
-					</div>
-					<div class="col-xl-7 mb-4 pb-3">
-						<div class="row">
-							<!-- Daily Sales -->
-							<div class="col-lg-7 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
-								<div class="daily_sales b-r-5 p-3">
-									<div class="d_item_header d-flex justify-content-between mb-3 position-relative z-index-1">
-										<h3>Daily Sales</h3>
-										<a href="#" class="scale_hover_half">Accounting</a>
-									</div>
-									<span class="ds_icon_bg">
-										<span class="mdi mdi-cash-multiple"></span>
-									</span>
-									<div class="ds_itmes text-center">
-										<p class="ds_percent mb-0">
-											70<span> %</span>
-										</p>
-										<p class="ds_up mb-0">48 Transection Today</p>
-									</div>									
-									<p class="ds_ftr mb-0">*Compared to the average daily sales</p>
-								</div>
-							</div>
-							<!-- User growth -->
-							<div class="col-lg-5 mb-4 pb-3 d-flex justify-content-center justify-content-xl-start">
-								<div class="user_growth b-r-5 p-3">
-									<div class="d_item_header d-flex justify-content-between mb-2 position-relative z-index-1">
-										<h3>User growth</h3>
-									</div>
-									<span class="ug_icon_bg">
-										<span class="mdi mdi-account-star-outline"></span>
-									</span>
-									<div class="ug_itmes text-center">
-										<div class="ug_circle">
-											<p class="ug_percent mb-0">
-												<span class="mdi mdi-plus"></span>
-												<span>3</span>	
-												<span class="prct"> %</span>
-											</p>
-										</div>
-										
-									</div>									
-									<p class="ug_ftr mb-0">*Compared to the average daily sales</p>
-								</div>
-							</div>													
-						</div>
-						<div class="row">
-							<!-- Server information -->
-							<div class="col-12 d-flex justify-content-center justify-content-xl-start">
-								<div class="server_info b-r-5 p-3">
-									<div class="d_item_header d-flex justify-content-between mb-3 position-relative z-index-1">
-										<h3>Server - Informations</h3>
-										<a href="#" class="scale_hover_half">System-Settings</a>
-									</div>
-									<p class="system_title pl-2">
-										System-Status: <span>Maintenance mode is currently deactivated.</span>
-									</p>
-									<div class="system_items px-3 px-xl-4">
-										<div class="sys_item ">
-											<div class="sys_name float-left text-uppercase">ram</div>
-											<div class="sys_bar_container float-left">
-												<span class="sys_bar d-block">
-													<sapn class="sys_inner_bar ram d-block" style="width:80%;"></span>
-												</span>
-											</div>
-											<div class="sys_percent float-left">80%</div>
-										</div>
-										<div class="sys_item">
-											<div class="sys_name float-left text-uppercase">cpu</div>
-											<div class="sys_bar_container float-left">
-												<span class="sys_bar d-block">
-													<sapn class="sys_inner_bar cpu d-block" style="width:23%;"></span>
-												</span>
-											</div>
-											<div class="sys_percent float-left">23%</div>
-										</div>
-										<div class="sys_item">
-											<div class="sys_name float-left text-uppercase">storage</div>
-											<div class="sys_bar_container float-left">
-												<span class="sys_bar d-block">
-													<sapn class="sys_inner_bar storage-1 d-block" style="width:88%;"></span>
-												</span>
-											</div>
-											<div class="sys_percent float-left">88%</div>
-										</div>
-										<div class="sys_item">
-											<div class="sys_name float-left text-uppercase">storage</div>
-											<div class="sys_bar_container float-left">
-												<span class="sys_bar d-block">
-													<sapn class="sys_inner_bar storage-2 d-block" style="width:31%;"></span>
-												</span>
-											</div>
-											<div class="sys_percent float-left">31%</div>
-										</div>
-									</div>
-								</div>
-							</div>	
-						</div>
-					</div>
+					</div>					
 				</div>
 			</div>
 		</div>
-		<!--=== End of Dashboard Template ===-->
+		<!--=== End of Request a Feature ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
+<!-- start: Delete Coupon Modal -->
+<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content px-lg-4 px-xl-5">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<span class="mdi mdi-close"></span>
+			</button>
+            <div class="modal-body pb-4 pt-5">
+                 <h4 class="pb-4"> Are you sure?</h4>
+				 <p>Deleted Document-Templates are irrevocably deleted and cannot be restored at a later time.</p>
+            </div>
+            <!--/modal-body-collapse -->
+            <div class="modal-footer mb-4">
+                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
+            </div>
+            <!--/modal-footer-collapse -->
+			<div class="modal_bg_icon">
+				<span class="mdi mdi-delete-empty"></span>
+			</div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
     <!-- Script Here -->
     <!-- jQuery -->
     <script src="./vendors/js/jquery-3.3.1.min.js"></script>
     <!-- popper js -->
     <script src="./vendors/js/popper.min.js"></script>
-		<!-- bootstrap js -->
+	<!-- bootstrap js -->
     <script src="./vendors/js/bootstrap.min.js"></script>
     <!-- chart js -->
     <script src="./vendors/js/chart.min.js"></script>
     <!-- chart js datalabels plugin -->
     <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
+	<!-- Currency formatter plugin -->
+    <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
-		<!-- Full Screen Plugin -->
+	<!-- <script src="./vendors/js/jquery.simpleselect.js"></script> -->
+	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->
 	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
