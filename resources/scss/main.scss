@@ -273,13 +273,16 @@
 		.body-header-content{	
 			margin-top:82px;
 			.back_btn{
-				font-size:20px;
-				color:$blue-bold;				
+				font-size: 20px;
+				color: $blue-bold;
 				min-width: 36px;
-    			width: 36px;
-				height:36px;
-				position:relative;
-				bottom:2px;
+				width: 36px;
+				height: 36px;
+				line-height: 36px;
+				position: relative;
+				bottom: 2px;
+				display: inline-block;
+				text-align: center;
 				@include transition-all(0.3s);
 				&:hover{
 					background-color: $blue-light;

@@ -666,7 +666,7 @@
 			&:hover{
 				@include transform-rotate(45deg);
 			}
-			&:focus{
+			&.rotate-focus:focus{
 				@include transform-rotate(360deg);	
 			}
 		}

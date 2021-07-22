@@ -63,12 +63,15 @@ $(document).ready(function(){
     });
     setTimeout(function(){ $('.preloader-js').addClass('d-none'); }, 700);
   }
-
+/*==========Rotate Icon (Refresh Icon)============== */
+$(".rotate_btn").hover(function(){
+  $(this).toggleClass('rotate-focus');
+  })
+/*=====X====Rotate Icon (Refresh Icon)=======X====== */
   /* Added .dahsboard class on dashboard page main element*/
   if( $('body').find('#deshboardItem').length){
     $('#mainItem').addClass('dashboard');
-  }
-  
+  }  
 });
 
 /*======= Fullscreen icon function =======*/
