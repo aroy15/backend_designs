@@ -55,6 +55,16 @@
 	.request_feature_details .request_f_details_content .bg_lightbulb {
 		bottom: 92px;
 	}
+	// Language Over View
+	.language_overview{
+		.language_Ov_inner{			
+			.langOv_table{				
+				.table_bottom .entries p {
+					padding-left: 0px;
+				}
+			}
+		}	
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){

@@ -666,6 +666,9 @@
 			&:hover{
 				@include transform-rotate(45deg);
 			}
+			&:focus{
+				@include transform-rotate(360deg);	
+			}
 		}
 		.selectBtn{
 			position:relative;

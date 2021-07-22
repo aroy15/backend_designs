@@ -1114,6 +1114,14 @@ textarea::placeholder {
   -o-transform: rotate(45deg);
 }
 
+.chart_container .chart_buttons .rotate_btn:focus {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
 .chart_container .chart_buttons .selectBtn {
   position: relative;
   width: 94px;
@@ -2951,10 +2959,6 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /* 8. Language Overview*/
 /***************************/
-.language_overview .content-inner {
-  min-height: 100vh;
-}
-
 .language_overview .language_Ov_inner {
   background-color: #FAFAFA;
 }
@@ -2969,16 +2973,20 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .language_overview .language_Ov_inner .langOv_table table tr th:nth-child(2), .language_overview .language_Ov_inner .langOv_table table tr td:nth-child(2) {
-  width: 65%;
+  width: 62%;
   font-size: 18px;
 }
 
 .language_overview .language_Ov_inner .langOv_table table tr th:nth-child(3), .language_overview .language_Ov_inner .langOv_table table tr td:nth-child(3) {
-  width: 20%;
+  width: 23%;
 }
 
 .language_overview .language_Ov_inner .langOv_table table tr th:nth-child(4), .language_overview .language_Ov_inner .langOv_table table tr th:nth-child(5), .language_overview .language_Ov_inner .langOv_table table tr td:nth-child(4), .language_overview .language_Ov_inner .langOv_table table tr td:nth-child(5) {
-  width: 100px;
+  width: 129px;
+}
+
+.language_overview .language_Ov_inner .langOv_table .table_bottom .entries p {
+  padding-left: 45px;
 }
 
 .language_overview .blue_btn:hover {
@@ -2989,7 +2997,7 @@ ul.pieLegend li:not(.anjon) {
 /* 9. Language Edit/Add*/
 /***************************/
 .language_EditAdd .content-inner {
-  min-height: 100vh;
+  max-width: 100%;
 }
 
 .language_EditAdd .languageEditAdd_inner {
@@ -3147,11 +3155,11 @@ ul.pieLegend li:not(.anjon) {
 
 .system_information .systemInfo_inner .hardware_info.server_info .system_items .sys_item .sys_bar_container .sys_bar {
   width: 100%;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
   height: 8px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -3221,19 +3229,19 @@ ul.pieLegend li:not(.anjon) {
 .system_information .systemInfo_inner .live_console .console_refreshBtn {
   font-size: 25px;
   color: #42ADE2;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .system_information .systemInfo_inner .live_console .console_refreshBtn:hover {
-  transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
-  -moz-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
-  -o-transform: rotate(120deg);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
 .system_information .systemInfo_inner .live_console .console_output {
@@ -3257,6 +3265,10 @@ ul.pieLegend li:not(.anjon) {
   -o-border-radius: 5px;
   font-size: 12px;
   overflow: hidden;
+}
+
+.system_information .systemInfo_inner .live_console .console_output .console_text p {
+  margin-bottom: 0px;
 }
 
 .system_information .systemInfo_inner .live_console .export_console a {
@@ -3403,6 +3415,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .request_feature_details .request_f_details_content .bg_lightbulb {
     bottom: 92px;
+  }
+  .language_overview .language_Ov_inner .langOv_table .table_bottom .entries p {
+    padding-left: 0px;
   }
 }
 
