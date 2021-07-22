@@ -46,7 +46,7 @@ input{
 		color:rgba(0, 0, 0, 0.5);
 	}
 	&:focus{
-		border:1px solid $blue-light;
+		border:1px solid $blue-light !important;
 	}
 }
 textarea{

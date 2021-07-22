@@ -255,8 +255,9 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div id="apiAllSetInput" class="apiSettings_inner p-3">
-					<div class="apiSet_item blue_border">
+				<div id="apiAllSetInput" class="apiSettings_inner p-0 p-sm-3">
+					<!-- STRIPE PAYMENT -->
+					<div class="apiSet_item blue_border mb-4">
 						<div class="d-flex justify-content-between">
 							<h3 class="text-uppercase mb-4">STRIPE PAYMENT</h3>
 							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsOne" aria-expanded="true" aria-controls="apiInputsOne">
@@ -264,18 +265,254 @@
 							</button>
 						</div>
 						<!-- Input Fields -->
-						<div id="apiInputsOne" class="api_inputFields collapse show" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
-							<div class="row">
-								<div class="col-lg-4">Webhook Secret-Key:</div>
-								<div class="col-lg-8">
-									<select name="" id="" class="gray_select">
+						<div id="apiInputsOne" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Enviroment:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<select name="" id=""  class="gray_select">
 										<option value="">Sandbox</option>
+										<option value="">Other-1</option>
+										<option value="">Other-2</option>
 									</select>
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Public-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Secret-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Webhook Secret-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-lg-4 col-xl-3">	</div>
+								<div class="col-lg-8 col-xl-9">
+									<label class="checkbox-container">
+										Enable Recurring Payments
+										<input type="checkbox" checked="">
+										<span class="checkmark"></span>
+									</label>
 								</div>
 							</div>
 						</div>
 						<!--/Input Fields  -->
 					</div>
+					<!--/STRIPE PAYMENT -->
+
+					<!-- PAYPAL PAYMENT -->
+					<div class="apiSet_item blue_border mb-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="text-uppercase mb-4">PAYPAL PAYMENT</h3>
+							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsTwo" aria-expanded="true" aria-controls="apiInputsTwo">
+								<span class="mdi mdi-chevron-down"></span>
+							</button>
+						</div>
+						<!-- Input Fields -->
+						<div id="apiInputsTwo" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Enviroment:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<select name="" id=""  class="gray_select">
+										<option value="">Sandbox</option>
+										<option value="">Other-1</option>
+										<option value="">Other-2</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>PayPal Client ID:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>PayPal Client Secret:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Webhook ID:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-lg-4 col-xl-3">	</div>
+								<div class="col-lg-8 col-xl-9">
+									<label class="checkbox-container">
+										Enable Subscriptions
+										<input type="checkbox" checked="">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!--/Input Fields  -->
+					</div>
+					<!--/PAYPAL PAYMENT -->
+
+					<!-- GOOGLE RECAPTCHA -->
+					<div class="apiSet_item blue_border mb-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="text-uppercase mb-4">GOOGLE RECAPTCHA</h3>
+							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsThree" aria-expanded="true" aria-controls="apiInputsThree">
+								<span class="mdi mdi-chevron-down"></span>
+							</button>
+						</div>
+						<!-- Input Fields -->
+						<div id="apiInputsThree" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Site-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Secret-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-lg-4 col-xl-3">	</div>
+								<div class="col-lg-8 col-xl-9">
+									<label class="checkbox-container">
+										Enable reCaptcha in signup page
+										<input type="checkbox" checked="">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!--/Input Fields  -->
+					</div>
+					<!--/GOOGLE RECAPTCHA -->
+
+					<!-- GOOGLE DRIVE PICKER -->
+					<div class="apiSet_item blue_border mb-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="text-uppercase mb-4">GOOGLE DRIVE PICKER</h3>
+							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsFour" aria-expanded="true" aria-controls="apiInputsFour">
+								<span class="mdi mdi-chevron-down"></span>
+							</button>
+						</div>
+						<!-- Input Fields -->
+						<div id="apiInputsFour" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Google App-ID:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" class="googleAPI_ID" placeholder="48980793996">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Google API-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Google Client-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" class="googleClientKey"
+									placeholder="889803243996-1dl8efmepqefco2mrtnp6rc9f4n1jrch.apps.googleusercontent.com">
+								</div>
+							</div>
+						</div>
+						<!--/Input Fields  -->
+					</div>
+					<!--/GOOGLE DRIVE PICKER -->
+
+					<!-- DROPBOX CHOOSER -->
+					<div class="apiSet_item blue_border mb-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="text-uppercase mb-4">DROPBOX CHOOSER</h3>
+							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsFive" aria-expanded="true" aria-controls="apiInputsFive">
+								<span class="mdi mdi-chevron-down"></span>
+							</button>
+						</div>
+						<!-- Input Fields -->
+						<div id="apiInputsFive" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Dropbox App-ID:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" class="input_w_391" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>Dropbox API-Key:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" class="input_w_391" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+						</div>
+						<!--/Input Fields  -->
+					</div>
+					<!--/DROPBOX CHOOSER -->
+					
+					<!-- ONEDRIVE FILEPICKER -->
+					<div class="apiSet_item blue_border mb-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="text-uppercase mb-4">ONEDRIVE FILEPICKER</h3>
+							<button id="colExpBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#apiInputsSix" aria-expanded="true" aria-controls="apiInputsSix">
+								<span class="mdi mdi-chevron-down"></span>
+							</button>
+						</div>
+						<!-- Input Fields -->
+						<div id="apiInputsSix" class="api_inputFields collapse show pl-4" aria-labelledby="colExpBtn_1" data-parent="#apiAllSetInput">
+							<div class="row mb-2">
+								<div class="col-lg-4 col-xl-3 mb-2 d-flex align-items-center">
+									<span>OneDrive Client-ID:</span>
+								</div>
+								<div class="col-lg-8 col-xl-9 mb-2">
+									<input type="password" class="input_w_391" placeholder="AIzaSyESIbjRUaB-2G0gVvORNLtVnSwyNn-g2MA">
+								</div>
+							</div>
+						</div>
+						<!--/Input Fields  -->
+					</div>
+					<!--/ONEDRIVE FILEPICKER -->
+
 				</div>
 			</div>
 		</div>

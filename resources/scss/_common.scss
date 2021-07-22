@@ -406,6 +406,60 @@
 }
 /*==X==Switch Icon Design==X==*/
 
+/*=====Check box design======*/
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 18px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	.checkmark {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		height: 23px;
+		width: 23px;
+		background-color:$black-light;
+		@include b-radius(5px);
+	}
+	input:checked ~ .checkmark {
+		background-color: $green-limeBtn;
+	}
+	.checkmark:after {
+		content: '';
+		position: absolute;
+		left: 7px;
+		top: 11px;
+		width: 10px;
+		height: 2px;
+		border: 1px solid white;
+	}
+	input:checked ~ .checkmark:after {
+		display: block;
+		left: 9px;
+		top: 3px;
+		width: 7px;
+		height: 12px;
+		border: solid white;
+		border-width: 0 2px 2px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+/*===X==Check box design===X===*/
 
 .responsive_alert{
 	font-size:12px;

@@ -95,7 +95,7 @@ input::placeholder {
 }
 
 input:focus {
-  border: 1px solid #42ADE2;
+  border: 1px solid #42ADE2 !important;
 }
 
 textarea {
@@ -763,6 +763,69 @@ textarea::placeholder {
 }
 
 /*==X==Switch Icon Design==X==*/
+/*=====Check box design======*/
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  background-color: #C4C4C4;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #1BD12D;
+}
+
+.checkbox-container .checkmark:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 11px;
+  width: 10px;
+  height: 2px;
+  border: 1px solid white;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+  left: 9px;
+  top: 3px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*===X==Check box design===X===*/
 .responsive_alert {
   font-size: 12px;
   display: none;
@@ -3192,6 +3255,10 @@ ul.pieLegend li:not(.anjon) {
   border: 1px solid rgba(66, 173, 226, 0.4);
 }
 
+.api_settings .apiSettings_inner .apiSet_item h3 {
+  font-weight: 600;
+}
+
 .api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn {
   background-color: #BCF1FF;
   width: 28px;
@@ -3210,14 +3277,19 @@ ul.pieLegend li:not(.anjon) {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-}
-
-.api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn.collapsed {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+}
+
+.api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn.collapsed {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
 }
 
 .api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn .mdi {
@@ -3226,8 +3298,51 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .api_settings .apiSettings_inner .apiSet_item .api_inputFields {
-  max-width: 700px;
+  max-width: 820px;
   width: 100%;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields span {
+  font-size: 18px;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select {
+  height: 46px;
+  max-width: 212px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 46px;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select span {
+  font-size: 15px;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select.open, .api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select:active, .api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select:focus, .api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select:hover {
+  border: solid 1px #42ADE2;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields .nice-select.gray_select .list {
+  -webkit-box-shadow: 0 0 0 1px #42ADE2;
+          box-shadow: 0 0 0 1px #42ADE2;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields input {
+  max-width: 482px;
+  width: 100%;
+  color: #393939;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields input.googleAPI_ID {
+  max-width: 157px;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields input.googleClientKey {
+  max-width: 100%;
+}
+
+.api_settings .apiSettings_inner .apiSet_item .api_inputFields input.input_w_391 {
+  max-width: 391px;
 }
 
 /*==============Responsive CSS===============*/
