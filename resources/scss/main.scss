@@ -1243,10 +1243,15 @@
 	}
 	.languageEditAdd_inner{
 		background-color: $gray-light1;
-		.switch_icon .s_icon_area .s_text{
-			font-size:15px;
-			color: $black-3939;
-			font-weight:300;
+		.switch_icon .s_icon_area {
+			input[type="checkbox"] ~ .switch_container .create_switch::after {
+				top: 1.5px;
+			}
+			.s_text{
+				font-size:15px;
+				color: $black-3939;
+				font-weight:300;
+			}
 		}
 		.langNameCode{
 			input{

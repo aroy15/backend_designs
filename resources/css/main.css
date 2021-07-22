@@ -624,6 +624,25 @@ textarea::placeholder {
   color: #ffffff;
 }
 
+.nice-select.reverse_select.open {
+  border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -ms-border-radius: 0px 0px 5px 5px;
+  -o-border-radius: 0px 0px 5px 5px;
+}
+
+.nice-select.reverse_select .list {
+  top: auto;
+  bottom: 100%;
+  margin: 0;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  -o-border-radius: 5px 5px 0px 0px;
+}
+
 /*==X===Custom Select Box design==X==*/
 /*=== Search box common design=== */
 .search_box {
@@ -2975,6 +2994,10 @@ ul.pieLegend li:not(.anjon) {
 
 .language_EditAdd .languageEditAdd_inner {
   background-color: #FAFAFA;
+}
+
+.language_EditAdd .languageEditAdd_inner .switch_icon .s_icon_area input[type="checkbox"] ~ .switch_container .create_switch::after {
+  top: 1.5px;
 }
 
 .language_EditAdd .languageEditAdd_inner .switch_icon .s_icon_area .s_text {

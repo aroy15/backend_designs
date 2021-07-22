@@ -317,7 +317,18 @@
 				}	
 			}
 		}
-
+	}
+	// the select menu show bottom to top
+	&.reverse_select{
+		&.open{
+			 @include b-radius(0px 0px 5px 5px);
+		}
+		.list{
+			top:auto;
+			bottom:100%;
+			margin:0;
+			@include b-radius(5px 5px 0px 0px);
+		}
 	}
 }
 /*==X===Custom Select Box design==X==*/
