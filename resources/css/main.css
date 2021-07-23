@@ -3664,28 +3664,28 @@ ul.pieLegend li:not(.anjon) {
 
 .system_settings .sys_inputs.followUpEmail .emailTextarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .system_settings .sys_inputs.followUpEmail .emailTextarea:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .system_settings .sys_inputs.followUpEmail .emailTextarea::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .system_settings .sys_inputs.followUpEmail .emailTextarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
