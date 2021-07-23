@@ -71,7 +71,48 @@ $(".rotate_btn").hover(function(){
   /* Added .dahsboard class on dashboard page main element*/
   if( $('body').find('#deshboardItem').length){
     $('#mainItem').addClass('dashboard');
-  }  
+  }
+  
+  /*===========Image Upload========== */
+  /* ----Big Logo Upload---- */
+  $('#bigLogo').on('change', function(event){
+    $('.show_big_logoName').empty();
+    var bigLogoFile =  $('#bigLogo');
+    var bigLogoLength = bigLogoFile[0].files.length;
+    var bigLogoItem = bigLogoFile[0].files;
+    var bigLogoImgSrc = URL.createObjectURL(event.target.files[0]);
+    var bigLogoText = "";
+
+    if(bigLogoLength > 0){
+      for(var i = 0; i < bigLogoLength; i++){
+        var bigLogoUpload = bigLogoItem[i].name;
+        bigLogoText += "<span>" + bigLogoUpload + "</span>"
+      }
+      $('.show_big_logoName').append(bigLogoText);
+      $('#show_big_logo').attr('src',bigLogoImgSrc);
+    }
+  });
+  /* ----/Big Logo Upload---- */
+   /* ----Smalll Logo Upload---- */
+   $('#smallLogo').on('change', function(event){
+    $('.show_small_logoName').empty();
+    var smallLogoFile =  $('#smallLogo');
+    var smallLogoLength = smallLogoFile[0].files.length;
+    var smallLogoItem = smallLogoFile[0].files;
+    var smallLogoImgSrc = URL.createObjectURL(event.target.files[0]);
+    var smallLogoText = "";
+
+    if(smallLogoLength > 0){
+      for(var i = 0; i < smallLogoLength; i++){
+        var smallLogoUpload = smallLogoItem[i].name;
+        smallLogoText += "<span>" + smallLogoUpload + "</span>"
+      }
+      $('.show_small_logoName').append(smallLogoText);
+      $('#show_small_logo').attr('src',smallLogoImgSrc);
+    }
+  });
+  /* ----/Big Logo Upload---- */
+  /*======X=====Image Upload====X====== */
 });
 
 /*======= Fullscreen icon function =======*/

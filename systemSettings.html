@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Feature</title>
+    <title>System Settings</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -242,11 +242,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">Request a Feature</h2>
+				<h2 class="bh_title">System Settings</h2>
 			</div>
 		</div>		
-		<!--=== Request a Feature ===-->
-		<div id="requestFeature" class="request_feature content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--===  System Settings ===-->
+		<div id="systemSettings" class="system_settings content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -254,152 +254,167 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner" style="min-height:100vh">                
-				<div class="request_feature_items p-3">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-						<div class="selectBtn order-2 order-lg-1">
-							<select name="" id="sort_requestFeature" class="nice_select_blue">
-								<option value="all" selected>All</option>
-								<option value="google-alerts">Google Alerts</option>
-								<option value="other">Other</option>
-								<option value="messenger-inbox">Messenger Inbox</option>
-							</select>
-						</div>
-						<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe on table left-right
-					</div>
-					<div class="table_container request_fea_table">
-						<table class="w-100 text-center" id="featureTable">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Category</th>
-									<th>Request</th>
-									<th>Status</th>
-									<th>Function</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1" feature-category="messenger-inbox">
-									<td>1</td>
-									<td>Messenger Inbox</td>
-									<td>I want to have a new Login Function</td>
-									<td><span class="green_alert">read</span></td>
-									<td>
-										<a href="./feature _requestsDetails.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2" feature-category="google-alerts">
-									<td>2</td>
-									<td>Google Alerts</td>
-									<td>Please add another Way to publish Postings</td>
-									<td><span class="red_alert">unread</span></td>
-									<td>
-										<a href="./feature _requestsDetails.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3" feature-category="other">
-									<td>3</td>
-									<td>Other</td>
-									<td>I have a great Idea for the Picture-Editor</td>
-									<td><span class="green_alert">read</span></td>
-									<td>
-										<a href="./feature _requestsDetails.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4" feature-category="other">
-									<td>4</td>
-									<td>Other</td>
-									<td>Please change somethin in the Content-Libary</td>
-									<td><span class="green_alert">read</span></td>
-									<td>
-										<a href="./feature _requestsDetails.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between">
-							<a href="#" class="file_btn shadow_hover_1">
-								<span class="mdi mdi-file-document"></span>
-							</a>
-							<div class="entries">
-								<p class="mb-0">1042 entries in total</p>
+			<div class="content-inner">                
+				<div class="systemSettings_inner p-0 p-sm-3">
+					<div class="row">
+						<div class="col-lg-7">
+							<h3>Meta Informations</h3>
+							<!-- website title -->
+							<div class="sys_inputs web_title mt-4">
+								<h6>Website Name (&lt;title&gt;)</h6>
+								<input type="text" placeholder="Uploadcommander | {activesite}">
 							</div>
-						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select name="" id="" class="white_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
+							<!-- /website title -->
+							<!-- website description -->
+							<div class="sys_inputs web_desc mt-4">
+								<h6>Website Description</h6>
+								<textarea name="" class="custom-scroll-bar-8" placeholder="Uploadcommander is the best and most beautiful marketing tool that will help your reach grow sustainably and attract many new customers."></textarea>
+							</div>
+							<!-- /website description -->
+						</div>
+						<!-- Maintenance alert -->
+						<div class="col-lg-5">							
+							<div class="maintenance_alert b-r-5 py-3 px-3 px-sm-5 px-md-3 px-xl-5 mx-auto text-center mt-5 mt-lg-0">
+								<img src="./resources/img/icons/triangle-alert.png" class="img_alert" alt="alert icon">
+								<h3 class="mb-3">Maintenance</h3>
+								<p class="px-0 px-sm-2 px-md-0 px-xl-2">If the checkbox below is checked, it is not possible 
+									for customers to log in to our interface.</p>
+								<label class="checkbox-container mx-auto text-left">
+									Activate maintenance mode
+									<input type="checkbox" checked="">
+									<span class="checkmark"></span>
+								</label>
 							</div>
 						</div>
-					</div>					
+						<!-- /Maintenance alert -->
+					</div>
+					<div class="row">
+						<div class="col-lg-7">
+							<!-- Add Keywords -->
+							<div class="sys_inputs web_tag mt-4">
+								<h6>Add Keywords</h6>
+								<div class="key_input_wrapper">
+									<input type="text" placeholder="Type in a Keyword">
+									<button class="add_tag shadow_hover_1">Add to Tags</button>	
+								</div>
+								<div class="tags-area mt-2">
+									<span class="tag-item alert alert-dismissible fade show">
+									  <span class="tag-content">Help</span>
+									  <button type="button" class="close" data-dismiss="alert" aria-label="close">
+										<span aria-hidden="true">×</span>
+									 </button>
+									</span>
+									<span class="tag-item alert alert-dismissible fade show">
+									  <span class="tag-content">Login</span>
+									  <button type="button" class="close" data-dismiss="alert" aria-label="close">
+										<span aria-hidden="true">×</span>
+									 </button>
+									</span>
+									<span class="tag-item alert alert-dismissible fade show">
+										<span class="tag-content">Subuser</span>
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
+										  <span aria-hidden="true">×</span>
+									   </button>
+									</span>
+									<span class="tag-item alert alert-dismissible fade show">
+										<span class="tag-content">Password</span>
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
+										  <span aria-hidden="true">×</span>
+									   </button>
+									</span>
+									<span class="tag-item alert alert-dismissible fade show">
+										<span class="tag-content">Renew Password</span>
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
+										  <span aria-hidden="true">×</span>
+									   </button>
+									</span>
+								</div>
+							</div>
+							<!-- /Add Keywords -->
+							<!-- Website Logo Big-->
+								<div class="sys_inputs web_logo_big mt-4">
+									<h6>Website Logo</h6>
+									<div class="logo_container b-r-5">
+										<div class="logo_preview pr-0 pr-md-5 pr-lg-0 pr-xl-5">
+											<img src="./resources/img/logo-big.png" alt="" id="show_big_logo" class="img-fluid d-block">
+										</div>
+										<div class="d-flex justify-content-between align-items-end mt-4">
+											<span class="showLogoText pr-4">
+												<span>
+													Currently Selected: 
+													<span class="logoText show_big_logoName">Logo.png</span>
+												</span>
+											</span>
+											<span>
+												<label class="input_file shadow_hover_1">
+													change logo
+													<input type="file" id="bigLogo" value="Change Logo">
+												</label>
+											</span>
+										</div>
+									</div>
+								</div>
+							<!-- /Website Logo Big-->
+						</div>
+						<div class="col-lg-5">
+							<!-- Website Logo Small -->
+							<div class="sys_inputs web_logo_small mx-auto ml-xl-auto mr-xl-0 mt-5">
+								<h6>Website Logo</h6>
+								<div class="logo_container b-r-5">
+									<div class="logo_preview mx-auto mt-4">
+										<img src="./resources/img/logo-short-bigger.png" alt="" id="show_small_logo" class="img-fluid d-block">
+									</div>
+									<div class="d-flex justify-content-between align-items-end mt-4">
+										<span class="showLogoText pr-3">
+											<span>
+												Currently Selected: 
+												<span class="logoText show_small_logoName">Fav.png</span>
+											</span>
+										</span>
+										<span>
+											<label class="input_file shadow_hover_1">
+												change logo
+												<input type="file" id="smallLogo" value="Change Logo">
+											</label>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- /Website Logo Small-->
+						</div>
+					</div>
+					<!-- Footer of the Follow-Up E-Mails -->
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="sys_inputs followUpEmail mt-5">
+								<h6>Footer of the Follow-Up E-Mails</h6>
+								<div class="emailBody">
+									<textarea class="emailTextarea custom-scroll-bar-8" 
+placeholder="{admin.firstname} {admin.lastname}
+{admin.role}
+Call: 02592 / 972745-3
+Mail: service@uploadcommander.de
+-----------------------------------------------------------------------
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.#####  Please do not reply to this message #####
+This e-mail address has been set up exclusively for sending e-mails.
+If you have any further questions or problems, please contact us by phone or open a ticket in your account. 
+
+REF: {followmail.referencenumber} 								@UploadCommander 2021"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="colg-lg-4"></div>
+					</div>
+					<!--/Footer of the Follow-Up E-Mails -->
 				</div>
 			</div>
 		</div>
-		<!--=== End of Request a Feature ===-->
+		<!--=== End of API System Settings ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
-<!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" id="modal_requestFeature" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content px-lg-4 px-xl-5">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				<span class="mdi mdi-close"></span>
-			</button>
-            <div class="modal-body pb-4 pt-5">
-                 <h4 class="pb-4"> Are you sure?</h4>
-				 <p>Deleted content is irrevocably deleted and cannot be restored at a later time.</p>
-            </div>
-            <!--/modal-body-collapse -->
-            <div class="modal-footer mb-4">
-                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
-            </div>
-            <!--/modal-footer-collapse -->
-			<div class="modal_bg_icon">
-				<span class="mdi mdi-delete-empty"></span>
-			</div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+
 
     <!-- Script Here -->
     <!-- jQuery -->
@@ -416,7 +431,6 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
-	<!-- <script src="./vendors/js/jquery.simpleselect.js"></script> -->
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

@@ -799,15 +799,37 @@ ul.pieLegend li:not(.anjon){
 }
 
 /*==========End of Full Screen Icon Design=========*/
-/****Custom Scroll Bar Design*****/
-.custom-scroll-bar{
+/*=======Custom Scroll bar 8px======*/
+.custom-scroll-bar-8{
+		//  width 
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	// Track 
+	&::-webkit-scrollbar-track {
+		background-color: #E3EAEF;
+		@include b-radius(8px);
+	}
+	// Handle 
+	&::-webkit-scrollbar-thumb {
+		background: #BAD4E5; 
+		@include b-radius(8px);
+	}
+	// Handle on hover 
+	&::-webkit-scrollbar-thumb:hover {
+		background:  $blue-light; 
+	}
+}
+/*===X====Custom Scroll bar 8px====X==*/
+/*=======Custom Scroll bar 15px======*/
+.custom-scroll-bar-15{
 		//  width 
 	&::-webkit-scrollbar {
 		width: 15px;
 	}
 	// Track 
 	&::-webkit-scrollbar-track {
-		background-color: #E3EAEF;;
+		background-color: #E3EAEF;
 		@include b-radius(15px);
 	}
 	// Handle 
@@ -820,3 +842,5 @@ ul.pieLegend li:not(.anjon){
 		background:  $blue-light; 
 	}
 }
+
+/*====X===Custom Scroll bar 15px===X===*/

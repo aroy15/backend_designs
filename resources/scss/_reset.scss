@@ -48,6 +48,12 @@ input{
 	&:focus{
 		border:1px solid $blue-light !important;
 	}
+	&[type="file"]{
+		&:focus{
+			border:none !important;
+			height:auto;
+		}
+	}
 }
 textarea{
 	min-height:92px;

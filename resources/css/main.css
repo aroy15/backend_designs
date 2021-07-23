@@ -14,6 +14,7 @@
     9.      Language Edit/Add
     10.     System-Information
     11.     API - Settings
+    12.     System - Settings
 ==========================================================
 **/
 /***************************/
@@ -96,6 +97,11 @@ input::placeholder {
 
 input:focus {
   border: 1px solid #42ADE2 !important;
+}
+
+input[type="file"]:focus {
+  border: none !important;
+  height: auto;
 }
 
 textarea {
@@ -1301,12 +1307,40 @@ ul.pieLegend li:not(.anjon) {
 }
 
 /*==========End of Full Screen Icon Design=========*/
-/****Custom Scroll Bar Design*****/
-.custom-scroll-bar::-webkit-scrollbar {
+/*=======Custom Scroll bar 8px======*/
+.custom-scroll-bar-8::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll-bar-8::-webkit-scrollbar-track {
+  background-color: #E3EAEF;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.custom-scroll-bar-8::-webkit-scrollbar-thumb {
+  background: #BAD4E5;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.custom-scroll-bar-8::-webkit-scrollbar-thumb:hover {
+  background: #42ADE2;
+}
+
+/*===X====Custom Scroll bar 8px====X==*/
+/*=======Custom Scroll bar 15px======*/
+.custom-scroll-bar-15::-webkit-scrollbar {
   width: 15px;
 }
 
-.custom-scroll-bar::-webkit-scrollbar-track {
+.custom-scroll-bar-15::-webkit-scrollbar-track {
   background-color: #E3EAEF;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -1315,7 +1349,7 @@ ul.pieLegend li:not(.anjon) {
   -o-border-radius: 15px;
 }
 
-.custom-scroll-bar::-webkit-scrollbar-thumb {
+.custom-scroll-bar-15::-webkit-scrollbar-thumb {
   background: #BAD4E5;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -1324,10 +1358,11 @@ ul.pieLegend li:not(.anjon) {
   -o-border-radius: 15px;
 }
 
-.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+.custom-scroll-bar-15::-webkit-scrollbar-thumb:hover {
   background: #42ADE2;
 }
 
+/*====X===Custom Scroll bar 15px===X===*/
 /*****Header Menu*****/
 #headerMenu {
   background-color: #002D4A;
@@ -3381,6 +3416,302 @@ ul.pieLegend li:not(.anjon) {
 
 .api_settings .apiSettings_inner .apiSet_item .api_inputFields input.input_w_391 {
   max-width: 391px;
+}
+
+/***************************/
+/* 12. System - Settings*/
+/***************************/
+.system_settings h6 {
+  font-size: 14px;
+}
+
+.system_settings .sys_inputs.web_title input {
+  max-width: 326px;
+  width: 100%;
+}
+
+.system_settings .sys_inputs.web_desc textarea {
+  max-width: 557px;
+  width: 100%;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+}
+
+.system_settings .sys_inputs.web_desc textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_desc textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_desc textarea::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_desc textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper, .system_settings .sys_inputs.web_tag .key_input_wrapper input {
+  background-color: #FAFAFA;
+  max-width: 552px;
+  height: 37px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper input {
+  padding-right: 110px;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.system_settings .sys_inputs.web_tag .key_input_wrapper .add_tag {
+  position: absolute;
+  padding: 3px 15px;
+  background-color: #42ADE2;
+  font-size: 12px;
+  color: #ffffff;
+  right: 10px;
+  top: 7px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.system_settings .sys_inputs.web_tag .tags-area {
+  font-size: 12px;
+  color: #393939;
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_tag .tags-area .tag-item {
+  min-width: 130px;
+  height: 36px;
+  background-color: #E3F6FF;
+  display: inline-block;
+  text-align: center;
+  padding: 0px 15px 0px 8px;
+  line-height: 36px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 4px 6px 4px 0px;
+}
+
+.system_settings .sys_inputs.web_tag .tags-area .tag-item:last-child {
+  margin-right: 0px;
+}
+
+.system_settings .sys_inputs.web_tag .tags-area .tag-item .close {
+  padding: 8px 5px;
+  font-size: 18px;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container {
+  max-width: 557px;
+  width: 100%;
+  min-height: 127px;
+  background-color: #FAFAFA;
+  padding: 20px 10px 5px 10px;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .logo_preview img {
+  background-color: #ffffff;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .input_file, .system_settings .sys_inputs.web_logo_big .logo_container .showLogoText {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .showLogoText {
+  font-weight: 400;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .showLogoText .logoText {
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .input_file {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #42ADE2;
+  color: #ffffff;
+  padding: 0px 10px;
+  height: 25px;
+  min-width: 100px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.system_settings .sys_inputs.web_logo_big .logo_container .input_file input[type="file"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
+
+.system_settings .sys_inputs.web_logo_small {
+  max-width: 314px;
+  width: 100%;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container {
+  min-height: 287px;
+  background-color: #FAFAFA;
+  padding: 20px 10px 5px 10px;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .logo_preview {
+  max-width: 208px;
+  width: 100%;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .logo_preview img {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .input_file, .system_settings .sys_inputs.web_logo_small .logo_container .showLogoText {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .showLogoText {
+  font-weight: 400;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .showLogoText .logoText {
+  font-weight: 300;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .input_file {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #42ADE2;
+  color: #ffffff;
+  padding: 0px 10px;
+  height: 25px;
+  min-width: 100px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.system_settings .sys_inputs.web_logo_small .logo_container .input_file input[type="file"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
+
+.system_settings .sys_inputs.followUpEmail .emailTextarea {
+  max-width: 650px;
+  width: 100%;
+  min-height: 265px;
+  resize: none;
+  color: #393939;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.system_settings .sys_inputs.followUpEmail .emailTextarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.system_settings .sys_inputs.followUpEmail .emailTextarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.system_settings .sys_inputs.followUpEmail .emailTextarea::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.system_settings .sys_inputs.followUpEmail .emailTextarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.system_settings .maintenance_alert {
+  background-color: rgba(255, 77, 77, 0.15);
+  position: relative;
+  max-width: 435px;
+  width: 100%;
+}
+
+.system_settings .maintenance_alert .img_alert {
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 64px;
+}
+
+.system_settings .maintenance_alert p {
+  font-size: 14px;
+}
+
+.system_settings .maintenance_alert .checkbox-container {
+  font-size: 15px;
+  max-width: 224px;
+  width: 100%;
 }
 
 /*==============Responsive CSS===============*/
