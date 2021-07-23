@@ -1800,6 +1800,59 @@
 		}
 	}
 }
+/***************************/
+/* 14. E-mail Templates*/
+/***************************/
 
+.email_templates{
+	.email_temp_inner{
+		background-color: $gray-light1;
+		.search_box {
+			max-width: 477px;
+			width: 100%;
+		}
+		.nice-select.emailTempHeaderSelect{
+			width:232px;			
+		}
+		table{
+			tr{
+				th,td{			
+					font-weight:300;
+					font-size:15px;
+					&:nth-child(1){
+						width:72px;
+					}
+					&:nth-child(2){
+						width: 36%;
+					} 
+					
+					&:nth-child(3){
+						width: 55%;
+					} 
+					&:nth-child(4),	&:nth-child(5){
+						width:86px;
+					}
+				}
+				td{
+					&:nth-child(2){
+						text-align: left;
+					}
+					&:nth-child(3){
+						font-weight: 200;
+						font-size: 12px;
+						line-height: 16px;
+						color: #565656;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}	
+	.blue_btn{
+		&:hover{
+			color:$white-main;
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

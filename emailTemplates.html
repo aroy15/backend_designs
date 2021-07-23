@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-mail Settings</title>
+    <title>E-Mail Templates</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -29,14 +29,14 @@
 		  <span class="hambarger"></span>
 		  </a>
 		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
-			<span class="top-left fs-bar"></span>
-			<span class="top-left-horiz fs-bar"></span>
-			<span class="top-right fs-bar"></span>
-			<span class="top-right-horiz fs-bar"></span>
-			<span class="bottom-left fs-bar"></span>
-			<span class="bottom-left-horiz fs-bar"></span>
-			<span class="bottom-right fs-bar"></span>
-			<span class="bottom-right-horiz fs-bar"></span>
+		  <span class="top-left fs-bar"></span>
+		  <span class="top-left-horiz fs-bar"></span>
+		  <span class="top-right fs-bar"></span>
+		  <span class="top-right-horiz fs-bar"></span>
+		  <span class="bottom-left fs-bar"></span>
+		  <span class="bottom-left-horiz fs-bar"></span>
+		  <span class="bottom-right fs-bar"></span>
+		  <span class="bottom-right-horiz fs-bar"></span>
 		  </button>    
 		  <a href="index.html" class="site-logo">
 		  <img src="resources/img/Logo-UC.png" alt="Site logo">
@@ -242,11 +242,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">E-mail Settings</h2>
+				<h2 class="bh_title">E-Mail Templates</h2>
 			</div>
 		</div>		
-		<!--===  E-Mail Settings ===-->
-		<div id="emailSettings" class="email_settings content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== Request a Feature ===-->
+		<div id="emailTamplates" class="email_templates content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -255,76 +255,151 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="emailSettings_inner p-0 p-lg-3">
-					<div class="row">
-						<div class="col-xl-9">
-							<div class="d-flex flex-column flex-sm-row mb-5">
-								<div class="emSet_inputs senderEmail mb-4 mb-sm-0 mr-0 mr-sm-4">
-									<h6>Sender E-Mail Adress</h6>
-									<input type="email" placeholder="service@uploadcommander.de">
-								</div>
-								<div class="emSet_inputs senderName mb-4 mb-sm-0 ml-0 ml-sm-4">
-									<h6>Name of the Sender</h6>
-									<input type="text" placeholder="Uploadcommander.de | Customer - Service">
-								</div>
+				<div class="email_temp_inner p-3">
+					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center align-items-lg-start">
+						<div class="selectBtn order-2 order-lg-1">
+							<!-- sorting email templates -->
+							<select name="" class="emailTempHeaderSelect">
+								<option selected>Sorted by Template-ID</option>
+								<option>Sorted by Template-ID-2</option>
+							</select>
+							<!--/sorting email templates  -->
+						</div>
+						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
+							<div class="mb-4 mb-lg-0">
+								<a href="./emailTemplatesEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Template</a>
 							</div>
-							<div class="d-flex flex-column flex-sm-row mb-5">
-								<div class="emSet_inputs acName mb-4 mb-sm-0 mr-0 mr-sm-4">
-									<h6>Account-Name</h6>
-									<input type="email" placeholder="service@uploadcommander.de">
-								</div>
-								<div class="emSet_inputs acPassword mb-4 mb-sm-0 ml-0 ml-sm-4">
-									<h6>Account-Password</h6>
-									<input type="password" placeholder="***********************">
-								</div>
+							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
+								<input type="text" class="search form-control" placeholder="Search">
+								<button type="submit" class="search_btn">
+								  <img src="./resources/img/icons/search-icon.png" alt="Search">
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="responsive_alert text-center py-3 text-dark">
+						If table are not fully showing please swipe the table left-right
+					</div>
+					<div class="table_container request_fea_table">
+						<table class="w-100 text-center">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Status</th>
+									<th>Function</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-id="1">
+									<td>1</td>
+									<td>Account expired in 10 days</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./emailTemplatesEdit.html" class="edit t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="2">
+									<td>2</td>
+									<td>Verify your E-Mail Adress</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
+									<td><span class="red_alert">inactive</span></td>
+									<td>
+										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="3">
+									<td>3</td>
+									<td>Thanks for your Order</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+								<tr data-id="4">
+									<td>4</td>
+									<td>You got a new Message from the Support</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
+									<td><span class="green_alert">active</span></td>
+									<td>
+										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
+											<span class="mdi mdi-file-edit-outline"></span>
+										</a>
+										<button class="delete btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-trash-can-outline"></span>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>						
+						<div class="table_bottom d-flex justify-content-between mt-4">
+							<div>&nbsp;</div>
+							<div class="entries text-center pl-lg-5">
+								<p class="mb-0 pl-lg-5 ml-xl-5">1042 entries in total</p>
 							</div>						
-							<div class="d-flex flex-column flex-lg-row mb-5 align-items-lg-center">
-								<div class="emSet_inputs smtpServer mb-4 mr-0 mr-lg-4">
-									<h6>SMTP-Server</h6>
-									<input type="email" placeholder="smtp.uploadcommander.de">
-								</div>
-								<div class="emSet_inputs smtpPOrt mb-4 ml-0 ml-lg-4">
-									<h6>SMTP-Port</h6>
-									<input type="text" placeholder="425">
-								</div>
-								<div class="emSet_inputs  ml-0 mb-4 ml-lg-5">
-									<label class="checkbox-container mt-4">
-										SMTP Auth
-										<input type="checkbox" checked="">
-										<span class="checkmark"></span>
-									</label>
-								</div>
+							<div class="show_entries d-flex justify-content-between align-items-center">
+								<span>Show Entries :</span>
+								<select name="" id="" class="white_select">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
 							</div>
 						</div>
-						<!-- send an expample -->
-						<div class="col-xl-3 mb-5">
-							<div class="sendExample mx-auto mr-xl-0 ml-xl-auto b-r-5">
-								<h6>Send an example</h6>
-								<p>When you click on "Send Mail", 
-									a sample e-mail will be sent 
-									to service@uploadcommander.de. </p>
-									<button class="icon_btn_blue shadow_hover_1">
-										<span class="mdi mdi-email"></span>
-										<span>Send Mail</span>	
-									</button>
-							</div>
-						</div>
-						<!--/send an expample -->
-					</div>
-					<!-- save settings -->
-					<div class="emailSaveBtn d-flex justify-content-center justify-content-xl-end">
-						<button class="green_lime_btn shadow_hover_1">Save Settings</button>
-					</div>
-					<!--/save settings -->
+					</div>					
 				</div>
 			</div>
 		</div>
-		<!--=== End of E-mail Settings ===-->
+		<!--=== End of Request a Feature ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
-
+<!-- start: Delete Coupon Modal -->
+<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content px-lg-4 px-xl-5">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<span class="mdi mdi-close"></span>
+			</button>
+            <div class="modal-body pb-4 pt-5">
+                 <h4 class="pb-4"> Are you sure?</h4>
+				 <p>Deleted Document-Templates are irrevocably deleted and cannot be restored at a later time.</p>
+            </div>
+            <!--/modal-body-collapse -->
+            <div class="modal-footer mb-4">
+                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
+            </div>
+            <!--/modal-footer-collapse -->
+			<div class="modal_bg_icon">
+				<span class="mdi mdi-delete-empty"></span>
+			</div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
     <!-- Script Here -->
     <!-- jQuery -->
@@ -341,6 +416,7 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- <script src="./vendors/js/jquery.simpleselect.js"></script> -->
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

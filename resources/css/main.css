@@ -16,6 +16,7 @@
     11.     API - Settings
     12.     System - Settings
     13.     E-mail Settings
+    14.     E-mail Templates
 ==========================================================
 **/
 /***************************/
@@ -3776,6 +3777,59 @@ ul.pieLegend li:not(.anjon) {
 .email_settings .sendExample .icon_btn_blue .mdi {
   font-size: 19px;
   padding-right: 5px;
+}
+
+/***************************/
+/* 14. E-mail Templates*/
+/***************************/
+.email_templates .email_temp_inner {
+  background-color: #FAFAFA;
+}
+
+.email_templates .email_temp_inner .search_box {
+  max-width: 477px;
+  width: 100%;
+}
+
+.email_templates .email_temp_inner .nice-select.emailTempHeaderSelect {
+  width: 232px;
+}
+
+.email_templates .email_temp_inner table tr th, .email_templates .email_temp_inner table tr td {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.email_templates .email_temp_inner table tr th:nth-child(1), .email_templates .email_temp_inner table tr td:nth-child(1) {
+  width: 72px;
+}
+
+.email_templates .email_temp_inner table tr th:nth-child(2), .email_templates .email_temp_inner table tr td:nth-child(2) {
+  width: 36%;
+}
+
+.email_templates .email_temp_inner table tr th:nth-child(3), .email_templates .email_temp_inner table tr td:nth-child(3) {
+  width: 55%;
+}
+
+.email_templates .email_temp_inner table tr th:nth-child(4), .email_templates .email_temp_inner table tr th:nth-child(5), .email_templates .email_temp_inner table tr td:nth-child(4), .email_templates .email_temp_inner table tr td:nth-child(5) {
+  width: 86px;
+}
+
+.email_templates .email_temp_inner table tr td:nth-child(2) {
+  text-align: left;
+}
+
+.email_templates .email_temp_inner table tr td:nth-child(3) {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 16px;
+  color: #565656;
+  text-align: left;
+}
+
+.email_templates .blue_btn:hover {
+  color: #ffffff;
 }
 
 /*==============Responsive CSS===============*/
