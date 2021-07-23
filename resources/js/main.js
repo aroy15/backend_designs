@@ -72,8 +72,21 @@ $(".rotate_btn").hover(function(){
   if( $('body').find('#deshboardItem').length){
     $('#mainItem').addClass('dashboard');
   }
+
   
-  /*===========Image Upload========== */
+  /*===========System Settings========== */
+  /*-------Add Keywords-------*/
+   $('#tagKeywordBtn').click(function(){
+    var getKeyword = $.trim($('#tagKeywordInput').val());
+    // var keywordSpaceCheck=$.trim(getKeyword);
+    var setHTMLKey = '<span class="tag-item alert alert-dismissible fade show"><span class="tag-content">'+ getKeyword +'</span><button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">×</span></button></span>';
+    if(getKeyword !== "" && getKeyword !== null){
+      $('#tagKeyReceiver').append(setHTMLKey);
+      $('#tagKeywordInput').val("");
+    }    
+  });
+  /*-------/Add Keywords-------*/
+
   /* ----Big Logo Upload---- */
   $('#bigLogo').on('change', function(event){
     $('.show_big_logoName').empty();
@@ -83,14 +96,24 @@ $(".rotate_btn").hover(function(){
     var bigLogoImgSrc = URL.createObjectURL(event.target.files[0]);
     var bigLogoText = "";
 
-    if(bigLogoLength > 0){
-      for(var i = 0; i < bigLogoLength; i++){
-        var bigLogoUpload = bigLogoItem[i].name;
-        bigLogoText += "<span>" + bigLogoUpload + "</span>"
-      }
-      $('.show_big_logoName').append(bigLogoText);
-      $('#show_big_logo').attr('src',bigLogoImgSrc);
+    /*Validation for only images */
+    var bigLogoselectedFile = event.target.files[0];
+    var bigLogoidxDot = bigLogoselectedFile.name.lastIndexOf(".") + 1;
+    var bigLogoextFile = bigLogoselectedFile.name.substr(bigLogoidxDot, bigLogoselectedFile.name.length).toLowerCase();
+    if (bigLogoextFile === "jpg" || bigLogoextFile === "jpeg" || bigLogoextFile === "png" || bigLogoextFile === "svg" || bigLogoextFile === "gif") {
+      if(bigLogoLength > 0){
+        for(var i = 0; i < bigLogoLength; i++){
+          var bigLogoUpload = bigLogoItem[i].name;
+          bigLogoText += "<span>" + bigLogoUpload + "</span>"
+        }
+        $('.show_big_logoName').append(bigLogoText);
+        $('#show_big_logo').attr('src',bigLogoImgSrc);        
+      } 
+    }else{
+      alert("Only jpg/jpeg, png and gif files are allowed!");
+      $('.show_big_logoName').append("<span>Logo.png</span>");
     }
+      
   });
   /* ----/Big Logo Upload---- */
    /* ----Smalll Logo Upload---- */
@@ -102,17 +125,26 @@ $(".rotate_btn").hover(function(){
     var smallLogoImgSrc = URL.createObjectURL(event.target.files[0]);
     var smallLogoText = "";
 
-    if(smallLogoLength > 0){
-      for(var i = 0; i < smallLogoLength; i++){
-        var smallLogoUpload = smallLogoItem[i].name;
-        smallLogoText += "<span>" + smallLogoUpload + "</span>"
+    /*Validation for only images */
+    var smallLogoselectedFile = event.target.files[0];
+    var smallLogoidxDot = smallLogoselectedFile.name.lastIndexOf(".") + 1;
+    var smallLogoextFile = smallLogoselectedFile.name.substr(smallLogoidxDot, smallLogoselectedFile.name.length).toLowerCase();
+    if (smallLogoextFile === "jpg" || smallLogoextFile === "jpeg" || smallLogoextFile === "png" || smallLogoextFile === "svg" || smallLogoextFile === "gif") {
+      if(smallLogoLength > 0){
+        for(var i = 0; i < smallLogoLength; i++){
+          var smallLogoUpload = smallLogoItem[i].name;
+          smallLogoText += "<span>" + smallLogoUpload + "</span>"
+        }
+        $('.show_small_logoName').append(smallLogoText);
+        $('#show_small_logo').attr('src',smallLogoImgSrc);
       }
-      $('.show_small_logoName').append(smallLogoText);
-      $('#show_small_logo').attr('src',smallLogoImgSrc);
+    }else{
+      alert("Only jpg/jpeg, png and gif files are allowed!");
+      $('.show_small_logoName').append("<span>Fav.png</span>");
     }
   });
   /* ----/Big Logo Upload---- */
-  /*======X=====Image Upload====X====== */
+  /*======X=====System Settings====X====== */
 });
 
 /*======= Fullscreen icon function =======*/

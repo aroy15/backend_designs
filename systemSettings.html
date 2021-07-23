@@ -294,10 +294,10 @@
 							<div class="sys_inputs web_tag mt-4">
 								<h6>Add Keywords</h6>
 								<div class="key_input_wrapper">
-									<input type="text" placeholder="Type in a Keyword">
-									<button class="add_tag shadow_hover_1">Add to Tags</button>	
+									<input type="text" id="tagKeywordInput" placeholder="Type in a Keyword">
+									<button id="tagKeywordBtn" class="add_tag shadow_hover_1">Add to Tags</button>	
 								</div>
-								<div class="tags-area mt-2">
+								<div id="tagKeyReceiver" class="tags-area mt-2">
 									<span class="tag-item alert alert-dismissible fade show">
 									  <span class="tag-content">Help</span>
 									  <button type="button" class="close" data-dismiss="alert" aria-label="close">
@@ -348,7 +348,7 @@
 											<span>
 												<label class="input_file shadow_hover_1">
 													change logo
-													<input type="file" id="bigLogo" value="Change Logo">
+													<input type="file" accept="image/*" id="bigLogo" value="Change Logo">
 												</label>
 											</span>
 										</div>
@@ -356,8 +356,8 @@
 								</div>
 							<!-- /Website Logo Big-->
 						</div>
-						<div class="col-lg-5">
-							<!-- Website Logo Small -->
+						<!-- Website Logo Small -->
+						<div class="col-lg-5">							
 							<div class="sys_inputs web_logo_small mx-auto ml-xl-auto mr-xl-0 mt-5">
 								<h6>Website Logo</h6>
 								<div class="logo_container b-r-5">
@@ -374,14 +374,14 @@
 										<span>
 											<label class="input_file shadow_hover_1">
 												change logo
-												<input type="file" id="smallLogo" value="Change Logo">
+												<input type="file" accept="image/*" id="smallLogo" value="Change Logo">
 											</label>
 										</span>
 									</div>
 								</div>
-							</div>
-							<!-- /Website Logo Small-->
+							</div>							
 						</div>
+						<!-- /Website Logo Small-->
 					</div>
 					<!-- Footer of the Follow-Up E-Mails -->
 					<div class="row">
