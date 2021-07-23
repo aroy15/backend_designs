@@ -65,6 +65,15 @@
 			}
 		}	
 	}
+	// E-mail Settings
+	.email_settings{
+		.sendExample{
+			p{
+				font-size: 13px;
+			}
+		}
+	}
+	
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){

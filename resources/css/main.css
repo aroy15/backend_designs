@@ -3817,6 +3817,9 @@ ul.pieLegend li:not(.anjon) {
   .language_overview .language_Ov_inner .langOv_table .table_bottom .entries p {
     padding-left: 0px;
   }
+  .email_settings .sendExample p {
+    font-size: 13px;
+  }
 }
 
 /*Medium devices (laptop, less than 1300px)*/
