@@ -255,6 +255,17 @@
 			}
 		}
 	}
+	//Email Settings
+	.email_settings{
+		.emSet_inputs{
+			&.senderEmail,&.acName,
+			&.senderName,
+			&.acPassword,&.smtpServer,
+			&.smtpPOrt{
+				max-width:100%;
+			}
+		}
+	}
 }
 
 @media (max-width:400px){

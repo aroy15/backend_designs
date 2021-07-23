@@ -15,6 +15,7 @@
     10.     System-Information
     11.     API - Settings
     12.     System - Settings
+    13.     E-mail Settings
 ==========================================================
 **/
 /***************************/
@@ -36,6 +37,10 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 h3 {
   font-size: 18px;
   color: #000000;
+}
+
+h6 {
+  font-size: 14px;
 }
 
 header, main, section, aside, article, footer {
@@ -426,7 +431,7 @@ textarea::placeholder {
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   font-weight: 300;
-  padding: 4px 10px;
+  padding: 8px 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -435,9 +440,9 @@ textarea::placeholder {
 }
 
 .icon_btn_blue .mdi {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
-  padding-right: 12px;
+  padding-right: 10px;
   position: relative;
   top: 3px;
 }
@@ -3714,6 +3719,65 @@ ul.pieLegend li:not(.anjon) {
   width: 100%;
 }
 
+/***************************/
+/* 13. E-mail Settings*/
+/***************************/
+.email_settings .content-inner {
+  max-width: 1245px;
+}
+
+.email_settings .emSet_inputs {
+  width: 100%;
+}
+
+.email_settings .emSet_inputs input {
+  width: 100%;
+}
+
+.email_settings .emSet_inputs.senderEmail, .email_settings .emSet_inputs.acName {
+  max-width: 326px;
+}
+
+.email_settings .emSet_inputs.senderName {
+  max-width: 365px;
+}
+
+.email_settings .emSet_inputs.acPassword, .email_settings .emSet_inputs.smtpServer {
+  max-width: 252px;
+}
+
+.email_settings .emSet_inputs.smtpPOrt {
+  max-width: 124px;
+}
+
+.email_settings .sendExample {
+  max-width: 233px;
+  width: 100%;
+  min-height: 135px;
+  background-color: #FAFAFA;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.email_settings .sendExample p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #707070;
+}
+
+.email_settings .sendExample .icon_btn_blue {
+  padding: 7px 21px;
+}
+
+.email_settings .sendExample .icon_btn_blue .mdi {
+  font-size: 19px;
+  padding-right: 5px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -3908,6 +3972,9 @@ ul.pieLegend li:not(.anjon) {
   }
   #bodyItem .main_item .body-header-content {
     margin-top: 180px;
+  }
+  .email_settings .emSet_inputs.senderEmail, .email_settings .emSet_inputs.acName, .email_settings .emSet_inputs.senderName, .email_settings .emSet_inputs.acPassword, .email_settings .emSet_inputs.smtpServer, .email_settings .emSet_inputs.smtpPOrt {
+    max-width: 100%;
   }
 }
 

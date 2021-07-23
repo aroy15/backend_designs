@@ -156,12 +156,12 @@
 	color:$white;
 	font-size:15px;
 	font-weight: 300;
-	padding:4px 10px;
+	padding:8px 10px;
 	@include b-radius(5px);
 	.mdi{
-		font-size: 22px;
+		font-size: 20px;
 		line-height: 1;
-		padding-right: 12px;
+		padding-right: 10px;
 		position: relative;
 		top: 3px;
 	}

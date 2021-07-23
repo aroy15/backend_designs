@@ -1546,6 +1546,7 @@
 	h6{
 		font-size:14px;
 	}
+	// All Inputs Here
 	.sys_inputs{
 		// website title
 		&.web_title{
@@ -1746,6 +1747,56 @@
 			font-size:15px;
 			max-width: 224px;
 			width:100%;
+		}
+	}
+}
+/***************************/
+/* 13. E-mail Settings*/
+/***************************/
+.email_settings{
+	.content-inner{
+		max-width:1245px;
+	}
+	.emSet_inputs{
+		width:100%;
+		input{
+			width:100%;
+		}
+		&.senderEmail,&.acName{
+			max-width:326px;
+		}
+		&.senderName{
+			max-width:365px;
+		}
+		&.acPassword,&.smtpServer{
+			max-width:252px;
+		}
+		&.smtpPOrt{
+			max-width:124px;
+		}
+	}
+	.sendExample{
+		max-width:233px;
+		width:100%;
+		min-height:135px;
+		background-color: $gray-light1;
+		padding:10px;
+		text-align:center;
+		overflow: hidden;
+    	overflow-wrap: break-word;
+		p{
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 19px;
+			margin-bottom:5px;
+			color: #707070;
+		}
+		.icon_btn_blue{
+			padding: 7px 21px;
+			.mdi{
+				font-size: 19px;
+    			padding-right: 5px;
+			}
 		}
 	}
 }

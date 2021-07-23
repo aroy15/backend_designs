@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounting Dashboard</title>
+    <title>E-mail Settings</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -29,14 +29,14 @@
 		  <span class="hambarger"></span>
 		  </a>
 		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
-		  <span class="top-left fs-bar"></span>
-		  <span class="top-left-horiz fs-bar"></span>
-		  <span class="top-right fs-bar"></span>
-		  <span class="top-right-horiz fs-bar"></span>
-		  <span class="bottom-left fs-bar"></span>
-		  <span class="bottom-left-horiz fs-bar"></span>
-		  <span class="bottom-right fs-bar"></span>
-		  <span class="bottom-right-horiz fs-bar"></span>
+			<span class="top-left fs-bar"></span>
+			<span class="top-left-horiz fs-bar"></span>
+			<span class="top-right fs-bar"></span>
+			<span class="top-right-horiz fs-bar"></span>
+			<span class="bottom-left fs-bar"></span>
+			<span class="bottom-left-horiz fs-bar"></span>
+			<span class="bottom-right fs-bar"></span>
+			<span class="bottom-right-horiz fs-bar"></span>
 		  </button>    
 		  <a href="index.html" class="site-logo">
 		  <img src="resources/img/Logo-UC.png" alt="Site logo">
@@ -130,7 +130,7 @@
 				</div>
 				<div id="collapseThree" class="collapse" aria-labelledby="navHeadingThree" data-parent="#navAccordion">
 					<ul class="itemss pl-4 pr-3">
-						<li><a href="#">Overview</a></li>
+						<li><a href="./accounting_dashboard.html">Overview</a></li>
 						<li><a href="#">Invoices</a></li>
 						<li><a href="./target_group_dashboard.html">Target Group</a></li>
 					</ul>
@@ -225,7 +225,7 @@
 						<li><a href="./documentTemplates.html">Document Templates</a></li>
 					</ul>
 				</div>
-			</div>		
+			</div>						
 		</div>
 		<!-- Nav footer Logo -->
 		<div class="nav_foot_content text-center">
@@ -242,11 +242,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">Accounting Dashboard</h2>
+				<h2 class="bh_title">E-mail Settings</h2>
 			</div>
 		</div>		
-		<!--=== Accounting Dashboard ===-->
-		<div id="accountingDashboard" class="accounting_Dashboard content-container p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
+		<!--===  E-Mail Settings ===-->
+		<div id="emailSettings" class="email_settings content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -255,200 +255,83 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="row">
-                    <!-- Sales by Period bar Chart -->
-                    <div class="col-xl-7 mb-4 d-flex justify-content-center justify-content-xl-start">
-						<div class="sales_chart_container chart_container pt-2">
-							<div class="d-flex justify-content-between align-items-center pr-3">
-								<h3>Sales by period</h3>
-								<div class="chart_buttons d-flex align-items-center">
-									<button class="rotate_btn btn-transparent px-3">
-										<span class="mdi mdi-rotate-right"></span>
+				<div class="emailSettings_inner p-0 p-lg-3">
+					<div class="row">
+						<div class="col-xl-9">
+							<div class="d-flex flex-column flex-sm-row mb-5">
+								<div class="emSet_inputs senderEmail mb-4 mb-sm-0 mr-0 mr-sm-4">
+									<h6>Sender E-Mail Adress</h6>
+									<input type="email" placeholder="service@uploadcommander.de">
+								</div>
+								<div class="emSet_inputs senderName mb-4 mb-sm-0 ml-0 ml-sm-4">
+									<h6>Name of the Sender</h6>
+									<input type="text" placeholder="Uploadcommander.de | Customer - Service">
+								</div>
+							</div>
+							<div class="d-flex flex-column flex-sm-row mb-5">
+								<div class="emSet_inputs acName mb-4 mb-sm-0 mr-0 mr-sm-4">
+									<h6>Account-Name</h6>
+									<input type="email" placeholder="service@uploadcommander.de">
+								</div>
+								<div class="emSet_inputs acPassword mb-4 mb-sm-0 ml-0 ml-sm-4">
+									<h6>Account-Password</h6>
+									<input type="password" placeholder="***********************">
+								</div>
+							</div>						
+							<div class="d-flex flex-column flex-lg-row mb-5 align-items-lg-center">
+								<div class="emSet_inputs smtpServer mb-4 mr-0 mr-lg-4">
+									<h6>SMTP-Server</h6>
+									<input type="email" placeholder="smtp.uploadcommander.de">
+								</div>
+								<div class="emSet_inputs smtpPOrt mb-4 ml-0 ml-lg-4">
+									<h6>SMTP-Port</h6>
+									<input type="text" placeholder="425">
+								</div>
+								<div class="emSet_inputs  ml-0 mb-4 ml-lg-5">
+									<label class="checkbox-container mt-4">
+										SMTP Auth
+										<input type="checkbox" checked="">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- send an expample -->
+						<div class="col-xl-3 mb-5">
+							<div class="sendExample mx-auto mr-xl-0 ml-xl-auto b-r-5">
+								<h6>Send an example</h6>
+								<p>When you click on "Send Mail", 
+									a sample e-mail will be sent 
+									to service@uploadcommander.de. </p>
+									<button class="icon_btn_blue shadow_hover_1">
+										<span class="mdi mdi-email"></span>
+										<span>Send Mail</span>	
 									</button>
-									<span class="selectBtn">
-										<select name="" id="salesPeriodUpdate">
-											<option id="monthSales_P" value="monthly" selected>Monthly</option>
-											<option id="yearSales_P" value="yearly">Yearly</option>
-											<option id="weekSales_P" value="weekly">Weekly</option>
-											<option id="dailySales_P" value="daily">Daily</option>
-										</select>
-									</span>									
-								</div>
-							</div>
-							<div class="sales_period">
-								<canvas id="salesPeriod_chart"></canvas>
 							</div>
 						</div>
-                    </div>
-					<!-- Current Active User -->
-                    <div class="col-xl-5 mb-4 d-flex justify-content-center justify-content-xl-start flex-column flex-xl-row flex-xl-wrap align-content-xl-between">
-						<div class="crnt_active_user blue_border text-center w-100 mx-auto mx-xl-0">
-							<h3>Currently active users</h3>
-							<div class="user_circle">
-								<span class="user_icon d-block">
-									<span class="mdi mdi-account"></span>
-									<span class="mdi mdi-currency-usd"></span>
-								</span>
-								<span class="u_amount d-block">4325</span>
-							</div>
-							<p class="px-xl-5">This number of users refers to users who have booked a subscription at the present time</p>
-						</div>
-						<div class="reg_users blue_border mt-4 w-100 mx-auto mx-xl-0 d-flex align-items-center text-center">
-							<div class="reg_user_icon ml-2 mr-5">
-								<span class="mdi mdi-human"></span>
-							</div>
-							<div class="reg_text ml-xl-4">
-								<h3>Registered users</h3> 
-								<p class="mb-0">10.251</p>
-							</div>
-						</div>
-					</div>					
-                </div>
-				<div class="row">
-					<!-- Sales figures by packages Pie Chart-->
-					<div class="col-xl-5 mb-4 d-flex justify-content-center justify-content-xl-start">
-						<div class="sales_figure_chart_container chart_container w-100">
-							<h3>Sales figures by packages</h3>
-							<div class="sales_figureChart">								
-								<canvas id="sales_figure_chart"></canvas>
-							</div>
-							<div id="sales_figure_legend" class="sales_figure_legend"></div>
-						</div>						
+						<!--/send an expample -->
 					</div>
-					<!-- Sales by the Last 10 Months -->
-					<div class="col-xl-7 mb-4 d-flex justify-content-center justify-content-xl-start">
-						<div class="sales_last_10_m blue_border w-100">
-							<div class="sales_item_header d-flex justify-content-between mb-3">
-								<h3>Sales by the last 10 Months</h3>
-								<button class="l_10_m_btn ml-3">
-									<span class="mdi mdi-download"></span>
-									<span class="l_10_btn_text">Download All Month</span>
-								</button>
-							</div>
-							<table class="sales_item_table w-100 text-center">
-								<thead>
-									<th>Month</th>
-									<th>Sales</th>
-									<th>Total users</th>
-								</thead>							
-								<tbody>
-									<tr>
-										<td>November 2020</td>
-										<td>4121,30 €</td>
-										<td>102077</td>
-									</tr>
-									<tr>
-										<td>October 2020</td>
-										<td>5102,99 €</td>
-										<td>9560</td>
-									</tr>
-									<tr>
-										<td>September 2020</td>
-										<td>4235,32 €</td>
-										<td>9203</td>
-									</tr>
-									<tr>
-										<td>August 2020</td>
-										<td>3245,12 €</td>
-										<td>9004</td>
-									</tr>
-									<tr>
-										<td>July 2020</td>
-										<td>2245,48 €</td>
-										<td>8502</td>
-									</tr>
-									<tr>
-										<td>June 2020</td>
-										<td>4141,11 €</td>
-										<td>8100</td>
-									</tr>
-									<tr>
-										<td>May 2020</td>
-										<td>5188,88 €</td>
-										<td>7254</td>
-									</tr>
-									<tr>
-										<td>April 2020</td>
-										<td>4128,22 €</td>
-										<td>7123</td>
-									</tr>
-									<tr>
-										<td>March 2020</td>
-										<td>314,20 €</td>
-										<td>6920</td>
-									</tr>
-									<tr>
-										<td>February 2020</td>
-										<td>990,75 €</td>
-										<td>6701</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>						
+					<!-- save settings -->
+					<div class="emailSaveBtn d-flex justify-content-center justify-content-xl-end">
+						<button class="green_lime_btn shadow_hover_1">Save Settings</button>
 					</div>
-				</div>
-				<div class="row">
-					<!-- User growth -->
-					<div class="col-xl-4 mb-4 d-flex justify-content-center justify-content-xl-start">
-						<div class="user_growth blue_border w-100 position-relative">
-							<div class="mb-2 position-relative z-index-1">
-								<h3>User growth</h3>
-							</div>
-							<span class="ug_icon_bg">
-								<span class="mdi mdi-account-star-outline"></span>
-							</span>
-							<div class="ug_itmes my-5 text-center">
-								<div class="ug_circle">
-									<p class="ug_percent mb-0">
-										<span class="mdi mdi-plus"></span>
-										<span>3</span>	
-										<span class="prct"> %</span>
-									</p>
-								</div>
-								
-							</div>									
-							<p class="ug_ftr mb-0">*by the last 10 Month</p>
-						</div>
-					</div>
-					<!-- Users by period -->
-					<div class="col-xl-8 mb-4 d-flex justify-content-center justify-content-xl-start">
-						<div class="users_P_chart_container chart_container ml-xl-4 pt-2 w-100">
-							<div class="d-flex justify-content-between align-items-center pr-3">
-								<h3>Users by period</h3>
-								<div class="chart_buttons d-flex align-items-center">
-									<button class="rotate_btn btn-transparent px-3">
-										<span class="mdi mdi-rotate-right"></span>
-									</button>
-									<span class="selectBtn">
-										<select name="" id="usersPeriodUpdate">
-											<option id="monthUsers_P" value="monthly" selected>Monthly</option>
-											<option id="yearUsers_P" value="yearly">Yearly</option>
-											<option id="weekUsers_P" value="weekly">Weekly</option>
-											<option id="dailyUsers_P" value="daily">Daily</option>
-										</select>
-									</span>									
-								</div>
-							</div>
-							<div class="users_periodChart">
-								<canvas id="usersPeriod_chart"></canvas>
-							</div>
-						</div>
-					</div>
+					<!--/save settings -->
 				</div>
 			</div>
 		</div>
-		<!--=== End of Dashboard Template ===-->
+		<!--=== End of E-mail Settings ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
+
 
     <!-- Script Here -->
     <!-- jQuery -->
     <script src="./vendors/js/jquery-3.3.1.min.js"></script>
     <!-- popper js -->
     <script src="./vendors/js/popper.min.js"></script>
-		<!-- bootstrap js -->
+	<!-- bootstrap js -->
     <script src="./vendors/js/bootstrap.min.js"></script>
     <!-- chart js -->
     <script src="./vendors/js/chart.min.js"></script>
@@ -458,7 +341,7 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
-		<!-- Full Screen Plugin -->
+	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->
 	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
