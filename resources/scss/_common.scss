@@ -576,6 +576,7 @@
 			th,td{				
 				height: 63px;
 				font-weight:300;
+				overflow-wrap: break-word;
 			}
 			th{
 				font-size:15px;
@@ -607,10 +608,10 @@
 						color:$blue-dark;
 					}					
 				}
-				.red_alert{
+				.red_alert,.red_alert .mdi{
 					color:$red-light;
 				}
-				.green_alert{
+				.green_alert,.green_alert .mdi{
 					color:$green-lime;
 				}
 			}

@@ -17,6 +17,8 @@
     12.     System - Settings
     13.     E-mail Settings
     14.     E-mail Templates
+    15.     E-mail Templates Edit/Add
+    16.     Accounting > Invoices
 ==========================================================
 **/
 /***************************/
@@ -995,6 +997,7 @@ textarea::placeholder {
 .table_container table tr th, .table_container table tr td {
   height: 63px;
   font-weight: 300;
+  overflow-wrap: break-word;
 }
 
 .table_container table tr th {
@@ -1040,11 +1043,11 @@ textarea::placeholder {
   color: #002D4A;
 }
 
-.table_container table tr td .red_alert {
+.table_container table tr td .red_alert, .table_container table tr td .red_alert .mdi {
   color: #FF4D4D;
 }
 
-.table_container table tr td .green_alert {
+.table_container table tr td .green_alert, .table_container table tr td .green_alert .mdi {
   color: #31C340;
 }
 
@@ -3832,12 +3835,110 @@ ul.pieLegend li:not(.anjon) {
   color: #ffffff;
 }
 
+/***************************/
+/* 15. E-mail Templates Edit/Add*/
+/***************************/
+.email_templatesEdit .content-inner {
+  max-width: 1170px;
+}
+
+.email_templatesEdit .nameOfTemp {
+  max-width: 525px;
+}
+
+.email_templatesEdit .descOfTemp {
+  max-width: 628px;
+}
+
+.email_templatesEdit .sendTemplate {
+  max-width: 314px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #707070;
+}
+
+.email_templatesEdit .sendTemplate .icon_btn_blue {
+  padding: 8px 10px;
+}
+
+.email_templatesEdit .sendTemplate .icon_btn_blue .mdi {
+  font-size: 20px;
+  padding-right: 0px;
+}
+
+.email_templatesEdit .email_text_editor {
+  max-width: 1053px;
+  width: 100%;
+  min-height: 635px;
+  background-color: #FAFAFA;
+}
+
+/***************************/
+/* 16. Accounting > Invoices*/
+/***************************/
+.accounting_invoices .acIvoices_inner {
+  background-color: #FAFAFA;
+}
+
+.accounting_invoices .acIvoices_inner .nice-select.acInvoiceSelect {
+  width: 232px;
+}
+
+.accounting_invoices .acIvoices_inner table tr th, .accounting_invoices .acIvoices_inner table tr td {
+  height: 63px;
+  font-weight: 300;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(1), .accounting_invoices .acIvoices_inner table tr td:nth-child(1) {
+  width: 15%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(2), .accounting_invoices .acIvoices_inner table tr td:nth-child(2) {
+  width: 15%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(3), .accounting_invoices .acIvoices_inner table tr td:nth-child(3) {
+  width: 10%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(4), .accounting_invoices .acIvoices_inner table tr td:nth-child(4) {
+  width: 35%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(5), .accounting_invoices .acIvoices_inner table tr td:nth-child(5) {
+  width: 15%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(6), .accounting_invoices .acIvoices_inner table tr td:nth-child(6) {
+  width: 10%;
+}
+
+.accounting_invoices .acIvoices_inner table tr th:nth-child(7), .accounting_invoices .acIvoices_inner table tr td:nth-child(7) {
+  width: 70px;
+}
+
+.accounting_invoices .acIvoices_inner table tr th {
+  font-size: 15px;
+}
+
+.accounting_invoices .acIvoices_inner table tr td:nth-child(4) {
+  text-align: left;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
 /***************************/
 /* 1080px height like 1200x1080 & 1500 to 1920 x 1080px*/
 /** min Width 1600px for 1920px**/
+@media (min-width: 1600px) {
+  .accounting_invoices .acIvoices_inner table tr td {
+    padding: 13px 13px 13px 18px;
+  }
+}
+
 /*Laptop*/
 @media (max-width: 1366px) {
   .target_group_sec {
@@ -3967,6 +4068,9 @@ ul.pieLegend li:not(.anjon) {
   .modal .modal-dialog {
     max-width: 470px;
   }
+  .accounting_invoices .acIvoices_inner table {
+    min-width: 795px;
+  }
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -4006,6 +4110,10 @@ ul.pieLegend li:not(.anjon) {
   }
   #bodyItem .main_item.main_item-active {
     margin-left: 0px;
+    width: 100%;
+  }
+  .accounting_invoices .acIvoices_inner .nice-select.acInvoiceSelect {
+    max-width: 232px;
     width: 100%;
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Languages Overview</title>
+    <title>E-Mail Templates > Edit / add</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -241,12 +241,15 @@
 	<main id="mainItem" class="main_item p-2 main_item-active">
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex">
-				<h2 class="bh_title">language Overview</h2>
+			<div class="d-flex align-items-center">				
+				<a href="./emailTemplates.html" class="back_btn btn-transparent mr-2 shadow_hover_1">
+					<span class="mdi mdi-arrow-left"></span>
+				</a>
+				<h2 class="bh_title">E-Mail Templates > Edit / add</h2>
 			</div>
 		</div>		
-		<!--=== Request a Feature ===-->
-		<div id="languageOverview" class="language_overview content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== E-Mail Templates > Edit / add ===-->
+		<div id="emailTamplatesEdit" class="email_templatesEdit content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -255,127 +258,75 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="language_Ov_inner p-3">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-						<div class="selectBtn order-2 order-lg-1">
-							<!-- sorting doc templates -->
-							<select name="" id="sort_docTemp" class="nice_select_blue">
-								<option value="ascending" selected>Sorted by ascending ID</option>
-								<option value="descending">Sorted by descending ID</option>
-							</select>
-							<!--/sorting doc templates  -->
-						</div>
-						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="./languageEditAdd.html" class="blue_btn mx-3 shadow_hover_1">+ Add Language</a>
+				<div class="email_tempEdit_inner p-3">
+					<!-- template ID & active switch -->
+					<div class="row justify-content-center justify-content-lg-between">
+						<div class="col-xl-6 d-flex align-items-center flex-wrap flex-column flex-sm-row">
+							<div class="mb-4 mr-sm-5">
+								<span class="id_tab">Template-ID: <span class="pl-3">18</span></span>
 							</div>
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
+							<div class="switch_icon mb-4 ml-sm-5">
+								<label class="s_icon_area mt-2">
+									<input type="checkbox" checked>
+									<div class="switch_container d-flex justify-content-center align-items-center">
+										<div class="create_switch"></div>
+										<div class="s_text">Active</div>
+									</div>
+								</label>									
+							</div>
+						</div>
+						<div class="col-xl-6"></div>
+					</div>
+					<!--/template ID & active switch -->
+					<div class="row">
+						<!-- Email input field -->
+						<div class="col-lg-6 col-xl-7 mb-5 mb-xl-0">
+							<div class="email_temp_input">
+								<div class="input-group mb-3">
+									<input type="text" class="nameOfTemp w-100" placeholder="Name of the Template">
+								</div>
+								<div class="input-group">
+									<textarea name="" id="" class="descOfTemp w-100 custom-scroll-bar-8" placeholder="Description of the Template"></textarea>
+								</div>
+							</div>
+						</div>						
+						<!--/Email input field -->
+						<!-- Send template button -->
+						<div class="col-lg-6 col-xl-5 d-flex flex-wrap justify-content-center justify-content-lg-end">
+							<div class="sendTemplate text-center">
+								<p class="mb-1">When you click on "Send template", <br/>
+									this email template will be sent as an email<br/> 
+									to service@uploadcommander.de.</p>
+								<button class="icon_btn_blue shadow_hover_1">
+									<span class="mdi mdi-email"></span>
+									<span class="pl-1">Send Template</span>
 								</button>
-							</form>
-						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
-					</div>
-					<div class="table_container langOv_table">
-						<table class="w-100 text-center">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name of the Language</th>
-									<th>Code</th>
-									<th>Status</th>
-									<th>Function</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1">
-									<td>1</td>
-									<td>German</td>
-									<td>DE</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./languageEditAdd.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2">
-									<td>2</td>
-									<td>English</td>
-									<td>EN</td>
-									<td><span class="red_alert">inactive</span></td>
-									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3">
-									<td>3</td>
-									<td>Spanish</td>
-									<td>SP</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4">
-									<td>4</td>
-									<td>Dutch</td>
-									<td>NL</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between">
-							<div>&nbsp;</div>
-							<div class="entries text-center ml-xl-5 pl-xl-5">
-								<p class="mb-0">1042 entries in total</p>
-							</div>						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select name="" id="" class="white_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
 							</div>
 						</div>
-					</div>					
+						<!-- Send Template Button -->
+					</div>
+					<!-- Text Editor Section -->
+					<div class="email_text_editor mt-5">
+						<img src="./resources/img/docTemp.png" class="img-fluid" alt="text editor">
+					</div>
+					<!--/Text Editor Section -->
+					<!-- email template buttons -->
+					<div class="mt-4 d-flex justify-content-end">
+						<div class="emailTempEditButtons">
+							<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
+						</div>
+					</div>
+					<!--/email template buttons -->
 				</div>
 			</div>
 		</div>
-		<!--=== End of Language Overview ===-->
+		<!--=== E-Mail Templates > Edit / add ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
 <!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+<div class="modal fade text-center" id="modal_requestFeature" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content px-lg-4 px-xl-5">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -388,7 +339,7 @@
             <!--/modal-body-collapse -->
             <div class="modal-footer mb-4">
                 <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes, sure.</button>
+                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
             </div>
             <!--/modal-footer-collapse -->
 			<div class="modal_bg_icon">

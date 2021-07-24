@@ -7,7 +7,18 @@
 }
 /** min Width 1600px for 1920px**/
 @media(min-width:1600px){
-	
+	// Acccounting > Invoices
+	.accounting_invoices{
+		.acIvoices_inner{
+			table{
+				tr{
+					td{
+						padding:13px 13px 13px 18px;
+					}
+				}
+			}
+		}
+	}
 }
 /*Laptop*/
 @media(max-width:1366px){
@@ -183,6 +194,14 @@
 	.modal .modal-dialog {
 		max-width: 470px;
 	}
+	// Acccounting > Invoices
+	.accounting_invoices{
+		.acIvoices_inner{
+			table{
+				min-width:795px;
+			}
+		}
+	}
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {
@@ -232,6 +251,15 @@
 			margin-left:0px;		
 			&.main_item-active{
 				margin-left:0px;
+				width:100%;
+			}
+		}
+	}
+	// Accounting > Invoices
+	.accounting_invoices{
+		.acIvoices_inner{
+			.nice-select.acInvoiceSelect{
+				max-width:232px;
 				width:100%;
 			}
 		}

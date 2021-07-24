@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Languages Overview</title>
+    <title>Accounting > Invoices</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -242,11 +242,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">language Overview</h2>
+				<h2 class="bh_title">Accounting > Invoices</h2>
 			</div>
 		</div>		
-		<!--=== Request a Feature ===-->
-		<div id="languageOverview" class="language_overview content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== Accounting > Invoices ===-->
+		<div id="accountingInvoices" class="accounting_invoices content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -255,20 +255,17 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="language_Ov_inner p-3">
+				<div class="acIvoices_inner p-3">
 					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
 						<div class="selectBtn order-2 order-lg-1">
-							<!-- sorting doc templates -->
-							<select name="" id="sort_docTemp" class="nice_select_blue">
-								<option value="ascending" selected>Sorted by ascending ID</option>
-								<option value="descending">Sorted by descending ID</option>
+							<select name="" class="acInvoiceSelect">
+								<option value="">Sorted by Date</option>
+								<option value="22.10.2021">22.10.2021</option>
+								<option value="07.12.2020">07.12.2020</option>
+								<option value="10.08.2020">10.08.2020</option>
 							</select>
-							<!--/sorting doc templates  -->
 						</div>
-						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="./languageEditAdd.html" class="blue_btn mx-3 shadow_hover_1">+ Add Language</a>
-							</div>
+						<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
 							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
 								<input type="text" class="search form-control" placeholder="Search">
 								<button type="submit" class="search_btn">
@@ -278,83 +275,100 @@
 						</div>
 					</div>
 					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
+						If table are not fully showing please swipe on table left-right
 					</div>
-					<div class="table_container langOv_table">
-						<table class="w-100 text-center">
+					<div class="table_container request_fea_table">
+						<table class="w-100 text-center" id="featureTable">
 							<thead>
 								<tr>
-									<th>ID</th>
-									<th>Name of the Language</th>
-									<th>Code</th>
+									<th>Invoice Nr.</th>
+									<th>Invoice Date</th>
+									<th>Customer</th>
+									<th>Customer E-Mail</th>
+									<th>Amount</th>
 									<th>Status</th>
 									<th>Function</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr data-id="1">
-									<td>1</td>
-									<td>German</td>
-									<td>DE</td>
-									<td><span class="green_alert">active</span></td>
+									<td>Invoice-002-R1</td>
+									<td>22.10.2021</td>
+									<td>20014</td>
+									<td>Tobias@gmail.com </td>
+									<td>100,33 €</td>
 									<td>
-										<a href="./languageEditAdd.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
+										<span class="green_alert">
+											<span class="mdi mdi-check-bold"></span>
+										</span>
+									</td>
+									<td>
+										<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="2">
-									<td>2</td>
-									<td>English</td>
-									<td>EN</td>
-									<td><span class="red_alert">inactive</span></td>
+									<td>Invoice-003-R1</td>
+									<td>07.12.2020</td>
+									<td>20045</td>
+									<td>Mustermann@Mustermann.de</td>
+									<td>56,50 €</td>
 									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
+										<span class="red_alert">
+											refused
+										</span>
+									</td>
+									<td>
+										<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="3">
-									<td>3</td>
-									<td>Spanish</td>
-									<td>SP</td>
-									<td><span class="green_alert">active</span></td>
+									<td>Invoice-004-R1</td>
+									<td>10.08.2020</td>
+									<td>20074</td>
+									<td>Schmidt.Josef@schreinerei-josef.de</td>
+									<td>10,02 €</td>
 									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
+										<span class="red_alert">
+											unpaid
+										</span>
+									</td>
+									<td>
+										<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="4">
-									<td>4</td>
-									<td>Dutch</td>
-									<td>NL</td>
-									<td><span class="green_alert">active</span></td>
+									<td>Invoice-005-R1</td>
+									<td>09.02.2020</td>
+									<td>20057</td>
+									<td>HildegardBecker@Beckermoebel.com</td>
+									<td>4,20 €</td>
 									<td>
-										<a href="./languageEditAdd.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
+										<span class="green_alert">
+											<span class="mdi mdi-check-bold"></span>
+										</span>
+									</td>
+									<td>
+										<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
 								</tr>
 							</tbody>
 						</table>						
 						<div class="table_bottom d-flex justify-content-between">
-							<div>&nbsp;</div>
-							<div class="entries text-center ml-xl-5 pl-xl-5">
+							<a href="#" class="file_btn shadow_hover_1">
+								<span class="mdi mdi-file-document"></span>
+							</a>
+							<div class="entries">
 								<p class="mb-0">1042 entries in total</p>
-							</div>						
+							</div>
+						
 							<div class="show_entries d-flex justify-content-between align-items-center">
 								<span>Show Entries :</span>
 								<select name="" id="" class="white_select">
@@ -369,13 +383,13 @@
 				</div>
 			</div>
 		</div>
-		<!--=== End of Language Overview ===-->
+		<!--=== End of Accounting > Invoices ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
 <!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+<div class="modal fade text-center modalContainer" id="modal_requestFeature" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content px-lg-4 px-xl-5">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -388,7 +402,7 @@
             <!--/modal-body-collapse -->
             <div class="modal-footer mb-4">
                 <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes, sure.</button>
+                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
             </div>
             <!--/modal-footer-collapse -->
 			<div class="modal_bg_icon">
