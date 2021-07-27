@@ -19,6 +19,17 @@
 			}
 		}
 	}
+	.user_admin_customer{
+		.userAdminCustomer_inner{
+			table{
+				tr{
+					td{
+						padding:13px 13px 13px 18px;
+					}
+				}
+			}
+		}
+	}
 }
 /*Laptop*/
 @media(max-width:1366px){
@@ -202,6 +213,43 @@
 			}
 		}
 	}
+	// User Adminstration - Customer
+	.user_admin_customer{
+		.userAdminCustomer_inner{
+			table{
+				min-width: 880px;
+			}
+		}
+	}
+	// User Admin Name
+	.user_admin_name{
+		// User Management
+		.user_management{
+			max-width: 680px;
+			// personal Setting
+			.personal_setting{
+				.nice-select{
+					width:150px;
+				}			
+				.inputs_row{
+					margin:0px -2.5px;
+					> div{
+						margin:5px 2.5px;
+						width:50%;
+					}
+				}
+				input[type="text"]{
+					width:100%;
+				}
+			}
+			// Interface Settings && Informations
+			.interface_settings,
+			.informations{
+				max-width:270px;
+				width:100%;
+			}
+		}
+	}
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {
@@ -256,6 +304,7 @@
 		}
 	}
 	// Accounting > Invoices
+	.nice-select.big_select,
 	.accounting_invoices{
 		.acIvoices_inner{
 			.nice-select.acInvoiceSelect{
@@ -300,6 +349,21 @@
 			&.acPassword,&.smtpServer,
 			&.smtpPOrt{
 				max-width:100%;
+			}
+		}
+	}
+	//User Admin Name
+	.user_admin_name{
+		// User Management
+		.user_management{
+			// personal Setting
+			.personal_setting{			
+				.inputs_row{
+					> div{
+						margin:5px 0px;
+						width:100%;
+					}
+				}
 			}
 		}
 	}

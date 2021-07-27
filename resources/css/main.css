@@ -19,6 +19,8 @@
     14.     E-mail Templates
     15.     E-mail Templates Edit/Add
     16.     Accounting > Invoices
+    17.     User Adminstration - Customer
+    18.     User Adminstration Name
 ==========================================================
 **/
 /***************************/
@@ -40,6 +42,10 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 h3 {
   font-size: 18px;
   color: #000000;
+}
+
+h4 {
+  font-size: 17px;
 }
 
 h6 {
@@ -235,6 +241,25 @@ textarea::placeholder {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /* =======<Hover Design>===========*/
@@ -450,6 +475,44 @@ textarea::placeholder {
   top: 3px;
 }
 
+.collapseExpandBtn {
+  background-color: #BCF1FF;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #42ADE2;
+  font-size: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.collapseExpandBtn.collapsed {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.collapseExpandBtn .mdi {
+  position: relative;
+  left: -2px;
+}
+
 /* ===X====</button design>=====X======*/
 .z-index-1 {
   z-index: 1;
@@ -657,6 +720,10 @@ textarea::placeholder {
   -o-border-radius: 5px 5px 0px 0px;
 }
 
+.nice-select.big_select {
+  width: 232px;
+}
+
 /*==X===Custom Select Box design==X==*/
 /*=== Search box common design=== */
 .search_box {
@@ -796,6 +863,77 @@ textarea::placeholder {
 }
 
 /*==X==Switch Icon Design==X==*/
+/*====Switch Icon Small Design====*/
+.switch_icon_small {
+  overflow: hidden;
+}
+
+.switch_icon_small label {
+  display: block;
+  cursor: pointer;
+  float: left;
+}
+
+.switch_icon_small label input ~ .switch_create {
+  width: 34px;
+  height: 20px;
+  background-color: #CBCBCB;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  overflow: hidden;
+}
+
+.switch_icon_small label input ~ .switch_create::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: 1px;
+  margin-left: 1px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.switch_icon_small label input:checked ~ .switch_create {
+  background-color: #47B4EA;
+}
+
+.switch_icon_small label input:checked ~ .switch_create::before {
+  margin-left: 15px;
+}
+
+.switch_icon_small .swich_text {
+  display: block;
+  float: left;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+/*==X==Switch Icon Small Design==X==*/
 /*=====Check box design======*/
 .checkbox-container {
   display: block;
@@ -1049,6 +1187,10 @@ textarea::placeholder {
 
 .table_container table tr td .green_alert, .table_container table tr td .green_alert .mdi {
   color: #31C340;
+}
+
+.table_container table tr td .yellow_alert, .table_container table tr td .yellow_alert .mdi {
+  color: #E2AC42;
 }
 
 .table_container table tr:hover td {
@@ -1561,6 +1703,8 @@ ul.pieLegend li:not(.anjon) {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #headerMenu .profile-photoss .profile_pic img:hover {
@@ -1921,6 +2065,8 @@ ul.pieLegend li:not(.anjon) {
   height: 92px;
   border: 2px solid #3489B3;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dashboardItem .profile_card .profile_info_d p {
@@ -2068,6 +2214,8 @@ ul.pieLegend li:not(.anjon) {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dashboardItem .latest_transection table tbody tr td:first-child {
@@ -3927,6 +4075,248 @@ ul.pieLegend li:not(.anjon) {
   text-align: left;
 }
 
+.accounting_invoices .modal .modal-dialog .modal-content.pdfViewContainer {
+  background: transparent;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
+.accounting_invoices #holder {
+  background: transparent;
+  padding: 32px 0 16px 0;
+}
+
+.accounting_invoices .canvas-wrapper {
+  margin-bottom: 16px;
+}
+
+.accounting_invoices canvas {
+  margin: 0 auto;
+  display: block;
+}
+
+/***************************/
+/* 17. User Adminstration - Customer*/
+/***************************/
+.user_admin_customer .userAdminCustomer_inner {
+  background-color: #FAFAFA;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(1), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(1) {
+  width: 104px;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(2), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(2) {
+  width: 13%;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3) {
+  width: 17%;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(4), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4) {
+  width: 35%;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(6), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(6) {
+  width: 80px;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th {
+  font-size: 15px;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr td:nth-child(2), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4) {
+  text-align: left;
+}
+
+/***************************/
+/* 18. User Adminstration Name*/
+/***************************/
+.user_admin_name .nav-pills .nav-link {
+  border-radius: .25rem;
+  min-height: 50px;
+  line-height: 2.1;
+}
+
+.user_admin_name .nav-pills .nav-link.active, .user_admin_name .nav-pills .show > .nav-link {
+  background-color: #42ADE2;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.user_admin_name .user_management .user_management_inner {
+  max-width: 928px;
+  width: 100%;
+}
+
+.user_admin_name .user_management h3 {
+  font-size: 20px;
+}
+
+.user_admin_name .user_management .nice-select {
+  height: 46px;
+  font-size: 15px;
+  line-height: 46px;
+}
+
+.user_admin_name .user_management .profile_picture {
+  width: 120px;
+  position: relative;
+}
+
+.user_admin_name .user_management .profile_picture img.profile_pic {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.user_admin_name .user_management .profile_picture .img_edit_btn {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #BCF1FF;
+  text-align: center;
+  line-height: 37px;
+  font-size: 25px;
+  color: #3489B3;
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.user_admin_name .user_management .personal_setting .nice-select {
+  width: 150px;
+}
+
+.user_admin_name .user_management .personal_setting .inputs_row {
+  margin: 0px -2.5px;
+}
+
+.user_admin_name .user_management .personal_setting .inputs_row > div {
+  margin: 5px 2.5px;
+  width: 50%;
+}
+
+.user_admin_name .user_management .personal_setting input[type="text"] {
+  width: 100%;
+}
+
+.user_admin_name .user_management .interface_settings .nice-select.gray_select {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.user_admin_name .user_management .informations .info_container {
+  font-size: 12px;
+  background-color: #FAFAFA;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 10px;
+}
+
+.user_admin_name .user_management .informations .info_container .info_row {
+  margin: 5px 0px;
+}
+
+.user_admin_name .user_management .informations .info_container .info_row:last-child {
+  margin-bottom: 0px;
+}
+
+.user_admin_name .user_management .informations .info_container .info_row > span:first-child {
+  width: 45%;
+}
+
+.user_admin_name .user_management .informations .info_container .info_row > span:last-child {
+  width: 50%;
+}
+
+.user_admin_name .user_management .resetBtn, .user_admin_name .user_management .loginBtn {
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  color: #393939;
+}
+
+.user_admin_name .user_management .resetBtn {
+  background-color: #FAFAFA;
+  padding: 0px 5px;
+  min-width: 180px;
+}
+
+.user_admin_name .user_management .loginBtn {
+  border: 1px solid #42ADE2 !important;
+  color: #42ADE2;
+  background-color: #ffffff;
+  padding: 0px 5px;
+  min-width: 211px;
+}
+
+.user_admin_name .user_management .subuser_mngmnt h3 span {
+  width: 48px;
+  height: 48px;
+  background-color: #FAFAFA;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th, .user_admin_name .user_management .subuser_mngmnt table tr td {
+  font-size: 15px;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th:nth-child(1), .user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(1) {
+  width: 30%;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th:nth-child(2), .user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(2) {
+  width: 20%;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th:nth-child(3), .user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(3) {
+  width: 35%;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th:nth-child(4), .user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(4) {
+  width: 100px;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th .mdi, .user_admin_name .user_management .subuser_mngmnt table tr td .mdi {
+  color: #D4D4D4;
+  position: relative;
+  top: 2px;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr th a, .user_admin_name .user_management .subuser_mngmnt table tr td a {
+  color: #115A8A;
+  text-decoration: underline;
+}
+
+.user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(1) {
+  text-align: left;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -3935,6 +4325,9 @@ ul.pieLegend li:not(.anjon) {
 /** min Width 1600px for 1920px**/
 @media (min-width: 1600px) {
   .accounting_invoices .acIvoices_inner table tr td {
+    padding: 13px 13px 13px 18px;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr td {
     padding: 13px 13px 13px 18px;
   }
 }
@@ -4071,6 +4464,30 @@ ul.pieLegend li:not(.anjon) {
   .accounting_invoices .acIvoices_inner table {
     min-width: 795px;
   }
+  .user_admin_customer .userAdminCustomer_inner table {
+    min-width: 880px;
+  }
+  .user_admin_name .user_management {
+    max-width: 680px;
+  }
+  .user_admin_name .user_management .personal_setting .nice-select {
+    width: 150px;
+  }
+  .user_admin_name .user_management .personal_setting .inputs_row {
+    margin: 0px -2.5px;
+  }
+  .user_admin_name .user_management .personal_setting .inputs_row > div {
+    margin: 5px 2.5px;
+    width: 50%;
+  }
+  .user_admin_name .user_management .personal_setting input[type="text"] {
+    width: 100%;
+  }
+  .user_admin_name .user_management .interface_settings,
+  .user_admin_name .user_management .informations {
+    max-width: 270px;
+    width: 100%;
+  }
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -4112,6 +4529,7 @@ ul.pieLegend li:not(.anjon) {
     margin-left: 0px;
     width: 100%;
   }
+  .nice-select.big_select .acIvoices_inner .nice-select.acInvoiceSelect,
   .accounting_invoices .acIvoices_inner .nice-select.acInvoiceSelect {
     max-width: 232px;
     width: 100%;
@@ -4140,6 +4558,10 @@ ul.pieLegend li:not(.anjon) {
   }
   .email_settings .emSet_inputs.senderEmail, .email_settings .emSet_inputs.acName, .email_settings .emSet_inputs.senderName, .email_settings .emSet_inputs.acPassword, .email_settings .emSet_inputs.smtpServer, .email_settings .emSet_inputs.smtpPOrt {
     max-width: 100%;
+  }
+  .user_admin_name .user_management .personal_setting .inputs_row > div {
+    margin: 5px 0px;
+    width: 100%;
   }
 }
 
@@ -4189,6 +4611,21 @@ ul.pieLegend li:not(.anjon) {
   }
   .accounting_Dashboard .sales_last_10_m table.sales_item_table tr:hover td {
     background: #BCF1FF;
+  }
+}
+
+/*==============Print CSS===============*/
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .modal-content, .modal-content * {
+    visibility: visible;
+    position: fixed;
+    top: 0px;
+    right: -250px;
+    width: 900px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

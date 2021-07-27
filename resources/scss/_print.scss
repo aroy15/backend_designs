@@ -1,0 +1,13 @@
+@media print{
+    body *{
+        visibility: hidden;
+    }
+    .modal-content, .modal-content *{
+        visibility: visible;
+        position:fixed;
+        top:0px;
+        right:-250px;
+        width:900px;
+        height: auto;
+    }
+}

@@ -50,10 +50,10 @@ $(document).ready(function(){
   }
   /*==X===Request a Feature ===X=== */
 
-  /*=========Live Console============= */
-// if($('body').find('#consoleText').length){
-//  $('#consoleText').perfectScrollbar();
-// }
+    /*=========Live Console============= */
+  // if($('body').find('#consoleText').length){
+  //  $('#consoleText').perfectScrollbar();
+  // }
 
   /*=====X====Live Console=======X====== */
   // preloader jquery plugin active
@@ -63,11 +63,11 @@ $(document).ready(function(){
     });
     setTimeout(function(){ $('.preloader-js').addClass('d-none'); }, 700);
   }
-/*==========Rotate Icon (Refresh Icon)============== */
-$(".rotate_btn").hover(function(){
-  $(this).toggleClass('rotate-focus');
-  })
-/*=====X====Rotate Icon (Refresh Icon)=======X====== */
+  /*==========Rotate Icon (Refresh Icon)============== */
+  $(".rotate_btn").hover(function(){
+    $(this).toggleClass('rotate-focus');
+    })
+  /*=====X====Rotate Icon (Refresh Icon)=======X====== */
   /* Added .dahsboard class on dashboard page main element*/
   if( $('body').find('#deshboardItem').length){
     $('#mainItem').addClass('dashboard');
@@ -78,6 +78,7 @@ $(".rotate_btn").hover(function(){
   /*-------Add Keywords-------*/
    $('#tagKeywordBtn').click(function(){
     var getKeyword = $.trim($('#tagKeywordInput').val());
+    console.log(getKeyword);
     // var keywordSpaceCheck=$.trim(getKeyword);
     var setHTMLKey = '<span class="tag-item alert alert-dismissible fade show"><span class="tag-content">'+ getKeyword +'</span><button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">×</span></button></span>';
     if(getKeyword !== "" && getKeyword !== null){
@@ -143,9 +144,128 @@ $(".rotate_btn").hover(function(){
       $('.show_small_logoName').append("<span>Fav.png</span>");
     }
   });
-  /* ----/Big Logo Upload---- */
+  /* ----/small Logo Upload---- */
   /*======X=====System Settings====X====== */
+
+  /*===========Accounting Invoices | PDF.js Library========= */
+  
+  if($('body').find('#accountingInvoices').length){
+    /*----PDF Modal preview---- */
+      $('.invoicePreviewBtn').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).closest('tr').data('id');
+        var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
+        $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
+        $('.modalContainer').data('id', id).modal('show');
+      });
+    /*----/PDF Modal preview---- */
+      /*------PDF.js Activation------ */
+
+      function renderPDF(url, canvasContainer, options) {
+
+        options = options || { scale: 1 };
+            
+        function renderPage(page) {
+            var viewport = page.getViewport(options.scale);
+            var wrapper = document.createElement("div");
+            wrapper.className = "canvas-wrapper";
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            var renderContext = {
+              canvasContext: ctx,
+              viewport: viewport
+            };
+            
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            wrapper.appendChild(canvas)
+            canvasContainer.appendChild(wrapper);
+            
+            page.render(renderContext);
+        }
+        
+        function renderPages(pdfDoc) {
+            for(var num = 1; num <= pdfDoc.numPages; num++)
+                pdfDoc.getPage(num).then(renderPage);
+        }
+    
+        PDFJS.disableWorker = true;
+        PDFJS.getDocument(url).then(renderPages);
+    
+    }   
+    
+    
+    renderPDF('./resources/pdf/task.pdf', document.getElementById('cavaContainer'));
+    
+    //   pdfjsLib.getDocument('./resources/pdf/task.pdf').then(function(doc){
+    //     console.log("this file has " + doc._pdfInfo.numPages + " pages");
+    //     doc.getPage(2).then(page => {
+    //         var myCanvas = document.getElementById("acccountingInvocePDFPreview");
+    //         var context = myCanvas.getContext("2d");
+    //         var viewport = page.getViewport(1);
+    //         myCanvas.width = viewport.width;        
+    //         myCanvas.height = viewport.height;
+    //         page.render({
+    //             canvasContext: context,
+    //             viewport: viewport
+    //         })
+
+    //     })
+    // })
+    /*------/PDF.js Activation------ */
+  }
+      // /* yes button click function */
+      // $('.deleteYesBtn').click(function () {
+      //   var id = $(this).parents('.modalContainer').data('id');
+      //   $('[data-id=' + id + ']').remove();
+      //   $(this).parents('.modalContainer').modal('hide');
+      // });
+  /*======X=====Accounting Invoices====X===== */
+
+  /*============User Adminstration Name============= */
+  $('#UserImgEditBtn').on('change', function(event){
+    var userImgLength =  $('#UserImgEditBtn')[0].files.length;
+    var userImgSrc = URL.createObjectURL(event.target.files[0]);
+    /*Validation for only images */
+    var userImgselectedFile = event.target.files[0];
+    var userImgidxDot = userImgselectedFile.name.lastIndexOf(".") + 1;
+    var userImgextFile = userImgselectedFile.name.substr(userImgidxDot, userImgselectedFile.name.length).toLowerCase();
+    if (userImgextFile === "jpg" || userImgextFile === "jpeg" || userImgextFile === "png" || userImgextFile === "gif") {
+      if(userImgLength > 0){     
+        $('#userImgPic').attr('src',userImgSrc);        
+      } 
+    }else{
+      alert("Only jpg/jpeg, png and gif files are allowed!");      
+    }
+      
+  });
+  /*======X=====User Adminstration Name======X====== */
+
+  /*=====User Administration name (Package & Payment tab)==== */
+  /*------<number increment & decrement>------- */
+  $(".button").on("click", function() {
+
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+  
+    if ($button.text() == "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+     // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 0;
+      }
+    }
+  
+    $button.parent().find("input").val(newVal);
+  
+  });
+    /*------</number increment & decrement>------- */
+  /*===X==User Administration name (Package & Payment tab)==X== */
 });
+
 
 /*======= Fullscreen icon function =======*/
 $(function() {    

@@ -56,6 +56,20 @@
 .b-r-50{
 	@include b-radius(50%);
 }
+.appearance-none{
+	appearance: none;
+	display:none;
+	width:0px;
+	height:0px;
+	opacity: 0;
+	overflow: hidden;
+}
+.cursor-pointer{
+	cursor:pointer;
+}
+.overflow-hidden{
+	overflow: hidden;
+}
 /* =======<Hover Design>===========*/
 .scale_hover_half{
 	@include transition-all(0.3s);
@@ -164,6 +178,26 @@
 		padding-right: 10px;
 		position: relative;
 		top: 3px;
+	}
+}
+
+.collapseExpandBtn{
+	background-color: $blue-opacity;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	@include b-radius(50%);
+	color:$blue-light;
+	font-size:20px;
+	@include transition-all(0.3s);
+	@include transform-rotate(180deg);
+	&.collapsed{
+		@include transform-rotate(0deg);
+	}
+	.mdi{
+		position: relative;
+		left: -2px;
 	}
 }
 /* ===X====</button design>=====X======*/
@@ -330,6 +364,10 @@
 			@include b-radius(5px 5px 0px 0px);
 		}
 	}
+	// big-width 232px;
+	&.big_select{
+		width:232px;
+	}
 }
 /*==X===Custom Select Box design==X==*/
 /*=== Search box common design=== */
@@ -416,7 +454,52 @@
 	}
 }
 /*==X==Switch Icon Design==X==*/
-
+/*====Switch Icon Small Design====*/
+.switch_icon_small{
+	overflow: hidden;
+	label{
+		display:block;
+		cursor:pointer;
+		float: left;
+		input{
+			&~.switch_create{
+				width:34px;
+				height:20px;
+				background-color: #CBCBCB;
+				@include b-radius(20px);
+				display:block;
+				position:relative;
+				@include transition-all(0.3s);
+				overflow: hidden;
+				&::before{
+					content:'';
+					width:18px;
+					height:18px;
+					@include b-radius(50%);
+					background-color: #fff;
+					display: inline-block;
+					margin-top: 1px;
+					margin-left: 1px;
+					@include transition-all(0.3s);
+					@include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.5));
+				}
+			}
+			&:checked ~ .switch_create{
+				background-color: #47B4EA;
+				&::before{
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+	.swich_text{
+		display: block;
+		float: left;
+		font-size:15px;
+		padding-left: 10px;
+	}
+}
+/*==X==Switch Icon Small Design==X==*/
 /*=====Check box design======*/
 .checkbox-container {
 	display: block;
@@ -613,6 +696,9 @@
 				}
 				.green_alert,.green_alert .mdi{
 					color:$green-lime;
+				}
+				.yellow_alert, .yellow_alert .mdi{
+					color:$yellow;
 				}
 			}
 			&:hover td{

@@ -125,6 +125,7 @@
 				@include b-radius(50%);
 				border:2px solid $white;
 				@include transition-all(0.3s);
+				object-fit: cover;
 				&:hover{
 					border:2px solid $blue-dark;
 				}
@@ -359,6 +360,7 @@
 			height:92px;
 			border:2px solid $blue-normal;
 			display:block;
+			object-fit: cover;
 		}
 		.profile_info_d{
 			p{
@@ -474,6 +476,7 @@
 							display:inline-block;
 							margin-right:10px;
 							vertical-align: middle;
+							object-fit: cover;
 						}							
 						&:first-child{
 							width:calc(100% - 110px);
@@ -1935,6 +1938,231 @@
 			}
 		}
 	}
+	// PDF Preview Modal
+	.modal .modal-dialog .modal-content.pdfViewContainer {
+		background: transparent;
+		@include b-radius(0px);
+	}
+	#holder{
+		background: transparent;
+		padding: 32px 0 16px 0;
+	  }
+	  .canvas-wrapper{
+		margin-bottom: 16px;
+	  }
+	  canvas{
+		margin: 0 auto;
+		display: block;
+	  }
+} 
+
+/***************************/
+/* 17. User Adminstration - Customer*/
+/***************************/
+.user_admin_customer{
+	.userAdminCustomer_inner{
+		background-color: $gray-light1;
+		table{
+			tr{
+				th,td{				
+					&:nth-child(1){
+						width:104px;
+					}
+					&:nth-child(2){
+						width: 13%;
+					} 
+					
+					&:nth-child(3){
+						width: 17%;
+					} 
+					&:nth-child(4){
+						width:35%;
+					}					
+					&:nth-child(5),&:nth-child(6){
+						width:80px;
+					}
+				}
+				th{
+					font-size:15px;
+				}
+				td{
+					&:nth-child(2),&:nth-child(3),&:nth-child(4){
+						text-align:left;
+					}
+					
+				}
+			}
+		}
+	}
+} 
+
+/***************************/
+/* 18. User Adminstration Name*/
+/***************************/
+.user_admin_name{	
+	.nav-pills .nav-link {
+		border-radius: .25rem;
+		min-height:50px;
+		line-height: 2.1;
+	}
+	.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+		background-color: $blue-light;
+		color:$white;
+	}
+	// User Management
+	.user_management{
+		.user_management_inner{
+			max-width:928px;
+			width:100%;
+		}
+		
+		h3{
+			font-size:20px;
+		}
+		.nice-select{
+			height: 46px;
+			font-size: 15px;
+			line-height: 46px;
+		}
+		// Profile picture
+		.profile_picture{
+			width:120px;
+			position: relative;
+			img.profile_pic{
+				width:120px;
+				height:120px;
+				object-fit:cover;
+				@include b-radius(50%);
+			}
+			.img_edit_btn{
+				width:37px;
+				height:37px;
+				@include b-radius(50%);
+				border:1px solid $blue-opacity;
+				text-align:center;
+				line-height:37px;
+				font-size: 25px;
+				color:$blue-normal;
+				position:absolute;
+				bottom:-4px;
+				right:0;
+				background-color: $white-main;
+			}
+		}
+		// personal Setting
+		.personal_setting{
+			.nice-select{
+				width:150px;
+			}			
+			.inputs_row{
+				margin:0px -2.5px;
+				> div{
+					margin:5px 2.5px;
+					width:50%;
+				}
+			}
+			input[type="text"]{
+				width:100%;
+			}
+		}
+		// Interface Settings
+		.interface_settings{
+			.nice-select.gray_select{
+				width:100%;
+				margin:5px 0px;
+			}
+		}
+		// Informations
+		.informations{
+			.info_container{
+				font-size:12px;
+				background-color: $gray-light1;
+				@include b-radius(5px);
+				padding:10px;
+				.info_row{
+					margin:5px 0px;
+					&:last-child{
+						margin-bottom:0px;
+					}
+					> span{
+						&:first-child{
+							width:45%;							
+						}
+						&:last-child{
+							width:50%;
+						}
+					}
+				}
+			}
+		}
+		.resetBtn,.loginBtn{
+			height:46px;
+			line-height:46px;
+			text-align:center;
+			color:$black;			
+		}
+		.resetBtn{
+			background-color: $gray-light1;
+			padding:0px 5px;
+			min-width:180px
+		}
+		.loginBtn{
+			border:1px solid $blue-light !important;
+			color:$blue-light;
+			background-color: $white-main;
+			padding:0px 5px;
+			min-width:211px;
+		}
+		//Subuser Management
+		.subuser_mngmnt{
+			h3{
+				span{
+					width:48px;
+					height:48px;
+					background-color: $gray-light1;
+					line-height: 48px;
+					text-align:center;
+					@include b-radius(50%);
+					color:$placeholder;
+				}
+			}
+			table{
+				tr{
+					th,td{	
+						font-size:15px;	
+						&:nth-child(1){
+							width:30%;
+						}
+						&:nth-child(2){
+							width: 20%;
+						} 
+						
+						&:nth-child(3){
+							width: 35%;
+						} 
+						&:nth-child(4){
+							width:100px;
+						}	
+						.mdi{
+							color: #D4D4D4;
+							position:relative;
+							top:2px;
+						}
+						a{
+							color:$blue-bold;
+							text-decoration: underline;
+						}
+					}
+					td:nth-child(1){
+						text-align:left;
+					}
+				}
+			}
+		}
+	}
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
+
+/*==============Print CSS===============*/
+@import "./_print.scss";

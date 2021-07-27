@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Adminstration User</title>
+        <!-- Fav Icon -->
+		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Material Design Iccons -->
+        <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+		<!-- select plugin -->
+		<link rel="stylesheet" href="./vendors/css/nice-select.css">
+        <!-- Booststrap 4 css -->
+        <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+        <!-- Main/Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css">
+</head>
+<body>
+ <!--=== Header Menu ===--> 
+ <header id="headerMenu" class="px-3">
+	<div class="row h-82 align-items-center  justify-content-between">
+	   <div class="col-lg-4 col-xl-4 d-flex order-3 order-lg-1 py-3 py-lg-0">
+		  <a href="javascript:void(0)" id="menuBar" class="h-icons menu_bar_icon">
+		  <span class="hambarger"></span>
+		  </a>
+		  <button class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
+		  <span class="top-left fs-bar"></span>
+		  <span class="top-left-horiz fs-bar"></span>
+		  <span class="top-right fs-bar"></span>
+		  <span class="top-right-horiz fs-bar"></span>
+		  <span class="bottom-left fs-bar"></span>
+		  <span class="bottom-left-horiz fs-bar"></span>
+		  <span class="bottom-right fs-bar"></span>
+		  <span class="bottom-right-horiz fs-bar"></span>
+		  </button>    
+		  <a href="index.html" class="site-logo">
+		  <img src="resources/img/Logo-UC.png" alt="Site logo">
+		  </a>
+	   </div>
+	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
+		  <a href="#" class="h-icons2 h-support">
+			<span class="icon-mdi">
+				<span class="mdi mdi-headset"></span>
+			</span>
+		  	<span class="d-block">Ticket System</span>
+		  </a>                            
+		  <a href="#" class="h-icons2 h-history">
+			 <span class="icon-mdi">
+				 <span class="mdi mdi-account-circle"></span>
+			</span>
+			 <span class="d-block">customers</span>
+		  </a>
+		  <a href="#" class="h-icons2 h-helpdesk">
+			<span class="icon-mdi">
+				<span class="mdi mdi-help-circle-outline"></span>
+			</span>
+			<span class="d-block">Documentation</span>
+		  </a> 
+	   </div>
+	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
+		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
+		  <span class="position-relative d-block order-1 order-sm-2">
+		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
+		  <a href="#" class="logout-icon position-absolute">
+		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
+		  </a>
+		  </span>         
+	   </div>
+	</div>
+ </header>
+<!--===End of Header Menu ===-->
+
+<!--=== Body Item  ===-->
+<div id="bodyItem" class="body-item position-relative d-flex">
+	<!--=== Side bar ===-->
+	<nav id="sidebarNav" class="sidebar_nav nav-active d-flex flex-row flex-wrap align-content-between justify-content-center">
+		<!-- Categories -->
+		<div id="navAccordion" class="d-flex flex-column transition-5">
+			<!-- Dashboard -->
+			<div class="side_nav_item mb-3">
+				<a href="index.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Dashboard</span>
+					<span class="icon-mdi"><span class="mdi mdi-home"></span></span>
+				</a>
+			</div>
+			<!-- Roles & Right -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">Roles & Right</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-gavel"></span>
+					</span>
+				</a>
+			</div>
+			<!-- User & Admins-->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingTwo">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">User & Admins</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-circle"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="navHeadingTwo" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="./userAdminCustomer.html">Customers</a></li>
+						<li><a href="#">Administrator</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Accounting & Analytics -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingThree">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Accounting & Analytics</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-calculator"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="navHeadingThree" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="./accounting_dashboard.html">Overview</a></li>
+						<li><a href="./accountingInvoices.html">Invoices</a></li>
+						<li><a href="./target_group_dashboard.html">Target Group</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Inform Customers -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Inform Customers</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-account-group"></span>
+						</span>
+					</a>
+				</div>
+				<!-- Coupons -->
+			<div class="side_nav_item mb-3">
+				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+						<span class="carret-icon icon-mdi"></span>
+						<span class="nav_item_title">Coupons</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-ticket-percent"></span>
+						</span>
+					</a>
+				</div>
+			<!-- Support -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFour">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Support</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-headset"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Ticket-System</a></li>
+						<li><a href="#">Ticket Archive</a></li>
+						<li><a href="#">Helpdesk</a></li>
+						<li><a href="#">Questions & Answers (FAQ)</a></li>
+						<li><a href="./feature _requests.html">Feature Requests</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Products & Packages -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingFive">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Products & Packages</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-package-variant"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="navHeadingFive" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="#">Packages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Server -->
+			<div class="side_nav_item mb-3">
+				<a href="./systemInformation.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+					<span class="carret-icon icon-mdi"></span>
+					<span class="nav_item_title">System-Information</span>
+					<span class="icon-mdi">
+						<span class="mdi mdi-server"></span>
+					</span>
+				</a>
+			</div>
+			<!-- Settings -->
+			<div class="side_nav_item mb-3">
+				<div id="navHeadingSix">
+					<button class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+						<span class="nav_item_title">Settings</span>
+						<span class="icon-mdi">
+							<span class="mdi mdi-cog-outline"></span>
+						</span>
+					</button>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="navHeadingSix" data-parent="#navAccordion">
+					<ul class="itemss pl-4 pr-3">
+						<li><a href="./systemSettings.html">System Settings</a></li>
+						<li><a href="./emailSettings.html">E-Mail Settings</a></li>
+						<li><a href="./emailTemplates.html">E-Mail Templates</a></li>
+						<li><a href="./apiSettings.html">API Connections</a></li>
+						<li><a href="./languageOverview.html">Languages</a></li>
+						<li><a href="./documentTemplates.html">Document Templates</a></li>
+					</ul>
+				</div>
+			</div>						
+		</div>
+		<!-- Nav footer Logo -->
+		<div class="nav_foot_content text-center">
+			<a href="#" class="d-block short-logo mx-auto">
+				<img src="./resources/img/logo-short.png" class="img-fluid" alt="logo">
+			</a>
+			<a href="https://www.uploadcommander.de" class="up_link mt-4 pb-4 d-block">www.uploadcommander.de</a>
+		</div>
+		<!--/ Nav footer Logo -->
+	</nav>
+	<!--=== End of Side bar ===-->
+	<!--=== Main Items ===-->
+	<main id="mainItem" class="main_item p-2 main_item-active">
+        <!--==*******All Frame setup on this here*********== -->
+		<div class="body-header-content mb-3 p-3 pl-xl-5">
+			<div class="d-flex">
+				<h2 class="bh_title">User Adminstration - Emely Gurrero #20345</h2>
+			</div>
+		</div>		
+		<!--===User Adminstration - Customer ===-->
+		<div id="userAdminName" class="user_admin_name content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+			<!-- preloader container -->
+			<div class="preloader-js">
+				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
+					<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
+				</div>
+			</div>
+			<!--x- End of preloader container -x-->
+			<div class="content-inner">                
+				<div class="userAdminName_inner">
+					<!-- MENU nav pills -->
+					<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+						<li class="nav-item mr-3">
+						  <a class="nav-link active shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
+						</li>
+						<li class="nav-item mr-3">
+						  <a class="nav-link shadow_hover_1" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Package & Payment</a>
+						</li>
+						<li class="nav-item mr-3">
+						  <a class="nav-link shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
+						</li>
+					  </ul>
+					  <!-- /MENU nav pills -->
+					  <div class="tab-content" id="pills-tabContent">
+						  <!-- ======User Management========= -->
+							<div class="user_management tab-pane fade show active" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
+								<div id="userManagementAll" class="user_management_inner">
+									<!--===Account Settings=== -->
+									<div class="account_settings blue_border mb-5">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">Account Settings</h3>
+											<button id="userMngMntBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntOne" aria-expanded="true" aria-controls="userMngMntOne">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>
+	
+										<div id="userMngMntOne" class="collapse show pl-4" aria-labelledby="userMngMntBtn_1" data-parent="#userManagementAll">
+											<div class="row">
+												<div class="col-xl-2 d-flex flex-column align-items-center mb-5 mb-xl-0">
+													<div class="profile_picture">
+														<img id="userImgPic" class="profile_pic" src="./resources/img/profile-pic.png" alt="profile pic">
+														<!-- Image Edit Button -->
+														<label class="img_edit_btn shadow_hover_1 cursor-pointer">
+															<input type="file" id="UserImgEditBtn"  class="appearance-none" accept="image/*">
+															<span class="mdi mdi-square-edit-outline"></span>
+														</label>
+														<!--/Image Edit Button -->														
+													</div>
+													<div class="switch_icon_small mt-3">
+														<label>
+															<input type="checkbox" class="appearance-none" checked>
+															<span class="switch_create"></span>
+														</label>
+														<span class="swich_text">Locked</span>
+													</div>
+												</div>
+												<div class="col-xl-6 mb-4 mb-xl-0">
+													<div class="personal_setting">
+														<h4 class="pb-3">Personal Settings</h4>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<select class="gray_select">
+																	<option>Sir or Madam</option>
+																	<option value="sir">Sir</option>
+																	<option value="sir">Madam</option>
+																</select>
+															</div>
+															<div>
+																<input type="text" placeholder="Company">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="First Name">
+															</div>
+															<div>
+																<input type="text" placeholder="Last Name">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Street">
+															</div>
+															<div>
+																<input type="text" placeholder="Number">
+															</div>
+														</div>														
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Post code">
+															</div>
+															<div>
+																<input type="text" placeholder="City">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Email">
+															</div>
+															<div>
+																<input type="text" placeholder="Phone">
+															</div>
+														</div>
+														<!-- Switch boxes -->
+														<div class="switch_boxes mt-4">
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none">
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none">
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+														</div>
+														<!-- /Switch boxes -->
+													</div>
+												</div>
+												<div class="col-xl-4">
+													<!-- Interface Settings -->
+													<div class="interface_settings mx-auto mx-xl-0">
+														<h4 class="mb-4">Interface Settings</h4>
+														<!-- language -->
+														<select class="gray_select">
+															<option>Language</option>
+															<option value="english">English</option>
+															<option value="german">German</option>
+															<option value="bengali">Bengali</option>
+															<option value="dutch">Dutch</option>
+														</select>
+														<!-- Time Zone -->
+														<select class="gray_select">
+															<option>Time Zone</option>
+															<option value="(GMT+2)"> Germany (GMT+2)</option>
+															<option value="(GMT-4)">NY, USA (GMT-4)</option>
+															<option value="(GMT+6)">Bangladesh (GMT+6)</option>
+														</select>
+														<!-- Time Format -->
+														<select class="gray_select">
+															<option>Time Format</option>
+															<option value="24-hour">24-hour</option>
+															<option value="12-hour">12-hour</option>
+														</select>
+														<!-- Time Format -->
+														<select class="gray_select mb-4">
+															<option>Data Format</option>
+															<option value="Format-1">Format-1</option>
+															<option value="Format-2">Format-2</option>
+														</select>														
+													</div>
+													<!-- /Interface Settings -->
+													<!-- informations -->
+													<div class="informations mx-auto mx-xl-0">
+														<h4 class="mb-2">Informations</h4>
+														<div class="info_container">
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Register Date: </span>
+																<span class="info_data">20.10.2020</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Last Login: </span>
+																<span class="info_data">15.07.2020 - 15:30</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Client: </span>
+																<span class="info_data">Windows 10
+																	Mozila Firefox 12.0.0.2</span>
+															</div>
+														</div>
+													</div>
+													<!-- /informations -->
+												</div>
+											</div>
+											<!-- Reset Password & Login -->
+											<div class="d-flex flex-wrap justify-content-center justify-content-xl-end mt-4 ">
+												<button class="resetBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Reset Password</button>
+												<button class="loginBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Login into the Customer</button>
+											</div>
+											<!-- /Reset Password & Login -->
+										</div>
+									</div>
+									<!--===end of Account Settings=== -->
+									<!--===Subuser Management=== -->
+									<div class="subuser_mngmnt blue_border">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">
+												Subuser Management 
+												<span class="d-inline-block ml-4">3/5</span>
+											</h3>
+											<button id="userMngMntBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntTwo" aria-expanded="true" aria-controls="userMngMntTwo">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="userMngMntTwo" class="collapse show pl-4" aria-labelledby="userMngMntBtn_2" data-parent="#userManagementAll">
+											<div class="table_container">
+												<table class="w-100 text-center p-3">
+													<thead>
+														<tr>
+															<th>Name</th>
+															<th>Register Date</th>
+															<th>Mail</th>
+															<th>Status</th> 
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Adrian Schroeder</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>AdrianSchroed@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="2">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Anna Delgado</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="3">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Max Lawrence</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="4">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Liza Meyers</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!--===end of Subuser Management=== -->
+								</div>
+								<!-- Save Setting Button -->
+								<div class="mt-5 d-flex justify-content-end">
+									<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
+								</div>
+								<!-- Save Setting Button -->
+							</div>
+							<!--====== end of User Management========== -->
+							<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+								Tab-2
+							</div>
+							<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+								Tab-3
+							</div>
+							<div class="tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
+								Documentation
+							</div>
+					  </div>				
+				</div>
+			</div>
+			<!-- start: Delete Coupon Modal -->
+			<div class="modal fade text-center modalContainer" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content px-lg-4 px-xl-5">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							<span class="mdi mdi-close"></span>
+						</button>
+						<div class="modal-body pb-4 pt-5">
+							<h4 class="pb-4"> Are you sure?</h4>
+							<p>Deleted Document-Templates are irrevocably deleted and cannot be restored at a later time.</p>
+						</div>
+						<!--/modal-body-collapse -->
+						<div class="modal-footer mb-4">
+							<button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
+						</div>
+						<!--/modal-footer-collapse -->
+						<div class="modal_bg_icon">
+							<span class="mdi mdi-delete-empty"></span>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+		</div>
+		<!--=== End of User Adminstration - Customer ===-->
+	</main>
+	<!--=== End of Main Items ===-->
+</div>
+<!--=== End of  Body Item ===-->
+
+
+    <!-- Script Here -->
+    <!-- jQuery -->
+    <script src="./vendors/js/jquery-3.3.1.min.js"></script>
+    <!-- popper js -->
+    <script src="./vendors/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+    <script src="./vendors/js/bootstrap.min.js"></script>
+    <!-- chart js -->
+    <script src="./vendors/js/chart.min.js"></script>
+    <!-- chart js datalabels plugin -->
+    <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
+	<!-- Currency formatter plugin -->
+    <script src="./vendors/js/currencyFormatter.min.js"></script>
+	<!-- Nice select plugin -->
+	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- pdf.js for PDF preview -->
+	<!-- <script src="./vendors/js/pdf.min.js"></script> -->
+	<!-- pdf.worker.js for PDF preview -->
+	<!-- <script src="./vendors/js/pdf.worker.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
+	<!-- Full Screen Plugin -->
+    <script src="./vendors/js/jquery.fullscreen-min.js"></script>
+	<!-- Preloader plugin -->
+	<script src="./vendors/js/jquery.preloadinator.min.js"></script>
+	<!-- main/custom js -->
+	<script src="./resources/js/main.js"></script>
+</body>
+</html>
