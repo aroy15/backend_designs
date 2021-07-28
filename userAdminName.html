@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Adminstration User</title>
+    <title>User Adminstration Name</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -259,10 +259,10 @@
 					<!-- MENU nav pills -->
 					<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
 						<li class="nav-item mr-3">
-						  <a class="nav-link active shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
+						  <a class="nav-link shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
 						</li>
 						<li class="nav-item mr-3">
-						  <a class="nav-link shadow_hover_1" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Package & Payment</a>
+						  <a class="nav-link active shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
 						</li>
 						<li class="nav-item mr-3">
 						  <a class="nav-link shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
@@ -273,8 +273,8 @@
 					  </ul>
 					  <!-- /MENU nav pills -->
 					  <div class="tab-content" id="pills-tabContent">
-						  <!-- ======User Management========= -->
-							<div class="user_management tab-pane fade show active" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
+						  <!-- ====== User Management ========= -->
+							<div class="user_management tab-pane fade" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
 								<div id="userManagementAll" class="user_management_inner">
 									<!--===Account Settings=== -->
 									<div class="account_settings blue_border mb-5">	
@@ -564,16 +564,279 @@
 									</div>
 									<!--===end of Subuser Management=== -->
 								</div>
-								<!-- Save Setting Button -->
+								<!-- Save Setting Button for user management-->
 								<div class="mt-5 d-flex justify-content-end">
 									<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
 								</div>
-								<!-- Save Setting Button -->
+								<!--/Save Setting Button for user management -->
 							</div>
-							<!--====== end of User Management========== -->
-							<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-								Tab-2
+							<!--===X=== end of User Management ====X====== -->
+							<!--========== Package & Payment ==============-->
+							<div class="package_payment tab-pane fade show active" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
+								<div id="packagePaymentAll" class="pkgPayment_inner">
+									<!--===Package, Limits & Features === -->
+									<div class="pkg_lmt_feturs blue_border mb-5">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">Packages</h3>
+											<button id="pkgPaymentBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentOne" aria-expanded="true" aria-controls="pkgPaymentOne">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>
+	
+										<div id="pkgPaymentOne" class="collapse show" aria-labelledby="pkgPaymentBtn_1" data-parent="#packagePaymentAll">
+											<div class="row justify-content-between">
+												<!-- software box image -->
+												<div class="col-lg-4">
+													<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
+														<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
+													</div>
+												</div>
+												<!-- /software box Image -->
+												<!-- Package Information -->
+												<div class="col-lg-4">
+													<div class="info_container mx-auto mt-4 mb-5 mb-lg-0">
+														<select class="gray_select bigger_select w-100 mb-1">
+															<option>Starter Package</option>
+															<option>Golden Package</option>
+															<option>Platinum Package</option>
+														</select>
+														<div class="info_inner">
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Last Payment: </span>
+																<span class="info_data">14.09.2020</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Duration: </span>
+																<span class="info_data text-blue">Monthly</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Payment: </span>
+																<span class="info_data text-blue">Manual</span>
+															</div>
+														</div>
+														<div class="expireDate mt-3">
+															<p class="text-red-light mb-1">Expire Date:</p>
+															<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
+														</div>
+													</div>
+												</div>
+												<!-- /Package Information -->
+												<!-- Limits -->
+												<div class="col-lg-4">
+													<div class="limits mx-auto mr-lg-0">
+														<h3 class="mb-4">Limits</h3>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Accounts</p>
+																<p class="mb-0 show_info text-blue">Already in use: 3 </p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="20" data-max="20">
+																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
+															</div>
+														</div>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Subusers</p>
+																<p class="mb-0 show_info text-blue">Already in use: 5</p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="30" data-max="30">
+																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
+															</div>
+														</div>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Storage</p>
+																<p class="mb-0 show_info text-blue">Already in use: 100MB</p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
+																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--/Limits -->
+												
+												<!-- Features -->
+												<div class="col-12">
+													<div class="features">
+														<h3 class="mb-4">Features</h3>
+														<div class="row pl-3">
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto Like
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Follow
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Unfollow
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Picture Editor
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Comment
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Repost
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto DM
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Answer
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Another Feature
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto DM
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Answer
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Another Feature
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>																	
+														</div>
+													</div>
+												</div>
+												<!-- /Features -->
+											</div>
+										</div>
+									</div>
+									<!--===X=== End of Package, Limits & Features ===X===-->
+									<!--===Payment History=== -->
+									<div id="paymentHistory" class="payment_history blue_border">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">
+												Payment History
+											</h3>
+											<button id="pkgPaymentBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentTwo" aria-expanded="true" aria-controls="pkgPaymentTwo">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="pkgPaymentTwo" class="collapse show" aria-labelledby="pkgPaymentBtn_2" data-parent="#packagePaymentAll">
+											<div class="table_container">
+												<table class="w-100 text-center p-3">
+													<thead>
+														<tr>
+															<th>Invoice Number</th>
+															<th>Invoice Date</th>
+															<th>Amount</th>
+															<th>Payment</th> 
+															<th>Function</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>PayPal</td>
+															<td>
+																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="2">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>Credit Card</td>
+															<td>
+																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="3">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>PayPal</td>
+															<td>
+																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="4">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>Giropay</td>
+															<td>
+																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- start: PDF preview Modal -->
+										<div class="modal fade text-center modalContainerPaymentHistory modal-transparent"  tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered">
+												<div class="modal-content pdfViewContainer">
+													<p class="pdfName text-center">invoice.pdf</p>
+													<div id="canvasPaymentHistory"></div>					
+												</div>
+												<!-- /.modal-content -->
+											</div>
+											<!-- /.modal-dialog -->
+										</div>
+										<!-- /End PDF preview Modal -->
+									</div>
+									<!--===end of Payment History=== -->
+								</div>
 							</div>
+							<!--======X==== Package & Payment =======X=======-->
 							<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 								Tab-3
 							</div>

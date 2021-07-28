@@ -50,12 +50,6 @@ $(document).ready(function(){
   }
   /*==X===Request a Feature ===X=== */
 
-    /*=========Live Console============= */
-  // if($('body').find('#consoleText').length){
-  //  $('#consoleText').perfectScrollbar();
-  // }
-
-  /*=====X====Live Console=======X====== */
   // preloader jquery plugin active
   if($('body').find('.preloader-js').length){
     $('.preloader-js').preloadinator({
@@ -148,7 +142,6 @@ $(document).ready(function(){
   /*======X=====System Settings====X====== */
 
   /*===========Accounting Invoices | PDF.js Library========= */
-  
   if($('body').find('#accountingInvoices').length){
     /*----PDF Modal preview---- */
       $('.invoicePreviewBtn').on('click', function (e) {
@@ -192,8 +185,7 @@ $(document).ready(function(){
         PDFJS.disableWorker = true;
         PDFJS.getDocument(url).then(renderPages);
     
-    }   
-    
+    }      
     
     renderPDF('./resources/pdf/task.pdf', document.getElementById('cavaContainer'));
     
@@ -214,12 +206,6 @@ $(document).ready(function(){
     // })
     /*------/PDF.js Activation------ */
   }
-      // /* yes button click function */
-      // $('.deleteYesBtn').click(function () {
-      //   var id = $(this).parents('.modalContainer').data('id');
-      //   $('[data-id=' + id + ']').remove();
-      //   $(this).parents('.modalContainer').modal('hide');
-      // });
   /*======X=====Accounting Invoices====X===== */
 
   /*============User Adminstration Name============= */
@@ -239,16 +225,64 @@ $(document).ready(function(){
     }
       
   });
+   /*---------- PDF.js Library-------------- */
+   if($('body').find('#paymentHistory').length){
+    /*----PDF Modal preview---- */
+      $('.invoicePreviewBtn').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).closest('tr').data('id');
+        var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
+        $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
+        $('.modalContainerPaymentHistory').data('id', id).modal('show');
+      });
+    /*----/PDF Modal preview---- */
+
+      /*------PDF.js Activation------ */
+      function renderPDF(url, canvasContainer, options) {
+
+        options = options || { scale: 1 };
+            
+        function renderPage(page) {
+            var viewport = page.getViewport(options.scale);
+            var wrapper = document.createElement("div");
+            wrapper.className = "canvas-wrapper";
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            var renderContext = {
+              canvasContext: ctx,
+              viewport: viewport
+            };
+            
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            wrapper.appendChild(canvas)
+            canvasContainer.appendChild(wrapper);
+            
+            page.render(renderContext);
+        }
+        
+        function renderPages(pdfDoc) {
+            for(var num = 1; num <= pdfDoc.numPages; num++)
+                pdfDoc.getPage(num).then(renderPage);
+        }
+    
+        PDFJS.disableWorker = true;
+        PDFJS.getDocument(url).then(renderPages);
+    
+    }      
+    
+    renderPDF('./resources/pdf/Invoice-002-R1.pdf', document.getElementById('canvasPaymentHistory'));
+    /*------/PDF.js Activation------ */
+   }
+  /*------X---- PDF.js Library--------X------ */
   /*======X=====User Adminstration Name======X====== */
 
   /*=====User Administration name (Package & Payment tab)==== */
   /*------<number increment & decrement>------- */
-  $(".button").on("click", function() {
-
+  $(".increDecreBtn").on("click", function() {
     var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
-  
-    if ($button.text() == "+") {
+    var oldValue = $button.parent().find("input").val();  
+    if ($button.attr('data-increment-derement') == "+") {
       var newVal = parseFloat(oldValue) + 1;
     } else {
      // Don't allow decrementing below zero
@@ -257,10 +291,30 @@ $(document).ready(function(){
       } else {
         newVal = 0;
       }
+    }  
+    $button.parent().find("input").val(newVal);  
+  });
+  $(".inputNumber").keyup(function() {
+    var eventValue = $(this).val();
+    var maxValue =  parseInt($(this).attr('data-max'));
+    /* text or string not allow */
+    if(!(/^\d+$/.test(eventValue))){
+      // alert('only number values is allowed');
+      $(this).val("");
     }
-  
-    $button.parent().find("input").val(newVal);
-  
+    if(eventValue > maxValue){
+      $(this).val(maxValue); 
+    }
+  });    
+  $('.incrementBtn').click(function(){
+    var oldValues = $(this).parent().find("input");
+    var mxValues = parseInt($(this).parent().find("input").attr('data-max'));
+    if(oldValues.val() === ""){
+      oldValues.val(1);
+    }else if(oldValues.val() > mxValues){
+      alert('Maximun Value is '+ mxValues); 
+      oldValues.val(mxValues);
+    }
   });
     /*------</number increment & decrement>------- */
   /*===X==User Administration name (Package & Payment tab)==X== */

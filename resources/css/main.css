@@ -33,6 +33,7 @@
 
 body {
   color: #393939;
+  font-size: 15px;
 }
 
 body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -243,17 +244,6 @@ textarea::placeholder {
   -o-border-radius: 50%;
 }
 
-.appearance-none {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  display: none;
-  width: 0px;
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -262,6 +252,16 @@ textarea::placeholder {
   overflow: hidden;
 }
 
+/*==========<Colors>============*/
+.text-blue {
+  color: #42ADE2;
+}
+
+.text-red-light {
+  color: #FF7575;
+}
+
+/*====X=====</Colors>======X====*/
 /* =======<Hover Design>===========*/
 .scale_hover_half {
   transition: 0.3s;
@@ -586,6 +586,20 @@ textarea::placeholder {
   display: none;
 }
 
+/*=====================*/
+/*ALL input type custom css here*/
+/*==================*/
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
 /*=====Custom Select Box design====*/
 .nice-select {
   border: solid 1px #42ADE2;
@@ -594,6 +608,7 @@ textarea::placeholder {
   font-size: 12px;
   height: 36px;
   line-height: 36px;
+  float: none;
 }
 
 .nice-select.open, .nice-select:active, .nice-select:focus, .nice-select:hover {
@@ -722,6 +737,13 @@ textarea::placeholder {
 
 .nice-select.big_select {
   width: 232px;
+}
+
+.nice-select.bigger_select {
+  height: 46px;
+  font-size: 15px;
+  line-height: 46px;
+  font-weight: 300;
 }
 
 /*==X===Custom Select Box design==X==*/
@@ -866,6 +888,7 @@ textarea::placeholder {
 /*====Switch Icon Small Design====*/
 .switch_icon_small {
   overflow: hidden;
+  text-align: left;
 }
 
 .switch_icon_small label {
@@ -941,7 +964,7 @@ textarea::placeholder {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -958,10 +981,10 @@ textarea::placeholder {
 
 .checkbox-container .checkmark {
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: 0;
-  height: 23px;
-  width: 23px;
+  height: 20px;
+  width: 20px;
   background-color: #C4C4C4;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -977,26 +1000,96 @@ textarea::placeholder {
 .checkbox-container .checkmark:after {
   content: '';
   position: absolute;
-  left: 7px;
-  top: 11px;
-  width: 10px;
+  left: 6px;
+  top: 9px;
+  width: 8px;
   height: 2px;
   border: 1px solid white;
 }
 
 .checkbox-container input:checked ~ .checkmark:after {
   display: block;
-  left: 9px;
-  top: 3px;
-  width: 7px;
-  height: 12px;
-  border: solid white;
+  left: 7px;
+  top: 4px;
+  width: 6px;
+  height: 9px;
+  border: solid #ffffff;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
+.checkbox-container.checkText-big {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.checkbox-container.checkText-small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 /*===X==Check box design===X===*/
+/*====== custom input[type="number"]====*/
+.incrementDcrement {
+  width: auto;
+}
+
+.incrementDcrement .increDecre_inner {
+  position: relative;
+}
+
+.incrementDcrement .increDecre_inner input {
+  width: 100%;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 1;
+}
+
+.incrementDcrement .increDecre_inner .increDecreBtn {
+  background-color: #FAFAFA;
+  position: absolute;
+  right: 8px;
+  top: 17px;
+  z-index: 2;
+  padding: 3px 10px;
+}
+
+.incrementDcrement .increDecre_inner .increDecreBtn::after {
+  content: '';
+  border-bottom: 2px solid #A3A3A3;
+  border-right: 2px solid #A3A3A3;
+  height: 7px;
+  width: 7px;
+  display: block;
+  pointer-events: none;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  position: relative;
+}
+
+.incrementDcrement .increDecre_inner .increDecreBtn.incrementBtn {
+  margin-top: -5px;
+}
+
+.incrementDcrement .increDecre_inner .increDecreBtn.decrementBtn {
+  margin-top: 5px;
+}
+
+.incrementDcrement .increDecre_inner .increDecreBtn.decrementBtn::after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+/*====== custom input[type="number"]====*/
 .responsive_alert {
   font-size: 12px;
   display: none;
@@ -1115,6 +1208,15 @@ textarea::placeholder {
 
 .modal .modal-header, .modal .modal-footer {
   border: none;
+}
+
+.modal.modal-transparent .modal-dialog .modal-content {
+  background: transparent;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
 }
 
 /*===X====== Modal Design===X====*/
@@ -4140,6 +4242,7 @@ ul.pieLegend li:not(.anjon) {
   border-radius: .25rem;
   min-height: 50px;
   line-height: 2.1;
+  background-color: #FAFAFA;
 }
 
 .user_admin_name .nav-pills .nav-link.active, .user_admin_name .nav-pills .show > .nav-link {
@@ -4315,6 +4418,84 @@ ul.pieLegend li:not(.anjon) {
 
 .user_admin_name .user_management .subuser_mngmnt table tr td:nth-child(1) {
   text-align: left;
+}
+
+.user_admin_name .package_payment h3 {
+  font-size: 20px;
+}
+
+.user_admin_name .package_payment .pkg_img_wrapper {
+  max-width: 267px;
+  width: 100%;
+}
+
+.user_admin_name .package_payment .info_container {
+  max-width: 250px;
+  width: 100%;
+}
+
+.user_admin_name .package_payment .info_container .info_inner {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.user_admin_name .package_payment .info_container .info_inner .info_row {
+  margin: 5px 0px;
+}
+
+.user_admin_name .package_payment .info_container .info_inner .info_row:last-child {
+  margin-bottom: 0px;
+}
+
+.user_admin_name .package_payment .info_container .info_inner .info_row > span:first-child {
+  width: 43%;
+}
+
+.user_admin_name .package_payment .info_container .info_inner .info_row > span:last-child {
+  width: 55%;
+}
+
+.user_admin_name .package_payment .limits {
+  max-width: 250px;
+  width: 100%;
+}
+
+.user_admin_name .package_payment .limits .limits_row {
+  margin: 5px -5px;
+}
+
+.user_admin_name .package_payment .limits .limits_row > div {
+  margin: 5px;
+  width: calc(50% - 2px);
+}
+
+.user_admin_name .package_payment .limits .limits_row > div.texts p {
+  font-size: 15px;
+}
+
+.user_admin_name .package_payment .limits .limits_row > div.texts p.show_info {
+  font-size: 10px;
+}
+
+.user_admin_name .package_payment .limits .limits_row > div.incrementDcrement {
+  max-width: 122px;
+}
+
+.user_admin_name .package_payment .features {
+  max-width: 750px;
+  width: 100%;
+}
+
+.user_admin_name .package_payment .features .checkbox-container {
+  padding-left: 40px;
+}
+
+.user_admin_name .package_payment .payment_history .table_container th:nth-child(3), .user_admin_name .package_payment .payment_history .table_container td:nth-child(3) {
+  width: 135px;
+}
+
+.user_admin_name .package_payment .payment_history .table_container th:nth-child(5), .user_admin_name .package_payment .payment_history .table_container td:nth-child(5) {
+  width: 99px;
 }
 
 /*==============Responsive CSS===============*/

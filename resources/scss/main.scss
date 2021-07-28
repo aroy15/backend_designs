@@ -2004,6 +2004,7 @@
 		border-radius: .25rem;
 		min-height:50px;
 		line-height: 2.1;
+		background-color: $gray-light1;
 	}
 	.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
 		background-color: $blue-light;
@@ -2160,6 +2161,85 @@
 			}
 		}
 	}
+	//Package & Payment
+	.package_payment{	
+		h3{
+			font-size: 20px;
+		}	
+		// Software Image Box
+		.pkg_img_wrapper{
+			max-width:267px;
+			width:100%;
+		}
+		// package info
+		.info_container{
+			max-width:250px;
+			width:100%;
+			.info_inner{
+				font-size:12px;
+				padding:10px;
+				.info_row{
+					margin:5px 0px;
+					&:last-child{
+						margin-bottom:0px;
+					}
+					> span{
+						&:first-child{
+							width:43%;							
+						}
+						&:last-child{
+							width:55%;
+						}
+					}
+				}
+			}
+		}
+		// Limits
+		.limits{
+			max-width:250px;
+			width:100%;
+			.limits_row{
+				margin: 5px -5px;
+				> div{
+					margin:5px;
+					width:calc(50% - 2px);
+					&.texts{
+						p{
+							font-size:15px;
+						}
+						p.show_info{
+							font-size:10px;
+						}
+					}
+					&.incrementDcrement{
+						max-width:122px;
+					}
+				}
+			}
+		}
+		//Features
+		.features{
+			max-width:750px;
+			width:100%;
+			.checkbox-container{
+				padding-left:40px;
+			}
+		}
+		// payment History
+		.payment_history{
+			.table_container{
+				th,td{
+					&:nth-child(3){
+						width:135px;
+					}
+					&:nth-child(5){
+						width:99px;
+					}
+				}
+			}
+		}
+	}
+	
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

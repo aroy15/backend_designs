@@ -45,6 +45,13 @@
 	-ms-transform:rotate($rotate);
 	-o-transform:rotate($rotate);
 }
+@mixin transform-origin($val1){
+	transform-origin: $val1;
+	-webkit-transform-origin: $val1;
+	-moz-transform-origin: $val1;
+	-ms-transform-origin: $val1;
+	-o-transform-origin: $val1;
+}
 @mixin transition-all($gettr) {
 	transition:$gettr;
 	-webkit-transition:$gettr;
