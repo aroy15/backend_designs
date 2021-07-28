@@ -4224,7 +4224,11 @@ ul.pieLegend li:not(.anjon) {
   width: 35%;
 }
 
-.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(6), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(6) {
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5) {
+  width: 100px;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(6), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(6) {
   width: 90px;
 }
 

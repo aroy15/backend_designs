@@ -1978,7 +1978,10 @@
 					&:nth-child(4){
 						width:35%;
 					}					
-					&:nth-child(5),&:nth-child(6){
+					&:nth-child(5){
+						width:100px;
+					}	
+					&:nth-child(6){
 						width:90px;
 					}
 				}
