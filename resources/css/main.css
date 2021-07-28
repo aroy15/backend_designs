@@ -4557,14 +4557,14 @@ ul.pieLegend li:not(.anjon) {
 .user_admin_name .history_support .historyFilter .filter_inner .filter_content p {
   color: #115A8A;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
 }
 
 .user_admin_name .history_support .historyFilter .filter_inner .filter_content span {
   font-weight: 300;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 14px;
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItemInner {
@@ -4648,12 +4648,12 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist p {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
 }
 
@@ -4679,7 +4679,7 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .date_hist {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1;
 }
@@ -4696,7 +4696,7 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .times {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 200;
 }
 
