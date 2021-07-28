@@ -4511,6 +4511,7 @@ ul.pieLegend li:not(.anjon) {
 
 .user_admin_name .history_support h3 {
   font-size: 20px;
+  font-weight: 400;
 }
 
 .user_admin_name .history_support .historyFilter {
