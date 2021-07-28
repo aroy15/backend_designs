@@ -323,7 +323,9 @@ $(document).ready(function(){
   /*===X==User Administration name (Package & Payment tab)==X== */
 });
 jQuery(document).ready(function(){
+  if($('body').find('.scrollbar-light').length){
     jQuery('.scrollbar-light').scrollbar();
+  }
 });
 /*======= Fullscreen icon function =======*/
 $(function() {    
