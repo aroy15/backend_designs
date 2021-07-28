@@ -317,10 +317,14 @@ $(document).ready(function(){
     }
   });
     /*------</number increment & decrement>------- */
+    /*perfect scrollbar */
+    // $('.historyItemInner').perfectScrollbar();
+    
   /*===X==User Administration name (Package & Payment tab)==X== */
 });
-
-
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-light').scrollbar();
+});
 /*======= Fullscreen icon function =======*/
 $(function() {    
   // $(".fullscreen-supported").toggle($(document).fullScreen() != null);

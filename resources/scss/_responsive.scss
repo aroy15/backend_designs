@@ -280,6 +280,16 @@
 			}
 		}
 	}
+	// User Administration Name
+	.user_admin_name{
+		// Support & History
+		.history_support{
+			// Filter
+			.historyFilter{
+				border-right:0px solid $blue-opacity;
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	#bodyItem{
@@ -411,6 +421,26 @@
 					}
 					&:hover td{
 						background: $blue-opacity;
+					}
+				}
+			}
+		}
+	}
+	// User Administration Name
+	.user_admin_name{
+		// Support & History
+		.history_support{
+			// History Items
+			.historyItemContainer{
+				.historyItem{
+					.profile_hist{
+						flex-wrap: nowrap;
+						flex-direction: column;
+						text-align:center;
+						padding-right: 10px;
+					}
+					.timeDate_hist {
+						padding-left: 10px;
 					}
 				}
 			}

@@ -17,6 +17,9 @@
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
         <!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
+		<!-- perfect scrollbar -->
+		<!-- <link rel="stylesheet" href="./vendors/css/perfect-scrollbar.css"> -->
+		<link rel="stylesheet" href="./vendors/css/jquery.scrollbar.css">
         <!-- Main/Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css">
 </head>
@@ -246,7 +249,7 @@
 			</div>
 		</div>		
 		<!--===User Adminstration - Customer ===-->
-		<div id="userAdminName" class="user_admin_name content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<div id="userAdminName" class="user_admin_name content-container p-0 p-md-4 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -262,10 +265,10 @@
 						  <a class="nav-link shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
 						</li>
 						<li class="nav-item mr-3">
-						  <a class="nav-link active shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
+						  <a class="nav-link shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
 						</li>
 						<li class="nav-item mr-3">
-						  <a class="nav-link shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
+						  <a class="nav-link active shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
 						</li>
 						<li class="nav-item">
 						  <a class="nav-link shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
@@ -572,7 +575,7 @@
 							</div>
 							<!--===X=== end of User Management ====X====== -->
 							<!--========== Package & Payment ==============-->
-							<div class="package_payment tab-pane fade show active" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
+							<div class="package_payment tab-pane fade" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
 								<div id="packagePaymentAll" class="pkgPayment_inner">
 									<!--===Package, Limits & Features === -->
 									<div class="pkg_lmt_feturs blue_border mb-5">	
@@ -835,11 +838,286 @@
 									</div>
 									<!--===end of Payment History=== -->
 								</div>
+								<!-- Save Setting Button for Package & payment-->
+								<div class="mt-5 d-flex justify-content-end">
+									<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
+								</div>
+								<!--/Save Setting Button for Package & payment -->
 							</div>
-							<!--======X==== Package & Payment =======X=======-->
-							<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-								Tab-3
+							<!--======X==== End of Package & Payment =======X=======-->
+							<!--=============== Support & History================-->
+							<div class="history_support tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+								<div id="historySupportParent" class="historySupport_inner">
+									<!--=== History === -->
+									<div class="history blue_border mb-5 pb-4">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">History</h3>
+											<button id="historyBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#historyId" aria-expanded="true" aria-controls="historyId">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="historyId" class="collapse show" aria-labelledby="historyBtn" data-parent="#historySupportParent">
+											<div class="row justify-content-between">
+												<!-- Filter History-->
+												<div class="col-lg-4 col-xl-3">
+													<div class="historyFilter pr-xl-3">
+														<div class="filter_inner b-r-8">
+															<h4 class="mb-2">Filter</h4>
+															<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-1.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Janett Guarso</p>
+																	<span class="d-block">10 Entries</span>
+																</div>
+															</div>
+															<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-2.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Timothy Grill</p>
+																	<span class="d-block">11 Entries</span>
+																</div>
+															</div>													<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-3.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Stefanie Killoah</p>
+																	<span class="d-block">23 Entries</span>
+																</div>
+															</div>
+															<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-4.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">20 Entries</span>
+																</div>
+															</div>	
+															<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-5.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Christine Killoah</p>
+																	<span class="d-block">2 Entries</span>
+																</div>
+															</div>	
+															<div class="filter_item d-flex align-items-center">
+																<div class="filter_pic">
+																	<img src="./resources/img/users/pic-6.png" alt="user">
+																</div>
+																<div class="filter_content">
+																	<p class="mb-0">Niclas Goseon</p>
+																	<span class="d-block">2 Entries</span>
+																</div>
+															</div>			
+														</div>														
+													</div>
+												</div>
+												<!-- /Filter History-->
+												<!-- History Items -->
+												<div class="col-lg-8 col-xl-9">
+													<div class="historyItemContainer mb-3">
+														<div class="historyItemInner scrollbar-light">
+															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_red d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist logos">
+																		<img src="./resources/img/logo-short.png" alt="logo">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">UploadCommander | Systemmanagement</p>
+																		<span class="d-block">An error occurred while publishing your post. The post was not published.</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
+																<div class="profile_hist d-flex align-items-center">
+																	<div class="pic_hist">
+																		<img src="./resources/img/users/pic-4.png" alt="image">
+																	</div>
+																	<div class="content_hist pl-2">
+																		<p class="mb-0">Tobias Messani</p>
+																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																	</div>
+																</div>
+																<div class="timeDate_hist">
+																	<p class="date_hist mb-0">25.02.2020</p>
+																	<div class="time_hist">
+																		<span class="mdi mdi-clock-outline"></span>
+																		<span class="times">16:45</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>	
+												</div>
+												<!-- /History Items -->
+											</div>
+										</div>
+									</div>
+									<!--===X=== End of History===X===-->
+									<!--===Payment History=== -->
+									<div id="supportTicketHistory" class="supportTicket_history blue_border">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">
+												Support Ticket History
+												<span class="ml-4">3</span>
+											</h3>
+											<button id="supportTktHistoryBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#supportTktHistoryId" aria-expanded="true" aria-controls="supportTktHistoryId">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="supportTktHistoryId" class="collapse show" aria-labelledby="supportTktHistoryBtn" data-parent="#supportHistoryParent">
+											<div class="table_container">
+												<table class="w-100 text-center p-3">
+													<thead>
+														<tr>
+															<th>ID</th>
+															<th>Date</th>
+															<th>Subject</th>
+															<th>Supporter</th> 
+															<th>Status</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1">
+															<td>UCS-10957</td>
+															<td>10.07.2020</td>
+															<td>Password Reset</td>
+															<td>Tobias Schmidt-Tudl</td>
+															<td>
+																<span class="yellow_alert">waiting</span>
+															</td>
+														</tr>
+														<tr data-id="2">
+															<td>UCS-10957</td>
+															<td>10.07.2020</td>
+															<td>Invoice Problem</td>
+															<td>Tobias Schmidt-Tudl</td>
+															<td>
+																<span class="green_alert">Complete</span>
+															</td>
+														</tr>
+														<tr data-id="3">
+															<td>UCS-10957</td>
+															<td>10.07.2020</td>
+															<td>Thornton</td>
+															<td>Tobias Schmidt-Tudl</td>
+															<td>
+																<span class="green_alert">waiting</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!--===end of Payment History=== -->
+								</div>
 							</div>
+							<!--========X======= End of Support & History========X========-->
 							<div class="tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
 								Documentation
 							</div>
@@ -896,10 +1174,10 @@
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
 	<!-- pdf.js for PDF preview -->
-	<!-- <script src="./vendors/js/pdf.min.js"></script> -->
-	<!-- pdf.worker.js for PDF preview -->
-	<!-- <script src="./vendors/js/pdf.worker.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
+	<!-- perfect scroll bar-->
+	<!-- <script src="./vendors/js/perfect-scrollbar.js"></script> -->
+	<script src="./vendors/js/jquery.scrollbar.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

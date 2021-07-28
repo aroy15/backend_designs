@@ -1609,6 +1609,7 @@ ul.pieLegend li:not(.anjon) {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  width: 13px;
 }
 
 .custom-scroll-bar-15::-webkit-scrollbar-thumb:hover {
@@ -4420,6 +4421,11 @@ ul.pieLegend li:not(.anjon) {
   text-align: left;
 }
 
+.user_admin_name .package_payment .pkgPayment_inner {
+  max-width: 928px;
+  width: 100%;
+}
+
 .user_admin_name .package_payment h3 {
   font-size: 20px;
 }
@@ -4496,6 +4502,245 @@ ul.pieLegend li:not(.anjon) {
 
 .user_admin_name .package_payment .payment_history .table_container th:nth-child(5), .user_admin_name .package_payment .payment_history .table_container td:nth-child(5) {
   width: 99px;
+}
+
+.user_admin_name .history_support .historySupport_inner {
+  max-width: 1025px;
+  width: 100%;
+}
+
+.user_admin_name .history_support h3 {
+  font-size: 20px;
+}
+
+.user_admin_name .history_support .historyFilter {
+  min-height: 409px;
+  position: relative;
+  border-right: 1px solid #BCF1FF;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner {
+  padding: 10px;
+  background-color: #FAFAFA;
+  max-width: 183px;
+  width: 100%;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_item {
+  margin-bottom: 20px;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_item:last-child {
+  margin-bottom: 0px;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_pic img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_content {
+  padding-left: 5px;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_content p {
+  color: #115A8A;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.user_admin_name .history_support .historyFilter .filter_inner .filter_content span {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItemInner {
+  height: 472px;
+  margin-bottom: 0px;
+  max-width: 730px;
+  width: 100%;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem {
+  background: rgba(196, 196, 196, 0.1);
+  padding: 6px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  max-width: 680px;
+  width: 100%;
+  border-right: 16px solid transparent;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem:last-child {
+  margin-bottom: 0px;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem:hover {
+  box-shadow: 0px 2px 9px -3px #42ADE2;
+  -webkit-box-shadow: 0px 2px 9px -3px #42ADE2;
+  -moz-box-shadow: 0px 2px 9px -3px #42ADE2;
+  -ms-box-shadow: 0px 2px 9px -3px #42ADE2;
+  -o-box-shadow: 0px 2px 9px -3px #42ADE2;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist {
+  padding-right: 20px;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .pic_hist img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .pic_hist.logos {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #C4C4C4;
+  padding: 10px;
+  line-height: 1.7;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .pic_hist.logos img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: unset;
+     object-fit: unset;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist span {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist {
+  width: 130px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  background: rgba(196, 196, 196, 0.2);
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .date_hist {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist {
+  line-height: 1;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .mdi {
+  font-size: 13px;
+  color: #42ADE2;
+  position: relative;
+  top: 1px;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .times {
+  font-size: 10px;
+  font-weight: 200;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem.hist_yellow {
+  border-right: 16px solid rgba(255, 219, 31, 0.7);
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem.hist_red {
+  border-right: 16px solid rgba(255, 77, 77, 0.7);
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem.hist_green {
+  border-right: 16px solid rgba(27, 209, 45, 0.7);
+}
+
+.user_admin_name .history_support .supportTicket_history h3 span {
+  width: 42px;
+  height: 42px;
+  background-color: #FAFAFA;
+  line-height: 42px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user_admin_name .history_support .supportTicket_history .table_container table tr th:nth-child(1), .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(1) {
+  width: 125px;
+}
+
+.user_admin_name .history_support .supportTicket_history .table_container table tr th:nth-child(2), .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(2) {
+  width: 111px;
+}
+
+.user_admin_name .history_support .supportTicket_history .table_container table tr th:nth-child(3), .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(3) {
+  width: 35%;
+}
+
+.user_admin_name .history_support .supportTicket_history .table_container table tr th:nth-child(4), .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(4) {
+  width: 25%;
+}
+
+.user_admin_name .history_support .supportTicket_history .table_container table tr th:nth-child(5), .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(5) {
+  width: 125px;
 }
 
 /*==============Responsive CSS===============*/
@@ -4687,6 +4932,9 @@ ul.pieLegend li:not(.anjon) {
     min-width: 100%;
     width: 100%;
   }
+  .user_admin_name .history_support .historyFilter {
+    border-right: 0px solid #BCF1FF;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4792,6 +5040,19 @@ ul.pieLegend li:not(.anjon) {
   }
   .accounting_Dashboard .sales_last_10_m table.sales_item_table tr:hover td {
     background: #BCF1FF;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItem .profile_hist {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-right: 10px;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist {
+    padding-left: 10px;
   }
 }
 

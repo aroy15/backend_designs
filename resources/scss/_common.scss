@@ -1007,6 +1007,7 @@ ul.pieLegend li:not(.anjon){
 	&::-webkit-scrollbar-thumb {
 		background: #BAD4E5; 
 		@include b-radius(15px);
+		width:13px;
 	}
 	// Handle on hover 
 	&::-webkit-scrollbar-thumb:hover {
