@@ -41,7 +41,8 @@
 		  <span class="bottom-right fs-bar"></span>
 		  <span class="bottom-right-horiz fs-bar"></span>
 		  </button>    
-		  <a href="index.html" class="site-logo">
+		 <a href="index.html" class="site-logo">
+    		<span class="logo-text">Backend</span>
 		  <img src="resources/img/Logo-UC.png" alt="Site logo">
 		  </a>
 	   </div>
@@ -262,905 +263,1400 @@
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
 				<div class="userAdminName_inner">
-					<!-- MENU nav pills -->
-					<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
-						<li class="nav-item mr-3">
-						  <a class="nav-link shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
-						</li>
-						<li class="nav-item mr-3">
-						  <a class="nav-link shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
-						</li>
-						<li class="nav-item mr-3">
-						  <a class="nav-link active shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
-						</li>
-					  </ul>
-					  <!-- /MENU nav pills -->
-					  <div class="tab-content" id="pills-tabContent">
-						  <!-- ====== User Management ========= -->
-							<div class="user_management tab-pane fade" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
-								<div id="userManagementAll" class="user_management_inner">
-									<!--===Account Settings=== -->
-									<div class="account_settings blue_border mb-5">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">Account Settings</h3>
-											<button id="userMngMntBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntOne" aria-expanded="true" aria-controls="userMngMntOne">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
-										</div>
-	
-										<div id="userMngMntOne" class="collapse show pl-4" aria-labelledby="userMngMntBtn_1" data-parent="#userManagementAll">
-											<div class="row">
-												<div class="col-xl-2 d-flex flex-column align-items-center mb-5 mb-xl-0">
-													<div class="profile_picture">
-														<img id="userImgPic" class="profile_pic" src="./resources/img/profile-pic.png" alt="profile pic">
-														<!-- Image Edit Button -->
-														<label class="img_edit_btn shadow_hover_1 cursor-pointer">
-															<input type="file" id="UserImgEditBtn"  class="appearance-none" accept="image/*">
-															<span class="mdi mdi-square-edit-outline"></span>
-														</label>
-														<!--/Image Edit Button -->														
-													</div>
-													<div class="switch_icon_small mt-3">
-														<label>
-															<input type="checkbox" class="appearance-none" checked>
-															<span class="switch_create"></span>
-														</label>
-														<span class="swich_text">Locked</span>
-													</div>
+					<!--======== MENU nav pills (follow up mail included)========-->
+					<div class="d-flex flex-wrap justify-content-between flex-wrap">
+						<ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+							<li class="nav-item mr-3 mb-3">
+							  <a class="nav-link shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
+							</li>
+							<li class="nav-item mr-3 mb-3">
+							  <a class="nav-link shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
+							</li>
+							<li class="nav-item mr-3 mb-3">
+							  <a class="nav-link shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
+							</li>
+							<li class="nav-item mb-3">
+							  <a class="nav-link active shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
+							</li>
+						</ul>
+						<!-- Follow up Mail -->
+						 <div class="follow-up-mail-link">
+							<button class="icon_btn_outline mt-1 ml-3 mb-4" data-toggle="modal" data-target="#followUpMailModal">
+								<span class="mdi mdi-email"></span>
+								<span class="btnText">Follow-up Mail</span>
+							  </button>
+							  <!--Follow Up mail modal popup -->
+							  <div id="followUpMailModal" class="modal fade text-center followUpMailModal" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content px-lg-4 px-xl-5">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											<span class="mdi mdi-close"></span>
+										</button>
+										<div class="modal-body p-4 mt-4">
+											<div class="showEmailText">
+												<h2 class="text-danger">Under construction</h2>
+												<p class="strongText"> Dear Ms. Example!</p>
+											
+												<p>With reference to our telephone conversation, I would like to thank you for contacting us.</p>
+
+												<p>As discussed, I have now consulted our technical department once again and asked how such an error can occur.</p>
+
+												<p>Our head technician then explained to me that a faulty internet connection can lead to disruptions in our service.</p>
+
+												<p>So the next time you upload images to your media center, please make sure you are connected to a stable internet connection.</p>
+
+												<p>If you have any further questions, please create a ticket in your account or contact us again by phone.</p>
+
+												<p>All the best, wishes you</p>
+
+												<p class="strongText mb-0">Emely Gurrero</p>
+												<p class="strongText">Customer-Service-Specialist</p>
+
+												<div class="contactInfo">
+													Call: 02592 / 972745-3<br/>
+													Mail: service@uploadcommander.de
 												</div>
-												<div class="col-xl-6 mb-4 mb-xl-0">
-													<div class="personal_setting">
-														<h4 class="pb-3">Personal Settings</h4>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div>
-																<select class="gray_select">
-																	<option>Sir or Madam</option>
-																	<option value="sir">Sir</option>
-																	<option value="sir">Madam</option>
-																</select>
-															</div>
-															<div>
-																<input type="text" placeholder="Company">
-															</div>
-														</div>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div>
-																<input type="text" placeholder="First Name">
-															</div>
-															<div>
-																<input type="text" placeholder="Last Name">
-															</div>
-														</div>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div>
-																<input type="text" placeholder="Street">
-															</div>
-															<div>
-																<input type="text" placeholder="Number">
-															</div>
-														</div>														
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div>
-																<input type="text" placeholder="Post code">
-															</div>
-															<div>
-																<input type="text" placeholder="City">
-															</div>
-														</div>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div>
-																<input type="text" placeholder="Email">
-															</div>
-															<div>
-																<input type="text" placeholder="Phone">
-															</div>
-														</div>
-														<!-- Switch boxes -->
-														<div class="switch_boxes mt-4">
-															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-															</div>
-															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none">
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-															</div>
-															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-																<div class="switch_icon_small mt-1">
-																	<label>
-																		<input type="checkbox" class="appearance-none">
-																		<span class="switch_create"></span>
-																	</label>
-																	<span class="swich_text">Email notifications</span>
-																</div>
-															</div>
-														</div>
-														<!-- /Switch boxes -->
-													</div>
+												<div class="devider mb-2"> -----------------------------------------------------------------------</div>
+												<div class="mailInfoOne mb-2">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.
 												</div>
-												<div class="col-xl-4">
-													<!-- Interface Settings -->
-													<div class="interface_settings mx-auto mx-xl-0">
-														<h4 class="mb-4">Interface Settings</h4>
-														<!-- language -->
-														<select class="gray_select">
-															<option>Language</option>
-															<option value="english">English</option>
-															<option value="german">German</option>
-															<option value="bengali">Bengali</option>
-															<option value="dutch">Dutch</option>
-														</select>
-														<!-- Time Zone -->
-														<select class="gray_select">
-															<option>Time Zone</option>
-															<option value="(GMT+2)"> Germany (GMT+2)</option>
-															<option value="(GMT-4)">NY, USA (GMT-4)</option>
-															<option value="(GMT+6)">Bangladesh (GMT+6)</option>
-														</select>
-														<!-- Time Format -->
-														<select class="gray_select">
-															<option>Time Format</option>
-															<option value="24-hour">24-hour</option>
-															<option value="12-hour">12-hour</option>
-														</select>
-														<!-- Time Format -->
-														<select class="gray_select mb-4">
-															<option>Data Format</option>
-															<option value="Format-1">Format-1</option>
-															<option value="Format-2">Format-2</option>
-														</select>														
-													</div>
-													<!-- /Interface Settings -->
-													<!-- informations -->
-													<div class="informations mx-auto mx-xl-0">
-														<h4 class="mb-2">Informations</h4>
-														<div class="info_container">
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Register Date: </span>
-																<span class="info_data">20.10.2020</span>
-															</div>
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Last Login: </span>
-																<span class="info_data">15.07.2020 - 15:30</span>
-															</div>
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Client: </span>
-																<span class="info_data">Windows 10
-																	Mozila Firefox 12.0.0.2</span>
-															</div>
-														</div>
-													</div>
-													<!-- /informations -->
+												<div class="mailInfoTwo mb-2">
+													#####  Please do not reply to this message #####
+													This e-mail address has been set up exclusively for sending e-mails.
+													If you have any further questions or problems, please contact us by phone or open a ticket in your account.
 												</div>
+												<div class="copyrightText d-flex justify-content-between align-items-center">
+													<p>REF: #CSR_9955102</p>
+													<p>@ UploadCommander 2021</p>
+												</div>	
 											</div>
-											<!-- Reset Password & Login -->
-											<div class="d-flex flex-wrap justify-content-center justify-content-xl-end mt-4 ">
-												<button class="resetBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Reset Password</button>
-												<button class="loginBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Login into the Customer</button>
-											</div>
-											<!-- /Reset Password & Login -->
-										</div>
-									</div>
-									<!--===end of Account Settings=== -->
-									<!--===Subuser Management=== -->
-									<div class="subuser_mngmnt blue_border">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">
-												Subuser Management 
-												<span class="d-inline-block ml-4">3/5</span>
-											</h3>
-											<button id="userMngMntBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntTwo" aria-expanded="true" aria-controls="userMngMntTwo">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
-										</div>	
-										<div id="userMngMntTwo" class="collapse show pl-4" aria-labelledby="userMngMntBtn_2" data-parent="#userManagementAll">
-											<div class="table_container">
-												<table class="w-100 text-center p-3">
-													<thead>
-														<tr>
-															<th>Name</th>
-															<th>Register Date</th>
-															<th>Mail</th>
-															<th>Status</th> 
-														</tr>
-													</thead>
-													<tbody>
-														<tr data-id="1">
-															<td>
-																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-																<a href="#" class="pl-2 d-inline-block scale_hover_half">Adrian Schroeder</a>
-															</td>
-															<td>10.07.2020</td>
-															<td>AdrianSchroed@mail.com</td>
-															<td>
-																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																</span>
-															</td>
-														</tr>
-														<tr data-id="2">
-															<td>
-																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-																<a href="#" class="pl-2 d-inline-block scale_hover_half">Anna Delgado</a>
-															</td>
-															<td>10.07.2020</td>
-															<td>EmelyGuerrero@mail.com</td>
-															<td>
-																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																</span>
-															</td>
-														</tr>
-														<tr data-id="3">
-															<td>
-																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-																<a href="#" class="pl-2 d-inline-block scale_hover_half">Max Lawrence</a>
-															</td>
-															<td>10.07.2020</td>
-															<td>EmelyGuerrero@mail.com</td>
-															<td>
-																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																</span>
-															</td>
-														</tr>
-														<tr data-id="4">
-															<td>
-																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-																<a href="#" class="pl-2 d-inline-block scale_hover_half">Liza Meyers</a>
-															</td>
-															<td>10.07.2020</td>
-															<td>EmelyGuerrero@mail.com</td>
-															<td>
-																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																	<label>
-																		<input type="checkbox" class="appearance-none" checked>
-																		<span class="switch_create"></span>
-																	</label>
-																</span>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-									<!--===end of Subuser Management=== -->
-								</div>
-								<!-- Save Setting Button for user management-->
-								<div class="mt-5 d-flex justify-content-end">
-									<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
-								</div>
-								<!--/Save Setting Button for user management -->
-							</div>
-							<!--===X=== end of User Management ====X====== -->
-							<!--========== Package & Payment ==============-->
-							<div class="package_payment tab-pane fade" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
-								<div id="packagePaymentAll" class="pkgPayment_inner">
-									<!--===Package, Limits & Features === -->
-									<div class="pkg_lmt_feturs blue_border mb-5">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">Packages</h3>
-											<button id="pkgPaymentBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentOne" aria-expanded="true" aria-controls="pkgPaymentOne">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
-										</div>
-	
-										<div id="pkgPaymentOne" class="collapse show" aria-labelledby="pkgPaymentBtn_1" data-parent="#packagePaymentAll">
-											<div class="row justify-content-between">
-												<!-- software box image -->
-												<div class="col-lg-4">
-													<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
-														<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
-													</div>
-												</div>
-												<!-- /software box Image -->
-												<!-- Package Information -->
-												<div class="col-lg-4">
-													<div class="info_container mx-auto mt-4 mb-5 mb-lg-0">
-														<select class="gray_select bigger_select w-100 mb-1">
-															<option>Starter Package</option>
-															<option>Golden Package</option>
-															<option>Platinum Package</option>
-														</select>
-														<div class="info_inner">
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Last Payment: </span>
-																<span class="info_data">14.09.2020</span>
-															</div>
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Duration: </span>
-																<span class="info_data text-blue">Monthly</span>
-															</div>
-															<div class="d-flex info_row justify-content-between">
-																<span class="info_title">Payment: </span>
-																<span class="info_data text-blue">Manual</span>
-															</div>
-														</div>
-														<div class="expireDate mt-3">
-															<p class="text-red-light mb-1">Expire Date:</p>
-															<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
-														</div>
-													</div>
-												</div>
-												<!-- /Package Information -->
-												<!-- Limits -->
-												<div class="col-lg-4">
-													<div class="limits mx-auto mr-lg-0">
-														<h3 class="mb-4">Limits</h3>
-														<div class="limits_row d-flex align-items-center">
-															<div class="texts text-center">
-																<p class="mb-0">Max. Accounts</p>
-																<p class="mb-0 show_info text-blue">Already in use: 3 </p>
-															</div>
-															<div class="incrementDcrement">
-																<div class="increDecre_inner">
-																	<input type="number" class="inputNumber" placeholder="20" data-max="20">
-																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
-																</div>
-															</div>
-														</div>
-														<div class="limits_row d-flex align-items-center">
-															<div class="texts text-center">
-																<p class="mb-0">Max. Subusers</p>
-																<p class="mb-0 show_info text-blue">Already in use: 5</p>
-															</div>
-															<div class="incrementDcrement">
-																<div class="increDecre_inner">
-																	<input type="number" class="inputNumber" placeholder="30" data-max="30">
-																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
-																</div>
-															</div>
-														</div>
-														<div class="limits_row d-flex align-items-center">
-															<div class="texts text-center">
-																<p class="mb-0">Max. Storage</p>
-																<p class="mb-0 show_info text-blue">Already in use: 100MB</p>
-															</div>
-															<div class="incrementDcrement">
-																<div class="increDecre_inner">
-																	<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
-																	<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																	<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<!--/Limits -->
+											<div class="modal_bg_icon">
+												<span class="mdi mdi-email-outline"></span>
 												
-												<!-- Features -->
-												<div class="col-12">
-													<div class="features">
-														<h3 class="mb-4">Features</h3>
-														<div class="row pl-3">
-															<div class="col-lg-3 col-sm-6">
-																<label class="checkbox-container mb-4">
-																	Auto Like
-																	<input type="checkbox">
-																	<span class="checkmark"></span>
+											</div>
+										</div>
+										<!--/modal-body-collapse -->
+										<div class="modal-footer mb-4">
+											<button type="button" class="green_lime_btn" data-dismiss="modal">Save this Entry</button>
+										</div>
+										<!--/modal-footer-collapse -->
+										<div class="modal_bg_icon">
+											<span class="mdi mdi-delete-empty"></span>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							  </div>
+							  <!--/Follow Up mail Modal popup -->
+						 </div>
+						 <!--/Follow up Mail -->
+					</div>					
+					<!--===X==== end of MENU nav pills =====X==-->
+
+					<!--======= Tab Contents ======-->
+					<div class="tab-content" id="pills-tabContent">
+						<!-- ====== User Management ========= -->
+						<div class="user_management tab-pane fade" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
+							<div id="userManagementAll" class="user_management_inner">
+								<!--===Account Settings=== -->
+								<div class="account_settings blue_border mb-5">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">Account Settings</h3>
+										<button id="userMngMntBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntOne" aria-expanded="true" aria-controls="userMngMntOne">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>
+
+									<div id="userMngMntOne" class="collapse show pl-4" aria-labelledby="userMngMntBtn_1" data-parent="#userManagementAll">
+										<div class="row">
+											<div class="col-xl-2 d-flex flex-column align-items-center mb-5 mb-xl-0">
+												<div class="profile_picture">
+													<img id="userImgPic" class="profile_pic" src="./resources/img/profile-pic.png" alt="profile pic">
+													<!-- Image Edit Button -->
+													<label class="img_edit_btn shadow_hover_1 cursor-pointer">
+														<input type="file" id="UserImgEditBtn"  class="appearance-none" accept="image/*">
+														<span class="mdi mdi-square-edit-outline"></span>
+													</label>
+													<!--/Image Edit Button -->														
+												</div>
+												<div class="switch_icon_small mt-3">
+													<label>
+														<input type="checkbox" class="appearance-none" checked>
+														<span class="switch_create"></span>
+													</label>
+													<span class="swich_text">Locked</span>
+												</div>
+											</div>
+											<div class="col-xl-6 mb-4 mb-xl-0">
+												<div class="personal_setting">
+													<h4 class="pb-3">Personal Settings</h4>
+													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+														<div>
+															<select class="gray_select">
+																<option>Sir or Madam</option>
+																<option value="sir">Sir</option>
+																<option value="sir">Madam</option>
+															</select>
+														</div>
+														<div>
+															<input type="text" placeholder="Company">
+														</div>
+													</div>
+													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+														<div>
+															<input type="text" placeholder="First Name">
+														</div>
+														<div>
+															<input type="text" placeholder="Last Name">
+														</div>
+													</div>
+													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+														<div>
+															<input type="text" placeholder="Street">
+														</div>
+														<div>
+															<input type="text" placeholder="Number">
+														</div>
+													</div>														
+													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+														<div>
+															<input type="text" placeholder="Post code">
+														</div>
+														<div>
+															<input type="text" placeholder="City">
+														</div>
+													</div>
+													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+														<div>
+															<input type="text" placeholder="Email">
+														</div>
+														<div>
+															<input type="text" placeholder="Phone">
+														</div>
+													</div>
+													<!-- Switch boxes -->
+													<div class="switch_boxes mt-4">
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
 																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Follow
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Unfollow
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
+																<span class="swich_text">Email notifications</span>
 															</div>
-															<div class="col-lg-3 col-sm-6">
-																<label class="checkbox-container mb-4">
-																	Picture Editor
-																	<input type="checkbox">
-																	<span class="checkmark"></span>
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
 																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Comment
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Repost
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
+																<span class="swich_text">Email notifications</span>
 															</div>
-															<div class="col-lg-3 col-sm-6">
-																<label class="checkbox-container mb-4">
-																	Auto DM
-																	<input type="checkbox">
-																	<span class="checkmark"></span>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none">
+																	<span class="switch_create"></span>
 																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Answer
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
-																<label class="checkbox-container mb-4">
-																	Another Feature
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
-																</label>
+																<span class="swich_text">Email notifications</span>
 															</div>
-															<div class="col-lg-3 col-sm-6">
-																<label class="checkbox-container mb-4">
-																	Auto DM
-																	<input type="checkbox">
-																	<span class="checkmark"></span>
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
 																</label>
-																<label class="checkbox-container mb-4">
-																	Auto Answer
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
+																<span class="swich_text">Email notifications</span>
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
 																</label>
-																<label class="checkbox-container mb-4">
-																	Another Feature
-																	<input type="checkbox" checked>
-																	<span class="checkmark"></span>
+																<span class="swich_text">Email notifications</span>
+															</div>
+															<div class="switch_icon_small mt-1">
+																<label>
+																	<input type="checkbox" class="appearance-none">
+																	<span class="switch_create"></span>
 																</label>
-															</div>																	
+																<span class="swich_text">Email notifications</span>
+															</div>
+														</div>
+													</div>
+													<!-- /Switch boxes -->
+												</div>
+											</div>
+											<div class="col-xl-4">
+												<!-- Interface Settings -->
+												<div class="interface_settings mx-auto mx-xl-0">
+													<h4 class="mb-4">Interface Settings</h4>
+													<!-- language -->
+													<select class="gray_select">
+														<option>Language</option>
+														<option value="english">English</option>
+														<option value="german">German</option>
+														<option value="bengali">Bengali</option>
+														<option value="dutch">Dutch</option>
+													</select>
+													<!-- Time Zone -->
+													<select class="gray_select">
+														<option>Time Zone</option>
+														<option value="(GMT+2)"> Germany (GMT+2)</option>
+														<option value="(GMT-4)">NY, USA (GMT-4)</option>
+														<option value="(GMT+6)">Bangladesh (GMT+6)</option>
+													</select>
+													<!-- Time Format -->
+													<select class="gray_select">
+														<option>Time Format</option>
+														<option value="24-hour">24-hour</option>
+														<option value="12-hour">12-hour</option>
+													</select>
+													<!-- Time Format -->
+													<select class="gray_select mb-4">
+														<option>Data Format</option>
+														<option value="Format-1">Format-1</option>
+														<option value="Format-2">Format-2</option>
+													</select>														
+												</div>
+												<!-- /Interface Settings -->
+												<!-- informations -->
+												<div class="informations mx-auto mx-xl-0">
+													<h4 class="mb-2">Informations</h4>
+													<div class="info_container">
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Register Date: </span>
+															<span class="info_data">20.10.2020</span>
+														</div>
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Last Login: </span>
+															<span class="info_data">15.07.2020 - 15:30</span>
+														</div>
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Client: </span>
+															<span class="info_data">Windows 10
+																Mozila Firefox 12.0.0.2</span>
 														</div>
 													</div>
 												</div>
-												<!-- /Features -->
+												<!-- /informations -->
 											</div>
+										</div>
+										<!-- Reset Password & Login -->
+										<div class="d-flex flex-wrap justify-content-center justify-content-xl-end mt-4 ">
+											<button class="resetBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Reset Password</button>
+											<button class="loginBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Login into the Customer</button>
+										</div>
+										<!-- /Reset Password & Login -->
+									</div>
+								</div>
+								<!--===end of Account Settings=== -->
+								<!--===Subuser Management=== -->
+								<div class="subuser_mngmnt blue_border">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">
+											Subuser Management 
+											<span class="d-inline-block ml-4">3/5</span>
+										</h3>
+										<button id="userMngMntBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntTwo" aria-expanded="true" aria-controls="userMngMntTwo">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>	
+									<div id="userMngMntTwo" class="collapse show pl-4" aria-labelledby="userMngMntBtn_2" data-parent="#userManagementAll">
+										<div class="table_container">
+											<table class="w-100 text-center p-3">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Register Date</th>
+														<th>Mail</th>
+														<th>Status</th> 
+													</tr>
+												</thead>
+												<tbody>
+													<tr data-id="1">
+														<td>
+															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+															<a href="#" class="pl-2 d-inline-block scale_hover_half">Adrian Schroeder</a>
+														</td>
+														<td>10.07.2020</td>
+														<td>AdrianSchroed@mail.com</td>
+														<td>
+															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
+																</label>
+															</span>
+														</td>
+													</tr>
+													<tr data-id="2">
+														<td>
+															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+															<a href="#" class="pl-2 d-inline-block scale_hover_half">Anna Delgado</a>
+														</td>
+														<td>10.07.2020</td>
+														<td>EmelyGuerrero@mail.com</td>
+														<td>
+															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
+																</label>
+															</span>
+														</td>
+													</tr>
+													<tr data-id="3">
+														<td>
+															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+															<a href="#" class="pl-2 d-inline-block scale_hover_half">Max Lawrence</a>
+														</td>
+														<td>10.07.2020</td>
+														<td>EmelyGuerrero@mail.com</td>
+														<td>
+															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
+																</label>
+															</span>
+														</td>
+													</tr>
+													<tr data-id="4">
+														<td>
+															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+															<a href="#" class="pl-2 d-inline-block scale_hover_half">Liza Meyers</a>
+														</td>
+														<td>10.07.2020</td>
+														<td>EmelyGuerrero@mail.com</td>
+														<td>
+															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																<label>
+																	<input type="checkbox" class="appearance-none" checked>
+																	<span class="switch_create"></span>
+																</label>
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
 									</div>
-									<!--===X=== End of Package, Limits & Features ===X===-->
-									<!--===Payment History=== -->
-									<div id="paymentHistory" class="payment_history blue_border">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">
-												Payment History
-											</h3>
-											<button id="pkgPaymentBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentTwo" aria-expanded="true" aria-controls="pkgPaymentTwo">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
-										</div>	
-										<div id="pkgPaymentTwo" class="collapse show" aria-labelledby="pkgPaymentBtn_2" data-parent="#packagePaymentAll">
-											<div class="table_container">
-												<table class="w-100 text-center p-3">
-													<thead>
-														<tr>
-															<th>Invoice Number</th>
-															<th>Invoice Date</th>
-															<th>Amount</th>
-															<th>Payment</th> 
-															<th>Function</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr data-id="1">
-															<td>Invoice-002-R1</td>
-															<td>10.07.2020</td>
-															<td>20.99€</td>
-															<td>PayPal</td>
-															<td>
-																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																	<span class="mdi mdi-file-document-outline"></span>
-																</button>
-															</td>
-														</tr>
-														<tr data-id="2">
-															<td>Invoice-002-R1</td>
-															<td>10.07.2020</td>
-															<td>20.99€</td>
-															<td>Credit Card</td>
-															<td>
-																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																	<span class="mdi mdi-file-document-outline"></span>
-																</button>
-															</td>
-														</tr>
-														<tr data-id="3">
-															<td>Invoice-002-R1</td>
-															<td>10.07.2020</td>
-															<td>20.99€</td>
-															<td>PayPal</td>
-															<td>
-																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																	<span class="mdi mdi-file-document-outline"></span>
-																</button>
-															</td>
-														</tr>
-														<tr data-id="4">
-															<td>Invoice-002-R1</td>
-															<td>10.07.2020</td>
-															<td>20.99€</td>
-															<td>Giropay</td>
-															<td>
-																<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																	<span class="mdi mdi-file-document-outline"></span>
-																</button>
-															</td>
-														</tr>
-													</tbody>
-												</table>
+								</div>
+								<!--===end of Subuser Management=== -->
+							</div>
+							<!-- Save Setting Button for user management-->
+							<div class="mt-5 d-flex justify-content-end">
+								<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
+							</div>
+							<!--/Save Setting Button for user management -->
+						</div>
+						<!--===X=== end of User Management ====X====== -->
+						<!--========== Package & Payment ==============-->
+						<div class="package_payment tab-pane fade" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
+							<div id="packagePaymentAll" class="pkgPayment_inner">
+								<!--===Package, Limits & Features === -->
+								<div class="pkg_lmt_feturs blue_border mb-5">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">Packages</h3>
+										<button id="pkgPaymentBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentOne" aria-expanded="true" aria-controls="pkgPaymentOne">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>
+
+									<div id="pkgPaymentOne" class="collapse show" aria-labelledby="pkgPaymentBtn_1" data-parent="#packagePaymentAll">
+										<div class="row justify-content-between">
+											<!-- software box image -->
+											<div class="col-lg-4">
+												<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
+													<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
+												</div>
 											</div>
+											<!-- /software box Image -->
+											<!-- Package Information -->
+											<div class="col-lg-4">
+												<div class="info_container mx-auto mt-4 mb-5 mb-lg-0">
+													<select class="gray_select bigger_select w-100 mb-1">
+														<option>Starter Package</option>
+														<option>Golden Package</option>
+														<option>Platinum Package</option>
+													</select>
+													<div class="info_inner">
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Last Payment: </span>
+															<span class="info_data">14.09.2020</span>
+														</div>
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Duration: </span>
+															<span class="info_data text-blue">Monthly</span>
+														</div>
+														<div class="d-flex info_row justify-content-between">
+															<span class="info_title">Payment: </span>
+															<span class="info_data text-blue">Manual</span>
+														</div>
+													</div>
+													<div class="expireDate mt-3">
+														<p class="text-red-light mb-1">Expire Date:</p>
+														<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
+													</div>
+												</div>
+											</div>
+											<!-- /Package Information -->
+											<!-- Limits -->
+											<div class="col-lg-4">
+												<div class="limits mx-auto mr-lg-0">
+													<h3 class="mb-4">Limits</h3>
+													<div class="limits_row d-flex align-items-center">
+														<div class="texts text-center">
+															<p class="mb-0">Max. Accounts</p>
+															<p class="mb-0 show_info text-blue">Already in use: 3 </p>
+														</div>
+														<div class="incrementDcrement">
+															<div class="increDecre_inner">
+																<input type="number" class="inputNumber" placeholder="20" data-max="20">
+																<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+															</div>
+														</div>
+													</div>
+													<div class="limits_row d-flex align-items-center">
+														<div class="texts text-center">
+															<p class="mb-0">Max. Subusers</p>
+															<p class="mb-0 show_info text-blue">Already in use: 5</p>
+														</div>
+														<div class="incrementDcrement">
+															<div class="increDecre_inner">
+																<input type="number" class="inputNumber" placeholder="30" data-max="30">
+																<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+															</div>
+														</div>
+													</div>
+													<div class="limits_row d-flex align-items-center">
+														<div class="texts text-center">
+															<p class="mb-0">Max. Storage</p>
+															<p class="mb-0 show_info text-blue">Already in use: 100MB</p>
+														</div>
+														<div class="incrementDcrement">
+															<div class="increDecre_inner">
+																<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
+																<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/Limits -->
+											
+											<!-- Features -->
+											<div class="col-12">
+												<div class="features">
+													<h3 class="mb-4">Features</h3>
+													<div class="row pl-3">
+														<div class="col-lg-3 col-sm-6">
+															<label class="checkbox-container mb-4">
+																Auto Like
+																<input type="checkbox">
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Follow
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Unfollow
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+														</div>
+														<div class="col-lg-3 col-sm-6">
+															<label class="checkbox-container mb-4">
+																Picture Editor
+																<input type="checkbox">
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Comment
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Repost
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+														</div>
+														<div class="col-lg-3 col-sm-6">
+															<label class="checkbox-container mb-4">
+																Auto DM
+																<input type="checkbox">
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Answer
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Another Feature
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+														</div>
+														<div class="col-lg-3 col-sm-6">
+															<label class="checkbox-container mb-4">
+																Auto DM
+																<input type="checkbox">
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Auto Answer
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+															<label class="checkbox-container mb-4">
+																Another Feature
+																<input type="checkbox" checked>
+																<span class="checkmark"></span>
+															</label>
+														</div>																	
+													</div>
+												</div>
+											</div>
+											<!-- /Features -->
 										</div>
-										<!-- start: PDF preview Modal -->
-										<div class="modal fade text-center modalContainerPaymentHistory modal-transparent"  tabindex="-1" role="dialog" aria-hidden="true">
+									</div>
+								</div>
+								<!--===X=== End of Package, Limits & Features ===X===-->
+								<!--===Payment History=== -->
+								<div id="paymentHistory" class="payment_history blue_border">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">
+											Payment History
+										</h3>
+										<button id="pkgPaymentBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentTwo" aria-expanded="true" aria-controls="pkgPaymentTwo">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>	
+									<div id="pkgPaymentTwo" class="collapse show" aria-labelledby="pkgPaymentBtn_2" data-parent="#packagePaymentAll">
+										<div class="table_container">
+											<table class="w-100 text-center p-3">
+												<thead>
+													<tr>
+														<th>Invoice Number</th>
+														<th>Invoice Date</th>
+														<th>Amount</th>
+														<th>Payment</th> 
+														<th>Function</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr data-id="1">
+														<td>Invoice-002-R1</td>
+														<td>10.07.2020</td>
+														<td>20.99€</td>
+														<td>PayPal</td>
+														<td>
+															<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<span class="mdi mdi-file-document-outline"></span>
+															</button>
+														</td>
+													</tr>
+													<tr data-id="2">
+														<td>Invoice-002-R1</td>
+														<td>10.07.2020</td>
+														<td>20.99€</td>
+														<td>Credit Card</td>
+														<td>
+															<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<span class="mdi mdi-file-document-outline"></span>
+															</button>
+														</td>
+													</tr>
+													<tr data-id="3">
+														<td>Invoice-002-R1</td>
+														<td>10.07.2020</td>
+														<td>20.99€</td>
+														<td>PayPal</td>
+														<td>
+															<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<span class="mdi mdi-file-document-outline"></span>
+															</button>
+														</td>
+													</tr>
+													<tr data-id="4">
+														<td>Invoice-002-R1</td>
+														<td>10.07.2020</td>
+														<td>20.99€</td>
+														<td>Giropay</td>
+														<td>
+															<button class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<span class="mdi mdi-file-document-outline"></span>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<!-- start: PDF preview Modal -->
+									<div class="modal fade text-center modalContainerPaymentHistory modal-transparent"  tabindex="-1" role="dialog" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content pdfViewContainer">
+												<p class="pdfName text-center">invoice.pdf</p>
+												<div id="canvasPaymentHistory"></div>					
+											</div>
+											<!-- /.modal-content -->
+										</div>
+										<!-- /.modal-dialog -->
+									</div>
+									<!-- /End PDF preview Modal -->
+								</div>
+								<!--===end of Payment History=== -->
+							</div>
+							<!-- Save Setting Button for Package & payment-->
+							<div class="mt-5 d-flex justify-content-end">
+								<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
+							</div>
+							<!--/Save Setting Button for Package & payment -->
+						</div>
+						<!--======X==== End of Package & Payment =======X=======-->
+						<!--=============== Support & History================-->
+						<div class="history_support tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+							<div id="historySupportParent" class="historySupport_inner">
+								<!--=== History === -->
+								<div class="history blue_border mb-5 pb-4">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">History</h3>
+										<button id="historyBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#historyId" aria-expanded="true" aria-controls="historyId">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>	
+									<div id="historyId" class="collapse show" aria-labelledby="historyBtn" data-parent="#historySupportParent">
+										<div class="row justify-content-between">
+											<!-- Filter History-->
+											<div class="col-lg-4 col-xl-3">
+												<div class="historyFilter pr-xl-3">
+													<div class="filter_inner b-r-8">
+														<h4 class="mb-2">Filter</h4>
+														<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-1.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Janett Guarso</p>
+																<span class="d-block">10 Entries</span>
+															</div>
+														</div>
+														<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-2.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Timothy Grill</p>
+																<span class="d-block">11 Entries</span>
+															</div>
+														</div>													<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-3.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Stefanie Killoah</p>
+																<span class="d-block">23 Entries</span>
+															</div>
+														</div>
+														<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-4.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Tobias Messani</p>
+																<span class="d-block">20 Entries</span>
+															</div>
+														</div>	
+														<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-5.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Christine Killoah</p>
+																<span class="d-block">2 Entries</span>
+															</div>
+														</div>	
+														<div class="filter_item d-flex align-items-center">
+															<div class="filter_pic">
+																<img src="./resources/img/users/pic-6.png" alt="user">
+															</div>
+															<div class="filter_content">
+																<p class="mb-0">Niclas Goseon</p>
+																<span class="d-block">2 Entries</span>
+															</div>
+														</div>			
+													</div>														
+												</div>
+											</div>
+											<!-- /Filter History-->
+											<!-- History Items -->
+											<div class="col-lg-8 col-xl-9">
+												<div class="historyItemContainer mb-3">
+													<div class="historyItemInner scrollbar-light">
+														<div class="historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_red d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist logos">
+																	<img src="./resources/img/logo-short.png" alt="logo">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">UploadCommander | Systemmanagement</p>
+																	<span class="d-block">An error occurred while publishing your post. The post was not published.</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+														<div class="historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+															<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+																<div class="pic_hist">
+																	<img src="./resources/img/users/pic-4.png" alt="image">
+																</div>
+																<div class="content_hist pl-2">
+																	<p class="mb-0">Tobias Messani</p>
+																	<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
+																</div>
+															</div>
+															<div class="timeDate_hist">
+																<p class="date_hist mb-0">25.02.2020</p>
+																<div class="time_hist">
+																	<span class="mdi mdi-clock-outline"></span>
+																	<span class="times">16:45</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>	
+											</div>
+											<!-- /History Items -->
+										</div>
+									</div>
+								</div>
+								<!--===X=== End of History===X===-->
+								<!--===Support Ticket History=== -->
+								<div id="supportTicketHistory" class="supportTicket_history blue_border">	
+									<div class="d-flex justify-content-between">
+										<h3 class="mb-4">
+											Support Ticket History
+											<span class="ml-4">3</span>
+										</h3>
+										<button id="supportTktHistoryBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#supportTktHistoryId" aria-expanded="true" aria-controls="supportTktHistoryId">
+											<span class="mdi mdi-chevron-down"></span>
+										</button>
+									</div>	
+									<div id="supportTktHistoryId" class="collapse show" aria-labelledby="supportTktHistoryBtn" data-parent="#supportHistoryParent">
+										<div class="table_container">
+											<table class="w-100 text-center p-3">
+												<thead>
+													<tr>
+														<th>ID</th>
+														<th>Date</th>
+														<th>Subject</th>
+														<th>Supporter</th> 
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr data-id="1">
+														<td><a href="#">UCS-10957</a></td>
+														<td>10.07.2020</td>
+														<td>Password Reset</td>
+														<td>Tobias Schmidt-Tudl</td>
+														<td>
+															<span class="yellow_alert">waiting</span>
+														</td>
+													</tr>
+													<tr data-id="2">
+														<td><a href="#">UCS-10957</a></td>
+														<td>10.07.2020</td>
+														<td>Invoice Problem</td>
+														<td>Tobias Schmidt-Tudl</td>
+														<td>
+															<span class="green_alert">Complete</span>
+														</td>
+													</tr>
+													<tr data-id="3">
+														<td><a href="#">UCS-10957</a></td>
+														<td>10.07.2020</td>
+														<td>Thornton</td>
+														<td>Tobias Schmidt-Tudl</td>
+														<td>
+															<span class="green_alert">waiting</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!--===end of Support Ticket History=== -->
+							</div>
+						</div>
+						<!--========X======= End of Support & History========X========-->
+						<!--===========Documentation==================-->
+						<div class="documentation history_support tab-pane fade show active" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
+							<div class="docmentation_inner blue_border">
+								<div class="d-flex flex-wrap justify-content-between">
+									<h3 class="mb-4 pr-3">Documentation</h3>
+									<!-- Add Entry to Documentation -->
+									<div class="addEntryToDoc_wrapper">
+										<button class="shadow_hover_1 blue_btn mb-4"  data-toggle="modal" data-target="#addEntryToDoc">+ Add Entry to Documentation</button>				
+										<!-- Add Entry Dcoumentation | Modal -->
+										<div id="addEntryToDoc" class="modal fade text-center addEntryToDoc" tabindex="-1" role="dialog" aria-hidden="true">
 											<div class="modal-dialog modal-dialog-centered">
-												<div class="modal-content pdfViewContainer">
-													<p class="pdfName text-center">invoice.pdf</p>
-													<div id="canvasPaymentHistory"></div>					
+												<div class="modal-content px-lg-4">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+														<span class="mdi mdi-close"></span>
+													</button>
+													<div class="modal-body pb-4 pt-5">
+														<h4 class="pb-4"> Add Entry to documentation</h4>
+														<p>Please describe in as much detail as possible so that another employee can still work with your comment at a later time.</p>
+														<div class="input_boxes text-left">
+															<span class="select_title mb-0 d-block">Set the Priority:</span>
+															<select class="docImportancySelect bigger_select white_select mb-3">
+																<option value="red">Very Important</option>
+																<option value="yellow">Important</option>
+																<option value="green">General</option>
+															</select>
+															<div class="textBody b-r-5">
+																<textarea id="docTextarea" placeholder="Type in your Documentation..." class="custom-scroll-bar-8"  maxlength="400"></textarea>
+																<span class="mb-0 d-block text-right">max. 400 Characters</span>
+															</div>
+														</div>		
+													</div>
+													<!--/modal-body-collapse -->
+													<div class="modal-footer flex-wrap mb-4 p-0 px-2">
+														<button type="button" id="docSaveBtn" class="saveBtn" data-dismiss="modal">Save this Entry</button>
+													</div>
+													<!--/modal-footer-collapse -->
+													<div class="modal_bg_icon">
+														<span class="mdi mdi-file-edit"></span>
+													</div>
 												</div>
 												<!-- /.modal-content -->
 											</div>
 											<!-- /.modal-dialog -->
 										</div>
-										<!-- /End PDF preview Modal -->
+										<!--/ Add Entry Dcoumentation | Modal -->
 									</div>
-									<!--===end of Payment History=== -->
+									<!--/Add Entry to Documentation  -->
 								</div>
-								<!-- Save Setting Button for Package & payment-->
-								<div class="mt-5 d-flex justify-content-end">
-									<button class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
-								</div>
-								<!--/Save Setting Button for Package & payment -->
-							</div>
-							<!--======X==== End of Package & Payment =======X=======-->
-							<!--=============== Support & History================-->
-							<div class="history_support tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-								<div id="historySupportParent" class="historySupport_inner">
-									<!--=== History === -->
-									<div class="history blue_border mb-5 pb-4">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">History</h3>
-											<button id="historyBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#historyId" aria-expanded="true" aria-controls="historyId">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
-										</div>	
-										<div id="historyId" class="collapse show" aria-labelledby="historyBtn" data-parent="#historySupportParent">
-											<div class="row justify-content-between">
-												<!-- Filter History-->
-												<div class="col-lg-4 col-xl-3">
-													<div class="historyFilter pr-xl-3">
-														<div class="filter_inner b-r-8">
-															<h4 class="mb-2">Filter</h4>
-															<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-1.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Janett Guarso</p>
-																	<span class="d-block">10 Entries</span>
-																</div>
-															</div>
-															<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-2.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Timothy Grill</p>
-																	<span class="d-block">11 Entries</span>
-																</div>
-															</div>													<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-3.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Stefanie Killoah</p>
-																	<span class="d-block">23 Entries</span>
-																</div>
-															</div>
-															<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-4.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Tobias Messani</p>
-																	<span class="d-block">20 Entries</span>
-																</div>
-															</div>	
-															<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-5.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Christine Killoah</p>
-																	<span class="d-block">2 Entries</span>
-																</div>
-															</div>	
-															<div class="filter_item d-flex align-items-center">
-																<div class="filter_pic">
-																	<img src="./resources/img/users/pic-6.png" alt="user">
-																</div>
-																<div class="filter_content">
-																	<p class="mb-0">Niclas Goseon</p>
-																	<span class="d-block">2 Entries</span>
-																</div>
-															</div>			
-														</div>														
+								<div class="row justify-content-between">
+									<!-- Filter documentation-->
+									<div class="col-lg-4 col-xl-3">
+										<div class="docFilter historyFilter pr-xl-3">
+											<div class="filter_inner b-r-8">
+												<h4 class="mb-2">Filter</h4>
+												<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-1.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Janett Guarso</p>
+														<span class="d-block">10 Entries</span>
 													</div>
 												</div>
-												<!-- /Filter History-->
-												<!-- History Items -->
-												<div class="col-lg-8 col-xl-9">
-													<div class="historyItemContainer mb-3">
-														<div class="historyItemInner scrollbar-light">
-															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
+												<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-2.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Timothy Grill</p>
+														<span class="d-block">11 Entries</span>
+													</div>
+												</div>													<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-3.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Stefanie Killoah</p>
+														<span class="d-block">23 Entries</span>
+													</div>
+												</div>
+												<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-4.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Tobias Messani</p>
+														<span class="d-block">20 Entries</span>
+													</div>
+												</div>	
+												<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-5.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Christine Killoah</p>
+														<span class="d-block">2 Entries</span>
+													</div>
+												</div>	
+												<div class="filter_item d-flex align-items-center">
+													<div class="filter_pic">
+														<img src="./resources/img/users/pic-6.png" alt="user">
+													</div>
+													<div class="filter_content">
+														<p class="mb-0">Niclas Goseon</p>
+														<span class="d-block">2 Entries</span>
+													</div>
+												</div>			
+											</div>
+											<div class="checkbox_items mt-4">
+												<label class="checkbox-container checkText-small mb-2">
+													Show Red Entries
+													<input type="checkbox">
+													<span class="checkmark"></span>
+												</label>
+												<label class="checkbox-container checkText-small mb-2">
+													Show Yellow Entries
+													<input type="checkbox" checked>
+													<span class="checkmark"></span>
+												</label>
+												<label class="checkbox-container checkText-small mb-2">
+													Show Green Entries
+													<input type="checkbox" checked>
+													<span class="checkmark"></span>
+												</label>
+												<label class="checkbox-container checkText-small mb-2">
+													Show System Log
+													<input type="checkbox" checked>
+													<span class="checkmark"></span>
+												</label>
+												<label class="checkbox-container checkText-small mb-2">
+													Show Comments
+													<input type="checkbox" checked>
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<button class="icon_btn_outline mt-3 ml-3">
+												<span class="mdi mdi-download"></span>
+												<span class="btnText">Download</span>
+											</button>
+										</div>
+									</div>
+									<!-- /Filter documentation-->
+									<!-- Documentations Items -->
+									<div class="col-lg-8 col-xl-9">
+										<div class="docItemContainer historyItemContainer mt-5 mb-3">
+											<div id="docItemReceiver" class="docItemInner historyItemInner scrollbar-light">
+												<div class="docItem historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-4.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Tobias Messani | Admin</p>
+															<span class="d-block">Tobias has logged into the customer</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">07.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_red d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-7.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Melissa Meiser | Supporter</p>
+															<span class="d-block">Melissa has sent instructions to the customer to reset their password.</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">09.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_red d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist logos">
+															<img src="./resources/img/logo-short.png" alt="logo">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">UploadCommander | Systemmanagement</p>
+															<span class="d-block">An error occurred while publishing your post. The post was not published.</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">25.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-4.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Tobias Messani | Admin</p>
+															<span class="d-block">Tobias has deactivated the subuser "Adrian Schroeder ~ AdrianSchroed@mail.com".</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>													
+												<div class="docItem historyItem hist_red d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-8.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Jane Doe | Supporter</p>
+															<span class="d-block">"When I spoke to the customer on the phone, she was annoyed about the 2,00€ shown on your invoice for another subuser. i then explained to her why this amount was booked. Afterwards she became very unfriendly and insulted me. 
+																I then had to end the conversation prematurely."</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+															<span class="comment text-uppercase d-block mt-1">Comment</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-8.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Jane Doe | Supporter</p>
+															<span class="d-block">Sent an email with the ID <a href="#showEmailModal" data-toggle="modal" class="c_link"> #CSR_9955102</a> to the customer.</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-10.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Chis Carlson | Supporter</p>
+															<span class="d-block">"To convince the customer to book a larger package, I created a voucher with a value of 10% (voucher number: 45) and sent it to her at marry.poppins@gmail.com."</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.02.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+															<span class="comment mt-1 d-block">comment</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_red d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-4.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Tobias Messani | Admin</p>
+															<span class="d-block">Joe opened the customer's invoice "Invoice_21353".</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">05.03.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">15:20</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_yellow d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-4.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Tobias Messani | Admin</p>
+															<span class="d-block">Sent an email with the ID <a href="#showEmailModal" data-toggle="modal" class="c_link">#CSR_48410</a> to the customer.</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.03.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">16:45</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-9.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Henny Riekers | Supporter</p>
+															<span class="d-block">Henny has deactivated the subuser "Jane Doe ~ JaneTheBrain@mail.com".</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.03.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">18:50</span>
+														</div>
+													</div>
+												</div>
+												<div class="docItem historyItem hist_green d-flex flex-column flex-sm-row justify-content-between align-items-center">
+													<div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+														<div class="pic_hist">
+															<img src="./resources/img/users/pic-9.png" alt="image">
+														</div>
+														<div class="content_hist pl-2">
+															<p class="mb-0">Henny Riekers | Supporter</p>
+															<span class="d-block">Henny has deactivated the subuser "Jane Doe ~ JaneTheBrain@mail.com".</span>
+														</div>
+													</div>
+													<div class="timeDate_hist">
+														<p class="date_hist mb-0">15.03.2020</p>
+														<div class="time_hist">
+															<span class="mdi mdi-clock-outline"></span>
+															<span class="times">18:50</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--======Show Email Modal ========-->
+											<div id="showEmailModal" class="modal showEmailModal fade" tabindex="-1" role="dialog" aria-hidden="true">
+												<div class="modal-dialog modal-dialog-centered">
+													<div class="modal-content py-3 px-3 px-xl-5">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+															<span class="mdi mdi-close"></span>
+														</button>
+														<h4 class="text-center">Show Email</h4>
+														<div class="modal-body p-4 mt-4">
+															<div class="showEmailText">
+																<p class="strongText">Dear Ms. Example!</p>
+															
+																<p>With reference to our telephone conversation, I would like to thank you for contacting us.</p>
+
+																<p>As discussed, I have now consulted our technical department once again and asked how such an error can occur.</p>
+
+																<p>Our head technician then explained to me that a faulty internet connection can lead to disruptions in our service.</p>
+
+																<p>So the next time you upload images to your media center, please make sure you are connected to a stable internet connection.</p>
+
+																<p>If you have any further questions, please create a ticket in your account or contact us again by phone.</p>
+
+																<p>All the best, wishes you</p>
+
+																<p class="strongText mb-0">Emely Gurrero</p>
+																<p class="strongText">Customer-Service-Specialist</p>
+
+																<div class="contactInfo">
+																	Call: 02592 / 972745-3<br/>
+																	Mail: service@uploadcommander.de
 																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
+																<div class="devider mb-2"> -----------------------------------------------------------------------</div>
+																<div class="mailInfoOne mb-2">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu pellentesque ultricies risus rhoncus pharetra, rhoncus. Sit faucibus auctor hendrerit euismod porttitor metus accumsan nulla. Sit suspendisse odio a pellentesque nisi, tempor. Nibh pharetra arcu, senectus vitae nulla volutpat.
 																</div>
+																<div class="mailInfoTwo mb-2">
+																	#####  Please do not reply to this message #####
+																	This e-mail address has been set up exclusively for sending e-mails.
+																	If you have any further questions or problems, please contact us by phone or open a ticket in your account.
+																</div>
+																<div class="copyrightText d-flex justify-content-between align-items-center">
+																	<p>REF: #CSR_9955102</p>
+																	<p>@ UploadCommander 2021</p>
+																</div>	
 															</div>
-															<div class="historyItem hist_red d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist logos">
-																		<img src="./resources/img/logo-short.png" alt="logo">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">UploadCommander | Systemmanagement</p>
-																		<span class="d-block">An error occurred while publishing your post. The post was not published.</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_yellow d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
-															</div>
-															<div class="historyItem hist_green d-flex justify-content-between align-items-center">
-																<div class="profile_hist d-flex align-items-center">
-																	<div class="pic_hist">
-																		<img src="./resources/img/users/pic-4.png" alt="image">
-																	</div>
-																	<div class="content_hist pl-2">
-																		<p class="mb-0">Tobias Messani</p>
-																		<span class="d-block">Tobias has deleted a new caption template called "Post Description".</span>
-																	</div>
-																</div>
-																<div class="timeDate_hist">
-																	<p class="date_hist mb-0">25.02.2020</p>
-																	<div class="time_hist">
-																		<span class="mdi mdi-clock-outline"></span>
-																		<span class="times">16:45</span>
-																	</div>
-																</div>
+															<div class="modal_bg_icon">
+																<span class="mdi mdi-email-outline"></span>
+																
 															</div>
 														</div>
-													</div>	
+														<!--/modal-body-collapse -->
+														<div class="modal-footer pb-0 text-center">
+															<div class="foot_text">
+																<p class="mb-0">This email was sent to customer (kundenemail@example.de) 
+																	<br/>by Emely Gurrero (Supporter) on 05/20/2021.</p>
+																<a href="#">ID #CSR_9955102</a>
+															</div>																
+														</div>
+														<!--/modal-footer-collapse -->
+														
+													</div>
+													<!-- /.modal-content -->
 												</div>
-												<!-- /History Items -->
+												<!-- /.modal-dialog -->
 											</div>
-										</div>
-									</div>
-									<!--===X=== End of History===X===-->
-									<!--===Support Ticket History=== -->
-									<div id="supportTicketHistory" class="supportTicket_history blue_border">	
-										<div class="d-flex justify-content-between">
-											<h3 class="mb-4">
-												Support Ticket History
-												<span class="ml-4">3</span>
-											</h3>
-											<button id="supportTktHistoryBtn" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#supportTktHistoryId" aria-expanded="true" aria-controls="supportTktHistoryId">
-												<span class="mdi mdi-chevron-down"></span>
-											</button>
+											<!--====X===/Show Email Modal ===X===-->
 										</div>	
-										<div id="supportTktHistoryId" class="collapse show" aria-labelledby="supportTktHistoryBtn" data-parent="#supportHistoryParent">
-											<div class="table_container">
-												<table class="w-100 text-center p-3">
-													<thead>
-														<tr>
-															<th>ID</th>
-															<th>Date</th>
-															<th>Subject</th>
-															<th>Supporter</th> 
-															<th>Status</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr data-id="1">
-															<td><a href="#">UCS-10957</a></td>
-															<td>10.07.2020</td>
-															<td>Password Reset</td>
-															<td>Tobias Schmidt-Tudl</td>
-															<td>
-																<span class="yellow_alert">waiting</span>
-															</td>
-														</tr>
-														<tr data-id="2">
-															<td><a href="#">UCS-10957</a></td>
-															<td>10.07.2020</td>
-															<td>Invoice Problem</td>
-															<td>Tobias Schmidt-Tudl</td>
-															<td>
-																<span class="green_alert">Complete</span>
-															</td>
-														</tr>
-														<tr data-id="3">
-															<td><a href="#">UCS-10957</a></td>
-															<td>10.07.2020</td>
-															<td>Thornton</td>
-															<td>Tobias Schmidt-Tudl</td>
-															<td>
-																<span class="green_alert">waiting</span>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
 									</div>
-									<!--===end of Support Ticket History=== -->
-								</div>
+									<!-- /documentation Items -->
+								</div>	
 							</div>
-							<!--========X======= End of Support & History========X========-->
-							<div class="tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
-								Documentation
-							</div>
-					  </div>				
+						</div>
+						<!--=====X==== End of Documentation =====X=======-->
+					</div>
+					<!--===X=== End of Tab Contents====X== -->
 				</div>
 			</div>
 			<!-- start: Delete Coupon Modal -->

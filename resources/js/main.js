@@ -209,6 +209,7 @@ $(document).ready(function(){
   /*======X=====Accounting Invoices====X===== */
 
   /*============User Adminstration Name============= */
+  /***********User Management Tab**********/
   $('#UserImgEditBtn').on('change', function(event){
     var userImgLength =  $('#UserImgEditBtn')[0].files.length;
     var userImgSrc = URL.createObjectURL(event.target.files[0]);
@@ -224,7 +225,10 @@ $(document).ready(function(){
       alert("Only jpg/jpeg, png and gif files are allowed!");      
     }
       
-  });
+  });  
+  /*****X******User Management Tab****X******/
+
+  /**********Package & Payment tab*********/
    /*---------- PDF.js Library-------------- */
    if($('body').find('#paymentHistory').length){
     /*----PDF Modal preview---- */
@@ -275,9 +279,7 @@ $(document).ready(function(){
     /*------/PDF.js Activation------ */
    }
   /*------X---- PDF.js Library--------X------ */
-  /*======X=====User Adminstration Name======X====== */
 
-  /*=====User Administration name (Package & Payment tab)==== */
   /*------<number increment & decrement>------- */
   $(".increDecreBtn").on("click", function() {
     var $button = $(this);
@@ -316,11 +318,76 @@ $(document).ready(function(){
       oldValues.val(mxValues);
     }
   });
-    /*------</number increment & decrement>------- */
-    /*perfect scrollbar */
-    // $('.historyItemInner').perfectScrollbar();
+    /*------</number increment & decrement>------- */    
+  /****X**** Package & Payment tab *****X*****/
+  /******** Documentation Tab ***************/
+  
+  /*-------<+ Add Entry to Documentation>----- */
+	function docColorImportancy(){
+    $('.docImportancySelect .current').prepend('<span class="importancyColor"></span>');    
+    var appColorInDoc = $('.docImportancySelect .current span');
+    var getDocValues = $('.docImportancySelect').val();
+    if(getDocValues === 'green'){
+        appColorInDoc.css('background','rgba(27, 209, 45, 0.7)');
+    }else if(getDocValues === 'red'){
+      appColorInDoc.css('background','rgba(255, 77, 77, 0.7)');
+    }
+    else if(getDocValues === 'yellow'){
+      appColorInDoc.css('background','rgba(255, 219, 31, 0.7)');
+    }
+  }
+  docColorImportancy();    
+  $(".docImportancySelect").on('change', function(){
+  	docColorImportancy();
+  });
+
+  $('#docSaveBtn').click(function(){
+    var getDocSelectValues = $('.docImportancySelect').val();
+    var docItemBorderColorClass;
+    if(getDocSelectValues === 'green'){
+        docItemBorderColorClass = "hist_green";
+    }else if(getDocSelectValues === 'red'){
+      docItemBorderColorClass = "hist_red";
+    }
+    else if(getDocSelectValues === 'yellow'){
+      docItemBorderColorClass = "hist_yellow";
+    }
+    var docItemReceiver = $('#docItemReceiver');
+    var docTextId = $('#docTextarea');
+    var docTextValueSet = $.trim(docTextId.val());
+    var addDocItem = `
+    <div class="docItem historyItem ${docItemBorderColorClass} d-flex flex-column flex-sm-row justify-content-between align-items-center">
+      <div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
+        <div class="pic_hist">
+          <img src="./resources/img/users/pic-8.png" alt="image">
+        </div>
+        <div class="content_hist pl-2">
+          <p class="mb-0">Jane Doe | Supporter</p>
+          <span class="d-block">"${docTextValueSet}"</span>
+        </div>
+      </div>
+      <div class="timeDate_hist">
+        <p class="date_hist mb-0">15.02.2020</p>
+        <div class="time_hist">
+          <span class="mdi mdi-clock-outline"></span>
+          <span class="times">16:45</span>
+          <span class="comment text-uppercase d-block mt-1">Comment</span>
+        </div>
+      </div>
+    </div>`;
+
+    if(docTextValueSet !== "" && docTextValueSet !== null){
+      docItemReceiver.append(addDocItem);
+      docTextId.val("");
+    }
     
-  /*===X==User Administration name (Package & Payment tab)==X== */
+  });
+   /*-------</+ Add Entry to Documentation>----- */
+
+  /****X******* Documentation Tab ******X***********/
+  /*======X=====User Adminstration Name======X====== */
+
+
 });
 jQuery(document).ready(function(){
   if($('body').find('.scrollbar-light').length){

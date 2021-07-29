@@ -475,6 +475,43 @@ textarea::placeholder {
   top: 3px;
 }
 
+.icon_btn_outline {
+  padding: 3px 18.5px;
+  color: #42ADE2;
+  border: 1px solid #42ADE2 !important;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  display: inline-block;
+  background-color: transparent;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.icon_btn_outline .btnText {
+  line-height: 2;
+}
+
+.icon_btn_outline .mdi {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.icon_btn_outline:hover {
+  background-color: #42ADE2;
+  color: #ffffff;
+}
+
+.icon_btn_outline:focus {
+  border: 1px solid #42ADE2 !important;
+}
+
 .collapseExpandBtn {
   background-color: #BCF1FF;
   width: 28px;
@@ -1136,7 +1173,7 @@ textarea::placeholder {
   background-color: rgba(231, 231, 231, 0.3);
 }
 
-.modal .modal-dialog .modal-content .modal-body, .modal .modal-dialog .modal-content .modal-footer {
+.modal .modal-dialog .modal-content .modal-body {
   position: relative;
   z-index: 1;
 }
@@ -1155,7 +1192,9 @@ textarea::placeholder {
           justify-content: center;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .cancelBtn, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn {
+.modal .modal-dialog .modal-content .modal-footer .cancelBtn, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn {
+  position: relative;
+  z-index: 1;
   max-width: 185px;
   height: 60px;
   width: 100%;
@@ -1176,7 +1215,7 @@ textarea::placeholder {
   border: 4px solid transparent !important;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .cancelBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover {
+.modal .modal-dialog .modal-content .modal-footer .cancelBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover {
   background-color: transparent;
 }
 
@@ -1188,13 +1227,20 @@ textarea::placeholder {
   border-color: #FF4D4D !important;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn {
+.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn {
   background-color: #1BD12D;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover {
+.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover {
   background-color: transparent;
   border-color: #1BD12D !important;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .saveBtn {
+  padding: 0px 22px;
+  max-width: 215px;
+  height: 70px;
+  line-height: 70px;
 }
 
 .modal .modal-dialog .modal-content .modal_bg_icon {
@@ -1632,10 +1678,18 @@ ul.pieLegend li:not(.anjon) {
   max-width: 300px;
   width: 100%;
   padding-left: 35px;
+  position: relative;
 }
 
 #headerMenu .site-logo img {
   max-width: 100%;
+}
+
+#headerMenu .site-logo .logo-text {
+  position: absolute;
+  right: -16px;
+  top: -1px;
+  font-size: 11px;
 }
 
 #headerMenu .h-82 {
@@ -4243,11 +4297,17 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /* 18. User Adminstration Name*/
 /***************************/
+.user_admin_name .content-inner {
+  max-width: 1163px;
+}
+
 .user_admin_name .nav-pills .nav-link {
   border-radius: .25rem;
   min-height: 50px;
-  line-height: 2.1;
+  line-height: 2.3;
   background-color: #FAFAFA;
+  min-width: 170px;
+  text-align: center;
 }
 
 .user_admin_name .nav-pills .nav-link.active, .user_admin_name .nav-pills .show > .nav-link {
@@ -4657,8 +4717,23 @@ ul.pieLegend li:not(.anjon) {
   font-weight: 200;
 }
 
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist .c_link {
+  color: #42ADE2;
+  text-decoration: underline;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.user_admin_name .history_support .historyItemContainer .historyItem .profile_hist .content_hist .c_link:hover {
+  text-shadow: 0px 0px 0.5px #000;
+}
+
 .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist {
   width: 130px;
+  min-width: 130px;
   padding-left: 25px;
   position: relative;
 }
@@ -4695,21 +4770,26 @@ ul.pieLegend li:not(.anjon) {
   top: 1px;
 }
 
-.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .times {
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .times, .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .comment {
   font-size: 12px;
   font-weight: 200;
 }
 
+.user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist .time_hist .comment {
+  color: #42ADE2;
+  text-transform: uppercase;
+}
+
 .user_admin_name .history_support .historyItemContainer .historyItem.hist_yellow {
-  border-right: 16px solid rgba(255, 219, 31, 0.7);
+  border-color: rgba(255, 219, 31, 0.7);
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem.hist_red {
-  border-right: 16px solid rgba(255, 77, 77, 0.7);
+  border-color: rgba(255, 77, 77, 0.7);
 }
 
 .user_admin_name .history_support .historyItemContainer .historyItem.hist_green {
-  border-right: 16px solid rgba(27, 209, 45, 0.7);
+  border-color: rgba(27, 209, 45, 0.7);
 }
 
 .user_admin_name .history_support .supportTicket_history h3 span {
@@ -4760,6 +4840,247 @@ ul.pieLegend li:not(.anjon) {
 .user_admin_name .history_support .supportTicket_history .table_container table tr td:nth-child(1) a:hover {
   color: #3489B3;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog {
+  max-width: 885px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal-body h4 {
+  font-size: 36px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal-body p {
+  font-size: 19px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal_bg_icon {
+  position: absolute;
+  left: -10px;
+  bottom: -33px;
+  font-size: 600px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .docImportancySelect {
+  width: 225px;
+  padding-left: 10px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .docImportancySelect .current .importancyColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .textBody {
+  background-color: #FAFAFA;
+  padding-top: 10px;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .textBody textarea {
+  width: 100%;
+  padding-top: 5px;
+  height: 164px;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .textBody span {
+  color: #666666;
+  padding: 3px 10px 5px;
+  line-height: 1;
+}
+
+.user_admin_name .documentation.history_support .docmentation_inner {
+  max-width: 1123px;
+  width: 100%;
+}
+
+.user_admin_name .documentation.history_support .blue_btn {
+  height: 36px;
+}
+
+.user_admin_name .documentation.history_support h3 {
+  font-size: 20px;
+}
+
+.user_admin_name .documentation.history_support .docFilter.historyFilter .filter_inner .filter_content span {
+  color: #42ADE2;
+}
+
+.user_admin_name .documentation.history_support .docFilter.historyFilter .checkbox-container {
+  padding-left: 28px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItemInner {
+  height: 860px;
+  max-width: 850px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem {
+  max-width: 778px;
+  padding: 8.5px 10px;
+  border-width: 20px;
+  margin-bottom: 8px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .profile_hist .pic_hist img {
+  width: 55px;
+  height: 55px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .profile_hist .pic_hist.logos {
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
+  border: 0px solid #C4C4C4;
+  background-color: #ffffff;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .profile_hist .pic_hist.logos img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: unset;
+     object-fit: unset;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .profile_hist .content_hist p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .profile_hist .content_hist span {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist {
+  width: 130px;
+  padding-left: 25px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist::before {
+  width: 3.33px;
+  height: 46px;
+  background-color: rgba(196, 196, 196, 0.5);
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist .date_hist {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist .time_hist {
+  line-height: 1;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist .time_hist .mdi {
+  font-size: 13px;
+  color: #42ADE2;
+  position: relative;
+  top: 1px;
+}
+
+.user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem .timeDate_hist .time_hist .times {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog {
+  max-width: 872px;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content {
+  background: #ffffff;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content h4 {
+  font-size: 36px;
+  color: #393939;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body {
+  font-family: "Roboto", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#42ADE2), to(#115A8A));
+  background: linear-gradient(180deg, #42ADE2 0%, #115A8A 100%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 13px;
+  position: relative;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .showEmailText {
+  position: relative;
+  z-index: 1;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body p {
+  font-size: 16px;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .strongText {
+  font-weight: 500;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .contactInfo {
+  font-size: 14px;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .devider {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .mailInfoOne {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .mailInfoTwo, .user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .copyrightText p {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-body .modal_bg_icon {
+  left: -34px;
+  bottom: -86px;
+  font-size: 550px;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .close {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .close:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-footer {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.user_admin_name .documentation .showEmailModal.modal .modal-dialog .modal-content .modal-footer a {
+  font-weight: 700;
 }
 
 /*==============Responsive CSS===============*/
@@ -4813,6 +5134,31 @@ ul.pieLegend li:not(.anjon) {
   .email_settings .sendExample p {
     font-size: 13px;
   }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog {
+    max-width: 600px;
+  }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal-body h4 {
+    font-size: 25px;
+  }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal-body p {
+    font-size: 18px;
+  }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal-footer .saveBtn {
+    padding: 0px 10px;
+    height: 55px;
+    line-height: 53px;
+  }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .modal-dialog .modal-content .modal_bg_icon {
+    left: -13px;
+    bottom: -25px;
+    font-size: 449px;
+  }
+  .user_admin_name .documentation .addEntryToDoc_wrapper .modal.addEntryToDoc .textBody textarea {
+    height: 100px;
+  }
+  .user_admin_name .documentation .historyItemContainer .historyItemInner {
+    padding-right: 18px;
+  }
 }
 
 /*Medium devices (laptop, less than 1300px)*/
@@ -4853,11 +5199,11 @@ ul.pieLegend li:not(.anjon) {
 }
 
 @media (max-width: 1199px) {
-  .site-logo {
-    width: 210px;
-  }
-  .site-logo img {
-    max-width: 100%;
+  #headerMenu .site-logo .logo-text {
+    position: absolute;
+    right: 3px;
+    top: -4px;
+    font-size: 11px;
   }
   .dashboardItem .profile_card .profile_content {
     -webkit-box-orient: horizontal;
@@ -4932,6 +5278,9 @@ ul.pieLegend li:not(.anjon) {
   .user_admin_name .user_management .informations {
     max-width: 270px;
     width: 100%;
+  }
+  .user_admin_name .documentation .historyItemContainer .historyItemInner {
+    padding-right: 5px;
   }
 }
 
@@ -5011,6 +5360,21 @@ ul.pieLegend li:not(.anjon) {
     margin: 5px 0px;
     width: 100%;
   }
+  .user_admin_name .history_support .historyItemContainer .historyItem .profile_hist {
+    padding-right: 0px;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist {
+    width: 100% !important;
+    padding-left: 0px !important;
+    text-align: center;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist::before {
+    position: static;
+    display: block;
+    width: 46px !important;
+    height: 3.33px !important;
+    margin: 12px auto;
+  }
 }
 
 @media (max-width: 400px) {
@@ -5059,19 +5423,6 @@ ul.pieLegend li:not(.anjon) {
   }
   .accounting_Dashboard .sales_last_10_m table.sales_item_table tr:hover td {
     background: #BCF1FF;
-  }
-  .user_admin_name .history_support .historyItemContainer .historyItem .profile_hist {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    padding-right: 10px;
-  }
-  .user_admin_name .history_support .historyItemContainer .historyItem .timeDate_hist {
-    padding-left: 10px;
   }
 }
 

@@ -95,7 +95,52 @@
 			}
 		}
 	}
-	
+	// User Administration Name
+	.user_admin_name{
+		.documentation{
+			// + Add Entry to Documentation 
+			.addEntryToDoc_wrapper{
+				.modal.addEntryToDoc{
+					.modal-dialog{
+						max-width: 600px;
+						.modal-content {
+							.modal-body {
+								h4 {
+									font-size: 25px;
+								}				
+								p{
+									font-size:18px;
+								}
+							}
+							.modal-footer{
+								.saveBtn{
+									padding: 0px 10px;
+									height: 55px;
+									line-height: 53px;
+								}
+							}
+							.modal_bg_icon {
+								left: -13px;
+								bottom: -25px;
+								font-size: 449px;
+							}
+						}						
+					}
+					.textBody{
+						textarea{
+							height:100px;
+						}
+					}
+				}
+			}
+			// History Items && Documentation Items
+			.historyItemContainer{
+				.historyItemInner{
+					padding-right: 18px;
+				}
+			}
+		}
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -143,10 +188,12 @@
 
 }
 @media(max-width: 1199px){
-	.site-logo{
-		width:210px;
-		img{
-			max-width:100%;
+	#headerMenu .site-logo {
+		.logo-text {
+			position: absolute;
+			right: 3px;
+			top: -4px;
+			font-size: 11px;
 		}
 	}
 	.dashboardItem{
@@ -247,6 +294,17 @@
 			.informations{
 				max-width:270px;
 				width:100%;
+			}
+		}
+	}
+
+	// User Administration Name
+	.user_admin_name{
+		.documentation{
+			.historyItemContainer{
+				.historyItemInner{
+					padding-right: 5px;
+				}
 			}
 		}
 	}
@@ -376,6 +434,24 @@
 				}
 			}
 		}
+		// Support & History
+		.history_support .historyItemContainer .historyItem {
+			.profile_hist {
+				padding-right: 0px;
+			}
+			.timeDate_hist {
+				width: 100% !important;
+				padding-left: 0px !important;
+				text-align: center;
+				&::before{
+					position:static;
+					display:block;
+					width:46px !important;
+					height:3.33px !important;
+					margin: 12px auto;
+				}
+			}
+		}
 	}
 }
 
@@ -427,24 +503,24 @@
 		}
 	}
 	// User Administration Name
-	.user_admin_name{
-		// Support & History
-		.history_support{
-			// History Items
-			.historyItemContainer{
-				.historyItem{
-					.profile_hist{
-						flex-wrap: nowrap;
-						flex-direction: column;
-						text-align:center;
-						padding-right: 10px;
-					}
-					.timeDate_hist {
-						padding-left: 10px;
-					}
-				}
-			}
-		}
-	}
+	// .user_admin_name{
+	// 	// Support & History
+	// 	.history_support{
+	// 		// History Items
+	// 		.historyItemContainer{
+	// 			.historyItem{
+	// 				.profile_hist{
+	// 					flex-wrap: nowrap;
+	// 					flex-direction: column;
+	// 					text-align:center;
+	// 					padding-right: 10px;
+	// 				}
+	// 				.timeDate_hist {
+	// 					padding-left: 10px;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 	
 }

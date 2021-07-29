@@ -19,8 +19,15 @@
 		max-width:300px;
 		width:100%;
 		padding-left:35px;
+		position:relative;
 		img{
 			max-width:100%;		
+		}
+		.logo-text {
+			position: absolute;
+			right: -16px;
+			top: -1px;
+			font-size: 11px;
 		}
 	}
 	.h-82{		
@@ -2002,12 +2009,17 @@
 /***************************/
 /* 18. User Adminstration Name*/
 /***************************/
-.user_admin_name{	
+.user_admin_name{
+	.content-inner{
+		max-width: 1163px;
+	}	
 	.nav-pills .nav-link {
 		border-radius: .25rem;
 		min-height:50px;
-		line-height: 2.1;
+		line-height: 2.3;
 		background-color: $gray-light1;
+		min-width: 170px;
+   		text-align: center;
 	}
 	.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
 		background-color: $blue-light;
@@ -2352,10 +2364,19 @@
 							font-size:14px;
 							font-weight:200;
 						}
+						.c_link{
+							color:$blue-light;
+							text-decoration: underline;
+							@include transition-all(0.3s);
+							&:hover{
+								text-shadow:0px 0px 0.5px #000;
+							}
+						}
 					}
 				}				
 				.timeDate_hist{
 					width:130px;
+					min-width:130px;
 					padding-left:25px;
 					position:relative;
 					&::before{
@@ -2380,20 +2401,24 @@
 							position: relative;
 							   top: 1px;
 						}
-						.times{
+						.times,.comment{
 							font-size:12px;
 							font-weight: 200;
+						}
+						.comment{
+							color:$blue-light;
+							text-transform: uppercase;
 						}
 					}
 				}
 				&.hist_yellow{
-					border-right:16px solid $light-yellow;
+					border-color: $light-yellow;
 				}
 				&.hist_red{
-					border-right:16px solid $light-red;
+					border-color: $light-red;
 				}
 				&.hist_green{
-					border-right:16px solid $light-green;
+					border-color:$light-green;
 				}   
 			}
 			
@@ -2450,6 +2475,222 @@
 			}
 		}
 		
+	}
+	//Documentation
+	.documentation{
+		.addEntryToDoc_wrapper{
+			.modal.addEntryToDoc{
+				.modal-dialog{
+					max-width: 885px;
+					.modal-content {
+						.modal-body {
+							h4 {
+								font-size: 36px;
+							}				
+							p{
+								font-size:19px;
+							}
+						}
+						.modal_bg_icon {
+							position: absolute;
+							left: -10px;
+							bottom: -33px;
+							font-size: 600px;
+						}
+					}
+				}
+					
+				.docImportancySelect {
+					width: 225px;
+					padding-left:10px;
+					.current .importancyColor{
+						width:20px;
+						height:20px;
+						@include b-radius(50%);
+						display: inline-block;
+						margin-right: 10px;
+						position: relative;
+						top: 5px;
+					}
+				}
+				.textBody{
+					background-color: $gray-light1;
+					padding-top:10px;
+					textarea{
+						width:100%;
+						padding-top:5px;
+						height:164px;
+						resize:none;
+						overflow-x:hidden;
+						overflow-y:auto;
+					}
+					span{
+						color:$gray-666;
+						padding: 3px 10px 5px;
+    					line-height: 1;
+					}
+				}
+			}
+		}
+		&.history_support{
+			.docmentation_inner{
+				max-width:1123px;
+				width:100%;
+			}
+			.blue_btn{
+				height:36px;
+			}
+			h3{
+				font-size: 20px;
+			}
+			// Filter
+			.docFilter.historyFilter{
+				.filter_inner{
+					.filter_content span {
+						color:$blue-light;
+					}
+				}
+				.checkbox-container{
+					padding-left:28px;
+				}
+			}
+			// History Items
+			.docItemContainer.historyItemContainer{
+				.historyItemInner{
+					height:860px;
+					max-width:850px;
+				}
+				.historyItem{
+					max-width: 778px;
+					padding: 8.5px 10px;
+					border-width: 20px;
+					margin-bottom:8px;
+					.profile_hist{
+						.pic_hist{
+							img{
+								width:55px;
+								height:55px;
+							}
+							&.logos{
+								width: 55px;
+								min-width: 55px;
+								height: 55px;
+								border: 0px solid #C4C4C4;
+								background-color: $white-main;
+								img{								
+									width:100%;
+									height: auto;
+									object-fit:unset;
+									@include b-radius(0px);
+								}
+							}
+						}
+						.content_hist{
+							p{
+								font-size:15px;
+								font-weight: 400;
+							}
+							span{
+								font-size:14px;
+								font-weight:200;
+							}
+						}
+					}				
+					.timeDate_hist{
+						width:130px;
+						padding-left:25px;
+						&::before{
+							width: 3.33px;
+							height: 46px;
+							background-color: rgba(196, 196, 196, 0.5);
+						}
+						.date_hist{
+							font-size:13px;
+							font-weight:400;
+							line-height: 1;
+						}
+						.time_hist{
+							line-height: 1;
+							.mdi{	
+								font-size:13px;
+								color:$blue-light;
+								position: relative;
+									top: 1px;
+							}
+							.times{
+								font-size:12px;
+								font-weight: 200;
+							}
+						}
+					}  
+				}
+			}
+		}
+		// Show Email Modal
+		.showEmailModal.modal{
+			.modal-dialog {
+				max-width: 872px;
+				.modal-content {
+					background:$white-main;
+					h4{
+						font-size:36px;
+						color:$black;
+					}
+					.modal-body{
+						font-family: $font-roboto;
+						background: linear-gradient(180deg, $blue-light 0%, $blue-bold 100%);
+						@include b-radius(5px);
+						font-size:13px;
+						position:relative;
+						.showEmailText{
+							position:relative;
+							z-index:1;
+						}
+
+						p{
+							font-size:16px;	
+						}
+						.strongText{
+							font-weight: 500;
+						}
+						.contactInfo{
+							font-size:14px;
+						}
+						.devider {
+							font-size: 16px;
+							letter-spacing: 2px;
+						}
+						.mailInfoOne{
+							font-size:10px;
+							font-weight: 500;
+						}
+						.mailInfoTwo,.copyrightText p{
+							font-size:11px;
+							font-weight:400;
+						}
+						.modal_bg_icon{
+							left: -34px;
+							bottom: -86px;
+							font-size: 550px;
+						}
+					}
+					.close{
+						background-color: rgba(0, 0, 0, 0.15);
+						&:hover{
+							background-color: rgba(0, 0, 0, 0.25);
+						}
+					}
+					.modal-footer{
+						color:rgba(0, 0, 0, 0.6);
+						font-size:15px;
+						font-weight:600;
+						a{
+							font-weight:700;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 /*==============Responsive CSS===============*/

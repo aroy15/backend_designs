@@ -180,6 +180,30 @@
 		top: 3px;
 	}
 }
+.icon_btn_outline{
+	padding: 3px 18.5px;
+	color:$blue-light;
+	border: 1px solid $blue-light !important;
+	@include b-radius(25px);
+	display: inline-block;	
+	background-color: transparent;	
+	@include transition-all(0.3s);
+	.btnText{
+		line-height: 2;
+	}	
+	.mdi{
+		font-size:20px;
+		position:relative;
+		top:2px;
+	}
+	&:hover{
+		background-color: $blue-light;
+		color:$white-main;
+	}
+	&:focus{
+		border: 1px solid $blue-light !important;
+	}	
+}
 
 .collapseExpandBtn{
 	background-color: $blue-opacity;
@@ -660,11 +684,9 @@
 					background-color:rgba(231, 231, 231, 0.3);
 				}
 			}
-			.modal-body, .modal-footer{
+			.modal-body{
 				position:relative;
 				z-index:1;
-			}
-			.modal-body{
 				h4{
 					font-size:30px;
 				}
@@ -674,7 +696,9 @@
 			}
 			.modal-footer{
 				justify-content: center;				
-				.cancelBtn,.deleteYesBtn{
+				.cancelBtn,.deleteYesBtn,.saveBtn{
+					position:relative;
+					z-index:1;
 					max-width:185px;
 					height:60px;
 					width:100%;
@@ -696,13 +720,19 @@
 						// color:$red-light;
 					}
 				}
-				.deleteYesBtn{
+				.deleteYesBtn,.saveBtn{
 					background-color: $green-limeBtn;
 					&:hover{
 						background-color: transparent;
 						border-color: $green-limeBtn !important;
 						// color: $green-limeBtn
 					}
+				}
+				.saveBtn{
+					padding: 0px 22px;
+					max-width: 215px;
+					height: 70px;
+					line-height: 70px;
 				}
 			}
 			.modal_bg_icon {
