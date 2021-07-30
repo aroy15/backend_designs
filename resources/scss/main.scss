@@ -2043,8 +2043,10 @@
 					font-size:13px;
 					.follorUpEmailText{
 						background-color: $gray-light1;
+						border:2px solid transparent;
 						&:focus{
-							outline: 2px solid $blue-bold;
+							outline: none;
+							border:2px solid $blue-bold;
 						}
 					}
 					p{
@@ -2085,7 +2087,7 @@
 							bottom:5px;
 						}						
 						.mdi{
-							font-size:40px;
+							font-size:30px;
 						}
 					}
 				}

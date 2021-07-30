@@ -4342,10 +4342,12 @@ ul.pieLegend li:not(.anjon) {
 
 .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .follorUpEmailText {
   background-color: #FAFAFA;
+  border: 2px solid transparent;
 }
 
 .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .follorUpEmailText:focus {
-  outline: 2px solid #115A8A;
+  outline: none;
+  border: 2px solid #115A8A;
 }
 
 .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body p {
@@ -4397,7 +4399,7 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .attacments .mdi {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .close {

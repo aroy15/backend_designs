@@ -71,7 +71,7 @@ $(document).ready(function(){
   /*===========System Settings========== */
   /*-------Add Keywords-------*/
    $('#tagKeywordBtn').click(function(){
-    var getKeyword = $.trim($('#tagKeywordInput').val());
+    var getKeyword = $.trim($('#tagKeywordInput').val().replace(/(<([^>]+)>)/ig,"").replace(/\r\n|\r|\n/g,""));
     console.log(getKeyword);
     // var keywordSpaceCheck=$.trim(getKeyword);
     var setHTMLKey = '<span class="tag-item alert alert-dismissible fade show"><span class="tag-content">'+ getKeyword +'</span><button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">×</span></button></span>';
@@ -357,7 +357,9 @@ $(document).ready(function(){
   $(".docImportancySelect").on('change', function(){
   	docColorImportancy();
   });
-
+  $('#docTextarea').bind('keyup click mouseover',function(){
+    $('#liveEntryChar').text($(this).val().length);
+  });
   $('#docSaveBtn').click(function(){
     var getDocSelectValues = $('.docImportancySelect').val();
     var docItemBorderColorClass;
@@ -371,7 +373,7 @@ $(document).ready(function(){
     }
     var docItemReceiver = $('#docItemReceiver');
     var docTextId = $('#docTextarea');
-    var docTextValueSet = $.trim(docTextId.val());
+    var docTextValueSet = $.trim(docTextId.val().replace(/(<([^>]+)>)/ig,"").replace(/\r\n|\r|\n/g,""));
     var addDocItem = `
     <div class="docItem historyItem ${docItemBorderColorClass} d-flex flex-column flex-sm-row justify-content-between align-items-center">
       <div class="profile_hist d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
@@ -396,8 +398,7 @@ $(document).ready(function(){
     if(docTextValueSet !== "" && docTextValueSet !== null){
       docItemReceiver.append(addDocItem);
       docTextId.val("");
-    }
-    
+    } 
   });
    /*-------</+ Add Entry to Documentation>----- */
 
