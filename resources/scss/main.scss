@@ -2024,6 +2024,92 @@
 	.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
 		background-color: $blue-light;
 		color:$white;
+	}	
+	// Follow Up Mail Link Modal
+	.followUpMailModal.modal{
+		.modal-dialog {
+			max-width: 872px;
+			.modal-content {
+				color:$black;
+				background:transparent;
+				h4{
+					font-size:36px;
+					color:$black;
+				}
+				.modal-body{
+					font-family: $font-roboto;
+					background: $white-main;
+					@include b-radius(5px);
+					font-size:13px;
+					.follorUpEmailText{
+						background-color: $gray-light1;
+						&:focus{
+							outline: 2px solid $blue-bold;
+						}
+					}
+					p{
+						font-size:16px;	
+					}
+					.strongText{
+						font-weight: 500;
+					}
+					.contactInfo{
+						font-size:14px;
+						font-weight: 500;
+					}
+					.devider {
+						font-size: 16px;
+						letter-spacing: 2px;
+					}
+					.mailInfoOne{
+						font-size:10px;
+						font-weight: 500;
+					}
+					.mailInfoTwo,.copyrightText p{
+						font-size:11px;
+						font-weight:400;
+					}
+					.modal_bg_icon{
+						left: -34px;
+						bottom: -86px;
+						font-size: 550px;
+					}
+					.attacments{
+						color:$blue-light;
+						label{
+							line-height:1;
+						}
+						.mailAttachedText{
+							font-size:18px;
+							position:relative;
+							bottom:5px;
+						}						
+						.mdi{
+							font-size:40px;
+						}
+					}
+				}
+				.close{
+					background-color: rgba(0, 0, 0, 0.15);
+					&:hover{
+						background-color: rgba(0, 0, 0, 0.25);
+					}
+				}
+				.modal-footer{
+					.sendMailBtn{
+						padding: 16.5px 38.5px;
+						font-size:18px;
+					}
+					.foot_text{
+						max-width: 640px;
+						width: 100%;
+						text-align: center;color:rgba(250, 250, 250, 1);
+						font-size:15px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
 	}
 	// User Management
 	.user_management{
@@ -2479,6 +2565,7 @@
 	//Documentation
 	.documentation{
 		.addEntryToDoc_wrapper{
+			// Add Entry to Document Modal
 			.modal.addEntryToDoc{
 				.modal-dialog{
 					max-width: 885px;

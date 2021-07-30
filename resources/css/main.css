@@ -4315,6 +4315,113 @@ ul.pieLegend li:not(.anjon) {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.user_admin_name .followUpMailModal.modal .modal-dialog {
+  max-width: 872px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content {
+  color: #393939;
+  background: transparent;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content h4 {
+  font-size: 36px;
+  color: #393939;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body {
+  font-family: "Roboto", sans-serif;
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 13px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .follorUpEmailText {
+  background-color: #FAFAFA;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .follorUpEmailText:focus {
+  outline: 2px solid #115A8A;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body p {
+  font-size: 16px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .strongText {
+  font-weight: 500;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .contactInfo {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .devider {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .mailInfoOne {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .mailInfoTwo, .user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .copyrightText p {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .modal_bg_icon {
+  left: -34px;
+  bottom: -86px;
+  font-size: 550px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .attacments {
+  color: #42ADE2;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .attacments label {
+  line-height: 1;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .attacments .mailAttachedText {
+  font-size: 18px;
+  position: relative;
+  bottom: 5px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-body .attacments .mdi {
+  font-size: 40px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .close {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .close:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-footer .sendMailBtn {
+  padding: 16.5px 38.5px;
+  font-size: 18px;
+}
+
+.user_admin_name .followUpMailModal.modal .modal-dialog .modal-content .modal-footer .foot_text {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+  color: #fafafa;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .user_admin_name .user_management .user_management_inner {
   max-width: 928px;
   width: 100%;

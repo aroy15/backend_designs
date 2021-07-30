@@ -209,6 +209,23 @@ $(document).ready(function(){
   /*======X=====Accounting Invoices====X===== */
 
   /*============User Adminstration Name============= */
+  /*--------<Follow Up Mail>--------- */
+  $('#mailAttachment').on('change', function(){
+    $('#mailAttachedText').empty();
+    var mailAttachedUpload =  $('#mailAttachment');
+    var mailAttachLength = mailAttachedUpload[0].files.length;
+    var mailAttachItems = mailAttachedUpload[0].files;
+    var mailAttachText = "";
+
+    if(mailAttachLength > 0){
+      for(var i = 0; i < mailAttachLength; i++){
+        var mailAttachedName = mailAttachItems[i].name;
+        mailAttachText += "<span>" + mailAttachedName + " </span>";
+      }
+      $('#mailAttachedText').append(mailAttachText);
+    }
+  });
+  /*--------</Follow Up Mail>--------- */
   /***********User Management Tab**********/
   $('#UserImgEditBtn').on('change', function(event){
     var userImgLength =  $('#UserImgEditBtn')[0].files.length;
