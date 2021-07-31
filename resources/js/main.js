@@ -16,8 +16,8 @@ $(document).ready(function(){
   });
   
   /* nice-select plugin activation */
-  if($('body').find('select').length){
-    $('select').niceSelect();
+  if($('body').find('select.custom_select').length){
+    $('select.custom_select').niceSelect();
   }
   /*--x--/nice-select plugin activation--x---- */
   /*===== bootstrap modal common script===== */
@@ -337,8 +337,7 @@ $(document).ready(function(){
   });
     /*------</number increment & decrement>------- */    
   /****X**** Package & Payment tab *****X*****/
-  /******** Documentation Tab ***************/
-  
+  /******** Documentation Tab ***************/  
   /*-------<+ Add Entry to Documentation>----- */
 	function docColorImportancy(){
     $('.docImportancySelect .current').prepend('<span class="importancyColor"></span>');    
@@ -404,14 +403,34 @@ $(document).ready(function(){
 
   /****X******* Documentation Tab ******X***********/
   /*======X=====User Adminstration Name======X====== */
-
-
+  /*=========== Coupn  */
+  // $("#datetimepicker").flatpickr();
 });
+
+if($('body').find('.dateTimePicker').length){
+  var config = {
+    enableTime:true,
+    dateFormat:"d/m/Y h:i K",
+    altInput:true,
+    altFormat: "d/m/Y h:i K"
+  }
+  $(".dateTimePicker").flatpickr(config);
+}
+
+
 jQuery(document).ready(function(){
   if($('body').find('.scrollbar-light').length){
     jQuery('.scrollbar-light').scrollbar();
   }
+  // jQuery('#couponFromDate').click(function(){
+    // jQuery('#couponFromDate').datetimepicker(); //support hide,show and destroy command
+  // })
+  // jQuery('#datetimepicker').datetimepicker();
 });
+
+// $(function () {
+//     $('#datetimepicker').datetimepicker();
+//   });
 /*======= Fullscreen icon function =======*/
 $(function() {    
   // $(".fullscreen-supported").toggle($(document).fullScreen() != null);

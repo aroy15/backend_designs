@@ -2822,8 +2822,279 @@
 			}
 		}
 	}
+	.couponPreveiw_modal{
+		.modal-content{
+			background: $white-main;
+			color:$black;
+			position:relative;
+			.modal-body{
+				> h5{
+					font-size:24px;
+				}
+				.coupon_info{
+					max-width:378px;
+					width:100%;
+					.couponIcon{
+						font-size:50px;
+						line-height:1;
+					}
+					.logo{
+						max-width:220px;
+						width:100%;
+					}
+					h3{
+						font-size: 20px;
+					}
+					.couponUpdate{
+						max-width:299px;
+						width:100%;
+						background:url('../img/bg_images/coupon-bg.png');
+						background-repeat: no-repeat;
+						.discount{
+							font-size:48px;
+							line-height:1;
+							span{
+								padding:0;
+								margin:0;
+								&#symbol{
+									margin-left:-12px;
+								}
+							}
+						}
+						p{
+							font-size:14px;
+							font-weight:200;
+							color:$black-main;
+						}
+						.discountCode{
+							font-size:48px;
+						}
+					}
+					.validProduct{
+						p{
+							font-size:15px;
+						}
+					}
+					.fromUntilTime{
+						text-align: right;
+						max-width:240px;
+						width:100%;
+						&::before{
+							content: '';
+							width:50px;
+							height:2px;
+							display:block;
+							background-color: rgba(0, 0, 0, 0.1);;
+							margin:10px auto;
+						}
+						.cdtTitle {
+							min-width: 60px;
+						}			
+					}
+					.qr-code-area{
+						background-color: $gray-light1;
+						padding:15px 15px 3px 15px;
+						.qr-code-text{
+							font-size:12px;
+							color:$gray-2;
+							font-weight:200;
+						}
+						.qr-code{
+							min-width:60px;
+						}
+						.qrFootText{
+							font-size:5px;
+							font-weight:300;
+						}
+					}
+				}
+			}
+			.couponDetailsInfo{
+				max-width:378px;
+				width:100%;
+				.coup_row{
+					font-size:15px;
+					> div{
+						width:50%;
+					}
+					.coup_info{
+						font-weight: 200;
+					}
+				}
+			}
+			.print-icon {
+				font-size:30px;
+				background-color: $gray-light1;
+				@include b-radius(20px);
+				padding:6px 11px;
+				line-height:1;
+				position:absolute;
+				bottom:10px;
+				right:20px;
+			}
+		}
+		
+	}
+	
 }
-
+/***************************/
+/* 20. Add Coupons / Edit Coupons*/
+/***************************/
+.couponAddEdit{
+	&.content-container{
+		overflow:inherit;
+	}
+	.inputCoupons{
+		.inputHeader{
+			font-size:14px;
+		}
+		 input::placeholder{
+			color:$placeholder-dark;
+			font-size:15px;
+		}
+		&.c_sales{
+			input{
+				max-width:252px;
+				width:100%
+			}
+		}
+		&.c_per_ab_am{
+			max-width: 402px;
+			width:100%;
+			.c_amount{
+				input{
+					max-width:111px;
+					width:100%;
+				}
+			}
+		}
+		&.c_setDate{
+			max-width:434px;
+			width:100%;
+			.dateTime_area{
+				position:relative;
+				.calendarIcon{
+					position:absolute;
+					top:3px;
+					left:5px;
+					font-size:20px;
+					color:#C7C7C7;
+				}
+				.dateTimePicker{
+					height:36px;
+					@include b-radius(5px);
+					max-width:100%;
+					padding: 10px 10px 10px 32px;
+					font-size: 15px;
+					max-width:328px;
+					width: 100%;
+				}
+			}
+		}
+		&.c_pakcage{
+			max-width:480px;
+			width:100%;
+			.selectArea{
+				flex-grow: 1;
+			}			
+			.custom_select{
+				width:100%;
+				height:40px;
+				line-height:40px;
+				font-size:12px;
+			}
+		}
+		&.c_maxNum{
+			max-width: 445px;
+			width:100%;
+			.inputHeader{
+				flex-flow:1;
+			}
+			input{
+				width:111px;
+			}
+		}
+	}
+	.print-icon {
+		font-size:30px;
+		background-color: $gray-light1;
+		@include b-radius(20px);
+		padding:6px 11px;
+		line-height:1;
+	}
+	.coupon_info{
+		max-width:378px;
+		width:100%;
+		.couponIcon{
+			font-size:50px;
+			line-height:1;
+		}
+		.logo{
+			max-width:220px;
+			width:100%;
+		}
+		h3{
+			font-size: 20px;
+		}
+		.couponUpdate{
+			max-width:299px;
+			width:100%;
+			background:url('../img/bg_images/coupon-bg.png');
+			background-repeat: no-repeat;
+			.discount{
+				font-size:48px;
+				line-height:1;
+				span{
+					padding:0;
+					margin:0;
+					&#symbol{
+						margin-left:-12px;
+					}
+				}
+			}
+			p{
+				font-size:14px;
+				font-weight:200;
+				color:$black-main;
+			}
+			.discountCode{
+				font-size:48px;
+			}
+		}
+		.fromUntilTime{
+			text-align: right;
+			max-width:240px;
+			width:100%;
+			&::before{
+				content: '';
+				width:50px;
+				height:2px;
+				display:block;
+				background-color: rgba(0, 0, 0, 0.1);;
+				margin:10px auto;
+			}
+			.cdtTitle {
+				min-width: 60px;
+			}			
+		}
+		.qr-code-area{
+			background-color: $gray-light1;
+			padding:15px 15px 3px 15px;
+			.qr-code-text{
+				font-size:12px;
+				color:$gray-2;
+				font-weight:200;
+			}
+			.qr-code{
+				min-width:60px;
+			}
+			.qrFootText{
+				font-size:5px;
+				font-weight:300;
+			}
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
 

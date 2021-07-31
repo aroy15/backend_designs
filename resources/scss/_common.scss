@@ -69,6 +69,9 @@
 .text-red-light{
 	color:#FF7575;
 }
+.text-green{
+	color:$green-lime;
+}
 /*====X=====</Colors>======X====*/
 /* =======<Hover Design>===========*/
 .scale_hover_half{
@@ -105,6 +108,12 @@
 	@include transition-all(0.3s);
 	&:hover{
 		@include box-shadow(2px 2px 11px -3px rgba(0,0,0,0.5) !important);
+	}
+}
+.shadow_hover_half{
+	@include transition-all(0.3s);
+	&:hover{
+		@include box-shadow(1px 1px 6px -2px rgba(0,0,0,0.5) !important);
 	}
 }
 .blue_btn_hover{
@@ -620,6 +629,50 @@
 	}
 }
 /*===X==Check box design===X===*/
+/*======Radio box =====*/
+.round-radiobox{
+	cursor:pointer;
+	.input-radio {
+	        appearance: none;
+			display: none;
+		&~ {
+			.radio_iconarea{
+				.check_radioicon{
+					width:22px;
+					height:22px;					
+					@include b-radius(50%);
+					background-color:$black-light;
+					position:relative;
+					overflow:hidden;
+					&::before{
+						content: '';
+						width: 12px;
+						height: 12px;
+						background-color: $white-main;
+						position: absolute;
+						left: 5px;
+						top: 5px;
+						@include b-radius(50%);
+						@include transition-all(0.3s);
+						box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+						display:none;
+					}
+				}
+			}
+		}
+		&:checked ~ {
+			.radio_iconarea{
+				.check_radioicon{
+					background-color:$green-lime;
+					&::before{
+						display:block;
+					}
+				}
+			}
+		}
+	}
+}
+/*===X=== Radio box ===X==*/
 /*====== custom input[type="number"]====*/
 .incrementDcrement{
 	width:auto;

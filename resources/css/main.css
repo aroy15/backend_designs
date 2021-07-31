@@ -16,12 +16,13 @@
     11.     API - Settings
     12.     System - Settings
     13.     E-mail Settings
-    14.     E-mail Templates
+    14.     E-mail Templates | modal included
     15.     E-mail Templates Edit/Add
-    16.     Accounting > Invoices
+    16.     Accounting > Invoices | modal included
     17.     User Adminstration - Customer
-    18.     User Adminstration Name
-    19.     Coupons
+    18.     User Adminstration Name | 4nos. modal included
+    19.     Coupons | modal included
+    20.     Add Coupons / Edit Coupons
 ==========================================================
 **/
 /***************************/
@@ -262,6 +263,10 @@ textarea::placeholder {
   color: #FF7575;
 }
 
+.text-green {
+  color: #31C340;
+}
+
 /*====X=====</Colors>======X====*/
 /* =======<Hover Design>===========*/
 .scale_hover_half {
@@ -360,6 +365,22 @@ textarea::placeholder {
   -moz-box-shadow: 2px 2px 11px -3px rgba(0, 0, 0, 0.5) !important;
   -ms-box-shadow: 2px 2px 11px -3px rgba(0, 0, 0, 0.5) !important;
   -o-box-shadow: 2px 2px 11px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.shadow_hover_half {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.shadow_hover_half:hover {
+  box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
+  -webkit-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
+  -moz-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
+  -ms-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
+  -o-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
 }
 
 .blue_btn_hover {
@@ -1080,6 +1101,63 @@ textarea::placeholder {
 }
 
 /*===X==Check box design===X===*/
+/*======Radio box =====*/
+.round-radiobox {
+  cursor: pointer;
+}
+
+.round-radiobox .input-radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
+
+.round-radiobox .input-radio ~ .radio_iconarea .check_radioicon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #C4C4C4;
+  position: relative;
+  overflow: hidden;
+}
+
+.round-radiobox .input-radio ~ .radio_iconarea .check_radioicon::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.round-radiobox .input-radio:checked ~ .radio_iconarea .check_radioicon {
+  background-color: #31C340;
+}
+
+.round-radiobox .input-radio:checked ~ .radio_iconarea .check_radioicon::before {
+  display: block;
+}
+
+/*===X=== Radio box ===X==*/
 /*====== custom input[type="number"]====*/
 .incrementDcrement {
   width: auto;
@@ -5243,6 +5321,353 @@ ul.pieLegend li:not(.anjon) {
 
 .coupons .table_container table tr th:nth-child(7), .coupons .table_container table tr td:nth-child(7) {
   width: 143px;
+}
+
+.coupons .couponPreveiw_modal .modal-content {
+  background: #ffffff;
+  color: #393939;
+  position: relative;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body > h5 {
+  font-size: 24px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info {
+  max-width: 378px;
+  width: 100%;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponIcon {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .logo {
+  max-width: 220px;
+  width: 100%;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info h3 {
+  font-size: 20px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate {
+  max-width: 299px;
+  width: 100%;
+  background: url("../img/bg_images/coupon-bg.png");
+  background-repeat: no-repeat;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate .discount {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate .discount span {
+  padding: 0;
+  margin: 0;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate .discount span#symbol {
+  margin-left: -12px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate p {
+  font-size: 14px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .couponUpdate .discountCode {
+  font-size: 48px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .validProduct p {
+  font-size: 15px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .fromUntilTime {
+  text-align: right;
+  max-width: 240px;
+  width: 100%;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .fromUntilTime::before {
+  content: '';
+  width: 50px;
+  height: 2px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .fromUntilTime .cdtTitle {
+  min-width: 60px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .qr-code-area {
+  background-color: #FAFAFA;
+  padding: 15px 15px 3px 15px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .qr-code-area .qr-code-text {
+  font-size: 12px;
+  color: #9B9B9B;
+  font-weight: 200;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .qr-code-area .qr-code {
+  min-width: 60px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .modal-body .coupon_info .qr-code-area .qrFootText {
+  font-size: 5px;
+  font-weight: 300;
+}
+
+.coupons .couponPreveiw_modal .modal-content .couponDetailsInfo {
+  max-width: 378px;
+  width: 100%;
+}
+
+.coupons .couponPreveiw_modal .modal-content .couponDetailsInfo .coup_row {
+  font-size: 15px;
+}
+
+.coupons .couponPreveiw_modal .modal-content .couponDetailsInfo .coup_row > div {
+  width: 50%;
+}
+
+.coupons .couponPreveiw_modal .modal-content .couponDetailsInfo .coup_row .coup_info {
+  font-weight: 200;
+}
+
+.coupons .couponPreveiw_modal .modal-content .print-icon {
+  font-size: 30px;
+  background-color: #FAFAFA;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 6px 11px;
+  line-height: 1;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+/***************************/
+/* 20. Add Coupons / Edit Coupons*/
+/***************************/
+.couponAddEdit.content-container {
+  overflow: inherit;
+}
+
+.couponAddEdit .inputCoupons .inputHeader {
+  font-size: 14px;
+}
+
+.couponAddEdit .inputCoupons input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+}
+
+.couponAddEdit .inputCoupons input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+}
+
+.couponAddEdit .inputCoupons input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+}
+
+.couponAddEdit .inputCoupons input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+}
+
+.couponAddEdit .inputCoupons.c_sales input {
+  max-width: 252px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_per_ab_am {
+  max-width: 402px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_per_ab_am .c_amount input {
+  max-width: 111px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_setDate {
+  max-width: 434px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_setDate .dateTime_area {
+  position: relative;
+}
+
+.couponAddEdit .inputCoupons.c_setDate .dateTime_area .calendarIcon {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-size: 20px;
+  color: #C7C7C7;
+}
+
+.couponAddEdit .inputCoupons.c_setDate .dateTime_area .dateTimePicker {
+  height: 36px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  max-width: 100%;
+  padding: 10px 10px 10px 32px;
+  font-size: 15px;
+  max-width: 328px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_pakcage {
+  max-width: 480px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_pakcage .selectArea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.couponAddEdit .inputCoupons.c_pakcage .custom_select {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+.couponAddEdit .inputCoupons.c_maxNum {
+  max-width: 445px;
+  width: 100%;
+}
+
+.couponAddEdit .inputCoupons.c_maxNum .inputHeader {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: 1;
+          flex-flow: 1;
+}
+
+.couponAddEdit .inputCoupons.c_maxNum input {
+  width: 111px;
+}
+
+.couponAddEdit .print-icon {
+  font-size: 30px;
+  background-color: #FAFAFA;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 6px 11px;
+  line-height: 1;
+}
+
+.couponAddEdit .coupon_info {
+  max-width: 378px;
+  width: 100%;
+}
+
+.couponAddEdit .coupon_info .couponIcon {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.couponAddEdit .coupon_info .logo {
+  max-width: 220px;
+  width: 100%;
+}
+
+.couponAddEdit .coupon_info h3 {
+  font-size: 20px;
+}
+
+.couponAddEdit .coupon_info .couponUpdate {
+  max-width: 299px;
+  width: 100%;
+  background: url("../img/bg_images/coupon-bg.png");
+  background-repeat: no-repeat;
+}
+
+.couponAddEdit .coupon_info .couponUpdate .discount {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.couponAddEdit .coupon_info .couponUpdate .discount span {
+  padding: 0;
+  margin: 0;
+}
+
+.couponAddEdit .coupon_info .couponUpdate .discount span#symbol {
+  margin-left: -12px;
+}
+
+.couponAddEdit .coupon_info .couponUpdate p {
+  font-size: 14px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.couponAddEdit .coupon_info .couponUpdate .discountCode {
+  font-size: 48px;
+}
+
+.couponAddEdit .coupon_info .fromUntilTime {
+  text-align: right;
+  max-width: 240px;
+  width: 100%;
+}
+
+.couponAddEdit .coupon_info .fromUntilTime::before {
+  content: '';
+  width: 50px;
+  height: 2px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+}
+
+.couponAddEdit .coupon_info .fromUntilTime .cdtTitle {
+  min-width: 60px;
+}
+
+.couponAddEdit .coupon_info .qr-code-area {
+  background-color: #FAFAFA;
+  padding: 15px 15px 3px 15px;
+}
+
+.couponAddEdit .coupon_info .qr-code-area .qr-code-text {
+  font-size: 12px;
+  color: #9B9B9B;
+  font-weight: 200;
+}
+
+.couponAddEdit .coupon_info .qr-code-area .qr-code {
+  min-width: 60px;
+}
+
+.couponAddEdit .coupon_info .qr-code-area .qrFootText {
+  font-size: 5px;
+  font-weight: 300;
 }
 
 /*==============Responsive CSS===============*/

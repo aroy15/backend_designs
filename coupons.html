@@ -260,7 +260,7 @@
 					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
 						<div class="selectBtn order-2 order-lg-1">
 							<!-- sorting doc templates -->
-							<select class="big_select">
+							<select class="big_select custom_select">
 								<option value="ascending" selected>Sorted by ascending ID</option>
 								<option value="descending">Sorted by descending ID</option>
 							</select>
@@ -268,7 +268,7 @@
 						</div>
 						<div class="search_box searchWithBtn order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
 							<div class="mb-4 mb-lg-0">
-								<a href="./couponaAddEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Coupon</a>
+								<a href="./couponAddEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Coupon</a>
 							</div>
 							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
 								<input type="text" class="search form-control" placeholder="Search">
@@ -310,10 +310,10 @@
 										</span>
 									</td>
 									<td>
-										<button class="btn-transparent t_shadow_scale_1">
+										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
 											<span class="mdi mdi-file-eye-outline"></span>
 										</button>
-										<a href="./couponaAddEdit.html" class="edit t_shadow_scale_1">
+										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
 										<button class="delete btn-transparent t_shadow_scale_1">
@@ -336,10 +336,10 @@
 										</span>
 									</td>
 									<td>
-										<button class="btn-transparent t_shadow_scale_1">
+										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
 											<span class="mdi mdi-file-eye-outline"></span>
 										</button>
-										<a href="./couponaAddEdit.html" class="edit t_shadow_scale_1">
+										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
 										<button class="delete btn-transparent t_shadow_scale_1">
@@ -362,10 +362,10 @@
 										</span>
 									</td>
 									<td>
-										<button class="btn-transparent t_shadow_scale_1">
+										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
 											<span class="mdi mdi-file-eye-outline"></span>
 										</button>
-										<a href="./couponaAddEdit.html" class="edit t_shadow_scale_1">
+										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
 										<button class="delete btn-transparent t_shadow_scale_1">
@@ -388,10 +388,10 @@
 										</span>
 									</td>
 									<td>
-										<button class="btn-transparent t_shadow_scale_1">
+										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
 											<span class="mdi mdi-file-eye-outline"></span>
 										</button>
-										<a href="./couponaAddEdit.html" class="edit t_shadow_scale_1">
+										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
 										<button class="delete btn-transparent t_shadow_scale_1">
@@ -410,7 +410,7 @@
 							</div>						
 							<div class="show_entries d-flex justify-content-between align-items-center">
 								<span>Show Entries :</span>
-								<select name="" id="" class="white_select">
+								<select class="white_select custom_select">
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -421,8 +421,101 @@
 					</div>					
 				</div>
 			</div>
+			<!-- =========Coupon Preview Modal=========== -->
+			<div class="modal fade couponPreveiw_modal" id="couponPreview" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content px-lg-4 px-xl-5">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							<span class="mdi mdi-close"></span>
+						</button>
+						<div class="modal-body py-4">
+							<h5 class="text-center mb-3">Coupon Preview</h5>
+							<div class="blue_border coupon_info mx-auto mb-3">
+								<div class="couponIcon text-center text-blue">
+									<span class="mdi mdi-ticket-percent"></span>
+								</div>
+								<div class="logo text-center mx-auto">
+									<img src="./resources/img/Logo-UC.png" class="img-fluid" alt="site logo">
+								</div>
+								<h3 class="text-center text-uppercase py-3">Your Coupon</h3>
+								<div class="couponUpdate text-center mx-auto mb-4">
+									<div class="discount">
+										<span id="discountNum">10</span>
+										<span id="symbol">%</span>
+									</div>
+									<p class="mb-0">discount with the code</p>
+									<div class="text-uppercase discountCode" id="discountCode" >SALE50</div>
+								</div>
+								<div class="validProduct text-center">
+									<p>Valid for product: <span class="ml-3 text-red-light" id="couponPackage">STARTER-Package</span></p>
+								</div>
+								<div class="fromUntilTime mx-auto mb-3">
+									<div class="d-flex justify-content-between">
+										<span class="cdtTitle">From:</span>
+										<span id="fromDateTime" class="untilDateTime text-blue">11.08.2020 - 8:00am</span>
+									</div>
+									<div class="d-flex justify-content-between">
+										<span class="cdtTitle">Until:</span>
+										<span id="untilDateTime" class="untilDateTime text-blue">11.08.2020 - 8:00am</span>
+									</div>
+								</div>
+								<div class="qr-code-area b-r-5">
+									<div class="d-flex align-items-center">
+										<p class="qr-code-text mb-0">Please note that this voucher is only redeemable in the aforementioned, limited period on the aforementioned product. A combination with other discount promotions is excluded.</p>
+										<div class="qr-code ml-2">
+											<img src="./resources/img/QR-code.png" class="img-fluid" alt="qr code">
+										</div>
+									</div>
+									<span class="d-block qrFootText text-right pt-1">GENERATED BY Noah Kaczmarek ON: 15.08.2020 - 09:30</span>
+								</div>
+							</div>
+							<div class="couponDetailsInfo mx-auto pb-3">
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Value:</div>
+									<div class="coup_info">10%</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Code:</div>
+									<div class="coup_info">SALE50</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Generated by:</div>
+									<div class="coup_info">Noah Kaczmarek</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Generated on:</div>
+									<div class="coup_info">15.08.2020 - 9:30</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Validity:</div>
+									<div class="coup_info">11.09.2020 - 8:00am</div>
+								</div>								
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Limited to product:</div>
+									<div class="coup_info">STARTER-Package</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Availability:</div>
+									<div class="coup_info">0 / 100</div>
+								</div>
+								<div class="d-flex coup_row">
+									<div class="coup_subject ml-2 ml-lg-4 mr-3">Status:</div>
+									<div class="coup_info text-green">active</div>
+								</div>
+							</div>
+						</div>
+						<!--/modal-body-collapse -->
+						<button class="print-icon shadow_hover_half text-blue d-block ml-auto mb-4">
+							<span class="mdi mdi-printer"></span>
+						</button>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /======== End of Coupon Preview Modal ==============-->
 		</div>
-		<!--=== Coupons ===-->
+		<!--=== End of Coupons ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
