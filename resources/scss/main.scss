@@ -2782,6 +2782,48 @@
 		}
 	}
 }
+/***************************/
+/* 19. Coupons*/
+/***************************/
+.coupons{
+	&.content-container{
+		overflow:inherit;
+		max-width:1161px;
+	}
+	.coupons_inner{
+		background-color: $gray-light1;
+	}
+	.table_container{
+		table{
+			tr{
+				th,td{
+					&:nth-child(1){
+						width:15%;
+					}
+					&:nth-child(2){
+						width:79px;
+					}
+					&:nth-child(3){
+						width:25%;
+					}
+					&:nth-child(4){
+						width:89px;
+					}
+					&:nth-child(5){
+						width:27%;
+					}
+					&:nth-child(6){
+						width:100px;
+					}
+					&:nth-child(7){
+						width:143px;
+					}
+				}
+			}
+		}
+	}
+}
+
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
 

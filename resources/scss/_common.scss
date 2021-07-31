@@ -418,6 +418,14 @@
 .search_box{
 	max-width: 317px;
     width: 100%;
+	&.searchWithBtn{
+		max-width:477px;
+		.blue_btn{
+			&:hover{
+				color:$white-main;
+			}
+		}
+	}
 	.search_area{
 		max-width:317px;
 		width:100%;
@@ -542,6 +550,11 @@
 		float: left;
 		font-size:15px;
 		padding-left: 10px;
+	}
+	&.lime_switch{
+		label input:checked ~ .switch_create {
+			background-color: $green-lime;
+		}
 	}
 }
 /*==X==Switch Icon Small Design==X==*/

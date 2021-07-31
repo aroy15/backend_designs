@@ -21,6 +21,7 @@
     16.     Accounting > Invoices
     17.     User Adminstration - Customer
     18.     User Adminstration Name
+    19.     Coupons
 ==========================================================
 **/
 /***************************/
@@ -790,6 +791,14 @@ textarea::placeholder {
   width: 100%;
 }
 
+.search_box.searchWithBtn {
+  max-width: 477px;
+}
+
+.search_box.searchWithBtn .blue_btn:hover {
+  color: #ffffff;
+}
+
 .search_box .search_area {
   max-width: 317px;
   width: 100%;
@@ -991,6 +1000,10 @@ textarea::placeholder {
   float: left;
   font-size: 15px;
   padding-left: 10px;
+}
+
+.switch_icon_small.lime_switch label input:checked ~ .switch_create {
+  background-color: #31C340;
 }
 
 /*==X==Switch Icon Small Design==X==*/
@@ -5192,6 +5205,46 @@ ul.pieLegend li:not(.anjon) {
   font-weight: 700;
 }
 
+/***************************/
+/* 19. Coupons*/
+/***************************/
+.coupons.content-container {
+  overflow: inherit;
+  max-width: 1161px;
+}
+
+.coupons .coupons_inner {
+  background-color: #FAFAFA;
+}
+
+.coupons .table_container table tr th:nth-child(1), .coupons .table_container table tr td:nth-child(1) {
+  width: 15%;
+}
+
+.coupons .table_container table tr th:nth-child(2), .coupons .table_container table tr td:nth-child(2) {
+  width: 79px;
+}
+
+.coupons .table_container table tr th:nth-child(3), .coupons .table_container table tr td:nth-child(3) {
+  width: 25%;
+}
+
+.coupons .table_container table tr th:nth-child(4), .coupons .table_container table tr td:nth-child(4) {
+  width: 89px;
+}
+
+.coupons .table_container table tr th:nth-child(5), .coupons .table_container table tr td:nth-child(5) {
+  width: 27%;
+}
+
+.coupons .table_container table tr th:nth-child(6), .coupons .table_container table tr td:nth-child(6) {
+  width: 100px;
+}
+
+.coupons .table_container table tr th:nth-child(7), .coupons .table_container table tr td:nth-child(7) {
+  width: 143px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -5390,6 +5443,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .user_admin_name .documentation .historyItemContainer .historyItemInner {
     padding-right: 5px;
+  }
+  .coupons .table_container table, .coupons .table_container .table_bottom {
+    min-width: 845px;
   }
 }
 
