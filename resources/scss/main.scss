@@ -2788,8 +2788,11 @@
 .coupons{
 	&.content-container{
 		overflow:inherit;
-		max-width:1161px;
+		.content-inner{			
+			max-width:1161px;
+		}
 	}
+
 	.coupons_inner{
 		background-color: $gray-light1;
 	}
@@ -2827,6 +2830,12 @@
 			background: $white-main;
 			color:$black;
 			position:relative;
+			.close{
+				background-color: rgba(85, 84, 84, 0.3);
+				&:hover {
+					background-color: rgba(85, 84, 84, 0.5);
+				}
+			}
 			.modal-body{
 				> h5{
 					font-size:24px;
@@ -3047,7 +3056,7 @@
 				span{
 					padding:0;
 					margin:0;
-					&#symbol{
+					&#disSymbol{
 						margin-left:-12px;
 					}
 				}

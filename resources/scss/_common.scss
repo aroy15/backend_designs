@@ -59,6 +59,9 @@
 .cursor-pointer{
 	cursor:pointer;
 }
+.disabled{
+	cursor:not-allowed;
+}
 .overflow-hidden{
 	overflow: hidden;
 }

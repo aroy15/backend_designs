@@ -403,34 +403,131 @@ $(document).ready(function(){
 
   /****X******* Documentation Tab ******X***********/
   /*======X=====User Adminstration Name======X====== */
-  /*=========== Coupn  */
-  // $("#datetimepicker").flatpickr();
-});
-
-if($('body').find('.dateTimePicker').length){
-  var config = {
-    enableTime:true,
-    dateFormat:"d/m/Y h:i K",
-    altInput:true,
-    altFormat: "d/m/Y h:i K"
+  /*=========== Coupon Table page ============ */
+  /*------<table modal coupon print>---------*/
+  if($('body').find('#coupons').length){
+    $('#coup_printViewBtn').click(function(){
+      $("#coupPreviewPrint_1").print({
+        globalStyles : true,
+        mediaPrint : true,
+      });
+    })
   }
-  $(".dateTimePicker").flatpickr(config);
-}
+    
+    /*------</table modal coupon print>---------*/
+  /*======X===== Coupon Table page ======X====== */
+
+  /*=========== Add Coupons / Edit Coupons =======*/
+  /*------<flatpickr Date & time picker Activation>------ */
+  if($('body').find('.dateTimePicker').length){
+    var config = {
+      enableTime:true,
+      dateFormat:"d/m/Y - h:i K",
+      altInput:true,
+      altFormat: "d/m/Y - h:i K"
+    }
+    $(".dateTimePicker").flatpickr(config);
+  }
+   /*-----</flatpickr Date & time picker Activation>--- */
+   /*-------<Coupon Code>---------- */
+   $('#couponCodeInput').bind("keyup mouseout", function(){
+      $('#discountCode').text($(this).val());
+   })   
+   /*-------</Coupon Code>---------- */
+   /*------<Coupon Amount Input>--------- */
+  if($('body').find('#coup_discountInput').length){
+    $('#coup_discountInput').bind("keyup mouseout", function(){ 
+      if($('#coup_percentage').prop("checked") == true){  
+        $(this).val($(this).val().replaceAll(/[^\d|^%]/gi, ''));   
+        $(this).val($(this).val().replaceAll('%','')+"%");
+      }    
+      if($('#coup_absolute').prop("checked") == true){
+        $(this).val($(this).val().replaceAll(/[^\d|^€]/gi, ''));
+        $(this).val($(this).val().replaceAll('€','')+"€");
+      }
+      if($(this).val()==="%"){
+        $(this).val("");
+      }else if($(this).val()==="€"){
+        $(this).val("");
+      }
+        var viewDidgitPrev= $(this).val().replaceAll(/[^\d]/gi, '');
+        $('#discountNum').text(viewDidgitPrev);   
+    });
+    $('#coup_percentage').change(function(){
+      var setInput = $('#coup_discountInput');
+      var getdVal = setInput.val().replace('€','');
+      if($(this).prop("checked") == true){
+        setInput.val(getdVal + "%");
+        var valueSign = setInput.attr('placeholder').replace('€','%');
+        setInput.attr('placeholder',valueSign);
+
+        if($(setInput).val()==="%"){
+          $(setInput).val("");
+        }
+        $('#disSymbol').text('%');
+      }
+        
+    });
+    $('#coup_absolute').change(function(){
+      var setInput = $('#coup_discountInput');
+      var getdVal = setInput.val().replace('%','');
+      if($(this).prop("checked") == true){   
+        setInput.val(getdVal + "€");
+        var valueSign = setInput.attr('placeholder').replace('%','€');
+        setInput.attr('placeholder',valueSign);
+
+        if($(setInput).val()==="€"){
+          $(setInput).val("");
+        }
+        $('#disSymbol').text('€');
+      }
+    });
+  }
+  /*------</Coupon Amount Input>--------- */
+  /*-------<discount code vaild form Date&Time>-------- */
+  $('#discountFromDateInput').bind("keyup change", function(){
+    $('#fromDateTime').text($(this).val());
+  })  
+   /*-------</discount code vaild Until Date&Time>-------- */
+   $('#discountUntilDateInput').bind("keyup change", function(){
+    $('#untilDateTime').text($(this).val());
+  })  
+   /*-------</discount code vaild Until Date&Time>-------- */
+  /*-------<package Select>--------- */  
+  $('#couponAllProductCheck').click(function(){
+    var coupPkgSelect = $('#coup_pkgSelect');
+    if($(this).prop('checked') === false){
+      coupPkgSelect.prop('disabled', false).niceSelect('update');
+    }else if ($(this).prop('checked') === true){
+      coupPkgSelect.prop('disabled', true).niceSelect('update');
+    }
+    coupPkgSelect.change(function(){
+      $('#couponPackage').text($(this).val());
+    })
+  });
+  /*-------</package Select>--------- */
+  /*-----<Coupon Preview Print>---- */
+  if($('body').find('#couponAddEdit').length){
+    $('#coup_addEditPrintBtn').click(function(){
+      $("#coupPreviewPrint_2").print({
+        globalStyles : true,
+        mediaPrint : true,
+      });
+    })
+  }
+  
+  /*-----</Coupon Preview Print>---- */
+  
+  /*======X===== Add Coupons / Edit Coupons ===X====*/
+});
 
 
 jQuery(document).ready(function(){
   if($('body').find('.scrollbar-light').length){
     jQuery('.scrollbar-light').scrollbar();
   }
-  // jQuery('#couponFromDate').click(function(){
-    // jQuery('#couponFromDate').datetimepicker(); //support hide,show and destroy command
-  // })
-  // jQuery('#datetimepicker').datetimepicker();
 });
 
-// $(function () {
-//     $('#datetimepicker').datetimepicker();
-//   });
 /*======= Fullscreen icon function =======*/
 $(function() {    
   // $(".fullscreen-supported").toggle($(document).fullScreen() != null);

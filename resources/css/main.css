@@ -250,6 +250,10 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.disabled {
+  cursor: not-allowed;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -5288,6 +5292,9 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 .coupons.content-container {
   overflow: inherit;
+}
+
+.coupons.content-container .content-inner {
   max-width: 1161px;
 }
 
@@ -5327,6 +5334,14 @@ ul.pieLegend li:not(.anjon) {
   background: #ffffff;
   color: #393939;
   position: relative;
+}
+
+.coupons .couponPreveiw_modal .modal-content .close {
+  background-color: rgba(85, 84, 84, 0.3);
+}
+
+.coupons .couponPreveiw_modal .modal-content .close:hover {
+  background-color: rgba(85, 84, 84, 0.5);
 }
 
 .coupons .couponPreveiw_modal .modal-content .modal-body > h5 {
@@ -5617,7 +5632,7 @@ ul.pieLegend li:not(.anjon) {
   margin: 0;
 }
 
-.couponAddEdit .coupon_info .couponUpdate .discount span#symbol {
+.couponAddEdit .coupon_info .couponUpdate .discount span#disSymbol {
   margin-left: -12px;
 }
 
@@ -6018,16 +6033,83 @@ ul.pieLegend li:not(.anjon) {
 
 /*==============Print CSS===============*/
 @media print {
-  body * {
-    visibility: hidden;
+  .coupon_info {
+    margin-top: 200px;
+    max-width: 378px;
+    width: 100%;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
   }
-  .modal-content, .modal-content * {
-    visibility: visible;
-    position: fixed;
-    top: 0px;
-    right: -250px;
-    width: 900px;
-    height: auto;
+  .coupon_info .couponIcon {
+    font-size: 50px;
+    line-height: 1;
+  }
+  .coupon_info .logo {
+    max-width: 220px;
+    width: 100%;
+  }
+  .coupon_info h3 {
+    font-size: 20px;
+  }
+  .coupon_info .couponUpdate {
+    max-width: 299px;
+    width: 100%;
+    background: url("../img/bg_images/coupon-bg.png");
+    background-repeat: no-repeat;
+  }
+  .coupon_info .couponUpdate .discount {
+    font-size: 48px;
+    line-height: 1;
+  }
+  .coupon_info .couponUpdate .discount span {
+    padding: 0;
+    margin: 0;
+  }
+  .coupon_info .couponUpdate .discount span#disSymbol {
+    margin-left: -12px;
+  }
+  .coupon_info .couponUpdate p {
+    font-size: 14px;
+    font-weight: 200;
+    color: #000000;
+  }
+  .coupon_info .couponUpdate .discountCode {
+    font-size: 48px;
+  }
+  .coupon_info .fromUntilTime {
+    text-align: right;
+    max-width: 240px;
+    width: 100%;
+  }
+  .coupon_info .fromUntilTime::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+  }
+  .coupon_info .fromUntilTime .cdtTitle {
+    min-width: 60px;
+  }
+  .coupon_info .qr-code-area {
+    background-color: #FAFAFA;
+    padding: 15px 15px 3px 15px;
+  }
+  .coupon_info .qr-code-area .qr-code-text {
+    font-size: 12px;
+    color: #9B9B9B;
+    font-weight: 200;
+  }
+  .coupon_info .qr-code-area .qr-code {
+    min-width: 60px;
+  }
+  .coupon_info .qr-code-area .qrFootText {
+    font-size: 5px;
+    font-weight: 300;
   }
 }
 /*# sourceMappingURL=main.css.map */
