@@ -330,7 +330,14 @@
 							</div>
 							<div class="inputCoupons c_maxNum d-flex justify-content-between align-items-center mt-4">
 								<p class="inputHeader mb-2 pr-2">Maximum number of times the coupon can be used:</p>
-								<input type="text" id="coup_maxTimesInput" placeholder="100" class="mb-2">
+								<!-- <input type="text" id="coup_maxTimesInput" placeholder="100" class="mb-2"> -->
+								<div class="incrementDcrement">
+									<div class="increDecre_inner">
+										<input type="number" class="inputNumber" placeholder="100" data-max="20000000">
+										<button class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+										<button class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-6">
