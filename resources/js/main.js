@@ -506,6 +506,11 @@ $(document).ready(function(){
     })
   });
   /*-------</package Select>--------- */
+  /*----<Coupon max times input>------ */
+  $('#coup_maxTimesInput').bind("keyup mouseout", function(){
+    $(this).val( $(this).val().replaceAll(/[^\d]/gi,''));
+  });
+  /*----</Coupon max times input>------ */
   /*-----<Coupon Preview Print>---- */
   if($('body').find('#couponAddEdit').length){
     $('#coup_addEditPrintBtn').click(function(){
@@ -514,8 +519,7 @@ $(document).ready(function(){
         mediaPrint : true,
       });
     })
-  }
-  
+  }  
   /*-----</Coupon Preview Print>---- */
   
   /*======X===== Add Coupons / Edit Coupons ===X====*/
