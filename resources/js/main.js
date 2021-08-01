@@ -431,7 +431,16 @@ $(document).ready(function(){
    /*-----</flatpickr Date & time picker Activation>--- */
    /*-------<Coupon Code>---------- */
    $('#couponCodeInput').bind("keyup mouseout", function(){
-      $('#discountCode').text($(this).val());
+     var thisVal = $(this).val();
+      $('#discountCode').text(thisVal);
+      if(thisVal.length >= 9 && thisVal.length <= 16){        
+      //  var fontSize = 300/thisVal.length; 
+        $('#discountCode').css("font-size", "25px");
+      }else if(thisVal.length > 16) {
+        $('#discountCode').css("font-size", "18px");
+      }else{
+        $('#discountCode').css("font-size", "48px");
+      }     
    })   
    /*-------</Coupon Code>---------- */
    /*------<Coupon Amount Input>--------- */
