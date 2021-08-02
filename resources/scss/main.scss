@@ -3104,6 +3104,172 @@
 		}
 	}
 }
+/***************************/
+/* 21. HelpDesk */
+/***************************/
+.helpDesk{
+	// Category Section
+	.helpDesk_category{
+		max-width:345px;
+		width:100%;
+		background-color: $gray-light1;
+		h3{
+			font-size: 18px;
+		}
+		.h_categoryWrapper{
+			button,a{
+				background-color:transparent;
+				display:block;
+				text-align: left;				
+			}
+			.h_catItem{				
+				.catFolder{
+					display:flex;
+					align-items:center;
+					@include transition-all(0.3s);
+					&:hover{
+						text-shadow:$text-shadow;
+					}
+					.mdi{
+						font-size:28px;
+						line-height:1;
+						color:$blue-dark;
+					}
+					.folderText{
+						padding-left:5px;
+					}					
+				}
+				.sub_articles{
+					margin-left:14px;
+					margin-top:6px;
+					.sub_artItem{
+						padding-left:18px;
+						position:relative;
+						@include transition-all(0.3s);
+						display:flex;
+						align-items:center;
+						&:hover *{
+							text-shadow:0px 0px 1px $gray;
+						}							
+						&::after,&::before{
+							content:'';
+							background-color: $black-light;
+							position:absolute;
+							bottom:13px;
+							left:0;
+						}
+						&::before{
+							width:4px;
+							height:100%;
+						}
+						&:first-child{
+							&::before{
+								height:70%;
+							}
+						}
+						&::after{
+							width:15px;
+							height:4px;
+						}					
+						.mdi{
+							font-size:23px;
+							color:$blue-light;
+						}
+						.fileText{
+							padding-left: 2px;
+						}
+					}					
+				}
+			}
+		}
+	}	
+	// Article Edit Section
+	.articleEditSec{
+		.deleteBtnRedText{
+			color:$red-light;
+			background:transparent;
+			line-height: 1;
+			@include transition-all(0.3s);
+			.mdi{
+				font-size:20px;
+			}
+			.dText{
+				text-decoration: underline;
+				font-size:18px;
+			}
+			&:hover{
+				color:$light-red;
+			}
+		}
+		.switch_icon_small{
+			.swich_text{
+				font-size: 18px;
+				line-height:1;
+			}
+		}
+		.hp_inputs{
+			font-size:13px;
+			font-weight: 300;
+			.custom_select{
+				max-width:338px;
+				width:100%;
+			}
+			.securityInput{
+				max-width:397px;
+				width:100%;
+			}
+		}
+		.articleEditor{
+			height:548px;
+			background-color: $gray-light1;
+		}
+	}
+	.editCreateCat_modal{
+		.modal-dialog{
+			.modal-content{
+				background:transparent;
+				.editCatModalContent{
+					position:relative;
+					background: linear-gradient(180deg, #42ADE2 0%, #115A8A 100%);
+					@include b-radius(8px);
+					p{
+						font-size:25px;
+						max-width:353px;
+						width:100%;
+					}
+					.categoryInput{
+						max-width:397px;
+						width:100%;
+						background-color: $white-main;	
+						font-size:15px;					
+					}
+					.delCatLink{
+						text-decoration: underline;
+						@include transition-all(0.3s);
+						&:hover{
+							text-shadow: 0px 0px 1px $white-main;
+						}
+					}
+					.modal_bg_icon {
+						left: 20px;
+						bottom: 37px;
+						font-size: 213px;
+						line-height: 1;
+						color: rgba(240, 240, 240, 0.1);
+					}
+				}
+				.green_lime_btn{
+					max-width:200px;
+					width:100%;
+					height:60px;
+					text-align:center;
+					padding:0px 5px;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
 

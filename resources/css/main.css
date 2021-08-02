@@ -23,6 +23,7 @@
     18.     User Adminstration Name | 4nos. modal included
     19.     Coupons | modal included
     20.     Add Coupons / Edit Coupons
+    21.     HelpDesk
 ==========================================================
 **/
 /***************************/
@@ -256,6 +257,10 @@ textarea::placeholder {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.display-none {
+  display: none;
 }
 
 /*==========<Colors>============*/
@@ -809,6 +814,12 @@ textarea::placeholder {
   font-weight: 300;
 }
 
+.nice-select.select_h_40 {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+}
+
 /*==X===Custom Select Box design==X==*/
 /*=== Search box common design=== */
 .search_box {
@@ -1287,7 +1298,7 @@ textarea::placeholder {
           justify-content: center;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .cancelBtn, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn {
+.modal .modal-dialog .modal-content .modal-footer .cancelBtn, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn, .modal .modal-dialog .modal-content .modal-footer .deleteButton {
   position: relative;
   z-index: 1;
   max-width: 185px;
@@ -1310,7 +1321,7 @@ textarea::placeholder {
   border: 4px solid transparent !important;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .cancelBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover {
+.modal .modal-dialog .modal-content .modal-footer .cancelBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteButton:hover {
   background-color: transparent;
 }
 
@@ -1322,11 +1333,11 @@ textarea::placeholder {
   border-color: #FF4D4D !important;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn {
+.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn, .modal .modal-dialog .modal-content .modal-footer .saveBtn, .modal .modal-dialog .modal-content .modal-footer .deleteButton {
   background-color: #1BD12D;
 }
 
-.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover {
+.modal .modal-dialog .modal-content .modal-footer .deleteYesBtn:hover, .modal .modal-dialog .modal-content .modal-footer .saveBtn:hover, .modal .modal-dialog .modal-content .modal-footer .deleteButton:hover {
   background-color: transparent;
   border-color: #1BD12D !important;
 }
@@ -5683,6 +5694,216 @@ ul.pieLegend li:not(.anjon) {
 .couponAddEdit .coupon_info .qr-code-area .qrFootText {
   font-size: 5px;
   font-weight: 300;
+}
+
+/***************************/
+/* 21. HelpDesk */
+/***************************/
+.helpDesk .helpDesk_category {
+  max-width: 345px;
+  width: 100%;
+  background-color: #FAFAFA;
+}
+
+.helpDesk .helpDesk_category h3 {
+  font-size: 18px;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper button, .helpDesk .helpDesk_category .h_categoryWrapper a {
+  background-color: transparent;
+  display: block;
+  text-align: left;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .catFolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .catFolder:hover {
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .catFolder .mdi {
+  font-size: 28px;
+  line-height: 1;
+  color: #002D4A;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .catFolder .folderText {
+  padding-left: 5px;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles {
+  margin-left: 14px;
+  margin-top: 6px;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem {
+  padding-left: 18px;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem:hover * {
+  text-shadow: 0px 0px 1px #A3A3A3;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem::after, .helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem::before {
+  content: '';
+  background-color: #C4C4C4;
+  position: absolute;
+  bottom: 13px;
+  left: 0;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem::before {
+  width: 4px;
+  height: 100%;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem:first-child::before {
+  height: 70%;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem::after {
+  width: 15px;
+  height: 4px;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem .mdi {
+  font-size: 23px;
+  color: #42ADE2;
+}
+
+.helpDesk .helpDesk_category .h_categoryWrapper .h_catItem .sub_articles .sub_artItem .fileText {
+  padding-left: 2px;
+}
+
+.helpDesk .articleEditSec .deleteBtnRedText {
+  color: #FF4D4D;
+  background: transparent;
+  line-height: 1;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.helpDesk .articleEditSec .deleteBtnRedText .mdi {
+  font-size: 20px;
+}
+
+.helpDesk .articleEditSec .deleteBtnRedText .dText {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.helpDesk .articleEditSec .deleteBtnRedText:hover {
+  color: rgba(255, 77, 77, 0.7);
+}
+
+.helpDesk .articleEditSec .switch_icon_small .swich_text {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.helpDesk .articleEditSec .hp_inputs {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.helpDesk .articleEditSec .hp_inputs .custom_select {
+  max-width: 338px;
+  width: 100%;
+}
+
+.helpDesk .articleEditSec .hp_inputs .securityInput {
+  max-width: 397px;
+  width: 100%;
+}
+
+.helpDesk .articleEditSec .articleEditor {
+  height: 548px;
+  background-color: #FAFAFA;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content {
+  background: transparent;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#42ADE2), to(#115A8A));
+  background: linear-gradient(180deg, #42ADE2 0%, #115A8A 100%);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent p {
+  font-size: 25px;
+  max-width: 353px;
+  width: 100%;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent .categoryInput {
+  max-width: 397px;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent .delCatLink {
+  text-decoration: underline;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent .delCatLink:hover {
+  text-shadow: 0px 0px 1px #ffffff;
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .editCatModalContent .modal_bg_icon {
+  left: 20px;
+  bottom: 37px;
+  font-size: 213px;
+  line-height: 1;
+  color: rgba(240, 240, 240, 0.1);
+}
+
+.helpDesk .editCreateCat_modal .modal-dialog .modal-content .green_lime_btn {
+  max-width: 200px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding: 0px 5px;
+  line-height: 60px;
 }
 
 /*==============Responsive CSS===============*/

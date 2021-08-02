@@ -65,6 +65,9 @@
 .overflow-hidden{
 	overflow: hidden;
 }
+.display-none{
+	display:none;
+}
 /*==========<Colors>============*/
 .text-blue{
 	color:$blue-light;
@@ -424,6 +427,11 @@
 		line-height: 46px;
 		font-weight: 300;
 	}
+	&.select_h_40{
+		font-size:14px;
+		height:40px;
+		line-height:40px;	
+	}
 }
 /*==X===Custom Select Box design==X==*/
 /*=== Search box common design=== */
@@ -765,7 +773,7 @@
 			}
 			.modal-footer{
 				justify-content: center;				
-				.cancelBtn,.deleteYesBtn,.saveBtn{
+				.cancelBtn,.deleteYesBtn,.saveBtn,.deleteButton{
 					position:relative;
 					z-index:1;
 					max-width:185px;
@@ -789,7 +797,7 @@
 						// color:$red-light;
 					}
 				}
-				.deleteYesBtn,.saveBtn{
+				.deleteYesBtn,.saveBtn,.deleteButton{
 					background-color: $green-limeBtn;
 					&:hover{
 						background-color: transparent;

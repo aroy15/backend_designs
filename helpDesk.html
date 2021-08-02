@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coupons</title>
+    <title>HelpDesk</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
 		<!-- select plugin -->
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
-        <!-- Booststrap 4 css -->
+		<!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
         <!-- Main/Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css">
@@ -242,12 +242,12 @@
 	<main id="mainItem" class="main_item p-2 main_item-active">
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex">
-				<h2 class="bh_title">Coupons</h2>
+			<div class="d-flex align-items-center">
+				<h2 class="bh_title">HelpDesk</h2>
 			</div>
 		</div>		
-		<!--=== Coupons ===-->
-		<div id="coupons" class="coupons content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== HelpDesk ===-->
+		<div id="helpDesk" class="helpDesk content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -256,296 +256,195 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="coupons_inner p-3 b-r-5">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-						<div class="selectBtn order-2 order-lg-1">
-							<!-- sorting doc templates -->
-							<select class="big_select custom_select">
-								<option value="ascending" selected>Sorted by ascending ID</option>
-								<option value="descending">Sorted by descending ID</option>
-							</select>
-							<!--/sorting doc templates  -->
-						</div>
-						<div class="search_box searchWithBtn order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="./couponAddEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Coupon</a>
-							</div>
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
+				<div class="helpDesk_inner">
+					<div class="row">
+						<!-- Category -->
+						<div class="col-lg-4">
+							<div class="helpDesk_category b-r-5 p-3">
+								<h3 class="mb-3">Category</h3>
+								<div class="h_categoryWrapper mb-5">
+									<div class="h_catItem">
+										<button class="catFolder" data-toggle="modal" data-target="#editCreateCategory_modal">
+											<span class="mdi mdi-folder"></span>
+											<span class="folderText">Content-Management</span>
+										</button>
+									</div>
+									<div class="h_catItem">
+										<button class="catFolder" data-toggle="modal" data-target="#editCreateCategory_modal">
+											<span class="mdi mdi-folder"></span>
+											<span class="folderText">Social-Media</span>
+										</button>
+									</div>
+									<div class="h_catItem">
+										<button class="catFolder" data-toggle="modal" data-target="#editCreateCategory_modal">
+											<span class="mdi mdi-folder"></span>
+											<span class="folderText">Interactions</span>
+										</button>
+									</div>
+									<div class="h_catItem">
+										<button class="catFolder" data-toggle="modal" data-target="#editCreateCategory_modal">
+											<span class="mdi mdi-folder"></span>
+											<span class="folderText">Analytics</span>
+										</button>
+									</div>
+									<div class="h_catItem">
+										<button class="catFolder" data-toggle="modal" data-target="#editCreateCategory_modal">
+											<span class="mdi mdi-folder"></span>
+											<span class="folderText">Settings</span>
+										</button>
+										<!-- sub Category -->
+										<div class="sub_articles">
+											<div class="sub_artItem">
+												<button class="sub_artLink">
+													<span class="mdi mdi-file"></span>
+													<span class="fileText">Security</span>
+												</button>
+											</div>
+											<div class="sub_artItem">
+												<button class="sub_artLink">
+													<span class="mdi mdi-file"></span>
+													<span class="fileText">Request a Feature</span>
+												</button>
+											</div>
+											<div class="sub_artItem">
+												<button class="sub_artLink">
+													<span class="mdi mdi-file"></span>
+													<span class="fileText">Channels</span>
+												</button>												
+											</div>
+											<div class="sub_artItem">
+												<button class="sub_artLink">
+													<span class="mdi mdi-file"></span>
+													<span class="fileText">Profile</span>
+												</button>
+											</div>
+										</div>
+										<!-- /Sub Category -->
+									</div>
+								</div>
+								<button class="icon_btn_blue mb-2 shadow_hover_1">
+									<span class="mdi mdi-file"></span>
+									<span>Add a new Function</span>
 								</button>
-							</form>
-						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
-					</div>
-					<div class="table_container">
-						<table class="w-100 text-center">
-							<thead>
-								<tr>
-									<th>Code</th>
-									<th>Value</th>
-									<th>Limitation</th>
-									<th>Used:</th>
-									<th>Valid</th>
-									<th>Status</th>
-									<th>functions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1">
-									<td>5C3A12E2</td>
-									<td>10%</td>
-									<td>STARTER-Package</td>
-									<td>0/10</td>
-									<td>12.05.2020 - 12.06.2020</td>
-									<td>
-										<span class="switch_icon_small lime_switch w-100 d-flex justify-content-center text-left mt-2">
-											<label>
-												<input type="checkbox" class="appearance-none" checked>
-												<span class="switch_create"></span>
-											</label>
-										</span>
-									</td>
-									<td>
-										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</button>
-										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2">
-									<td>075FC251</td>
-									<td>30,55€</td>
-									<td>- - -</td>
-									<td>1 / 1</td>
-									<td>12.05.2020 - 12.06.2020</td>
-									<td>
-										<span class="switch_icon_small lime_switch w-100 d-flex justify-content-center text-left mt-2">
-											<label>
-												<input type="checkbox" class="appearance-none" checked>
-												<span class="switch_create"></span>
-											</label>
-										</span>
-									</td>
-									<td>
-										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</button>
-										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3">
-									<td>CASH15</td>
-									<td>15%</td>
-									<td>STARTER-Package</td>
-									<td>0/10</td>
-									<td>- - -</td>
-									<td>
-										<span class="switch_icon_small lime_switch w-100 d-flex justify-content-center text-left mt-2">
-											<label>
-												<input type="checkbox" class="appearance-none" checked>
-												<span class="switch_create"></span>
-											</label>
-										</span>
-									</td>
-									<td>
-										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</button>
-										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4">
-									<td>D2FE4ED6</td>
-									<td>5,00€</td>
-									<td>INFLUENCER-Package</td>
-									<td>5 / 100</td>
-									<td>12.05.2020 - 12.06.2020</td>
-									<td>
-										<span class="switch_icon_small lime_switch w-100 d-flex justify-content-center text-left mt-2">
-											<label>
-												<input type="checkbox" class="appearance-none" checked>
-												<span class="switch_create"></span>
-											</label>
-										</span>
-									</td>
-									<td>
-										<button class="btn-transparent t_shadow_scale_1" data-toggle="modal" data-target="#couponPreview">
-											<span class="mdi mdi-file-eye-outline"></span>
-										</button>
-										<a href="./couponAddEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between">
-							<a href="#" class="file_btn shadow_hover_1">
-								<span class="mdi mdi-file-document"></span>
-							</a>
-							<div class="entries text-center ml-xl-5 pl-xl-5">
-								<p class="mb-0">1042 entries in total</p>
+								<div class="clearfix"></div>
+								<button class="icon_btn_blue shadow_hover_1">
+									<span class="mdi mdi-folder"></span>
+									<span>Add a New Category</span>
+								</button>
 							</div>						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select class="white_select custom_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
+						</div>
+						<!-- /Category -->
+						<!-- Article Edit Section -->
+						<div class="col-lg-8">
+							<div id="articleEditSec" class="articleEditSec display-none pl-xl-4">
+							   <div class="d-flex flex-wrap justify-content-between">
+									<div class="switch_icon_small lime_switch mb-3">								
+										<span class="swich_text pl-0 pr-4">Is Active:</span>
+										<label>
+											<input type="checkbox" class="appearance-none" checked="">
+											<span class="switch_create"></span>
+										</label>
+									</div>
+									<button class="deleteBtnRedText">
+										<span class="mdi mdi-trash-can"></span>
+										<span class="dText">Delete</span>
+									</button>
+							   </div>
+							   <div class="hp_inputs mb-3">
+								   <p class="mb-0">Assignment:</p>
+								   <select class="custom_select gray_select select_h_40">
+									   <option>Settings</option>
+									   <option>Analytics</option>
+									   <option>Interactions</option>
+								   </select>
+							   </div>
+							   <div class="hp_inputs mb-3">
+									<p class="mb-0">Linked Page</p>
+									<select class="custom_select gray_select select_h_40">
+										<option>frontend_settings_security</option>
+										<option>frontend_settings_security-2</option>
+										<option>frontend_settings_security-3</option>
+									</select>
+								</div>
+								<div class="hp_inputs mb-3">
+									<input type="text" class="securityInput" placeholder="Security">
+								</div>
+								<div class="articleEditor">
+									 <img src="./resources/img/editior.png" class="img-fluid" alt="Editor">
+								</div>
 							</div>
 						</div>
-					</div>					
-				</div>
+						<!-- /Artic le Edit Section -->
+					</div>
+					<!-- Save Settings -->
+					<div class="d-flex justify-content-end mt-5">
+						<button class="green_lime_btn shadow_hover_1">Save Settings</button>
+					</div>
+					<!-- /Save Settings -->
+				</div>	
 			</div>
-			<!-- =========Coupon Preview Modal=========== -->
-			<div class="modal fade couponPreveiw_modal" id="couponPreview" tabindex="-1" role="dialog" aria-hidden="true">
+			<!-- ====== Edit or Create Category  Modal ======-->
+			<div class="modal fade text-center editCreateCat_modal" id="editCreateCategory_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="editCatModalContent px-lg-3">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								<span class="mdi mdi-close"></span>
+							</button>
+							<div class="modal-body pb-2 pt-5">
+								<p class="mb-4 mx-auto">Please enter a name to create a new category, or edit a name.</p>
+								<input type="text" class="categoryInput mx-auto" placeholder="Account & Invoice">
+								<a href="#deleteCategory_modal" class="delCatLink d-block text-right mt-5" data-toggle="modal" data-dismiss="modal">Delete this Category</a>
+							</div>
+							<!--/modal-footer-collapse -->
+							<div class="modal_bg_icon">
+								<span class="mdi mdi-folder-edit"></span>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center mt-3">
+							<button class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
+						</div>
+					</div>
+					
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- ====== End of Edit or Create Category Modal ======-->
+
+			<!-- ====== Delete Category  Modal ======-->
+			<div class="modal fade text-center" id="deleteCategory_modal" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content px-lg-4 px-xl-5">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 							<span class="mdi mdi-close"></span>
 						</button>
-						<div class="modal-body py-4">
-							<h5 class="text-center mb-3">Coupon Preview</h5>
-							<div id="coupPreviewPrint_1" class="blue_border coupon_info mx-auto mb-3">
-								<div class="couponIcon text-center text-blue">
-									<span class="mdi mdi-ticket-percent"></span>
-								</div>
-								<div class="logo text-center mx-auto">
-									<img src="./resources/img/Logo-UC.png" class="img-fluid" alt="site logo">
-								</div>
-								<h3 class="text-center text-uppercase py-3">Your Coupon</h3>
-								<div class="couponUpdate text-center mx-auto mb-4">
-									<div class="discount">
-										<span id="discountNum">10</span>
-										<span id="symbol">%</span>
-									</div>
-									<p class="mb-0">discount with the code</p>
-									<div class="text-uppercase discountCode" id="discountCode" >SALE50</div>
-								</div>
-								<div class="validProduct text-center">
-									<p>Valid for product: <span class="ml-3 text-red-light" id="couponPackage">STARTER-Package</span></p>
-								</div>
-								<div class="fromUntilTime mx-auto mb-3">
-									<div class="d-flex justify-content-between">
-										<span class="cdtTitle">From:</span>
-										<span id="fromDateTime" class="untilDateTime text-blue">11.08.2020 - 8:00am</span>
-									</div>
-									<div class="d-flex justify-content-between">
-										<span class="cdtTitle">Until:</span>
-										<span id="untilDateTime" class="untilDateTime text-blue">11.08.2020 - 8:00am</span>
-									</div>
-								</div>
-								<div class="qr-code-area b-r-5">
-									<div class="d-flex align-items-center">
-										<p class="qr-code-text mb-0">Please note that this voucher is only redeemable in the aforementioned, limited period on the aforementioned product. A combination with other discount promotions is excluded.</p>
-										<div class="qr-code ml-2">
-											<img src="./resources/img/QR-code.png" class="img-fluid" alt="qr code">
-										</div>
-									</div>
-									<span class="d-block qrFootText text-right pt-1">GENERATED BY Noah Kaczmarek ON: 15.08.2020 - 09:30</span>
-								</div>
-							</div>
-							<div class="couponDetailsInfo mx-auto pb-3">
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Value:</div>
-									<div class="coup_info">10%</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Code:</div>
-									<div class="coup_info">SALE50</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Generated by:</div>
-									<div class="coup_info">Noah Kaczmarek</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Generated on:</div>
-									<div class="coup_info">15.08.2020 - 9:30</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Validity:</div>
-									<div class="coup_info">11.09.2020 - 8:00am</div>
-								</div>								
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Limited to product:</div>
-									<div class="coup_info">STARTER-Package</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Availability:</div>
-									<div class="coup_info">0 / 100</div>
-								</div>
-								<div class="d-flex coup_row">
-									<div class="coup_subject ml-2 ml-lg-4 mr-3">Status:</div>
-									<div class="coup_info text-green">active</div>
-								</div>
-							</div>
+						<div class="modal-body pb-4 pt-5">
+							<h4 class="pb-4"> Are you sure?</h4>
+							<p>Deleted content is irrevocably deleted and cannot be restored at a later time.</p>
 						</div>
 						<!--/modal-body-collapse -->
-						<button id="coup_printViewBtn" class="print-icon shadow_hover_half text-blue d-block ml-auto mb-4">
-							<span class="mdi mdi-printer"></span>
-						</button>
+						<div class="modal-footer mb-4">
+							<button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="deleteButton" data-dismiss="modal"><span class="mdi mdi-check-bold"></span> Yes</button>
+						</div>
+						<!--/modal-footer-collapse -->
+						<div class="modal_bg_icon">
+							<span class="mdi mdi-delete-empty"></span>
+						</div>
 					</div>
 					<!-- /.modal-content -->
 				</div>
 				<!-- /.modal-dialog -->
 			</div>
-			<!-- /======== End of Coupon Preview Modal ==============-->
+			<!-- ====== End of Delete Category Modal ======-->
+
 		</div>
-		<!--=== End of Coupons ===-->
+		<!--=== End of HelpDesk ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
-<!--=== End of  Body Item ===-->
-<!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content px-lg-4 px-xl-5">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				<span class="mdi mdi-close"></span>
-			</button>
-            <div class="modal-body pb-4 pt-5">
-                 <h4 class="pb-4"> Are you sure?</h4>
-				 <p>Deleted content is irrevocably deleted and cannot be restored at a later time.</p>
-            </div>
-            <!--/modal-body-collapse -->
-            <div class="modal-footer mb-4">
-                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes, sure.</button>
-            </div>
-            <!--/modal-footer-collapse -->
-			<div class="modal_bg_icon">
-				<span class="mdi mdi-delete-empty"></span>
-			</div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+<!--=== End of  Body Item ===-->	
 
     <!-- Script Here -->
     <!-- jQuery -->
