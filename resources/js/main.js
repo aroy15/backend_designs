@@ -14,7 +14,37 @@ $(document).ready(function(){
       $('.lgt_icons').removeClass('looping');   
     }, 2000);
   });
+  /*-----<Profile Pic max-size>-----*/
+  $('#UserImgEditBtn1').on('change', function(event){
+    var userImgLength =  $('#UserImgEditBtn1')[0].files.length;
+    var userImgSrc = URL.createObjectURL(event.target.files[0]);
+    /*Validation for only images */
+    var userImgselectedFile = event.target.files[0];
+    var userImgidxDot = userImgselectedFile.name.lastIndexOf(".") + 1;
+    var userImgextFile = userImgselectedFile.name.substr(userImgidxDot, userImgselectedFile.name.length).toLowerCase();
+    if (userImgextFile === "jpg" || userImgextFile === "jpeg" || userImgextFile === "png" || userImgextFile === "gif" || userImgextFile === "bmp") {
+      if(userImgLength > 0){     
+        $('#userImgPic1').attr('src',userImgSrc);        
+      } 
+    }else{
+      alert("Only jpg, jpeg , png, bmp and gif files are allowed!");      
+    }
+    
+    if(this.files[0].size > 2200000){
+      alert("File is too big! Maximum size is 2 MB");
+      this.value = "";
+      $('#userImgPic1').attr('src','./resources/img/profile-pic.png'); 
+    };
   
+  }); 
+  // var uploadField = document.getElementById("UserImgEditBtn1");
+  // uploadField.onchange = function() {
+  //     if(this.files[0].size > 2200000){
+  //       alert("File is too big!");
+  //       this.value = "";
+  //     };
+  // };
+  /*-----</Profile Pic max-size>-----*/
   /* nice-select plugin activation */
   if($('body').find('select.custom_select').length){
     $('select.custom_select').niceSelect();

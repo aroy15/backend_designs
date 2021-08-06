@@ -315,6 +315,14 @@
 			min-width: 845px;
 		}
 	}
+	//Ticketsystem Overview / Ticket-System
+	.ticketsystem_overview{
+		.table_container{
+			table, .table_bottom {
+				min-width:900px;
+			}
+		}
+	}
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {

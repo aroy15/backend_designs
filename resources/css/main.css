@@ -24,6 +24,7 @@
     19.     Coupons | modal included
     20.     Add Coupons / Edit Coupons
     21.     HelpDesk
+    22.     Ticketsystem Overview / Ticket-System
 ==========================================================
 **/
 /***************************/
@@ -274,6 +275,10 @@ textarea::placeholder {
 
 .text-green {
   color: #31C340;
+}
+
+.bg-gray {
+  background-color: #FAFAFA;
 }
 
 /*====X=====</Colors>======X====*/
@@ -1952,7 +1957,7 @@ ul.pieLegend li:not(.anjon) {
           animation: rotate 750ms 300ms infinite;
 }
 
-#headerMenu .profile-photoss .profile_pic img {
+#headerMenu .profile-photoss .profile_picContainer img.profile_pic {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1970,7 +1975,7 @@ ul.pieLegend li:not(.anjon) {
      object-fit: cover;
 }
 
-#headerMenu .profile-photoss .profile_pic img:hover {
+#headerMenu .profile-photoss .profile_picContainer img.profile_pic:hover {
   border: 2px solid #002D4A;
 }
 
@@ -1992,6 +1997,125 @@ ul.pieLegend li:not(.anjon) {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
   }
+}
+
+/****Prfile Picture Change Modal****/
+.profilePicChange_modal .modal-dialog {
+  max-width: 872px;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content {
+  color: #393939;
+  background: transparent;
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body {
+  font-family: "Roboto", sans-serif;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body h4 {
+  font-size: 18px;
+  color: #393939;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .profilePicArea {
+  background-color: rgba(66, 173, 226, 0.2);
+  padding: 10px 5px 20px 5px;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  max-width: 222px;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .profilePicArea h5 {
+  font-size: 20px;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .profile_picture {
+  width: 170px;
+  position: relative;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .profile_picture img.profile_pic {
+  width: 170px;
+  height: 170px;
+  border: 4px solid #ffffff;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .profile_picture .img_edit_btn {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #BCF1FF;
+  text-align: center;
+  line-height: 49px;
+  font-size: 35px;
+  color: #3489B3;
+  position: absolute;
+  bottom: -12px;
+  right: 12px;
+  background-color: #ffffff;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .pic_footText {
+  max-width: 290px;
+  width: 100%;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .pic_footText .picAlertText {
+  font-size: 14px;
+  color: #707070;
+  font-weight: 300;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .pic_footText .picAlertText .mdi {
+  color: #42ADE2;
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+  line-height: 1;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-body .pic_footText p {
+  font-size: 15px;
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .close {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .close:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.profilePicChange_modal .modal-dialog .modal-content .modal-footer .green_lime_btn {
+  padding: 16.5px 38.5px;
+  font-size: 18px;
 }
 
 /*****Body Items*****/
@@ -4550,7 +4674,7 @@ ul.pieLegend li:not(.anjon) {
   position: relative;
 }
 
-.user_admin_name .user_management .profile_picture img.profile_pic {
+.user_admin_name .user_management .profile_picture img.profile_pic2 {
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
@@ -5906,6 +6030,94 @@ ul.pieLegend li:not(.anjon) {
   line-height: 60px;
 }
 
+/***************************/
+/* 22. Ticketsystem Overview / Ticket-System */
+/***************************/
+.ticketsystem_overview .content-inner {
+  padding: 20px 20px 40px 20px;
+}
+
+.ticketsystem_overview .nav-pills .nav-link.active, .ticketsystem_overview .user_admin_name .nav-pills .show > .nav-link {
+  background-color: #42ADE2;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ticketsystem_overview .nav-pills .nav-link {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  min-height: 50px;
+  line-height: 2.3;
+  background-color: #FAFAFA;
+  min-width: 170px;
+  text-align: center;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(1), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(1) {
+  width: 112px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(2), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(2) {
+  width: 90px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(3), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(3) {
+  width: 117px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(4) {
+  width: 56%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(5) {
+  width: 96px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(6) {
+  width: 56px;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4) {
+  text-align: center;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(1), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(1) {
+  width: 112px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(2), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(2) {
+  width: 90px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3) {
+  width: 25%;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(4) {
+  width: 117px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
+  width: 20%;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(6) {
+  width: 90px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(7), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(7) {
+  width: 70px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
+  text-align: left;
+  padding-left: 15px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -6107,6 +6319,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .coupons .table_container table, .coupons .table_container .table_bottom {
     min-width: 845px;
+  }
+  .ticketsystem_overview .table_container table, .ticketsystem_overview .table_container .table_bottom {
+    min-width: 900px;
   }
 }
 

@@ -42,19 +42,19 @@
 		  </a>
 	   </div>
 	   <div class="col-7 col-lg-5 col-xl-5 d-flex order-1 order-lg-2 py-3 py-lg-0 align-items-center justify-content-start justify-content-lg-center text-center">
-		  <a href="#" class="h-icons2 h-support">
+		  <a href="./ticketSystem.html" class="h-icons2 h-ticketSys">
 			<span class="icon-mdi">
 				<span class="mdi mdi-headset"></span>
 			</span>
 		  	<span class="d-block">Ticket System</span>
 		  </a>                            
-		  <a href="#" class="h-icons2 h-history">
+		  <a href="./userAdminCustomer.html" class="h-icons2 h-customers">
 			 <span class="icon-mdi">
 				 <span class="mdi mdi-account-circle"></span>
 			</span>
 			 <span class="d-block">customers</span>
 		  </a>
-		  <a href="#" class="h-icons2 h-helpdesk">
+		  <a href="./userAdminName.html" class="h-icons2 h-documentation">
 			<span class="icon-mdi">
 				<span class="mdi mdi-help-circle-outline"></span>
 			</span>
@@ -64,7 +64,7 @@
 	   <div class="profile-photoss col-5 col-lg-3 col-xl-3 d-flex order-2 order-lg-3 flex-column flex-sm-row align-items-center justify-content-end pr-sm-5">
 		  <span class="user-name pr-0 pr-sm-3 order-2 order-sm-1">Emely Guerrero</span>
 		  <span class="position-relative d-block order-1 order-sm-2">
-		  <a href="#" class="d-block profile_pic"><img src="resources/img/profile-pic.png" alt="profile picture"></a>
+		  <a href="#profilePicChange_modal" data-toggle="modal" class="d-block profile_picContainer"><img src="resources/img/profile-pic.png" class="profile_pic" alt="profile picture"></a>
 		  <a href="#" class="logout-icon position-absolute">
 		  <img class="lgt_icons" src="resources/img/icons/logout.png" alt="Logout">
 		  </a>
@@ -73,7 +73,49 @@
 	</div>
  </header>
 <!--===End of Header Menu ===-->
-
+<!-- ====== Profile Picture Chnage Modal ======-->
+<div id="profilePicChange_modal" class="modal fade profilePicChange_modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">			
+			<div class="modal-body py-4 px-3 mx-auto">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					<span class="mdi mdi-close"></span>
+				</button>
+				<h4 class="text-center mb-4 pt-3">Change your Profile-Picture!</h4>
+				<div class="profilePicArea mx-auto">
+					<div class="profile_picture mx-auto">
+						<img id="userImgPic1" class="profile_pic" src="./resources/img/profile-pic.png" alt="profile pic">
+						<!-- Image Edit Button -->
+						<label class="img_edit_btn shadow_hover_1 cursor-pointer">
+							<input type="file" id="UserImgEditBtn1" class="appearance-none" accept="image/*">
+							<span class="mdi mdi-square-edit-outline"></span>
+						</label>
+						<!--/Image Edit Button -->														
+					</div>
+					<h5 class="text-center mt-3 mb-0">Emely Guerrero</h5>
+				</div>
+				<div class="pic_footText text-center mt-3 mx-auto">
+					<div class="picAlertText mb-3">
+						<span class="mdi mdi-information-outline"></span>
+						<span>Only jpg, jpeg, png, bmp, gif files allowed.<br>
+							Maximum 10 files upload at a once.<br>
+							Max filesize 2 MB.</span>
+					</div>
+					<p class="mb-0">Your Role:<span class="text-green pl-1">Manager</span></p>
+					<p class="mb-0">Registered since 25.02.2020</p>
+				</div>
+			</div>
+			<!--/modal-body-collapse -->
+			<div class="modal-footer flex-column">
+				<button type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
+			</div>
+			<!--/modal-footer-collapse -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- ===X=== End of Profile Picture Chnage Modal ===X===-->
 <!--=== Body Item  ===-->
 <div id="bodyItem" class="body-item position-relative d-flex">
 	<!--=== Side bar ===-->
@@ -168,7 +210,7 @@
 				</div>
 				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
 					<ul class="itemss pl-4 pr-3">
-						<li><a href="#">Ticket-System</a></li>
+						<li><a href="./ticketSystem.html">Ticket-System</a></li>
 						<li><a href="#">Ticket Archive</a></li>
 						<li><a href="./helpDesk.html">Helpdesk</a></li>
 						<li><a href="#">Questions & Answers (FAQ)</a></li>
