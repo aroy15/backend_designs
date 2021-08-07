@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket System</title>
+    <title>Ticketsystem Detail</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -13,6 +13,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- Material Design Iccons -->
         <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+		<!-- Magnific-popup plugin -->
+		<link rel="stylesheet" href="./vendors/css/magnific-popup.css">
 		<!-- select plugin -->
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
         <!-- Booststrap 4 css -->
@@ -285,11 +287,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">Ticketsystem Overview</h2>
+				<h2 class="bh_title">Ticketsystem Detail</h2>
 			</div>
 		</div>		
 		<!--=== ticketsystem Overview ===-->
-		<div id="ticketsystemOverview" class="ticketsystem_overview content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<div id="ticketsystem_detail" class="ticketsystem_detail content-container p-0 p-md-3 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -298,231 +300,189 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">
-				<ul class="nav nav-pills" id="pills-tab" role="tablist">
-					<li class="nav-item mr-3 mb-4" role="presentation">
-					  <a class="nav-link shadow_hover_half" id="pills-assigned-tab" data-toggle="pill" href="#pills-assigned" role="tab" aria-controls="pills-assigned" aria-selected="true">Assigned to you</a>
-					</li>
-					<li class="nav-item mb-4" role="presentation">
-					  <a class="nav-link active shadow_hover_half" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="false">Overview</a>
-					</li>
-				  </ul>
-				  <div class="tab-content" id="pills-tabContent">
-					<!--===== Assigned To You =======-->
-					<div class="tab-pane fade" id="pills-assigned" role="tabpanel" aria-labelledby="pills-assigned-tab">
-						
-						<div class="assigned_tableArea bg-gray b-r-8 p-3">
-							<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-								<div class="selectBtn order-2 order-lg-1">
-									<select class="big_select custom_select">
-										<option value="ascending" selected>Sorted by ascending ID</option>
-										<option value="descending">Sorted by descending ID</option>
-									</select>
+				<div class="row">
+					<div class="col-xl-7 mb-5 mb-xl-0">
+						<a href="./ticketSystem.html" class="d-block text-blue mb-3"><span class="position-relative bottom-2 pr-1">&#8592;</span>Back</a>
+						<div class="tikit__number mb-5 text-center">TICKET #DEM-10956</div>
+						<!-- Chat Container -->
+						<div class="chat__container mx-auto mx-xl-0">
+							<!-- chat Messege -->
+							<div class="chat__inner">
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
+										</div>
+										<div class="msg__area">
+											<p class="msg__text">Hello, i want get known about my package.</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
+										</div>
+									</div>
 								</div>
-								<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
-									<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-										<input type="text" class="search form-control" placeholder="Search">
-										<button type="submit" class="search_btn">
-										  <img src="./resources/img/icons/search-icon.png" alt="Search">
-										</button>
-									</form>
+								<div class="msg__row support__msg my-3 ml-auto">
+									<div class="d-flex justify-content-end">									
+										<div class="msg__area">
+											<p class="msg__text">Hello Michael, which is you package?</p>
+											<span class="msg__info text-right">Emely Gurrero | Aug 15 2020 15:13</span>
+										</div>
+										<div class="profilePic ml-2 mt-2">
+											<img class="profile__img" src="./resources/img/profile-pic.png" alt="pic">
+										</div>
+									</div>
+								</div>
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
+										</div>
+										<div class="msg__area">
+											<p class="msg__text">My current package is basic.</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
+										</div>
+									</div>
+								</div>
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
+										</div>
+										<div class="msg__area">
+											<p class="msg__text">Which one is better for my<br>
+												accounts? As i have many<br>
+												accounts on social media!</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:17</span>
+										</div>
+									</div>
+								</div>
+								<div class="msg__row support__msg typing__msg my-3 ml-auto">
+									<div class="d-flex justify-content-end">									
+										<div class="msg__area">
+											<p class="msg__text">Typing...</p>
+											<span class="msg__info text-right"></span>
+										</div>
+										<div class="profilePic ml-2 mt-2">
+											<img class="profile__img" src="./resources/img/profile-pic.png" alt="pic">
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="responsive_alert text-center py-3 text-dark">
-								If table are not fully showing please swipe the table left-right
+							<!-- /Chat Messege -->
+							<!-- Chat Input -->
+							<div class="chat_input_area">
+								<textarea class="custom-scroll-bar-8" placeholder="Text here.."></textarea>
+								<div class="buttons_area d-flex justify-content-end">
+									<div>
+										<label class="scale_hover_half cursor-pointer mb-0 mr-3 position-relative top-2">
+											<input id="cusMailAttachment" type="file" multiple class="appearance-none" accept="image/*,.pdf">
+											<span class="mdi mdi-paperclip"></span>
+										</label>
+										<button class="sendBtn shadow_hover_1">Send</button>
+									</div>
+								</div>
 							</div>
-							<div class="table_container">
-								<table class="w-100 text-center">
+							<!-- /Chat Input -->
+						</div>
+						<!-- /Chart Container -->
+					</div>
+					<div class="col-xl-5">
+						<!-- Customer Information -->
+						<div class="customer__info mx-auto b-r-5 bg-gray">
+							<div class="tikit__no text-center">#DEM-10956</div>
+							<div class="wait__reply text-center mx-auto mb-4">Waiting for customer reply</div>
+							<!-- customer profile info -->
+							<div class="cust_profile_info">
+								<div class="d-flex main__info">
+									<div class="cus_profileImg">
+										<img src="./resources/img/customer-2.png" alt="image">
+									</div>
+									<div class="pl-3 flex-grow-1">
+										<div class="d-flex justify-content-between">
+											<p class="cus_name">Mr. Michael Doe</p>
+											<p class="cus_no pl-3 text-right">#20214</p>
+										</div>
+										<p class="cus_nameInfo"><span class="mdi mdi-email"></span> michael.doe@doeservice.com</p>
+										<p class="cus_nameInfo"><span class="mdi mdi-phone"></span> 017655458227</p>
+									</div>
+								</div>
+								<div class="cus_extraInfo mt-3 d-flex justify-content-between">
+									<div class="cus_address mr-3">
+										Mesen & Doe GmbH<br>
+										Streetstreet 12<br>
+										59379 City
+									</div>
+									<div class="cus_loginInfo text-center">
+										<p>Last Login</p>
+										<p>15.12.2020 - 07:33</p>
+										<a href="#" class="d-block mt-3">Open Customer</a>
+									</div>
+								</div>
+							</div>
+							<!-- /Customer profile info -->
+							<!-- Ticket History -->
+							<div class="ticket__history mt-3">
+								<h4 class="mb-2">Ticket History</h4>
+								<table class="d-block">
 									<thead>
-										<tr>
-											<th>Ticket Nr.</th>
-											<th>Customer Nr.</th>
-											<th>Created at</th>
-											<th>Subject</th>
-											<th>Status</th>
-											<th>Action</th> 
-										</tr>
+										<th>Date</th>
+										<th>Entry</th>
 									</thead>
 									<tbody>
 										<tr>
-											<td>UCS-10957</td>
-											<td>20042</td>
-											<td>20.01.2020</td>
-											<td>Password reset? How its possible </td>
-											<td><span class="yellow_alert">pending</span></td>
-											<td>
-												<a href="#" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td> 
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket created successfully by Customer</td>
 										</tr>
 										<tr>
-											<td>UCS-10934</td>
-											<td>25022</td>
-											<td>19.01.2020</td>
-											<td>Need Help with the Autotools</td>
-											<td><span class="yellow_alert">pending</span></td>
-											<td>
-												<a href="#" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td> 
-										</tr>								
-										<tr>
-											<td>UCS-10976</td>
-											<td>25422</td>
-											<td>18.01.2020</td>
-											<td>This is another thing?</td>
-											<td><span class="yellow_alert">pending</span></td>
-											<td>
-												<a href="#" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td> 
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (Pending)</td>
 										</tr>
 										<tr>
-											<td>UCS-10999</td>
-											<td>25042</td>
-											<td>19.01.2020</td>
-											<td>How can i add more Subusers?</td>
-											<td><span class="yellow_alert">no answer</span></td>
-											<td>
-												<a href="#" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td> 
+											<td>20.10.2020 - 09:33</td>
+											<td>Emely Gurrero answered the Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (waiting for customer reply)</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>The Customer replied to this Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Supporter changed to Tobias Schmidt-Tudl | Admin</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Tobias Schmidt-Tudl answered the Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (waiting for customer reply)</td>
 										</tr>
 									</tbody>
-								</table>						
-								<div class="table_bottom d-flex justify-content-between">
-									<div>&nbsp;</div>
-									<div class="entries text-center ml-xl-5 pl-xl-5 align-self-end">
-										<p class="mb-0 pl-xl-5">1042 entries in total</p>
-									</div>						
-									<div class="show_entries d-flex justify-content-between align-items-center">
-										<span>Show Entries :</span>
-										<select class="white_select custom_select">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-								</div>
-							</div>					
-						</div>
-					</div>
-					<!--===X== End of Assigned To You ===X====-->
-					<!--===== Overview ======-->
-					<div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
-						<div class="overview_tableArea bg-gray b-r-8 p-3">
-							<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-								<div class="selectBtn order-2 order-lg-1">
-									<select class="big_select custom_select">
-										<option value="ascending" selected>Sorted by ascending ID</option>
-										<option value="descending">Sorted by descending ID</option>
+								</table>
+								<div class="change_supporter mx-auto mt-4">
+									<p class="mb-0">Change Suporter:</p>
+									<select class="custom_select gray_select">
+										<option>Tobias Schmidt-Tudl | Admin</option>
+										<option>example-1</option>
+										<option>example-2</option>
 									</select>
 								</div>
-								<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
-									<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-										<input type="text" class="search form-control" placeholder="Search">
-										<button type="submit" class="search_btn">
-										  <img src="./resources/img/icons/search-icon.png" alt="Search">
-										</button>
-									</form>
+							</div>
+							<!-- /Ticket History -->
+							<!-- Attachments -->
+							<div class="cus__attachments mt-3">
+								<h4>Attachments</h4>
+								<div id="cus_Attached_Text" class="cus__attachedText d-flex flex-wrap">
+									
 								</div>
 							</div>
-							<div class="responsive_alert text-center py-3 text-dark">
-								If table are not fully showing please swipe the table left-right
-							</div>
-							<div class="table_container">
-								<table class="w-100 text-center">
-									<thead>
-										<tr>
-											<th>Ticket Nr.</th>
-											<th>Customer Nr.</th>
-											<th>Customer</th>
-											<th>Created at</th>
-											<th>Supporter</th>
-											<th>Status</th>
-											<th>Action</th> 
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>UCS-10957</td>
-											<td>20042</td>
-											<td>Tobias Beck</td>
-											<td>20.01.2020</td>
-											<td>- - - - - - - - -</td>
-											<td><span class="green_alert">open</span></td>
-											<td>
-												<a href="./ticketSystemDetail.html" class="t_shadow_scale_1">
-													<span class="mdi mdi-account-check"></span>
-												</a>
-											</td> 
-										</tr>
-										<tr>
-											<td>UCS-10934</td>
-											<td>25022</td>
-											<td>Max Mustermann</td>
-											<td>19.01.2020</td>
-											<td>Noah Kaczmarek</td>
-											<td><span class="yellow_alert">pending</span></td>
-											<td>
-												<a href="./ticketSystemDetail.html" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td>  
-										</tr>								
-										<tr>
-											<td>UCS-10976</td>
-											<td>25422</td>
-											<td>Josef Birgens</td>
-											<td>18.01.2020</td>
-											<td>Mirco Mustermann</td>
-											<td><span class="yellow_alert">waiting</span></td>
-											<td>
-												<a href="./ticketSystemDetail.html" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td> 
-										</tr>
-										<tr>
-											<td>UCS-10999</td>
-											<td>25042</td>
-											<td>Hildegard Gullendorfer</td>
-											<td>19.01.2020</td>
-											<td>Steffen Muster</td>
-											<td><span class="red_alert">no answer</span></td>
-											<td>
-												<a href="./ticketSystemDetail.html" class="t_shadow_scale_1">
-													<span class="mdi mdi-file-eye-outline"></span>
-												</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>						
-								<div class="table_bottom d-flex justify-content-between">
-									<div>&nbsp;</div>
-									<div class="entries text-center ml-xl-5 pl-xl-5 align-self-end">
-										<p class="mb-0 pl-xl-5">1042 entries in total</p>
-									</div>						
-									<div class="show_entries d-flex justify-content-between align-items-center">
-										<span>Show Entries :</span>
-										<select class="white_select custom_select">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-								</div>
-							</div>					
+							<!-- /Attachments -->
 						</div>
+						<!-- /Customer Information -->
 					</div>
-					<!--==X=== End of Overview ====X==-->
-				  </div>                
-				
+				</div>
 			</div>
 		</div>
 		<!--=== End of ticketsystem Overview ===-->
@@ -544,6 +504,8 @@
     <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
 	<!-- Currency formatter plugin -->
     <script src="./vendors/js/currencyFormatter.min.js"></script>
+	<!-- Magnific popup plugin-->
+	<script src="./vendors/js/jquery.magnific-popup.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
 	<!-- Full Screen Plugin -->

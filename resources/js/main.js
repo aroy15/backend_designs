@@ -566,6 +566,35 @@ $(document).ready(function(){
     $('#articleEditSec').hide();
   })
   /*====X===== HelpDesk =====X====== */
+  /*=======Ticketsystem Detail========= */
+  $('#cusMailAttachment').on('change', function(event){
+    $('#cus_Attached_Text').empty();
+    var newUplodChat =  $('#cusMailAttachment');
+    var newChatLengths = newUplodChat[0].files.length;
+    var newChatItems = newUplodChat[0].files;
+    var newfrag = "";
+
+    if(newChatLengths > 0){
+      for(var i = 0; i < newChatLengths; i++){
+        var newUploadName = newChatItems[i].name;        
+        var newChatFileSrc = URL.createObjectURL(event.target.files[i]);
+        newfrag += "<a href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
+      }
+      $('#cus_Attached_Text').append(newfrag);
+    }
+  });
+
+  if($('body').find('#cus_Attached_Text').length){
+    $('#cus_Attached_Text').magnificPopup({
+      type: 'image',
+      delegate: 'a',
+      gallery: {
+        enabled: true
+      }
+    });
+  }
+ 
+  /*===X====Ticketsystem Detail====X===== */
 });
 
 
