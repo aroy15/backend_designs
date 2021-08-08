@@ -3807,6 +3807,46 @@
 		}	
 	}
 }
+/***************************/
+/* 26. Roles & Rights*/
+/***************************/
+.roles_rights{
+	.table_container{
+		table{
+			padding:10px;
+			padding-top:5px;
+			tr{
+				th{
+					&:nth-child(1){
+						width:82px;
+					}
+					&:nth-child(2){
+						width:20%;
+					}
+					&:nth-child(3){
+						width:25%;
+					}
+					&:nth-child(4){
+						width:20%;
+					}
+					&:nth-child(5){
+						width:15%;
+					}
+					&:nth-child(6){
+						width:116px;
+					}
+					&:nth-child(7){
+						width:129px;
+					}
+				}
+				th,td{
+					border-left-width: 4px;
+					border-right-width:4px;
+				}
+			}
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
 

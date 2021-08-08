@@ -6596,6 +6596,47 @@ ul.pieLegend li:not(.anjon) {
   line-height: 1;
 }
 
+/***************************/
+/* 26. Roles & Rights*/
+/***************************/
+.roles_rights .table_container table {
+  padding: 10px;
+  padding-top: 5px;
+}
+
+.roles_rights .table_container table tr th:nth-child(1) {
+  width: 82px;
+}
+
+.roles_rights .table_container table tr th:nth-child(2) {
+  width: 20%;
+}
+
+.roles_rights .table_container table tr th:nth-child(3) {
+  width: 25%;
+}
+
+.roles_rights .table_container table tr th:nth-child(4) {
+  width: 20%;
+}
+
+.roles_rights .table_container table tr th:nth-child(5) {
+  width: 15%;
+}
+
+.roles_rights .table_container table tr th:nth-child(6) {
+  width: 116px;
+}
+
+.roles_rights .table_container table tr th:nth-child(7) {
+  width: 129px;
+}
+
+.roles_rights .table_container table tr th, .roles_rights .table_container table tr td {
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
