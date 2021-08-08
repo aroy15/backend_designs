@@ -279,6 +279,10 @@ textarea::placeholder {
           flex-grow: 1;
 }
 
+.pdf___viewer .canvas-wrapper {
+  overflow: auto;
+}
+
 /*==========<Colors>============*/
 .text-blue {
   color: #42ADE2;
@@ -1366,7 +1370,7 @@ textarea::placeholder {
   padding: 0px 22px;
   max-width: 215px;
   height: 70px;
-  line-height: 70px;
+  line-height: 2px;
 }
 
 .modal .modal-dialog .modal-content .modal_bg_icon {
@@ -6212,12 +6216,12 @@ ul.pieLegend li:not(.anjon) {
   min-height: 50px;
 }
 
-.ticketsystem_detail .chat__container .chat_input_area .buttons_area .mdi {
+.ticketsystem_detail .chat__container .chat_input_area .buttons_area label {
   font-size: 30px;
   color: rgba(0, 0, 0, 0.25);
 }
 
-.ticketsystem_detail .chat__container .chat_input_area .buttons_area .mdi:hover {
+.ticketsystem_detail .chat__container .chat_input_area .buttons_area label:hover {
   color: #707070;
 }
 
@@ -6230,6 +6234,38 @@ ul.pieLegend li:not(.anjon) {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   padding: 14px 60px;
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content {
+  overflow: inherit;
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content .tsc_row {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content .tsc_row .tsc_title {
+  font-weight: 400;
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content .tsc_row .tsc_text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content .modal_bg_icon {
+  left: auto;
+  bottom: 17px;
+  font-size: 370px;
+  right: -23px;
+}
+
+.ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content .modal-footer .saveBtn {
+  padding: 0px 10px;
+  max-width: 185px;
+  height: 60px;
+  line-height: 2px;
 }
 
 .ticketsystem_detail .customer__info {
@@ -6440,7 +6476,7 @@ ul.pieLegend li:not(.anjon) {
   background-color: #BCF1FF;
 }
 
-.ticketsystem_detail .cus__attachments .cus__attachedText a {
+.ticketsystem_detail .cus__attachments .cus__attachedText .c_file_links {
   max-width: 50%;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -6449,6 +6485,17 @@ ul.pieLegend li:not(.anjon) {
   font-size: 10px;
   line-height: 14px;
   color: #115A8A;
+  background-color: transparent;
+  text-align: left;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.ticketsystem_detail .cus__attachments .cus__attachedText .c_file_links:hover {
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 /*==============Responsive CSS===============*/

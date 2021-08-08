@@ -77,6 +77,9 @@
 .flex-grow-1{
 	flex-grow:1;
 }
+.pdf___viewer .canvas-wrapper{
+	overflow:auto;
+}
 /*==========<Colors>============*/
 .text-blue{
 	color:$blue-light;
@@ -821,7 +824,7 @@
 					padding: 0px 22px;
 					max-width: 215px;
 					height: 70px;
-					line-height: 70px;
+					line-height: 2px;
 				}
 			}
 			.modal_bg_icon {

@@ -37,13 +37,6 @@ $(document).ready(function(){
     };
   
   }); 
-  // var uploadField = document.getElementById("UserImgEditBtn1");
-  // uploadField.onchange = function() {
-  //     if(this.files[0].size > 2200000){
-  //       alert("File is too big!");
-  //       this.value = "";
-  //     };
-  // };
   /*-----</Profile Pic max-size>-----*/
   /* nice-select plugin activation */
   if($('body').find('select.custom_select').length){
@@ -171,6 +164,46 @@ $(document).ready(function(){
   /* ----/small Logo Upload---- */
   /*======X=====System Settings====X====== */
 
+  /******************************************
+  ========= PDF JS Library Funtion for all======
+  *******************************************/
+  if($('body').find('.pdf___viewer').length){
+    function renderPDF(url, canvasContainer, options) {
+
+      options = options || { scale: 1 };
+          
+      function renderPage(page) {
+          var viewport = page.getViewport(options.scale);
+          var wrapper = document.createElement("div");
+          wrapper.className = "canvas-wrapper";
+          var canvas = document.createElement('canvas');
+          var ctx = canvas.getContext('2d');
+          var renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+          
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          wrapper.appendChild(canvas)
+          canvasContainer.appendChild(wrapper);
+          
+          page.render(renderContext);
+      }
+      
+      function renderPages(pdfDoc) {
+          for(var num = 1; num <= pdfDoc.numPages; num++)
+              pdfDoc.getPage(num).then(renderPage);
+      }
+  
+      PDFJS.disableWorker = true;
+      PDFJS.getDocument(url).then(renderPages);
+  
+    }
+  }  
+  /********X****************X**********X********
+  ========= End of PDF JS Library Funtion for all======
+  *******X*****************X**********X*********/
   /*===========Accounting Invoices | PDF.js Library========= */
   if($('body').find('#accountingInvoices').length){
     /*----PDF Modal preview---- */
@@ -182,58 +215,8 @@ $(document).ready(function(){
         $('.modalContainer').data('id', id).modal('show');
       });
     /*----/PDF Modal preview---- */
-      /*------PDF.js Activation------ */
-
-      function renderPDF(url, canvasContainer, options) {
-
-        options = options || { scale: 1 };
-            
-        function renderPage(page) {
-            var viewport = page.getViewport(options.scale);
-            var wrapper = document.createElement("div");
-            wrapper.className = "canvas-wrapper";
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
-            var renderContext = {
-              canvasContext: ctx,
-              viewport: viewport
-            };
-            
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            wrapper.appendChild(canvas)
-            canvasContainer.appendChild(wrapper);
-            
-            page.render(renderContext);
-        }
-        
-        function renderPages(pdfDoc) {
-            for(var num = 1; num <= pdfDoc.numPages; num++)
-                pdfDoc.getPage(num).then(renderPage);
-        }
-    
-        PDFJS.disableWorker = true;
-        PDFJS.getDocument(url).then(renderPages);
-    
-    }      
-    
+      /*------PDF.js Activation------ */ 
     renderPDF('./resources/pdf/task.pdf', document.getElementById('cavaContainer'));
-    
-    //   pdfjsLib.getDocument('./resources/pdf/task.pdf').then(function(doc){
-    //     console.log("this file has " + doc._pdfInfo.numPages + " pages");
-    //     doc.getPage(2).then(page => {
-    //         var myCanvas = document.getElementById("acccountingInvocePDFPreview");
-    //         var context = myCanvas.getContext("2d");
-    //         var viewport = page.getViewport(1);
-    //         myCanvas.width = viewport.width;        
-    //         myCanvas.height = viewport.height;
-    //         page.render({
-    //             canvasContext: context,
-    //             viewport: viewport
-    //         })
-
-    //     })
-    // })
     /*------/PDF.js Activation------ */
   }
   /*======X=====Accounting Invoices====X===== */
@@ -288,40 +271,7 @@ $(document).ready(function(){
       });
     /*----/PDF Modal preview---- */
 
-      /*------PDF.js Activation------ */
-      function renderPDF(url, canvasContainer, options) {
-
-        options = options || { scale: 1 };
-            
-        function renderPage(page) {
-            var viewport = page.getViewport(options.scale);
-            var wrapper = document.createElement("div");
-            wrapper.className = "canvas-wrapper";
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
-            var renderContext = {
-              canvasContext: ctx,
-              viewport: viewport
-            };
-            
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            wrapper.appendChild(canvas)
-            canvasContainer.appendChild(wrapper);
-            
-            page.render(renderContext);
-        }
-        
-        function renderPages(pdfDoc) {
-            for(var num = 1; num <= pdfDoc.numPages; num++)
-                pdfDoc.getPage(num).then(renderPage);
-        }
-    
-        PDFJS.disableWorker = true;
-        PDFJS.getDocument(url).then(renderPages);
-    
-    }      
-    
+      /*------PDF.js Activation------ */   
     renderPDF('./resources/pdf/Invoice-002-R1.pdf', document.getElementById('canvasPaymentHistory'));
     /*------/PDF.js Activation------ */
    }
@@ -566,34 +516,79 @@ $(document).ready(function(){
     $('#articleEditSec').hide();
   })
   /*====X===== HelpDesk =====X====== */
+
   /*=======Ticketsystem Detail========= */
-  $('#cusMailAttachment').on('change', function(event){
-    $('#cus_Attached_Text').empty();
-    var newUplodChat =  $('#cusMailAttachment');
-    var newChatLengths = newUplodChat[0].files.length;
-    var newChatItems = newUplodChat[0].files;
-    var newfrag = "";
+  /*----<Text area Validation>------*/
+  $('#chatTextArea').bind('keyup mouseout mouseover',function(){
+    $(this).val($(this).val().replace(/(<([^>]+)>)/ig,"").replace(/\r\n|\r|\n/g,""));
+  })
+  /*----</Text area Validation>------*/
+  /*-------<tag Name Changer Plugin>------- */
+  $.fn.renameTag = function(replaceWithTag){
+    this.each(function(){
+          var outerHtml = this.outerHTML;
+          var tagName = $(this).prop("tagName");
+          var regexStart = new RegExp("^<"+tagName,"i");
+          var regexEnd = new RegExp("</"+tagName+">$","i")
+          outerHtml = outerHtml.replace(regexStart,"<"+replaceWithTag)
+          outerHtml = outerHtml.replace(regexEnd,"</"+replaceWithTag+">");
+          $(this).replaceWith(outerHtml);
+      });
+      return this;
+  }
+  /*-------</tag Name Changer Plugin>------- */
+  if($('body').find('#cusMailAttachment').length){
+    $('#cusMailAttachment').on('change', function(event){
+      $('#cus_Attached_Text').empty();
+      var newUplodChat =  $('#cusMailAttachment');
+      var newChatLengths = newUplodChat[0].files.length;
+      var newChatItems = newUplodChat[0].files;
+      var newfrag = "";
+  
+      if(newChatLengths > 0){
+        for(var i = 0; i < newChatLengths; i++){
+          var newUploadName = newChatItems[i].name;        
+          var newChatFileSrc = URL.createObjectURL(event.target.files[i]);
+          newfrag += "<a class='c_file_links' href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
+        }
+        $('#cus_Attached_Text').append(newfrag);            
+      }  
+  
+      $('.c_file_links').each(function () {
+        if($(this).text().match('.pdf')){
+          $(this).renameTag("button");        
+        }
+      });   
 
-    if(newChatLengths > 0){
-      for(var i = 0; i < newChatLengths; i++){
-        var newUploadName = newChatItems[i].name;        
-        var newChatFileSrc = URL.createObjectURL(event.target.files[i]);
-        newfrag += "<a href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
-      }
-      $('#cus_Attached_Text').append(newfrag);
-    }
-  });
+      $('button.c_file_links').each(function(index){
+        $(this).attr({
+          "data-id":index,
+        });
+      })
 
-  if($('body').find('#cus_Attached_Text').length){
+      /*--------PDF view bootstrap modal------*/
+      $('button.c_file_links').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).data('id');
+        $('.uploaded_PDF_Modal').data('id', id).modal('show');
+        /*------PDF.js Activation------ */
+        $('.uploaded_PDF_Modal .canvas-wrapper').remove();
+        renderPDF($(this).attr('href'), document.getElementById('canvasUploadedPDF'));
+          /*------/PDF.js Activation------ */
+      });
+
+      
+    });
+    /*----<Maginific Popup>----- */
     $('#cus_Attached_Text').magnificPopup({
       type: 'image',
       delegate: 'a',
       gallery: {
-        enabled: true
+        enabled: false
       }
-    });
+    }); 
+    /*----</Maginific Popup>----- */
   }
- 
   /*===X====Ticketsystem Detail====X===== */
 });
 

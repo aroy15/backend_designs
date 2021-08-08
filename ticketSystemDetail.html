@@ -369,14 +369,65 @@
 							<!-- /Chat Messege -->
 							<!-- Chat Input -->
 							<div class="chat_input_area">
-								<textarea class="custom-scroll-bar-8" placeholder="Text here.."></textarea>
+								<textarea id="chatTextArea" class="custom-scroll-bar-8" placeholder="Text here.."></textarea>
 								<div class="buttons_area d-flex justify-content-end">
 									<div>
 										<label class="scale_hover_half cursor-pointer mb-0 mr-3 position-relative top-2">
 											<input id="cusMailAttachment" type="file" multiple class="appearance-none" accept="image/*,.pdf">
 											<span class="mdi mdi-paperclip"></span>
 										</label>
-										<button class="sendBtn shadow_hover_1">Send</button>
+										<button class="sendBtn shadow_hover_1" data-toggle="modal" data-target="#tikitStatusModal">Send</button>
+										<!--========start: Ticket Status Modal=======-->
+										<div class="modal fade text-center" id="tikitStatusModal" data-backdrop="static"  tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered">
+												<div class="modal-content px-lg-4">
+													<div class="modal-body pt-5">
+														<h4 class="pb-4">Please choose a status for this ticket</h4>
+														<p>Thank you for answering this ticket.<br>
+														Please select now in which status the ticket is:</p>
+														<div class="tikit_statusContent text-left">
+															<div class="d-flex tsc_row mb-3">
+																<span class="tsc_title">Pending</span>
+																<span class="tsc_text pl-2 pl-lg-3">
+																	The ticket is assigned to a supporter and is currently being processed. You can choose this status if, <br>
+																	for example, you need to do some research before you can respond.
+																</span>
+															</div>
+															<div class="d-flex tsc_row mb-3">
+																<span class="tsc_title">Waiting:</span>
+																<span class="tsc_text pl-2 pl-lg-3">
+																	You still need more information from the customer and have to wait for this before you can finally process the ticket.																	
+																</span>
+															</div>
+															<div class="d-flex tsc_row mb-3">
+																<span class="tsc_title">Pending</span>
+																<span class="tsc_text pl-2 pl-lg-3">
+																	You have completely processed the customer's request.<br> 
+																	Closed tickets cannot be reopened.
+																</span>
+															</div>
+														</div>
+
+														<select class="custom_select big_select mt-5 mb-3 mx-auto">
+															<option>WAITING FOR INFORMATIONS</option>
+															<option>WAITING FOR INFORMATIONS-2</option>
+															<option>WAITING FOR INFORMATIONS-3</option>
+														</select>
+
+														<div class="modal-footer">
+															<button type="button" class="saveBtn">Save this Status</button>
+														</div>
+													</div>
+													<!--/modal-body-collapse -->													
+													<div class="modal_bg_icon">
+														<span class="mdi mdi-headset"></span>
+													</div>
+												</div>
+												<!-- /.modal-content -->
+											</div>
+											<!-- /.modal-dialog -->
+										</div>
+										<!--=========/End of Ticket Status Modal=====-->
 									</div>
 								</div>
 							</div>
@@ -477,6 +528,17 @@
 								<div id="cus_Attached_Text" class="cus__attachedText d-flex flex-wrap">
 									
 								</div>
+								<!-- start: PDF preview Modal -->
+								<div class="modal fade text-center uploaded_PDF_Modal modal-transparent pdf___viewer" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content pdfViewContainer">
+											<div id="canvasUploadedPDF"></div>					
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+								<!-- /End PDF preview Modal -->
 							</div>
 							<!-- /Attachments -->
 						</div>
@@ -508,6 +570,8 @@
 	<script src="./vendors/js/jquery.magnific-popup.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- pdf.js for PDF preview -->
+	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

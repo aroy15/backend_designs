@@ -3509,7 +3509,7 @@
 				min-height:50px;
 			}
 			.buttons_area{
-				.mdi{
+				label{
 					font-size:30px;
 					color:rgba(0, 0, 0, 0.25);
 					&:hover{
@@ -3521,6 +3521,32 @@
 					background-color: $blue-light;
 					@include b-radius(5px);
 					padding:14px 60px;
+				}
+			}
+			.modal .modal-dialog .modal-content {
+				overflow:inherit;
+				.tsc_row{
+					font-family: $font-roboto;
+					color:$white-main;
+					font-size:12px;
+					.tsc_title{
+						font-weight:400;
+					}
+					.tsc_text{
+						color: rgba(255, 255, 255, 0.7);
+					}
+				}
+				.modal_bg_icon {
+					left: auto;
+					bottom: 17px;
+					font-size: 370px;
+					right: -23px;
+				}
+				.modal-footer .saveBtn {
+					padding: 0px 10px;
+					max-width: 185px;
+					height: 60px;
+					line-height: 2px;
 				}
 			}
 		}
@@ -3670,7 +3696,7 @@
 			@include cus__title_heading;
 			padding-right:20px;
 		}
-		.cus__attachedText a {
+		.cus__attachedText .c_file_links {
 			max-width: 50%;
 			flex-basis: 50%;
 			width: 50%;
@@ -3678,6 +3704,12 @@
 			font-size: 10px;
 			line-height: 14px;
 			color:$blue-bold;
+			background-color:transparent;
+			text-align:left;
+			@include transition-all(0.2s);
+			&:hover{
+				text-shadow: $text-shadow;
+			}
 		}
 	}
 	
