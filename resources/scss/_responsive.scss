@@ -141,6 +141,14 @@
 			}
 		}
 	}
+	//Ticket System Detail Closed
+	.ticketsystem_detail_closed{
+		.chat__container{
+			.ticket__closed{
+				max-width:480px;
+			}
+		}
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -242,7 +250,7 @@
 	.table_container {
 		overflow:auto;
 		table, .table_bottom{
-			min-width:600px;		
+			min-width:750px;		
 		}
 	}
 	.responsive_alert{
@@ -320,6 +328,14 @@
 		.table_container{
 			table, .table_bottom {
 				min-width:900px;
+			}
+		}
+	}
+	//ticketsystem Archive
+	.ticket_archive{
+		.table_container{
+			table, .table_bottom {
+				min-width:800px;
 			}
 		}
 	}

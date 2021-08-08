@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Target Group Designs</title>
+    <title>Ticketsystem Detail</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -13,6 +13,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- Material Design Iccons -->
         <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+		<!-- Magnific-popup plugin -->
+		<link rel="stylesheet" href="./vendors/css/magnific-popup.css">
+		<!-- select plugin -->
+		<link rel="stylesheet" href="./vendors/css/nice-select.css">
         <!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
         <!-- Main/Custom CSS -->
@@ -266,7 +270,7 @@
 						<li><a href="./documentTemplates.html">Document Templates</a></li>
 					</ul>
 				</div>
-			</div>	
+			</div>						
 		</div>
 		<!-- Nav footer Logo -->
 		<div class="nav_foot_content text-center">
@@ -283,11 +287,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">Target Group Dashboard</h2>
+				<h2 class="bh_title">Ticketsystem Detail</h2>
 			</div>
 		</div>		
-		<!--=== Target Group Content ===-->
-		<div id="TargetGroup" class="target_group_sec content-container p-0 p-md-4 px-lg-5 pt-lg-2 b-r-8">
+		<!--=== ticketsystem Overview ===-->
+		<div id="ticketsystem_detail-closed" class="ticketsystem_detail ticketsystem_detail_closed content-container p-0 p-md-3 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -295,127 +299,193 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner">                
+			<div class="content-inner">
 				<div class="row">
-                    <!-- Age of the target group -->
-                    <div class="col-lg-7 mb-4">
-						<div class="age_chart_container chart_container">
-							<h3>Age of the target group</h3>
-							<p class="mb-0">users</p>
-							<div class="age_target">
-								<canvas id="ageTarget_chart"></canvas>
-							</div>
-							<div class="bottom_text">years</div>
-						</div>
-                    </div>
-                    <div class="col-lg-5 mb-4 d-flex">
-						<div class="sub_can_container chart_container">
-							<h3>Reasons why customers cancelled their subscription</h3>
-							<div class="chart_sub_cancel">
-								<canvas id="chart_SubCancel"></canvas>
-							</div>
-							<div id="chart_SC_legend" class="chart_SC_legend"></div>
-						</div>
-					</div>					
-                </div>
-				<div class="row">
-					<div class="col-lg-7 mb-4">
-						<!-- Average Member -->
-						<div class="average_member blue_border">
-							<h3>Average Member</h3>
-							<div class="row">
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-face-shimmer"></span>
+					<div class="col-xl-7 mb-5 mb-xl-0">
+						<a href="./ticketArchive.html" class="d-block text-blue mb-3"><span class="position-relative bottom-2 pr-1">&#8592;</span>Back</a>
+						<div class="tikit__number mb-5 text-center">TICKET #DEM-10956</div>
+						<!-- Chat Container -->
+						<div class="chat__container mx-auto mx-xl-0">
+							<!-- chat Messege -->
+							<div class="chat__inner">
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
 										</div>
-										<p class="avg_num bg_num">42<span>years</span></p>
-										<p class="avg_foot bg_foot">Age of customers</p>
+										<div class="msg__area">
+											<p class="msg__text">Hello, i want get known about my package.</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
+										</div>
 									</div>
 								</div>
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-currency-eur"></span>
+								<div class="msg__row support__msg my-3 ml-auto">
+									<div class="d-flex justify-content-end">									
+										<div class="msg__area">
+											<p class="msg__text">Hello Michael, which is you package?</p>
+											<span class="msg__info text-right">Emely Gurrero | Aug 15 2020 15:13</span>
 										</div>
-										<p class="avg_num bg_num">108,20<span>€</span></p>
-										<p class="avg_foot bg_foot">expenditure per month</p>
+										<div class="profilePic ml-2 mt-2">
+											<img class="profile__img" src="./resources/img/profile-pic.png" alt="pic">
+										</div>
 									</div>
 								</div>
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-account-supervisor"></span>
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
 										</div>
-										<p class="avg_num bg_num">8<span>users</span></p>
-										<p class="avg_foot bg_foot">number of active subusers</p>
+										<div class="msg__area">
+											<p class="msg__text">My current package is basic.</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
+										</div>
 									</div>
 								</div>
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-clipboard-alert"></span>
+								<div class="msg__row cutomer__msg my-3 mr-auto">
+									<div class="d-flex justify-content-start">
+										<div class="profilePic mr-2 mt-2">
+											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
 										</div>
-										<p class="avg_num bg_num">4<span>Tickets</span></p>
-										<p class="avg_foot bg_foot">Opened support tickets</p>
-									</div>
-								</div>
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-cloud-upload"></span>
+										<div class="msg__area">
+											<p class="msg__text">Which one is better for my<br>
+												accounts? As i have many<br>
+												accounts on social media!</p>
+											<span class="msg__info">Michael Doe | Aug 15 2020 15:17</span>
 										</div>
-										<p class="avg_num bg_num">800<span>MB</span></p>
-										<p class="avg_foot bg_foot">occupied storage (media center)</p>
-									</div>
-								</div>
-								<div class="col-md-6 col-xl-4">
-									<div class="avg_item bg_icon_div">
-										<div class="bg_icon">
-											<span class="mdi mdi-link-variant"></span>
-										</div>
-										<p class="avg_num bg_num">4<span>Pcs.</span></p>
-										<p class="avg_foot bg_foot">connected Channels</p>
 									</div>
 								</div>
 							</div>
+							<!-- /Chat Messege -->
+							<!-- ticket closed alert -->
+							<div class="ticket__closed mx-auto b-r-5 mb-5">
+								<img class="alert_image" src="./resources/img/icons/triangle-alert.png" alt="alert">
+								<div class="tc_content">
+									<h5>Ticket closed!</h5>
+									<p>This ticket has already been closed by <a href="#" class="anchor_hover">Tobias Schmidt-Tudl</a>.<br>
+										You can no longer reply to this ticket.
+									</p>
+								</div>
+							</div>
+							<!-- /Ticket closed alert -->
 						</div>
+						<!-- /Chat Container -->
 					</div>
-					<div class="col-lg-5 mb-4">
-						<!-- Distribution according to networks -->
-						<div class="dist_net_chart_container chart_container">
-							<h3>Distribution according to networks</h3>
-							<p>Connected Channels</p>
-							<div class="dist_net">
-								<canvas id="dist_net_chart"></canvas>
+					<div class="col-xl-5">
+						<!-- Customer Information -->
+						<div class="customer__info mx-auto b-r-5 bg-gray">
+							<div class="tikit__no text-center">#DEM-10956</div>
+							<div class="wait__reply text-center mx-auto mb-4">closed</div>
+							<!-- customer profile info -->
+							<div class="cust_profile_info">
+								<div class="d-flex main__info">
+									<div class="cus_profileImg">
+										<img src="./resources/img/customer-2.png" alt="image">
+									</div>
+									<div class="pl-3 flex-grow-1">
+										<div class="d-flex justify-content-between">
+											<p class="cus_name">Mr. Michael Doe</p>
+											<p class="cus_no pl-3 text-right">#20214</p>
+										</div>
+										<p class="cus_nameInfo"><span class="mdi mdi-email"></span> michael.doe@doeservice.com</p>
+										<p class="cus_nameInfo"><span class="mdi mdi-phone"></span> 017655458227</p>
+									</div>
+								</div>
+								<div class="cus_extraInfo mt-3 d-flex justify-content-between">
+									<div class="cus_address mr-3">
+										Mesen & Doe GmbH<br>
+										Streetstreet 12<br>
+										59379 City
+									</div>
+									<div class="cus_loginInfo text-center">
+										<p>Last Login</p>
+										<p>15.12.2020 - 07:33</p>
+										<a href="#" class="d-block mt-3">Open Customer</a>
+									</div>
+								</div>
 							</div>
+							<!-- /Customer profile info -->
+							<!-- Ticket History -->
+							<div class="ticket__history mt-3">
+								<h4 class="mb-2">Ticket History</h4>
+								<table class="d-block">
+									<thead>
+										<th>Date</th>
+										<th>Entry</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket created successfully by Customer</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (Pending)</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Emely Gurrero answered the Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (waiting for customer reply)</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>The Customer replied to this Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Supporter changed to Tobias Schmidt-Tudl | Admin</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Tobias Schmidt-Tudl answered the Ticket</td>
+										</tr>
+										<tr>
+											<td>20.10.2020 - 09:33</td>
+											<td>Ticket Status Changed to (waiting for customer reply)</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="change_supporter ml-lg-4 mt-4 d-flex align-items-start">
+									<span class="mr-2">
+										<span class="mdi mdi-information-outline"></span>
+									</span>
+									<span>This ticket cannot be assigned to another 
+										supporter because it has already been 
+										closed by <a href="#" class="text-blue t_shadow_scale_1">Tobias Schmidt-Tudl</a>.
+									</span>
+								</div>
+							</div>
+							<!-- /Ticket History -->
+							<!-- Attachments -->
+							<div class="cus__attachments mt-3">
+								<h4>Attachments</h4>
+								<div id="cus_Attached_Text" class="cus__attachedText cus_gallery d-flex flex-wrap">
+									<a class="c_file_links" href="./resources/img/profile-pic.png">screen.png</a>
+									<a class="c_file_links" href="./resources/pdf/Invoice-002-R1.pdf">Invoice-002-R1.pdf</a>
+									<a class="c_file_links" href="./resources/video/video-screencast.webm">video-screencast.webm</a>
+								</div>
+								<!-- start: PDF preview Modal -->
+								<div class="modal fade text-center uploaded_PDF_Modal modal-transparent pdf___viewer" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content pdfViewContainer">
+											<div id="canvasUploadedPDF"></div>					
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+								<!-- /End PDF preview Modal -->
+							</div>
+							<!-- /Attachments -->
 						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-5 mb-4">
-						<div class="payment_chart_container chart_container">
-							<h3>Payment methods</h3>
-							<div class="payment_method">								
-								<canvas id="payment_methods"></canvas>
-							</div>
-							<div id="p_method_legend" class="p_method_legend"></div>
-						</div>						
-					</div>
-					<div class="col-lg-7 mb-4">
-						<!-- Distribution according to networks -->
-						<div class="dist_chart_container2 chart_container">
-							<h3>Distribution according to networks</h3>
-							<p>Proportion of payment completions</p>
-							<div class="dist_net2">
-								<canvas id="dist_net_chart2"></canvas>
-							</div>
-						</div>
+						<!-- /Customer Information -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--=== End of Dashboard Template ===-->
+		<!--=== End of ticketsystem Overview ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
@@ -426,15 +496,21 @@
     <script src="./vendors/js/jquery-3.3.1.min.js"></script>
     <!-- popper js -->
     <script src="./vendors/js/popper.min.js"></script>
-		<!-- bootstrap js -->
+	<!-- bootstrap js -->
     <script src="./vendors/js/bootstrap.min.js"></script>
     <!-- chart js -->
     <script src="./vendors/js/chart.min.js"></script>
     <!-- chart js datalabels plugin -->
     <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
-	<!-- chart label plugin -->
-    <!-- <script src="./vendors/js/chartjs-plugin-labels.js"></script> -->
-		<!-- Full Screen Plugin -->
+	<!-- Currency formatter plugin -->
+    <script src="./vendors/js/currencyFormatter.min.js"></script>
+	<!-- Magnific popup plugin-->
+	<script src="./vendors/js/jquery.magnific-popup.min.js"></script>
+	<!-- Nice select plugin -->
+	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- pdf.js for PDF preview -->
+	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
+	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->
 	<script src="./vendors/js/jquery.preloadinator.min.js"></script>

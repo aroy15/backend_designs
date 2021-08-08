@@ -26,6 +26,7 @@
     21.     HelpDesk
     22.     Ticketsystem Overview / Ticket-System
     23.     Ticketsystem Detail
+    24.     Ticketsystem Archive
 ==========================================================
 **/
 /***************************/
@@ -167,7 +168,7 @@ textarea::placeholder {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  overflow: inherit;
   position: relative;
 }
 
@@ -414,6 +415,14 @@ textarea::placeholder {
   -moz-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
   -ms-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
   -o-box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.anchor_hover {
+  color: #42ADE2;
+}
+
+.anchor_hover:hover {
+  color: #3489B3;
 }
 
 .blue_btn_hover {
@@ -1510,6 +1519,11 @@ textarea::placeholder {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   font-weight: 300;
+}
+
+.table_container .table_bottom .custom_select .list li.option {
+  line-height: 27px;
+  min-height: 27px;
 }
 
 /*===X==Table common Design ===X====*/
@@ -2855,6 +2869,7 @@ ul.pieLegend li:not(.anjon) {
   background-image: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png);
   background-position: left 27%, 57.3% 10%, 100% 55%;
   background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 .target_group_sec.content-container .content-inner {
@@ -2939,6 +2954,10 @@ ul.pieLegend li:not(.anjon) {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
+}
+
+.target_group_sec .average_member {
+  background-color: #ffffff;
 }
 
 .target_group_sec .dist_net_chart_container {
@@ -3031,6 +3050,7 @@ ul.pieLegend li:not(.anjon) {
   background-image: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/2.png), url(../img/bg_images/accounting-dashboard/3.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png);
   background-position: left 27%, left 42%, 38% 78%, 57% 10%, 100% 90%;
   background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 .accounting_Dashboard .sales_chart_container {
@@ -6361,12 +6381,12 @@ ul.pieLegend li:not(.anjon) {
   color: #42ADE2;
 }
 
-.ticketsystem_detail .ticket__history {
+.ticketsystem_detail .customer__info .ticket__history {
   background-color: #ffffff;
   padding: 18px 10px;
 }
 
-.ticketsystem_detail .ticket__history h4 {
+.ticketsystem_detail .customer__info .ticket__history h4 {
   font-size: 16px;
   line-height: 22px;
   display: inline-block;
@@ -6375,7 +6395,7 @@ ul.pieLegend li:not(.anjon) {
   position: relative;
 }
 
-.ticketsystem_detail .ticket__history h4::after {
+.ticketsystem_detail .customer__info .ticket__history h4::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -6385,23 +6405,23 @@ ul.pieLegend li:not(.anjon) {
   background-color: #BCF1FF;
 }
 
-.ticketsystem_detail .ticket__history table {
+.ticketsystem_detail .customer__info .ticket__history table {
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
 }
 
-.ticketsystem_detail .ticket__history table tr th, .ticketsystem_detail .ticket__history table tr td {
+.ticketsystem_detail .customer__info .ticket__history table tr th, .ticketsystem_detail .customer__info .ticket__history table tr td {
   overflow-wrap: break-word;
   color: #000000;
   padding: 2px;
 }
 
-.ticketsystem_detail .ticket__history table tr th:nth-child(2), .ticketsystem_detail .ticket__history table tr td:nth-child(2) {
+.ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(2), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(2) {
   border-left: 1px solid rgba(155, 155, 155, 0.5);
 }
 
-.ticketsystem_detail .ticket__history table tr th {
+.ticketsystem_detail .customer__info .ticket__history table tr th {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -6411,24 +6431,24 @@ ul.pieLegend li:not(.anjon) {
   padding-top: 0px;
 }
 
-.ticketsystem_detail .ticket__history table tr td {
+.ticketsystem_detail .customer__info .ticket__history table tr td {
   font-weight: 200;
   font-size: 8px;
   line-height: 11px;
 }
 
-.ticketsystem_detail .ticket__history .change_supporter {
+.ticketsystem_detail .customer__info .ticket__history .change_supporter {
   max-width: 172px;
   width: 100%;
 }
 
-.ticketsystem_detail .ticket__history .change_supporter > p {
+.ticketsystem_detail .customer__info .ticket__history .change_supporter > p {
   font-size: 10px;
   color: #000000;
   font-weight: 300;
 }
 
-.ticketsystem_detail .ticket__history .change_supporter .custom_select {
+.ticketsystem_detail .customer__info .ticket__history .change_supporter .custom_select {
   height: 31px;
   line-height: 31px;
   font-size: 11px;
@@ -6438,25 +6458,25 @@ ul.pieLegend li:not(.anjon) {
   padding-right: 19px;
 }
 
-.ticketsystem_detail .ticket__history .change_supporter .custom_select .list li.option {
+.ticketsystem_detail .customer__info .ticket__history .change_supporter .custom_select .list li.option {
   line-height: 31px;
   min-height: 31px;
 }
 
-.ticketsystem_detail .ticket__history .change_supporter .custom_select::after {
+.ticketsystem_detail .customer__info .ticket__history .change_supporter .custom_select::after {
   border-bottom: 1px solid #A3A3A3;
   border-right: 1px solid #A3A3A3;
   height: 5px;
   width: 5px;
 }
 
-.ticketsystem_detail .cus__attachments {
+.ticketsystem_detail .customer__info .cus__attachments {
   background-color: #ffffff;
   padding: 15px 10px;
   border-radius: 0px 0px 20px 20px;
 }
 
-.ticketsystem_detail .cus__attachments h4 {
+.ticketsystem_detail .customer__info .cus__attachments h4 {
   font-size: 16px;
   line-height: 22px;
   display: inline-block;
@@ -6466,7 +6486,7 @@ ul.pieLegend li:not(.anjon) {
   padding-right: 20px;
 }
 
-.ticketsystem_detail .cus__attachments h4::after {
+.ticketsystem_detail .customer__info .cus__attachments h4::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -6476,7 +6496,7 @@ ul.pieLegend li:not(.anjon) {
   background-color: #BCF1FF;
 }
 
-.ticketsystem_detail .cus__attachments .cus__attachedText .c_file_links {
+.ticketsystem_detail .customer__info .cus__attachments .cus__attachedText .c_file_links {
   max-width: 50%;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -6492,10 +6512,88 @@ ul.pieLegend li:not(.anjon) {
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
+  overflow-wrap: break-word;
 }
 
-.ticketsystem_detail .cus__attachments .cus__attachedText .c_file_links:hover {
+.ticketsystem_detail .customer__info .cus__attachments .cus__attachedText .c_file_links:hover {
   text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+/***************************/
+/* 24. Ticketsystem Archive */
+/***************************/
+.ticket_archive .table_container table tr th:nth-child(1) {
+  width: 110px;
+}
+
+.ticket_archive .table_container table tr th:nth-child(2) {
+  width: 90px;
+}
+
+.ticket_archive .table_container table tr th:nth-child(3) {
+  width: 26%;
+}
+
+.ticket_archive .table_container table tr th:nth-child(4) {
+  width: 40%;
+}
+
+.ticket_archive .table_container table tr th:nth-child(5) {
+  width: 25%;
+}
+
+.ticket_archive .table_container table tr th:nth-child(6) {
+  width: 55px;
+}
+
+.ticket_archive .table_container table tr td:nth-child(3), .ticket_archive .table_container table tr td:nth-child(5) {
+  text-align: left;
+  padding-left: 14px;
+}
+
+/***************************/
+/* 25. Ticketsystem Detail Colsed*/
+/***************************/
+.ticketsystem_detail_closed .chat__container .ticket__closed {
+  margin-top: 100px;
+  max-width: 591px;
+  min-height: 112px;
+  width: 100%;
+  background-color: rgba(255, 77, 77, 0.1);
+  padding: 13px 20px 24px 56px;
+  position: relative;
+}
+
+.ticketsystem_detail_closed .chat__container .ticket__closed .alert_image {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+}
+
+.ticketsystem_detail_closed .chat__container .ticket__closed h5 {
+  font-size: 18px;
+}
+
+.ticketsystem_detail_closed .chat__container .ticket__closed p {
+  margin-bottom: 0px;
+}
+
+.ticketsystem_detail_closed .customer__info .wait__reply {
+  background-color: rgba(255, 77, 77, 0.7);
+  max-width: 84px;
+}
+
+.ticketsystem_detail_closed .customer__info .ticket__history .change_supporter {
+  max-width: 220px;
+  font-size: 10px;
+  color: #ED5A5A;
+  font-weight: 300;
+  line-height: 12px;
+}
+
+.ticketsystem_detail_closed .customer__info .ticket__history .change_supporter .mdi {
+  font-size: 20px;
+  line-height: 1;
 }
 
 /*==============Responsive CSS===============*/
@@ -6573,6 +6671,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .user_admin_name .documentation .historyItemContainer .historyItemInner {
     padding-right: 18px;
+  }
+  .ticketsystem_detail_closed .chat__container .ticket__closed {
+    max-width: 480px;
   }
 }
 
@@ -6659,7 +6760,7 @@ ul.pieLegend li:not(.anjon) {
     overflow: auto;
   }
   .table_container table, .table_container .table_bottom {
-    min-width: 600px;
+    min-width: 750px;
   }
   .responsive_alert {
     display: block;
@@ -6702,6 +6803,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .ticketsystem_overview .table_container table, .ticketsystem_overview .table_container .table_bottom {
     min-width: 900px;
+  }
+  .ticket_archive .table_container table, .ticket_archive .table_container .table_bottom {
+    min-width: 800px;
   }
 }
 

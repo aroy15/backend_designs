@@ -757,6 +757,7 @@
 				url(../img/bg_images/accounting-dashboard/5.png);
 	background-position: left 27%, 57.3% 10%, 100% 55%;
 	background-repeat:no-repeat;
+	background-color:$white-main;
 	&.content-container{
 		.content-inner{
 			max-width:1190px;
@@ -803,6 +804,10 @@
 			margin-top:20px;			
 			@include ordering_html_legend_6();
 		}
+	}
+	// Average Member
+	.average_member{
+		background-color: $white-main;
 	}
 	// Distributation Network Bar Chart
 	.dist_net_chart_container{
@@ -863,6 +868,7 @@
 				url(../img/bg_images/accounting-dashboard/5.png);
 	background-position: left 27%, left 42%, 38% 78%, 57% 10%, 100% 90%;
 	background-repeat:no-repeat;
+	background-color:$white-main;
 	// Sales Period Bar Chart
 	.sales_chart_container{
 		background-color: $white-main;
@@ -3568,6 +3574,7 @@
 			max-width:209px;
 			width:100%;
 		}
+		// Customer Profile ino
 		.cust_profile_info{
 			background-color: $white-main;
 			@include b-radius(20px 20px 0px 0px);
@@ -3619,100 +3626,186 @@
 				}
 			}
 		}
-	}
-	// Ticket history
-	.ticket__history{
-		background-color: $white-main;
-		padding:18px 10px;
-		h4{
-			@include cus__title_heading;
-		}
-		table{
-			border-collapse: separate;
-			border-spacing: 0;
-			table-layout: fixed;
-			
-			tr{
-				th,td{				
-					overflow-wrap: break-word;
-					color:$black-main;
-					padding:2px;
-					&:nth-child(2){
-						border-left:1px solid rgba(155, 155, 155, 0.5);
+		// Ticket history
+		.ticket__history{
+			background-color: $white-main;
+			padding:18px 10px;
+			h4{
+				@include cus__title_heading;
+			}
+			table{
+				border-collapse: separate;
+				border-spacing: 0;
+				table-layout: fixed;
+				
+				tr{
+					th,td{				
+						overflow-wrap: break-word;
+						color:$black-main;
+						padding:2px;
+						&:nth-child(2){
+							border-left:1px solid rgba(155, 155, 155, 0.5);
+						}
+					}
+					th{
+						font-weight:400;
+						font-size:10px;
+						line-height:14px;
+						text-align:center;
+						border-bottom:1px solid rgba(155, 155, 155, 0.5);
+						padding-bottom:1px;
+						padding-top:0px;
+					}
+					td{
+						font-weight: 200;
+						font-size:8px;
+						line-height:11px;
 					}
 				}
-				th{
-					font-weight:400;
+			}
+			.change_supporter{
+				max-width:172px;
+				width:100%;
+				> p{
 					font-size:10px;
-					line-height:14px;
-					text-align:center;
-					border-bottom:1px solid rgba(155, 155, 155, 0.5);
-					padding-bottom:1px;
-					padding-top:0px;
+					color:$black-main;
+					font-weight: 300;				
+				}
+				.custom_select{
+					$height:31px;
+					height:$height;
+					line-height:$height;
+					font-size: 11px;
+					font-weight: 300;
+					color:rgba(0, 0, 0, 0.5);
+					padding-left: 7px;
+					padding-right: 19px;
+					.list li.option {
+						line-height: $height;
+						min-height: $height;
+					}
+					&::after {
+						border-bottom: 1px solid $gray;
+						border-right: 1px solid $gray;
+						height: 5px;
+						width:5px;
+					}
+				}
+			}
+		}
+		// Attachments
+		.cus__attachments{
+			background-color: $white-main;
+			padding:15px 10px;
+			border-radius: 0px 0px 20px 20px;
+			h4{
+				@include cus__title_heading;
+				padding-right:20px;
+			}
+			.cus__attachedText .c_file_links {
+				max-width: 50%;
+				flex-basis: 50%;
+				width: 50%;
+				padding: 3px;
+				font-size: 10px;
+				line-height: 14px;
+				color:$blue-bold;
+				background-color:transparent;
+				text-align:left;
+				@include transition-all(0.2s);
+				overflow-wrap: break-word;
+				&:hover{
+					text-shadow: $text-shadow;
+				}
+			}
+		}
+	}
+}
+/***************************/
+/* 24. Ticketsystem Archive */
+/***************************/
+.ticket_archive{
+	.table_container{
+		table{
+			tr{
+				th{
+					&:nth-child(1){
+						width:110px;
+					}
+					&:nth-child(2){
+						width:90px;
+					}
+					&:nth-child(3){
+						width:26%;
+					}
+					&:nth-child(4){
+						width:40%;
+					}
+					&:nth-child(5){
+						width:25%;
+					}
+					&:nth-child(6){
+						width:55px;
+					}
 				}
 				td{
-					font-weight: 200;
-					font-size:8px;
-					line-height:11px;
+					&:nth-child(3),&:nth-child(5){
+						text-align:left;
+						padding-left:14px;
+					}
 				}
 			}
 		}
-		.change_supporter{
-			max-width:172px;
+	}
+}
+/***************************/
+/* 25. Ticketsystem Detail Colsed*/
+/***************************/
+.ticketsystem_detail_closed{
+	// chat Container
+	.chat__container{
+		.ticket__closed{
+			margin-top:100px;
+			max-width:591px;
+			min-height:112px;
 			width:100%;
-			> p{
+			background-color: rgba(255, 77, 77, 0.1);
+			padding:13px 20px 24px 56px;
+			position:relative;
+			.alert_image{
+				position:absolute;
+				left:-25px;
+				top:-30px;
+			}
+			h5{
+				font-size:18px;
+			}
+			p{
+				margin-bottom:0px;
+			}
+		}
+	}
+	// Customer Information
+	.customer__info{
+		.wait__reply{
+			background-color: rgba(255, 77, 77, 0.7);
+			max-width:84px;
+		}
+		// Ticket history
+		.ticket__history{
+			.change_supporter{
+				max-width:220px;
 				font-size:10px;
-				color:$black-main;
-				font-weight: 300;				
-			}
-			.custom_select{
-				$height:31px;
-				height:$height;
-				line-height:$height;
-				font-size: 11px;
+				color: #ED5A5A;
 				font-weight: 300;
-				color:rgba(0, 0, 0, 0.5);
-				padding-left: 7px;
-				padding-right: 19px;
-				.list li.option {
-					line-height: $height;
-					min-height: $height;
-				}
-				&::after {
-					border-bottom: 1px solid $gray;
-					border-right: 1px solid $gray;
-					height: 5px;
-					width:5px;
+				line-height: 12px;
+				.mdi{
+					font-size:20px;
+					line-height: 1;
 				}
 			}
-		}
+		}	
 	}
-	// Attachments
-	.cus__attachments{
-		background-color: $white-main;
-		padding:15px 10px;
-		border-radius: 0px 0px 20px 20px;
-		h4{
-			@include cus__title_heading;
-			padding-right:20px;
-		}
-		.cus__attachedText .c_file_links {
-			max-width: 50%;
-			flex-basis: 50%;
-			width: 50%;
-			padding: 3px;
-			font-size: 10px;
-			line-height: 14px;
-			color:$blue-bold;
-			background-color:transparent;
-			text-align:left;
-			@include transition-all(0.2s);
-			&:hover{
-				text-shadow: $text-shadow;
-			}
-		}
-	}
-	
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

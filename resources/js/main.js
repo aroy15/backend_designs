@@ -537,6 +537,58 @@ $(document).ready(function(){
       return this;
   }
   /*-------</tag Name Changer Plugin>------- */
+  /*---<uploaded file finder function>---- This is also linked with id = #cusMailAttachment*/
+  function uploadedFileViewer(){
+    $('.c_file_links').each(function () {
+      var findExt = $(this).text().toLowerCase();
+      if(findExt.match('.pdf')){
+        $(this).renameTag("button");        
+      }
+      if(findExt.match('.mp4') || findExt.match('.mov') || findExt.match('.wmv') || findExt.match('.flv') || findExt.match('.avi') || findExt.match('.webm') || findExt.match('.mkv') || findExt.match('.avchd')){
+        $(this).addClass('video-link');
+        $(this).attr('data-typed','video');
+      }
+    });   
+
+    $('a.c_file_links').bind('click',function(){
+      var link_type = "";
+      if($(this).attr('data-typed')==='video'){
+        link_type = 'iframe';
+      }else if($(this).attr('data-typed')!=='video'){
+        link_type = 'image';
+      }
+      /*----<Maginific Popup>----- */ 
+      $('.cus_gallery').magnificPopup({
+        type: link_type,
+        delegate: 'a',
+        gallery: {
+          enabled: false
+        }
+      }); 
+    /*----</Maginific Popup>----- */
+
+    })
+    
+    $('button.c_file_links').each(function(index){
+      $(this).attr({
+        "data-id":index,
+      });
+    })
+
+    /*--------PDF view bootstrap modal------*/
+    $('button.c_file_links').on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).data('id');
+      $('.uploaded_PDF_Modal').data('id', id).modal('show');
+      /*------PDF.js Activation------ */
+      $('.uploaded_PDF_Modal .canvas-wrapper').remove();
+      renderPDF($(this).attr('href'), document.getElementById('canvasUploadedPDF'));
+      /*------/PDF.js Activation------ */
+    });
+  }
+  uploadedFileViewer();
+  /*---</uploaded file finder function>---- */
+
   if($('body').find('#cusMailAttachment').length){
     $('#cusMailAttachment').on('change', function(event){
       $('#cus_Attached_Text').empty();
@@ -549,45 +601,14 @@ $(document).ready(function(){
         for(var i = 0; i < newChatLengths; i++){
           var newUploadName = newChatItems[i].name;        
           var newChatFileSrc = URL.createObjectURL(event.target.files[i]);
-          newfrag += "<a class='c_file_links' href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
+          newfrag += "<a class='c_file_links' data-typed='image' href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
         }
         $('#cus_Attached_Text').append(newfrag);            
-      }  
-  
-      $('.c_file_links').each(function () {
-        if($(this).text().match('.pdf')){
-          $(this).renameTag("button");        
-        }
-      });   
-
-      $('button.c_file_links').each(function(index){
-        $(this).attr({
-          "data-id":index,
-        });
-      })
-
-      /*--------PDF view bootstrap modal------*/
-      $('button.c_file_links').on('click', function (e) {
-        e.preventDefault();
-        var id = $(this).data('id');
-        $('.uploaded_PDF_Modal').data('id', id).modal('show');
-        /*------PDF.js Activation------ */
-        $('.uploaded_PDF_Modal .canvas-wrapper').remove();
-        renderPDF($(this).attr('href'), document.getElementById('canvasUploadedPDF'));
-          /*------/PDF.js Activation------ */
-      });
-
-      
-    });
-    /*----<Maginific Popup>----- */
-    $('#cus_Attached_Text').magnificPopup({
-      type: 'image',
-      delegate: 'a',
-      gallery: {
-        enabled: false
       }
-    }); 
-    /*----</Maginific Popup>----- */
+      /* All file finder program in this function */
+      uploadedFileViewer();
+    });
+    
   }
   /*===X====Ticketsystem Detail====X===== */
 });

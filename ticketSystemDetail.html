@@ -215,7 +215,7 @@
 				<div id="collapseFour" class="collapse" aria-labelledby="navHeadingFour" data-parent="#navAccordion">
 					<ul class="itemss pl-4 pr-3">
 						<li><a href="./ticketSystem.html">Ticket-System</a></li>
-						<li><a href="#">Ticket Archive</a></li>
+						<li><a href="./ticketArchive.html">Ticket Archive</a></li>
 						<li><a href="./helpDesk.html">Helpdesk</a></li>
 						<li><a href="#">Questions & Answers (FAQ)</a></li>
 						<li><a href="./feature _requests.html">Feature Requests</a></li>
@@ -354,6 +354,7 @@
 										</div>
 									</div>
 								</div>
+								<!-- typing Messege -->
 								<div class="msg__row support__msg typing__msg my-3 ml-auto">
 									<div class="d-flex justify-content-end">									
 										<div class="msg__area">
@@ -365,6 +366,7 @@
 										</div>
 									</div>
 								</div>
+								<!-- /typing Messege -->
 							</div>
 							<!-- /Chat Messege -->
 							<!-- Chat Input -->
@@ -373,7 +375,7 @@
 								<div class="buttons_area d-flex justify-content-end">
 									<div>
 										<label class="scale_hover_half cursor-pointer mb-0 mr-3 position-relative top-2">
-											<input id="cusMailAttachment" type="file" multiple class="appearance-none" accept="image/*,.pdf">
+											<input id="cusMailAttachment" type="file" multiple class="appearance-none" accept="image/*,.pdf,video/*">
 											<span class="mdi mdi-paperclip"></span>
 										</label>
 										<button class="sendBtn shadow_hover_1" data-toggle="modal" data-target="#tikitStatusModal">Send</button>
@@ -389,7 +391,7 @@
 															<div class="d-flex tsc_row mb-3">
 																<span class="tsc_title">Pending</span>
 																<span class="tsc_text pl-2 pl-lg-3">
-																	The ticket is assigned to a supporter and is currently being processed. You can choose this status if, <br>
+																	The ticket is assigned to a supporter and is currently being processed. You can choose this status if,
 																	for example, you need to do some research before you can respond.
 																</span>
 															</div>
@@ -402,7 +404,7 @@
 															<div class="d-flex tsc_row mb-3">
 																<span class="tsc_title">Pending</span>
 																<span class="tsc_text pl-2 pl-lg-3">
-																	You have completely processed the customer's request.<br> 
+																	You have completely processed the customer's request.
 																	Closed tickets cannot be reopened.
 																</span>
 															</div>
@@ -433,7 +435,7 @@
 							</div>
 							<!-- /Chat Input -->
 						</div>
-						<!-- /Chart Container -->
+						<!-- /Chat Container -->
 					</div>
 					<div class="col-xl-5">
 						<!-- Customer Information -->
@@ -525,7 +527,7 @@
 							<!-- Attachments -->
 							<div class="cus__attachments mt-3">
 								<h4>Attachments</h4>
-								<div id="cus_Attached_Text" class="cus__attachedText d-flex flex-wrap">
+								<div id="cus_Attached_Text" class="cus__attachedText cus_gallery d-flex flex-wrap">
 									
 								</div>
 								<!-- start: PDF preview Modal -->
