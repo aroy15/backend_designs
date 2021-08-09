@@ -143,6 +143,11 @@
 		color:$blue-normal;
 	}
 }
+.white_hover{
+	&:hover{
+		color:$white-main;
+	}
+}
 .blue_btn_hover{
 	@include transition-all(0.2s);
 	&:hover{
@@ -178,7 +183,7 @@
 .green_lime_btn{
 	background-color: $green-limeBtn;
     color: $white-main;
-    padding: 8px 22px;
+    padding: 9px 22px;
     display: inline-block;
 	@include b-radius(5px);
 	font-size: 15px;

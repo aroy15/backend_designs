@@ -3847,6 +3847,119 @@
 		}
 	}
 }
+/***************************/
+/* 27. Roles & Rights Edit*/
+/***************************/
+.roles_rights_edit{
+	 .content-inner {
+		max-width: 1130px;
+	}
+	.role_informations{
+		max-width:722px;
+		width:100%;
+		min-height:215px;
+		padding:20px 28px 0px 28px;
+		h5{
+			font-size:15px;
+		}
+		.name_role{
+			padding:0px 20px 28px 0px;			
+			min-width:330px;
+			.roleInput{
+				max-width:211px;
+			}
+			.roleDesc{
+				min-height:65px;
+				height:65px;
+				resize:none;
+			}
+		}
+		.name_info{
+			min-width:249px;
+			padding:0px 0px 28px 20px;
+			.info_row{
+				span{
+					font-size:12px;
+					line-height: 16px;
+					color: rgba(0, 0, 0, 0.7);
+					width:45%;
+					&:last-child{
+						width:55%;
+					}
+				}
+			}
+			
+		}
+	}
+	.permissions{
+		h3{
+			font-size:20px;
+		}
+		p{
+			color:rgba(0, 0, 0, 0.8);
+			font-weight: 300;
+		}
+		.permission_checkboxes{
+			width:100%;
+			.checkbox-container{
+				padding-left:30px;
+			}
+		}
+	}
+}
+/***************************/
+/* 28. Roles & Rights New*/
+/***************************/
+.roles_rights_new{
+   .role_informations{
+	   max-width:465px;
+	   .name_role{
+		   padding-right:0px;			
+		   min-width:auto;
+		   max-width:375px;
+		   width:100%;
+	   }
+   }
+}
+/***************************/
+/* 29. User Adminstration - Administrators*/
+/***************************/
+.administrator{
+	.table_container{
+		table{
+			tr{
+				th,td{
+					&:nth-child(1){
+						width:79px;
+					}
+					&:nth-child(2){
+						width:15%;
+					} 
+					&:nth-child(3){
+						width:20%;
+					} 
+					&:nth-child(4){
+						width:30%;
+					} 
+					&:nth-child(5){
+						width:15%;
+					} 
+					&:nth-child(6){
+						width:12%;
+					}  
+				}
+				td{
+					text-align:left;
+					padding-left:15px;
+					&:nth-child(1),&:nth-child(6){
+						text-align:center;
+						padding-left:5px;
+					}
+				}
+			}
+		}
+	}
+}
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";
 

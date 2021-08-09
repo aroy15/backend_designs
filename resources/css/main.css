@@ -27,6 +27,11 @@
     22.     Ticketsystem Overview / Ticket-System
     23.     Ticketsystem Detail
     24.     Ticketsystem Archive
+    25.     Ticketsystem Detail Colsed
+    26.     Roles & Rights
+    27.     Roles & Rights Edit
+    28.     Roles & Rights New
+    29.     User Adminstration - Administrators
 ==========================================================
 **/
 /***************************/
@@ -425,6 +430,10 @@ textarea::placeholder {
   color: #3489B3;
 }
 
+.white_hover:hover {
+  color: #ffffff;
+}
+
 .blue_btn_hover {
   transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -479,7 +488,7 @@ textarea::placeholder {
 .green_lime_btn {
   background-color: #1BD12D;
   color: #ffffff;
-  padding: 8px 22px;
+  padding: 9px 22px;
   display: inline-block;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -6637,6 +6646,123 @@ ul.pieLegend li:not(.anjon) {
   border-right-width: 4px;
 }
 
+/***************************/
+/* 27. Roles & Rights Edit*/
+/***************************/
+.roles_rights_edit .content-inner {
+  max-width: 1130px;
+}
+
+.roles_rights_edit .role_informations {
+  max-width: 722px;
+  width: 100%;
+  min-height: 215px;
+  padding: 20px 28px 0px 28px;
+}
+
+.roles_rights_edit .role_informations h5 {
+  font-size: 15px;
+}
+
+.roles_rights_edit .role_informations .name_role {
+  padding: 0px 20px 28px 0px;
+  min-width: 330px;
+}
+
+.roles_rights_edit .role_informations .name_role .roleInput {
+  max-width: 211px;
+}
+
+.roles_rights_edit .role_informations .name_role .roleDesc {
+  min-height: 65px;
+  height: 65px;
+  resize: none;
+}
+
+.roles_rights_edit .role_informations .name_info {
+  min-width: 249px;
+  padding: 0px 0px 28px 20px;
+}
+
+.roles_rights_edit .role_informations .name_info .info_row span {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  width: 45%;
+}
+
+.roles_rights_edit .role_informations .name_info .info_row span:last-child {
+  width: 55%;
+}
+
+.roles_rights_edit .permissions h3 {
+  font-size: 20px;
+}
+
+.roles_rights_edit .permissions p {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 300;
+}
+
+.roles_rights_edit .permissions .permission_checkboxes {
+  width: 100%;
+}
+
+.roles_rights_edit .permissions .permission_checkboxes .checkbox-container {
+  padding-left: 30px;
+}
+
+/***************************/
+/* 28. Roles & Rights New*/
+/***************************/
+.roles_rights_new .role_informations {
+  max-width: 465px;
+}
+
+.roles_rights_new .role_informations .name_role {
+  padding-right: 0px;
+  min-width: auto;
+  max-width: 375px;
+  width: 100%;
+}
+
+/***************************/
+/* 29. User Adminstration - Administrators*/
+/***************************/
+.administrator .table_container table tr th:nth-child(1), .administrator .table_container table tr td:nth-child(1) {
+  width: 79px;
+}
+
+.administrator .table_container table tr th:nth-child(2), .administrator .table_container table tr td:nth-child(2) {
+  width: 15%;
+}
+
+.administrator .table_container table tr th:nth-child(3), .administrator .table_container table tr td:nth-child(3) {
+  width: 20%;
+}
+
+.administrator .table_container table tr th:nth-child(4), .administrator .table_container table tr td:nth-child(4) {
+  width: 30%;
+}
+
+.administrator .table_container table tr th:nth-child(5), .administrator .table_container table tr td:nth-child(5) {
+  width: 15%;
+}
+
+.administrator .table_container table tr th:nth-child(6), .administrator .table_container table tr td:nth-child(6) {
+  width: 12%;
+}
+
+.administrator .table_container table tr td {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.administrator .table_container table tr td:nth-child(1), .administrator .table_container table tr td:nth-child(6) {
+  text-align: center;
+  padding-left: 5px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -6940,6 +7066,19 @@ ul.pieLegend li:not(.anjon) {
     width: 46px !important;
     height: 3.33px !important;
     margin: 12px auto;
+  }
+  .roles_rights_edit .role_informations {
+    padding: 20px 15px 0px 15px;
+  }
+  .roles_rights_edit .role_informations .name_role {
+    padding: 0px 0px 28px 0px;
+    min-width: auto;
+  }
+  .roles_rights_edit .role_informations .name_info {
+    min-width: auto;
+    max-width: 249px;
+    width: 100%;
+    padding: 0px 0px 28px 0px;
   }
 }
 

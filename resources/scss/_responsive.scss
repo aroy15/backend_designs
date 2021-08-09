@@ -484,6 +484,22 @@
 			}
 		}
 	}
+	// Backend Rights & Roles Edit Page
+	.roles_rights_edit{
+		.role_informations{
+			padding:20px 15px 0px 15px;
+			.name_role{
+				padding:0px 0px 28px 0px;			
+				min-width:auto;
+			}
+			.name_info{
+				min-width:auto;
+				max-width:249px;
+				width:100%;
+				padding:0px 0px 28px 0px;
+			}
+		}
+	}
 }
 
 @media (max-width:400px){
@@ -533,25 +549,4 @@
 			}
 		}
 	}
-	// User Administration Name
-	// .user_admin_name{
-	// 	// Support & History
-	// 	.history_support{
-	// 		// History Items
-	// 		.historyItemContainer{
-	// 			.historyItem{
-	// 				.profile_hist{
-	// 					flex-wrap: nowrap;
-	// 					flex-direction: column;
-	// 					text-align:center;
-	// 					padding-right: 10px;
-	// 				}
-	// 				.timeDate_hist {
-	// 					padding-left: 10px;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-	
 }
