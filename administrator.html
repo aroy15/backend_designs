@@ -308,7 +308,7 @@
 						</div>
 						<div class="search_box searchWithBtn order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
 							<div class="mb-4 mb-lg-0">
-								<a href="#" class="blue_btn mx-3 shadow_hover_1">+ Add Admin</a>
+								<a href="#addNewAdmin_modal" data-toggle="modal" class="blue_btn mx-3 shadow_hover_1">+ Add Admin</a>
 							</div>
 							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
 								<input type="text" class="search form-control" placeholder="Search">
@@ -411,7 +411,74 @@
 								</select>
 							</div>
 						</div>
-					</div>					
+					</div>
+					<!--========Add a new Admin  MODAL=======-->
+					<div class="modal fade add_new_admin__modal white_modal" id="addNewAdmin_modal"  tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									<span class="mdi mdi-close"></span>
+								</button>
+								<div class="modal-body pb-4">
+									<h4 class="pb-4 text-center"> Add a new Admin</h4>
+									<div class="newAdmin_inputs">
+										<select class="title_select custom_select gray_select bigger_select">
+											<option>Sir or Madam</option>
+											<option>Sir</option>
+											<option>Madam</option>
+										</select>
+										<div class="d-flex inputs_row">
+											<p>
+												<input type="text" placeholder="First Name">
+											</p>
+											<p>
+												<input type="text" placeholder="Last Name">
+											</p>
+										</div>
+										<div class="d-flex inputs_row">
+											<p>
+												<input type="email" placeholder="E-Mail Adress">
+											</p>
+											<p>
+												<input type="email" placeholder="Repeat E-Mail Adress">
+											</p>
+										</div>
+										<div class="d-flex inputs_row">
+											<p>
+												<input type="text" placeholder="Street">
+											</p>
+											<p>
+												<input type="tel" class="tel_number" placeholder="Number">
+											</p>
+										</div>
+										<div class="d-flex inputs_row postCodeCity_row">
+											<p>
+												<input type="tel" class="post_input" placeholder="Post code">
+											</p>
+											<p>
+												<input type="tel" class="city_input" placeholder="City">
+											</p>
+										</div>
+										<div class="role_select_row mt-5">
+											<h6 class="mb-1">
+												Role of this new Admin:
+											</h6>
+											<select class="custom_select gray_select bigger_select">
+												<option>Manager</option>
+												<option>Admin</option>
+												<option>Admin</option>
+											</select>
+											<button class="green_lime_btn shadow_hover_1 mt-5">Send an invitation</button>
+										</div>
+									</div>
+								</div>
+								<!--/modal-body-collapse -->
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog -->
+					</div>
+					<!--====X==== End of Add a new Admin  MODAL===X====-->				
 				</div>
 			</div>
 		</div>

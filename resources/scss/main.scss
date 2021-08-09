@@ -3959,6 +3959,74 @@
 			}
 		}
 	}
+	.add_new_admin__modal{
+		&.modal .modal-dialog {
+			max-width: 923px;
+			.close{
+				right: 10px;
+				top: 10px;
+			}			
+			.modal-content{
+				background-image: url('../img/team.png');
+				background-repeat:no-repeat;
+				background-position:bottom right;
+				min-height: 605px;
+				overflow: inherit;
+				.modal-body{
+					padding:20px;
+					.newAdmin_inputs{
+						max-width:645px;
+						width:100%;
+						p{
+							margin-bottom:10px;
+						}
+						input,.custom_select{
+							width:100%;
+						}
+						.title_select{
+							max-width:150px;
+							margin-bottom:10px;						
+						}
+						.inputs_row{
+							margin-left:-8px;
+							margin-right:-8px;
+							p{
+								padding:0px 8px;
+								flex-grow:1;
+								width:100%;
+								input{
+									width:100%;
+								}
+								.tel_number{
+									max-width:86px;
+								}
+							}
+							&.postCodeCity_row{
+								p{									
+									&:first-child{
+										max-width:178px;
+									}
+									&:last-child{
+										max-width:268px;
+									}
+									.post_input{
+										max-width:120px;
+									}
+								}
+							}
+						}
+						.role_select_row{
+							max-width:250px;
+							width:100%;
+							.green_lime_btn{
+								width:100%;
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

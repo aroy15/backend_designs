@@ -1413,6 +1413,19 @@ textarea::placeholder {
   -o-border-radius: 0px;
 }
 
+.modal.white_modal .modal-dialog .modal-content {
+  color: #393939;
+  background: #ffffff;
+}
+
+.modal.white_modal .modal-dialog .modal-content .close {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.modal.white_modal .modal-dialog .modal-content .close:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 /*===X====== Modal Design===X====*/
 /*===Table Common Design====*/
 .table_container table {
@@ -6761,6 +6774,87 @@ ul.pieLegend li:not(.anjon) {
 .administrator .table_container table tr td:nth-child(1), .administrator .table_container table tr td:nth-child(6) {
   text-align: center;
   padding-left: 5px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog {
+  max-width: 923px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .close {
+  right: 10px;
+  top: 10px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content {
+  background-image: url("../img/team.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  min-height: 605px;
+  overflow: inherit;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body {
+  padding: 20px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs {
+  max-width: 645px;
+  width: 100%;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs p {
+  margin-bottom: 10px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs input, .administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .custom_select {
+  width: 100%;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .title_select {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row p {
+  padding: 0px 8px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row p input {
+  width: 100%;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row p .tel_number {
+  max-width: 86px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row.postCodeCity_row p:first-child {
+  max-width: 178px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row.postCodeCity_row p:last-child {
+  max-width: 268px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row.postCodeCity_row p .post_input {
+  max-width: 120px;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .role_select_row {
+  max-width: 250px;
+  width: 100%;
+}
+
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .role_select_row .green_lime_btn {
+  width: 100%;
 }
 
 /*==============Responsive CSS===============*/
