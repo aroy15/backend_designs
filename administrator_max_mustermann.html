@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Adminstration - Administrators</title>
+    <title>User Adminstration - Administrators > Max Mustermann</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -285,11 +285,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">User Adminstration - Administrators</h2>
+				<h2 class="bh_title">User Adminstration - Administrators > Max Mustermann</h2>
 			</div>
 		</div>		
-		<!--=== User Adminstration - Administrators ===-->
-		<div id="administrator" class="administrator content-container p-0 p-md-4 pt-lg-2 b-r-8">
+		<!--=== User Adminstration - Administrators > Max Mustermann ===-->
+		<div id="adminMaxMustermann" class="admin_max_mustermann content-container p-0 p-md-4 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -297,192 +297,191 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner">                
-				<div class="administrator_inner px-3 pt-3 pb-1 bg-gray b-r-5">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-						<div class="selectBtn order-2 order-lg-1">
-							<select class="custom_select big_select">
-								<option value="ascending" selected>Sorted by ascending ID</option>
-								<option value="descending">Sorted by descending ID</option>
-							</select>
-						</div>
-						<div class="search_box searchWithBtn order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="#addNewAdmin_modal" data-toggle="modal" class="blue_btn mx-3 shadow_hover_1">+ Add Admin</a>
+			<div class="content-inner">      
+				<div class="admin_max_mst_inner">
+					<!-- top section -->
+					<div class="row mb-5">
+						<div class="col-xl-3 d-flex flex-column align-items-center mb-5 mb-xl-0">
+							<div class="profile_picture mx-auto">
+								<img id="userImgPic3" class="profile_pic" src="./resources/img/admin.png" alt="profile pic">
+								<!-- Image Edit Button -->
+								<label class="img_edit_btn shadow_hover_1 cursor-pointer">
+									<input type="file" id="UserImgEditBtn3" class="appearance-none" accept="image/*">
+									<span class="mdi mdi-square-edit-outline"></span>
+								</label>
+								<!--/Image Edit Button -->														
 							</div>
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
-								</button>
-							</form>
+							<button class="btn-transparent text-red-light scale_hover_half d-block mt-3 mb-5">
+								<span class="mdi mdi-trash-can-outline"></span>
+								<span>Remove Picture</span>
+							</button>
+							<button class="blue_btn d-inline-block b-r-5 py-2 px-3 shadow_hover_1">Reset his Password</button>
 						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
-					</div>
-					<div class="table_container">
-						<table class="w-100 text-center">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Firstname</th>
-									<th>Lastname</th>
-									<th>E-Mail</th>
-									<th>Role</th>
-									<th>Functions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1">
-									<td>1</td>
-									<td>Tobias</td>
-									<td>Kersbach-Knorr</td>
-									<td>Tobias@uploadcommander.de </td>
-									<td>Admin</td>
-									<td>
-										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2">
-									<td>2</td>
-									<td>Max</td>
-									<td>Mustermann</td>
-									<td>Mustermann@uploadcommander.de</td>
-									<td>Manager</td>
-									<td>
-										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3">
-									<td>3</td>
-									<td>Josef</td>
-									<td>Schmidt</td>
-									<td>Schmidt.Josef@uploadcommander.de</td>
-									<td>Supporter</td>
-									<td>
-										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4">
-									<td>4</td>
-									<td>Hildegard</td>
-									<td>Becker</td>
-									<td>Hildegard@uploadcommander.com</td>
-									<td>Admin</td>
-									<td>
-										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-square-edit-outline"></span>
-										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between">
-							<div>&nbsp;</div>
-							<div class="entries text-center ml-xl-5 pl-xl-5 d-flex align-items-end">
-								<p class="mb-0">1042 entries in total</p>
-							</div>						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select class="white_select custom_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<!--========Add a new Admin  MODAL=======-->
-					<div class="modal fade add_new_admin__modal white_modal" id="addNewAdmin_modal"  tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-									<span class="mdi mdi-close"></span>
-								</button>
-								<div class="modal-body pb-4">
-									<h4 class="pb-4 text-center"> Add a new Admin</h4>
-									<form class="newAdmin_inputs d-block">
-										<select class="title_select custom_select gray_select bigger_select">
+						<div class="col-xl-6 mb-4 mb-xl-0">
+							<div class="personal_setting mx-auto mx-xl-0">
+								<h4 class="pb-3">Personal Settings</h4>
+								<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+									<div>
+										<select class="custom_select gray_select bigger_select">
 											<option>Sir or Madam</option>
-											<option>Sir</option>
-											<option>Madam</option>
+											<option value="sir">Sir</option>
+											<option value="sir">Madam</option>
 										</select>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="text" placeholder="First Name">
-											</p>
-											<p>
-												<input type="text" placeholder="Last Name">
-											</p>
+									</div>
+									<div>
+										<div class="switch_icon_small mt-2">
+											<label>
+												<input type="checkbox" class="appearance-none" checked="">
+												<span class="switch_create"></span>
+											</label>
+											<span class="swich_text">Lock this Admin</span>
 										</div>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="email" placeholder="E-Mail Adress">
-											</p>
-											<p>
-												<input type="email" placeholder="Repeat E-Mail Adress">
-											</p>
-										</div>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="text" placeholder="Street">
-											</p>
-											<p>
-												<input type="tel" class="tel_number" placeholder="Number">
-											</p>
-										</div>
-										<div class="d-flex inputs_row postCodeCity_row flex-column flex-sm-row">
-											<p>
-												<input type="tel" class="post_input" placeholder="Post code">
-											</p>
-											<p>
-												<input type="tel" class="city_input" placeholder="City">
-											</p>
-										</div>
-										<div class="role_select_row mt-5">
-											<h6 class="mb-1">
-												Role of this new Admin:
-											</h6>
-											<select class="custom_select gray_select bigger_select">
-												<option>Manager</option>
-												<option>Admin</option>
-												<option>Admin</option>
-											</select>
-											<button type="submit" class="green_lime_btn shadow_hover_1 mt-5">Send an invitation</button>
-										</div>
-									</form>
+									</div>
 								</div>
-								<!--/modal-body-collapse -->
+								<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+									<div>
+										<input type="text" placeholder="First Name">
+									</div>
+									<div>
+										<input type="text" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+									<div>
+										<input type="text" placeholder="Street">
+									</div>
+									<div>
+										<input type="tel" class="number_input" placeholder="Number">
+									</div>
+								</div>														
+								<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+									<div>
+										<input type="tel" class="post_code_input" placeholder="Post code">
+									</div>
+									<div>
+										<input type="text" placeholder="City">
+									</div>
+								</div>
+								<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+									<div>
+										<input type="text" placeholder="Email">
+									</div>
+									<div></div>
+								</div>
 							</div>
-							<!-- /.modal-content -->
 						</div>
-						<!-- /.modal-dialog -->
+						<div class="col-xl-3">
+							<div class="left_sec mx-auto mx-xl-0 mt-4 pt-2">
+								<!-- informations -->
+								<div class="informations mx-auto mx-xl-0">
+									<h4 class="mb-2">Informations</h4>
+									<div class="info_container">
+										<div class="d-flex info_row justify-content-between">
+											<span class="info_title">Register Date: </span>
+											<span class="info_data">20.10.2020</span>
+										</div>
+										<div class="d-flex info_row justify-content-between">
+											<span class="info_title">Last Login: </span>
+											<span class="info_data">15.07.2020 - 15:30</span>
+										</div>
+										<div class="d-flex info_row justify-content-between">
+											<span class="info_title">IP-Address: </span>
+											<span class="info_data">127.0.0.1</span>
+										</div>
+										<div class="d-flex info_row justify-content-between">
+											<span class="info_title">Client: </span>
+											<span class="info_data">Windows 10
+												Mozila Firefox 12.0.0.2</span>
+										</div>
+									</div>
+								</div>
+								<!-- /informations -->
+								<!-- Role -->
+								<div class="role mx-auto mx-xl-0">
+									<h4 class="mt-4">Role: </h4>
+									<!-- language -->
+									<select class="custom_select bigger_select gray_select">
+										<option>Manager</option>
+										<option>Admin</option>
+										<option>Accounts</option>
+									</select>
+								</div>
+								<!-- /Role -->
+							</div>
+						</div>
 					</div>
-					<!--====X==== End of Add a new Admin  MODAL===X====-->				
+					<!-- /top section -->
+					<!-- bottom section -->
+					<div class="row">
+						<!-- bar chart -->
+						<div class="col-xl-8 mb-4 d-flex justify-content-center justify-content-xl-start">
+							<div class="ans_tikit_chart_container chart_container mx-auto mr-xl-0 ml-xl-4 pt-2 ">
+								<div class="d-flex justify-content-between align-items-center pr-3">
+									<h3>Users by period</h3>
+									<div class="chart_buttons d-flex align-items-center">
+										<button class="rotate_btn btn-transparent px-3">
+											<span class="mdi mdi-rotate-right"></span>
+										</button>
+										<span class="selectBtn">
+											<select class="custom_select" id="ansTicketUpdate">
+												<option id="monthAns_ticket" value="monthly" selected>Monthly</option>
+												<option id="yearAns_ticket" value="yearly">Yearly</option>
+												<option id="weekAns_ticket" value="weekly">Weekly</option>
+												<option id="dailyAns_ticket" value="daily">Daily</option>
+											</select>
+										</span>									
+									</div>
+								</div>
+								<div class="ans_tikit_chart_inner">
+									<canvas id="answered_ticket_chart"></canvas>
+								</div>
+							</div>
+						</div>
+						<!-- /bar chart -->
+						<div class="col-xl-4  mb-4 d-flex justify-content-center justify-content-xl-start flex-column flex-xl-row flex-xl-wrap align-content-xl-between">
+							<div class="blue_border tickets d-flex align-items-center mx-auto mx-xl-0">
+								<div class="row align-items-center">
+									<div class="col-5">
+										<div class="icons_area">
+											<span class="mdi mdi-clock-outline"></span>
+										</div>
+									</div>
+									<div class="col-7">
+										<div class="content-area text-center">
+											<h3>Pending Tickets</h3>
+											<span class="numbers d-block">12</span>
+											<p class="mb-0">*Waiting for the 
+												answer from the 
+												supporter</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="blue_border tickets mt-4 d-flex align-items-center mx-auto mx-xl-0">
+								<div class="row align-items-center">
+									<div class="col-5">
+										<div class="icons_area">
+											<span class="mdi mdi-clock-outline"></span>
+										</div>
+									</div>
+									<div class="col-7">
+										<div class="content-area text-center">
+											<h3>Answered tickets</h3>
+											<span class="numbers d-block">945</span>
+											<p class="mb-0">*Waiting for the 
+												answer from the 
+												supporter</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /bottom section -->
 				</div>
 			</div>
 		</div>
-		<!--===X== End of User Adminstration - Administrators ==X===-->
+		<!--===X== End of User Adminstration - Administrators > Max Mustermann ==X===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>

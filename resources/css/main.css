@@ -3073,6 +3073,7 @@ ul.pieLegend li:not(.anjon) {
   background-position: left 27%, left 42%, 38% 78%, 57% 10%, 100% 90%;
   background-repeat: no-repeat;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .accounting_Dashboard .sales_chart_container {
@@ -6853,8 +6854,179 @@ ul.pieLegend li:not(.anjon) {
   width: 100%;
 }
 
+.administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .role_select_row h6 {
+  font-size: 15px;
+}
+
 .administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .role_select_row .green_lime_btn {
   width: 100%;
+}
+
+/***************************/
+/* 30. User Adminstration - Administrators > Max Mustermann*/
+/***************************/
+.admin_max_mustermann .profile_picture {
+  width: 200px;
+  position: relative;
+}
+
+.admin_max_mustermann .profile_picture img.profile_pic {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.admin_max_mustermann .profile_picture .img_edit_btn {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #BCF1FF;
+  text-align: center;
+  line-height: 49px;
+  font-size: 35px;
+  color: #3489B3;
+  position: absolute;
+  bottom: -12px;
+  right: 12px;
+  background-color: #ffffff;
+}
+
+.admin_max_mustermann .personal_setting {
+  max-width: 520px;
+  width: 100%;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row > div {
+  margin-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 50%;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row > div .custom_select {
+  max-width: 150px;
+  width: 100%;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row > div input {
+  width: 100%;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row > div input.number_input {
+  max-width: 84px;
+}
+
+.admin_max_mustermann .personal_setting .inputs_row > div input.post_code_input {
+  max-width: 120px;
+}
+
+.admin_max_mustermann .left_sec {
+  max-width: 249px;
+  width: 100%;
+}
+
+.admin_max_mustermann .informations .info_container {
+  font-size: 12px;
+  background-color: #FAFAFA;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 10px;
+}
+
+.admin_max_mustermann .informations .info_container .info_row {
+  margin: 5px 0px;
+}
+
+.admin_max_mustermann .informations .info_container .info_row:last-child {
+  margin-bottom: 0px;
+}
+
+.admin_max_mustermann .informations .info_container .info_row > span:first-child {
+  width: 45%;
+}
+
+.admin_max_mustermann .informations .info_container .info_row > span:last-child {
+  width: 50%;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container {
+  max-width: 687px;
+  width: 100%;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .custom_select {
+  background-color: #42ADE2;
+  color: #ffffff;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .custom_select .list .option {
+  color: #42ADE2;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .custom_select .list .option:hover {
+  color: #ffffff;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .custom_select::after {
+  border-color: #ffffff;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .ans_tikit_chart_inner {
+  height: 310px;
+}
+
+.admin_max_mustermann .ans_tikit_chart_container .ans_tikit_chart_inner #answered_ticket_chart {
+  width: 100% !important;
+}
+
+.admin_max_mustermann .tickets {
+  min-height: 189px;
+  max-width: 340px;
+  width: 100%;
+}
+
+.admin_max_mustermann .tickets .icons_area {
+  width: 101px;
+  height: 101px;
+  border: 3px solid #BCF1FF;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  line-height: 101px;
+  font-size: 48px;
+  color: #42ADE2;
+}
+
+.admin_max_mustermann .tickets .numbers {
+  font-size: 35px;
+  line-height: 48px;
+}
+
+.admin_max_mustermann .tickets p {
+  font-weight: 300;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /*==============Responsive CSS===============*/
@@ -7089,6 +7261,24 @@ ul.pieLegend li:not(.anjon) {
   .user_admin_name .history_support .historyFilter {
     border-right: 0px solid #BCF1FF;
   }
+  .administrator .add_new_admin__modal.modal .modal-dialog {
+    max-width: 923px;
+  }
+  .administrator .add_new_admin__modal.modal .modal-dialog .close {
+    right: 10px;
+    top: 10px;
+  }
+  .administrator .add_new_admin__modal.modal .modal-dialog .modal-content {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(116, 114, 114, 0.2)), to(rgba(116, 114, 114, 0.2))), url("../img/team.png");
+    background-image: linear-gradient(rgba(116, 114, 114, 0.2), rgba(116, 114, 114, 0.2)), url("../img/team.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  .administrator .add_new_admin__modal.modal .modal-dialog .modal-content .role_select_row h6 {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    color: #000000;
+  }
 }
 
 @media (max-width: 767px) {
@@ -7173,6 +7363,13 @@ ul.pieLegend li:not(.anjon) {
     max-width: 249px;
     width: 100%;
     padding: 0px 0px 28px 0px;
+  }
+  .administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row p {
+    max-width: 100% !important;
+  }
+  .administrator .add_new_admin__modal.modal .modal-dialog .modal-content .modal-body .newAdmin_inputs .inputs_row p input {
+    width: 100%;
+    max-width: 100% !important;
   }
 }
 

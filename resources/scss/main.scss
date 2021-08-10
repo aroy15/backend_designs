@@ -869,6 +869,7 @@
 	background-position: left 27%, left 42%, 38% 78%, 57% 10%, 100% 90%;
 	background-repeat:no-repeat;
 	background-color:$white-main;
+	overflow: hidden;
 	// Sales Period Bar Chart
 	.sales_chart_container{
 		background-color: $white-main;
@@ -4018,6 +4019,9 @@
 						.role_select_row{
 							max-width:250px;
 							width:100%;
+							h6{
+								font-size:15px;
+							}
 							.green_lime_btn{
 								width:100%;
 							}
@@ -4026,6 +4030,141 @@
 				}
 			}
 		}		
+	}
+}
+/***************************/
+/* 30. User Adminstration - Administrators > Max Mustermann*/
+/***************************/
+.admin_max_mustermann{
+	// Profile Picture
+	.profile_picture{
+		$mesurementPic:200px;
+		width:$mesurementPic;					
+		position: relative;
+		img.profile_pic{
+			width:$mesurementPic;
+			height:$mesurementPic;
+			object-fit:cover;
+			@include b-radius(50%);
+		}
+		.img_edit_btn{
+			width:49px;
+			height:49px;
+			@include b-radius(50%);
+			border:1px solid $blue-opacity;
+			text-align:center;
+			line-height:49px;
+			font-size: 35px;
+			color:$blue-normal;
+			position:absolute;
+			bottom:-12px;
+			right:12px;
+			background-color: $white-main;
+		}
+	}
+	// Personal Setting
+	.personal_setting{
+		max-width:520px;
+		width:100%;
+		.inputs_row{
+			margin-left:-8px;
+			margin-right:-8px;
+			> div{
+				margin-bottom:10px;
+				padding-left:8px;
+				padding-right:8px;
+				min-width:50%;
+				.custom_select{
+					max-width:150px;
+					width:100%;
+				}
+				input{
+					width:100%;
+					&.number_input{
+						max-width:84px;
+					}
+					&.post_code_input{
+						max-width:120px;
+					}
+				}
+			}
+		}
+	}
+	.left_sec{
+		max-width:249px;
+		width:100%;
+	}
+	// Informations	
+	.informations{
+		.info_container{
+			font-size:12px;
+			background-color: $gray-light1;
+			@include b-radius(5px);
+			padding:10px;
+			.info_row{
+				margin:5px 0px;
+				&:last-child{
+					margin-bottom:0px;
+				}
+				> span{
+					&:first-child{
+						width:45%;							
+					}
+					&:last-child{
+						width:50%;
+					}
+				}
+			}
+		}
+	}
+	// Answered Tickets Chart
+	.ans_tikit_chart_container{
+		max-width:687px;
+		width:100%;
+		.custom_select{
+			background-color:$blue-light;
+			color:$white-main;
+			.list .option{
+				color:$blue-light;
+				&:hover{
+					color:$white-main;
+				}
+			}
+			&::after{
+				border-color:$white-main;
+			}
+		}
+		.ans_tikit_chart_inner{
+			height:310px;
+			#answered_ticket_chart{
+				width:100% !important;
+			}
+		}
+	}
+	// tickets
+	.tickets{
+		min-height:189px;
+		max-width:340px;
+		width:100%;
+		.icons_area{
+			width:101px;
+			height:101px;
+			border:3px solid $blue-opacity;
+			text-align:center;
+			@include b-radius(50%);
+			line-height: 101px;
+			font-size:48px;
+			color:$blue-light;
+		}
+		.numbers{
+			font-size: 35px;
+			line-height: 48px;
+		}
+		p{
+			font-weight: 300;
+			font-size: 15px;
+			color: rgba(0, 0, 0, 0.5);
+		}
 	}
 }
 /*==============Responsive CSS===============*/

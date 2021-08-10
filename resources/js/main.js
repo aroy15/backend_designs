@@ -611,6 +611,33 @@ $(document).ready(function(){
     
   }
   /*===X====Ticketsystem Detail====X===== */
+
+  /*================== User Adminstration - Administrators > Max Mustermann===========*/
+  /*-----<Profile Pic Upload>-----*/
+  $('#UserImgEditBtn3').on('change', function(event){
+    var userImgLength =  $('#UserImgEditBtn3')[0].files.length;
+    var userImgSrc = URL.createObjectURL(event.target.files[0]);
+    /*Validation for only images */
+    var userImgselectedFile = event.target.files[0];
+    var userImgidxDot = userImgselectedFile.name.lastIndexOf(".") + 1;
+    var userImgextFile = userImgselectedFile.name.substr(userImgidxDot, userImgselectedFile.name.length).toLowerCase();
+    if (userImgextFile === "jpg" || userImgextFile === "jpeg" || userImgextFile === "png" || userImgextFile === "gif" || userImgextFile === "bmp") {
+      if(userImgLength > 0){     
+        $('#userImgPic3').attr('src',userImgSrc);        
+      } 
+    }else{
+      alert("Only jpg, jpeg , png, bmp and gif files are allowed!");      
+    }
+    
+    if(this.files[0].size > 2200000){
+      alert("File is too big! Maximum size is 2 MB");
+      this.value = "";
+      $('#userImgPic3').attr('src','./resources/img/admin.png'); 
+    };
+  
+  });
+  /*-----<Profile Pic Upload/>-------*/
+  /*==========X======== User Adminstration - Administrators > Max Mustermann====X=======*/
 });
 
 
@@ -1470,6 +1497,119 @@ if($('body').find('#usersPeriod_chart').length){
   .trigger( "change" );
 }
 /*========X=======*Ref = #anjon#08 | Users by Period Bar chart ==========X======== */
+
+/*===============*Ref = #anjon#09 | Answered tickets Bar chart ================== */
+if($('body').find('#answered_ticket_chart').length){
+  // Monthly values
+  var monthLabel_ansTikit= ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var monthData_ansTikit = [50, 155, 170,200,260,210,100,220,130,65,240,210];
+  // Yearly values
+  var yearLabel_ansTikit = [2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032];
+  var yearData_ansTikit = [500,1000,700,1500,1100,500,700,600,1100,750,677,980];
+  // Weekly values
+  var weekLabel_ansTikit = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var weekData_ansTikit= [80,100,150,203,167,120,70];
+  // Daily values
+  var dailyLabel_ansTikit = [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+  var dailyData_ansTikit = [10,20,25,50,5,33,12,25,20,25,50,45,51,35,23,17,27,47,19,49,29,37,28,46,50,21,36,48,26,55,44];
+  // Step Size yAxis
+  var stepSizeMonthly_ansTikit= 50;
+  var stepSizeYearly_ansTikit = 250;
+  var stepSizeWeekly_ansTikit= 20;
+  var stepSizeDaily_ansTikit = 10;
+  // Connect with canvas ID
+  var ansTikit_Chart_ID = document.getElementById("answered_ticket_chart");
+  var ansTikit_chart = ansTikit_Chart_ID.getContext('2d');
+
+    var ansTikit_data = {
+      labels:monthLabel_ansTikit,
+      datasets: [{
+          label: 'answered tickets',
+          data: monthData_ansTikit,
+          backgroundColor: '#42ADE2',
+          borderColor: 'transparent',
+          borderWidth: 0,
+          borderRadius:2,
+      }]
+    }
+    
+    var ansTikitChart = new Chart(ansTikit_chart, {
+        type: 'bar',
+        data: ansTikit_data,
+        options: {
+          maintainAspectRatio:false,
+            layout:{
+                padding:10,
+            },
+            plugins:{
+                legend:{
+                  display:false,              
+                }   
+            },   
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize:stepSizeMonthly_ansTikit
+                    },
+                    grid: {
+                      display: false
+                    }
+                },
+                x: {
+                    title: {
+                      display: false,
+                    },               
+                    grid: {
+                      display: false
+                    },
+                    ticks:{
+                      display:true,
+                    }            
+                }
+            },
+            // barThickness: 25,
+            maxBarThickness: 40,
+            minBarLength: 2,
+        },    
+    });  
+
+  $( "select#ansTicketUpdate" )
+  .change(function() {
+    // Monthly
+    $( "select option#monthAns_ticket:selected" ).each(function() {
+      ansTikitChart.data.labels = monthLabel_ansTikit;
+      ansTikitChart.data.datasets[0].data = monthData_ansTikit;
+      ansTikitChart.options.scales.y.ticks.stepSize = stepSizeMonthly_ansTikit;   
+      ansTikitChart.update();
+    });
+
+    // yearly
+    $( "select option#yearAns_ticket:selected" ).each(function() {
+      ansTikitChart.data.labels = yearLabel_ansTikit;
+      ansTikitChart.data.datasets[0].data = yearData_ansTikit;
+      ansTikitChart.options.scales.y.ticks.stepSize = stepSizeYearly_ansTikit;
+      ansTikitChart.update();
+    });
+    // weekly
+    $( "select option#weekAns_ticket:selected" ).each(function() {
+      ansTikitChart.data.labels = weekLabel_ansTikit;
+      ansTikitChart.data.datasets[0].data = weekData_ansTikit;
+      ansTikitChart.options.scales.y.ticks.stepSize = stepSizeWeekly_ansTikit;  
+      ansTikitChart.update();
+      
+    });
+    // Daily
+    $( "select option#dailyAns_ticket:selected" ).each(function() {
+      ansTikitChart.data.labels = dailyLabel_ansTikit;
+      ansTikitChart.data.datasets[0].data = dailyData_ansTikit;
+      ansTikitChart.options.scales.y.ticks.stepSize = stepSizeDaily_ansTikit;
+      ansTikitChart.update();
+    });
+  })
+  .trigger( "change" );
+}
+/*=======X========*Ref = #anjon#09 | Answered tickets Bar chart ==========X======== */
 
 /* ==========*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data ============== */
 /* Connnected with Ref = #anjon#01, #anjon#04*/

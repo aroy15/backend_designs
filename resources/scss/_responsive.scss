@@ -379,6 +379,33 @@
 			}
 		}
 	}
+
+	// 29. User Adminstration - Administrators
+	.administrator{
+		// Add New Admin  Modal
+		.add_new_admin__modal{
+			&.modal .modal-dialog {
+				max-width: 923px;
+				.close{
+					right: 10px;
+					top: 10px;
+				}			
+				.modal-content{
+					background-image: linear-gradient(rgba(116, 114, 114, 0.2), rgba(116, 114, 114, 0.2)),
+									url('../img/team.png');
+					background-repeat:no-repeat;
+					background-position:bottom right;
+					.role_select_row{
+						h6{
+							background-color:rgba(255,255,255,0.5);
+							padding:5px;
+							color:$black-main;
+						}
+					}
+				}
+			}		
+		}
+	}
 }
 @media (max-width: 767px) {
 	#bodyItem{
@@ -498,6 +525,28 @@
 				width:100%;
 				padding:0px 0px 28px 0px;
 			}
+		}
+	}
+	// 29. User Adminstration - Administrators
+	.administrator{
+		.add_new_admin__modal{
+			&.modal .modal-dialog {		
+				.modal-content{
+					.modal-body{
+						.newAdmin_inputs{
+							.inputs_row{
+								p{
+									max-width:100% !important;
+									input{
+										width:100%;
+										max-width:100% !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}		
 		}
 	}
 }
