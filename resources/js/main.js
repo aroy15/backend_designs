@@ -510,10 +510,10 @@ $(document).ready(function(){
 
   /*========= HelpDesk =========== */
   $('.sub_artLink').click(function(){
-    $('#articleEditSec').show();
+    $('.articleEditSec').show();
   });
   $('.deleteBtnRedText').click(function(){
-    $('#articleEditSec').hide();
+    $(this).parents('.articleEditSec').hide();
   })
   /*====X===== HelpDesk =====X====== */
 
