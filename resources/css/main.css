@@ -32,6 +32,8 @@
     27.     Roles & Rights Edit
     28.     Roles & Rights New
     29.     User Adminstration - Administrators
+    30.     User Adminstration - Administrators > Max Mustermann
+    31.     Package Settings
 ==========================================================
 **/
 /***************************/
@@ -7027,6 +7029,38 @@ ul.pieLegend li:not(.anjon) {
   font-weight: 300;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+/***************************/
+/* 31. Package Settings*/
+/***************************/
+.package_settings .table_container table tr th:nth-child(1), .package_settings .table_container table tr td:nth-child(1) {
+  width: 72px;
+}
+
+.package_settings .table_container table tr th:nth-child(2), .package_settings .table_container table tr td:nth-child(2) {
+  width: 45%;
+}
+
+.package_settings .table_container table tr th:nth-child(3), .package_settings .table_container table tr td:nth-child(3) {
+  width: 134px;
+}
+
+.package_settings .table_container table tr th:nth-child(4), .package_settings .table_container table tr td:nth-child(4) {
+  width: 134px;
+}
+
+.package_settings .table_container table tr th:nth-child(5), .package_settings .table_container table tr td:nth-child(5) {
+  width: 117px;
+}
+
+.package_settings .table_container table tr th:nth-child(6), .package_settings .table_container table tr td:nth-child(6) {
+  width: 125px;
+}
+
+.package_settings .table_container table tr td:nth-child(2) {
+  text-align: left;
+  padding-left: 15px;
 }
 
 /*==============Responsive CSS===============*/

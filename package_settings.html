@@ -293,7 +293,7 @@
 			<div class="content-inner">                
 				<div class="pkg_settings_inner px-3 pt-3 pb-1 bg-gray b-r-5">
 					<div class="d-flex justify-content-end">
-						<a href="#" class="blue_btn shadow_hover_1 white_hover px-3">+ Add Package</a>
+						<a href="#" class="blue_btn shadow_hover_1 white_hover px-4">+ Add Package</a>
 					</div>
 					<div class="responsive_alert text-center py-3 text-dark">
 						If table are not fully showing please swipe the table left-right
@@ -303,70 +303,78 @@
 							<thead>
 								<tr>
 									<th>ID</th>
-									<th>Firstname</th>
-									<th>Lastname</th>
-									<th>E-Mail</th>
-									<th>Role</th>
+									<th>Name of the Package</th>
+									<th>monthly</th>
+									<th>yearly</th>
+									<th>Status</th>
 									<th>Functions</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr data-id="1">
 									<td>1</td>
-									<td>Tobias</td>
-									<td>Kersbach-Knorr</td>
-									<td>Tobias@uploadcommander.de </td>
-									<td>Admin</td>
+									<td>TRIAL VERSION</td>
+									<td>-</td>
+									<td>-</td>
+									<td>
+										<span class="green_alert">active</span>
+									</td>
 									<td>
 										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
+										<button data-toggle="modal" data-target="#pkg_tableRow_modal" class="btn-transparent t_shadow_scale_1">
 											<span class="mdi mdi-trash-can-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="2">
 									<td>2</td>
-									<td>Max</td>
-									<td>Mustermann</td>
-									<td>Mustermann@uploadcommander.de</td>
-									<td>Manager</td>
+									<td>STARTER-PACKAGE</td>
+									<td>25,00 €</td>
+									<td>270,00 €</td>
+									<td>
+										<span class="red_alert">inactive</span>
+									</td>
 									<td>
 										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
+										<button data-toggle="modal" data-target="#pkg_tableRow_modal" class="btn-transparent t_shadow_scale_1">
 											<span class="mdi mdi-trash-can-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="3">
 									<td>3</td>
-									<td>Josef</td>
-									<td>Schmidt</td>
-									<td>Schmidt.Josef@uploadcommander.de</td>
-									<td>Supporter</td>
+									<td>INFLUENCER-PACKAGE</td>
+									<td>69,99 €</td>
+									<td>69,99 €</td>
+									<td>
+										<span class="green_alert">active</span>
+									</td>
 									<td>
 										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
+										<button data-toggle="modal" data-target="#pkg_tableRow_modal" class="btn-transparent t_shadow_scale_1">
 											<span class="mdi mdi-trash-can-outline"></span>
 										</button>
 									</td>
 								</tr>
 								<tr data-id="4">
 									<td>4</td>
-									<td>Hildegard</td>
-									<td>Becker</td>
-									<td>Hildegard@uploadcommander.com</td>
-									<td>Admin</td>
+									<td>BUSINESS-PACKAGE</td>
+									<td>108,00 €</td>
+									<td>1149,00 €</td>
+									<td>
+										<span class="green_alert">active</span>
+									</td>
 									<td>
 										<a href="./administrator_max_mustermann.html" class="edit t_shadow_scale_1">
 											<span class="mdi mdi-square-edit-outline"></span>
 										</a>
-										<button class="delete btn-transparent t_shadow_scale_1">
+										<button data-toggle="modal" data-target="#pkg_tableRow_modal" class="btn-transparent t_shadow_scale_1">
 											<span class="mdi mdi-trash-can-outline"></span>
 										</button>
 									</td>
@@ -380,7 +388,7 @@
 							</div>						
 							<div class="show_entries d-flex justify-content-between align-items-center">
 								<span>Show Entries :</span>
-								<select class="white_select custom_select">
+								<select class="custom_select white_select">
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -389,73 +397,40 @@
 							</div>
 						</div>
 					</div>
-					<!--========Add a new Admin  MODAL=======-->
-					<div class="modal fade add_new_admin__modal white_modal" id="addNewAdmin_modal"  tabindex="-1" role="dialog" aria-hidden="true">
+					<!--========Delete Table row  MODAL=======-->
+					<div class="modal fade text-center" id="pkg_tableRow_modal" tabindex="-1" role="dialog" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
+							<div class="modal-content px-lg-4 px-xl-5">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 									<span class="mdi mdi-close"></span>
 								</button>
-								<div class="modal-body pb-4">
-									<h4 class="pb-4 text-center"> Add a new Admin</h4>
-									<form class="newAdmin_inputs d-block">
-										<select class="title_select custom_select gray_select bigger_select">
-											<option>Sir or Madam</option>
-											<option>Sir</option>
-											<option>Madam</option>
-										</select>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="text" placeholder="First Name">
-											</p>
-											<p>
-												<input type="text" placeholder="Last Name">
-											</p>
-										</div>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="email" placeholder="E-Mail Adress">
-											</p>
-											<p>
-												<input type="email" placeholder="Repeat E-Mail Adress">
-											</p>
-										</div>
-										<div class="d-flex inputs_row flex-column flex-sm-row">
-											<p>
-												<input type="text" placeholder="Street">
-											</p>
-											<p>
-												<input type="tel" class="tel_number" placeholder="Number">
-											</p>
-										</div>
-										<div class="d-flex inputs_row postCodeCity_row flex-column flex-sm-row">
-											<p>
-												<input type="tel" class="post_input" placeholder="Post code">
-											</p>
-											<p>
-												<input type="tel" class="city_input" placeholder="City">
-											</p>
-										</div>
-										<div class="role_select_row mt-5">
-											<h6 class="mb-1">
-												Role of this new Admin:
-											</h6>
-											<select class="custom_select gray_select bigger_select">
-												<option>Manager</option>
-												<option>Admin</option>
-												<option>Admin</option>
-											</select>
-											<button type="submit" class="green_lime_btn shadow_hover_1 mt-5">Send an invitation</button>
-										</div>
-									</form>
+								<div class="modal-body pb-4 pt-5">
+									<h4 class="pb-4"> Are you sure?</h4>
+									<p class="mb-0">Deleted content is irrevocably deleted and cannot be restored at a later time.</p>
+									<p class="mb-0">Please select a role to which administrators of the deleted role should be directed.</p>
+									<select class="custom_select big_select mx-auto my-5">
+										<option>SUPPORT-SPECIALIST V2</option>
+										<option>SUPPORT-SPECIALIST V3</option>
+										<option>SUPPORT-SPECIALIST V1</option>
+									</select>
+									<div class="modal-footer mb-0">
+										<button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
+										<button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">
+											<span class="mdi mdi-check-bold"></span> 
+											Yes, sure.
+										</button>
+									</div>
 								</div>
-								<!--/modal-body-collapse -->
+								<!--/modal-body-collapse -->									
+								<div class="modal_bg_icon">
+									<span class="mdi mdi-delete-empty"></span>
+								</div>
 							</div>
 							<!-- /.modal-content -->
 						</div>
 						<!-- /.modal-dialog -->
 					</div>
-					<!--====X==== End of Add a new Admin  MODAL===X====-->				
+					<!--====X==== End of Delete Table row  MODAL===X====-->				
 				</div>
 			</div>
 		</div>
@@ -464,35 +439,6 @@
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
-<!-- start: Delete Modal -->
-<div class="modal fade text-center modalContainer"  tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content px-lg-4 px-xl-5">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				<span class="mdi mdi-close"></span>
-			</button>
-            <div class="modal-body pb-4 pt-5">
-                 <h4 class="pb-4"> Are you sure?</h4>
-				 <p>Deleted content is irrevocably deleted and cannot be restored at a later time.</p>
-            </div>
-            <!--/modal-body-collapse -->
-            <div class="modal-footer mb-4">
-                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-				<button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">
-					<span class="mdi mdi-check-bold"></span> 
-					Yes, sure.
-				</button>
-            </div>
-            <!--/modal-footer-collapse -->
-			<div class="modal_bg_icon">
-				<span class="mdi mdi-delete-empty"></span>
-			</div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
 
     <!-- Script Here -->
     <!-- jQuery -->
