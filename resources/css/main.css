@@ -7063,6 +7063,41 @@ ul.pieLegend li:not(.anjon) {
   padding-left: 15px;
 }
 
+.package_settings_name .width_area {
+  max-width: 928px;
+  width: 100%;
+}
+
+.package_settings_name .pkgName_input {
+  min-width: 233px;
+}
+
+.package_settings_name .limits {
+  max-width: 250px;
+  width: 100%;
+}
+
+.package_settings_name .limits .limits_row {
+  margin: 5px -5px;
+}
+
+.package_settings_name .limits .limits_row > div {
+  margin: 5px;
+  width: calc(50% - 2px);
+}
+
+.package_settings_name .limits .limits_row > div.texts p {
+  font-size: 15px;
+}
+
+.package_settings_name .limits .limits_row > div.texts p.show_info {
+  font-size: 10px;
+}
+
+.package_settings_name .limits .limits_row > div.incrementDcrement {
+  max-width: 122px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/

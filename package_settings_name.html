@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Coupons / Edit Coupons</title>
+    <title>Package Settings - STARTER-PACKAGE</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -280,14 +280,14 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex align-items-center">
-				<a href="./coupons.html" class="back_btn btn-transparent mr-2 shadow_hover_1">
+				<a href="./package_settings.html" class="back_btn btn-transparent mr-2 shadow_hover_1">
 					<span class="mdi mdi-arrow-left"></span>
 				</a>
-				<h2 class="bh_title">Add Coupons / Edit Coupons</h2>
+				<h2 class="bh_title">Package Settings - STARTER-PACKAGE</h2>
 			</div>
 		</div>		
-		<!--=== Add Coupons / Edit Coupons ===-->
-		<div id="couponAddEdit" class="couponAddEdit content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== Package Settings - Starter -Package ===-->
+		<div id="packageSettings_name" class="package_settings_name content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -296,135 +296,251 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="couponAddEdit_inner">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="inputCoupons c_sales mb-5">
-								<p class="inputHeader mb-2">Which code should be used to activate the discount?</p>
-								<input type="text" id="couponCodeInput" placeholder="SALE50">
+				<form class="pkgSettingName_inner">
+					<div id="packageSetNameParent">
+						<div class="width_area blue_border mb-5">	
+							<div class="d-flex justify-content-between mb-3">
+								<div>
+									<input type="text" class="pkgName_input" placeholder="STARTER-PACKAGE">
+								</div>
+								<button type="button"  type="button" id="pkgSetNameBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgSetNameOne" aria-expanded="true" aria-controls="pkgSetNameOne">
+									<span class="mdi mdi-chevron-down"></span>
+								</button>
 							</div>
-							<div class="inputCoupons c_per_ab_am mb-4">
-								<p class="inputHeader mb-2">How should the discount be applied?</p>
-								<div class="d-flex justify-content-between">
-									<div>
-										<label class="round-radiobox d-block mb-3">
-											<input type="radio" id="coup_percentage" class="input-radio" name="percentAbsolute" checked>
-											<span class="radio_iconarea d-flex">
-											  <span class="check_radioicon"></span>
-											  <span class="radio_text pl-2">Percentage</span>
-											</span>              
-										</label>
-										<label class="round-radiobox d-block mb-3">
-											<input id="coup_absolute" type="radio" class="input-radio" name="percentAbsolute">
-											<span class="radio_iconarea d-flex">
-											  <span class="check_radioicon"></span>
-											  <span class="radio_text pl-2">Absolute</span>
-											</span>              
-										</label>
-									</div>
-									<div class="c_amount">
-										<p class="inputHeader mb-1">Amount</p>
-										<input type="text" id="coup_discountInput" placeholder="10 %">
-									</div> 
-								</div>
-							</div>
-							<div class="inputCoupons c_setDate">
-								<p class="inputHeader mb-2">This discount code will be valid from:</p>
-								<div class="dateTime_area mb-3">
-									<div class="calendarIcon">
-										<span class="mdi mdi-calendar-month-outline"></span>
-									</div>
-									<input type="text" class="dateTimePicker" id="discountFromDateInput" placeholder="08/11/2020 8:00 am">
-								</div>
-								<p class="inputHeader mb-2 ">until:</p>
-								<div class="dateTime_area mb-5 pb-4">
-									<div class="calendarIcon">
-										<span class="mdi mdi-calendar-month-outline"></span>
-									</div>
-									<input type="text" class="dateTimePicker" id="discountUntilDateInput" placeholder="09/11/2020 8:00 am">
-								</div>
-							</div>
-							<div class="inputCoupons c_pakcage">
-								<p class="inputHeader mb-2">Code can only be redeemed for the following product:</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="selectArea mb-3 mr-4">
-										<select id="coup_pkgSelect" class="custom_select gray_select bigger_select" disabled="disabled">
-											<option>STARTER-Package</option>
-											<option>Golden-Package</option>
-											<option>Platinum-Package</option>
-										</select>
-									</div>
-									<div class="checkBoxArea mb-3 mt-2">
-										<label class="checkbox-container">
-											All Product
-											<input id="couponAllProductCheck" type="checkbox" checked="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="inputCoupons c_maxNum d-flex justify-content-between align-items-center mt-4">
-								<p class="inputHeader mb-2 pr-2">Maximum number of times the coupon can be used:</p>
-								<!-- <input type="text" id="coup_maxTimesInput" placeholder="100" class="mb-2"> -->
-								<div class="incrementDcrement">
-									<div class="increDecre_inner">
-										<input type="number" class="inputNumber" placeholder="100" data-max="2500">
-										<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-										<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<button type="button"  id="coup_addEditPrintBtn" class="print-icon shadow_hover_half text-blue d-block ml-auto mb-4">
-								<span class="mdi mdi-printer"></span>
-							</button>
-							<div id="coupPreviewPrint_2" class="blue_border coupon_info mx-auto">
-								<div class="couponIcon text-center text-blue">
-									<span class="mdi mdi-ticket-percent"></span>
-								</div>
-								<div class="logo text-center mx-auto">
-									<img src="./resources/img/Logo-UC.png" class="img-fluid" alt="site logo">
-								</div>
-								<h3 class="text-center text-uppercase py-3">Your Coupon</h3>
-								<div class="couponUpdate text-center mx-auto mb-4">
-									<div class="discount">
-										<span id="discountNum">10</span>
-										<span id="disSymbol">%</span>
-									</div>
-									<p class="mb-0">discount with the code</p>
-									<div class="text-uppercase discountCode" id="discountCode" >SALE50</div>
-								</div>
-								<div class="validProduct text-center">
-									<p>Valid for product: <span class="ml-3 text-red-light" id="couponPackage">STARTER-Package</span></p>
-								</div>
-								<div class="fromUntilTime mx-auto mb-3">
-									<div class="d-flex justify-content-between">
-										<span class="cdtTitle">From:</span>
-										<span id="fromDateTime" class="text-blue">11.08.2020 - 8:00am</span>
-									</div>
-									<div class="d-flex justify-content-between">
-										<span class="cdtTitle">Until:</span>
-										<span id="untilDateTime" class="text-blue">11.08.2020 - 8:00am</span>
-									</div>
-								</div>
-								<div class="qr-code-area b-r-5">
-									<div class="d-flex align-items-center">
-										<p class="qr-code-text mb-0">Please note that this voucher is only redeemable in the aforementioned, limited period on the aforementioned product. A combination with other discount promotions is excluded.</p>
-										<div class="qr-code ml-2">
-											<img src="./resources/img/QR-code.png" class="img-fluid" alt="qr code">
+	
+							<div id="pkgSetNameOne" class="collapse show" aria-labelledby="pkgSetNameBtn_1" data-parent="#packageSetNameParent">
+								<div class="row justify-content-between">
+									<!-- software box image -->
+									<div class="col-lg-4">
+										<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
+											<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
 										</div>
 									</div>
-									<span class="d-block qrFootText text-right pt-1">GENERATED BY Noah Kaczmarek ON: 15.08.2020 - 09:30</span>
+									<!-- /software box Image -->
+									<!-- Pricing -->
+									<div class="col-lg-4">
+										<div class="limits mx-auto mx-lg-0 mb-5 mb-xl-0">											
+											<h3 class="mb-4">Pricing</h3>
+											<div class="limits_row d-flex align-items-center">
+												<div class="texts text-center">
+													<p class="mb-0">Monthly Price</p>
+												</div>
+												<div class="incrementDcrement">
+													<div class="increDecre_inner">
+														<input type="number" class="inputNumber" placeholder="25,00" data-max="2500">
+														<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+														<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+													</div>
+												</div>
+											</div>
+											<div class="limits_row d-flex align-items-center">
+												<div class="texts text-center">
+													<p class="mb-0">Yearly Price</p>
+												</div>
+												<div class="incrementDcrement">
+													<div class="increDecre_inner">
+														<input type="number" class="inputNumber" placeholder="270,00" data-max="27000">
+														<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+														<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /Pricing -->
+									<!-- Limits -->
+									<div class="col-lg-4">
+										<div class="limits mx-auto mx-lg-0">
+											<h3 class="mb-4">Limits</h3>
+											<div class="limits_row d-flex align-items-center">
+												<div class="texts text-center">
+													<p class="mb-0">Max. Accounts</p>
+												</div>
+												<div class="incrementDcrement">
+													<div class="increDecre_inner">
+														<input type="number" class="inputNumber" placeholder="20" data-max="20">
+														<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+														<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+													</div>
+												</div>
+											</div>
+											<div class="limits_row d-flex align-items-center">
+												<div class="texts text-center">
+													<p class="mb-0">Max. Subusers</p>
+												</div>
+												<div class="incrementDcrement">
+													<div class="increDecre_inner">
+														<input type="number" class="inputNumber" placeholder="30" data-max="30">
+														<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+														<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+													</div>
+												</div>
+											</div>
+											<div class="limits_row d-flex align-items-center">
+												<div class="texts text-center">
+													<p class="mb-0">Max. Storage</p>
+												</div>
+												<div class="incrementDcrement">
+													<div class="increDecre_inner">
+														<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
+														<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+														<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/Limits -->
+									
+									<!-- Features -->
+									<div class="col-12">
+										<div class="features">
+											<h3 class="mb-4">Features</h3>
+											<div class="row pl-3">
+												<div class="col-lg-3 col-sm-6">
+													<label class="checkbox-container mb-4">
+														Auto Like
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Follow
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Unfollow
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Like
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Follow
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Unfollow
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+												</div>
+												<div class="col-lg-3 col-sm-6">
+													<label class="checkbox-container mb-4">
+														Picture Editor
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Comment
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Repost
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Picture Editor
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Comment
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Repost
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+												</div>
+												<div class="col-lg-3 col-sm-6">
+													<label class="checkbox-container mb-4">
+														Auto DM
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Answer
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Another Feature
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto DM
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Answer
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Another Feature
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+												</div>
+												<div class="col-lg-3 col-sm-6">
+													<label class="checkbox-container mb-4">
+														Auto DM
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Answer
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Another Feature
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto DM
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Auto Answer
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+													<label class="checkbox-container mb-4">
+														Another Feature
+														<input type="checkbox" checked>
+														<span class="checkmark"></span>
+													</label>
+												</div>																	
+											</div>
+										</div>
+									</div>
+									<!-- /Features -->
 								</div>
 							</div>
-							<button type="button"  class="green_lime_btn d-block shadow_hover_1 ml-auto mt-5">Save Change</button>
 						</div>
 					</div>
-				</div>	
+					<!-- Save Settings button -->
+					<div class="d-flex justify-content-end">
+						<button type="submit" class="green_lime_btn shadow_hover_1">Save Settings</button>
+					</div>
+				</form>	
 			</div>
 		</div>
-		<!--=== End of Add Coupons / Edit Coupons ===-->
+		<!--=== Package Settings - Starter -Package ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
