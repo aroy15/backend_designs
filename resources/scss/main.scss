@@ -716,14 +716,14 @@
 					width: calc(100% - 160px);
 					.sys_bar{
 						width:100%;
-						@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.25));
+						@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.05));
 						height:8px;
 						@include b-radius(5px);
 						margin-top: 9px;
 						.sys_inner_bar{
 							background-color: #E2AC42;
 							height:8px;
-							@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.25));
+							@include box-shadow(inset 0px 4px 4px rgba(0, 0, 0, 0.05));
 							@include b-radius(5px 0px 0px 5px);
 							&.cpu{
 								background-color: #1BD12D;
@@ -3489,7 +3489,7 @@
 				object-fit: cover;
 			}
 			.msg__info{
-				font-size: 8px;
+				font-size: 10px;
 				color: rgba(0, 0, 0, 0.25);
 				display:block;
 				margin-top:2px;
@@ -3512,12 +3512,12 @@
 				display:block;
 				resize:none;
 				padding:0px 5px 0px 0px;
-				height:50px;
-				min-height:50px;
+				height:150px;
+				min-height:100px;
 			}
 			.buttons_area{
 				label{
-					font-size:30px;
+					font-size:25px;
 					color:rgba(0, 0, 0, 0.25);
 					&:hover{
 						color:$gray-7070;
@@ -3527,7 +3527,7 @@
 					color: $white;
 					background-color: $blue-light;
 					@include b-radius(5px);
-					padding:14px 60px;
+					padding:8px 37px;
 				}
 			}
 			.modal .modal-dialog .modal-content {
@@ -3557,11 +3557,16 @@
 				}
 			}
 		}
+		.uploaded__attached__text span {
+			color: $gray;
+			font-size: 12px;
+			padding-right: 5px;
+		}
 	}
 	// Customer Information
 	.customer__info{
 		padding:10px 15px;
-		max-width:345px;
+		max-width:400px;
 		width:100%;
 		.tikit__no{
 			font-size:24px;
@@ -3602,11 +3607,11 @@
 					font-weight:300;
 				}
 				.cus_nameInfo{
-					font-size:9px;
+					font-size:13px;
 					font-weight:200;
 					color:$black-main;
 					.mdi{
-						font-size:11px;
+						font-size:13px;
 						position:relative;
 						top:2px;
 						color:$blue-bold;
@@ -3659,7 +3664,7 @@
 					}
 					td{
 						font-weight: 200;
-						font-size:8px;
+						font-size:10px;
 						line-height:11px;
 					}
 				}
@@ -3668,7 +3673,7 @@
 				max-width:172px;
 				width:100%;
 				> p{
-					font-size:10px;
+					font-size:12px;
 					color:$black-main;
 					font-weight: 300;				
 				}
@@ -3708,7 +3713,7 @@
 				flex-basis: 50%;
 				width: 50%;
 				padding: 3px;
-				font-size: 10px;
+				font-size: 12px;
 				line-height: 14px;
 				color:$blue-bold;
 				background-color:transparent;
@@ -4234,7 +4239,47 @@
 			}
 		}
 	}
-	
+}
+/***************************/
+/* 32. Inform All Customers*/
+/***************************/
+.inform_customers{
+	.inputs_area{
+		max-width:397px;
+		width:100%;
+		input{
+			width:100%;
+		}
+	}
+	.sendExample{
+		max-width:233px;
+		width:100%;
+		min-height:135px;
+		background-color: $gray-light1;
+		padding:10px;
+		text-align:center;
+		overflow: hidden;
+    	overflow-wrap: break-word;
+		p{
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 19px;
+			margin-bottom:5px;
+			color: #707070;
+		}
+		.icon_btn_blue{
+			padding: 7px 21px;
+			.mdi{
+				font-size: 19px;
+    			padding-right: 5px;
+			}
+		}
+	}
+	.inform_cus_text_editor{
+		max-width:847px;
+		width:100%;
+		background-color: $gray-light1;
+	}
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

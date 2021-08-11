@@ -516,6 +516,10 @@ textarea::placeholder {
   min-width: 134px;
 }
 
+.red_gradient_btn:hover {
+  color: #ffffff;
+}
+
 .id_tab {
   background-color: #42ADE2;
   color: #ffffff;
@@ -2837,11 +2841,11 @@ ul.pieLegend li:not(.anjon) {
 
 .dashboardItem .server_info .system_items .sys_item .sys_bar_container .sys_bar {
   width: 100%;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
   height: 8px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -2854,11 +2858,11 @@ ul.pieLegend li:not(.anjon) {
 .dashboardItem .server_info .system_items .sys_item .sys_bar_container .sys_bar .sys_inner_bar {
   background-color: #E2AC42;
   height: 8px;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 5px 0px 0px 5px;
   -webkit-border-radius: 5px 0px 0px 5px;
   -moz-border-radius: 5px 0px 0px 5px;
@@ -6226,7 +6230,7 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .ticketsystem_detail .chat__container .msg__row .msg__info {
-  font-size: 8px;
+  font-size: 10px;
   color: rgba(0, 0, 0, 0.25);
   display: block;
   margin-top: 2px;
@@ -6257,12 +6261,12 @@ ul.pieLegend li:not(.anjon) {
   display: block;
   resize: none;
   padding: 0px 5px 0px 0px;
-  height: 50px;
-  min-height: 50px;
+  height: 150px;
+  min-height: 100px;
 }
 
 .ticketsystem_detail .chat__container .chat_input_area .buttons_area label {
-  font-size: 30px;
+  font-size: 25px;
   color: rgba(0, 0, 0, 0.25);
 }
 
@@ -6278,7 +6282,7 @@ ul.pieLegend li:not(.anjon) {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 14px 60px;
+  padding: 8px 37px;
 }
 
 .ticketsystem_detail .chat__container .chat_input_area .modal .modal-dialog .modal-content {
@@ -6313,9 +6317,15 @@ ul.pieLegend li:not(.anjon) {
   line-height: 2px;
 }
 
+.ticketsystem_detail .chat__container .uploaded__attached__text span {
+  color: #A3A3A3;
+  font-size: 12px;
+  padding-right: 5px;
+}
+
 .ticketsystem_detail .customer__info {
   padding: 10px 15px;
-  max-width: 345px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -6380,13 +6390,13 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .ticketsystem_detail .customer__info .cust_profile_info .main__info .cus_nameInfo {
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 200;
   color: #000000;
 }
 
 .ticketsystem_detail .customer__info .cust_profile_info .main__info .cus_nameInfo .mdi {
-  font-size: 11px;
+  font-size: 13px;
   position: relative;
   top: 2px;
   color: #115A8A;
@@ -6458,7 +6468,7 @@ ul.pieLegend li:not(.anjon) {
 
 .ticketsystem_detail .customer__info .ticket__history table tr td {
   font-weight: 200;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 11px;
 }
 
@@ -6468,7 +6478,7 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .ticketsystem_detail .customer__info .ticket__history .change_supporter > p {
-  font-size: 10px;
+  font-size: 12px;
   color: #000000;
   font-weight: 300;
 }
@@ -6527,7 +6537,7 @@ ul.pieLegend li:not(.anjon) {
       flex-basis: 50%;
   width: 50%;
   padding: 3px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 14px;
   color: #115A8A;
   background-color: transparent;
@@ -7096,6 +7106,52 @@ ul.pieLegend li:not(.anjon) {
 
 .package_settings_name .limits .limits_row > div.incrementDcrement {
   max-width: 122px;
+}
+
+/***************************/
+/* 32. Inform All Customers*/
+/***************************/
+.inform_customers .inputs_area {
+  max-width: 397px;
+  width: 100%;
+}
+
+.inform_customers .inputs_area input {
+  width: 100%;
+}
+
+.inform_customers .sendExample {
+  max-width: 233px;
+  width: 100%;
+  min-height: 135px;
+  background-color: #FAFAFA;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.inform_customers .sendExample p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #707070;
+}
+
+.inform_customers .sendExample .icon_btn_blue {
+  padding: 7px 21px;
+}
+
+.inform_customers .sendExample .icon_btn_blue .mdi {
+  font-size: 19px;
+  padding-right: 5px;
+}
+
+.inform_customers .inform_cus_text_editor {
+  max-width: 847px;
+  width: 100%;
+  background-color: #FAFAFA;
 }
 
 /*==============Responsive CSS===============*/

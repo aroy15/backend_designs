@@ -197,6 +197,9 @@
 	@include b-radius(5px);
 	font-size: 15px;
 	min-width:134px;
+	&:hover{
+		color:$white-main;
+	}
 }
 .id_tab {
     background-color: $blue-light;

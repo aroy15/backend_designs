@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Roles & Rights</title>
+    <title>Inform All Customers</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -29,14 +29,14 @@
 		  <span class="hambarger"></span>
 		  </a>
 		  <button type="button"  class="h-icons full-screen-wrap bg-transparent" onclick="$(document).toggleFullScreen()">
-		  <span class="top-left fs-bar"></span>
-		  <span class="top-left-horiz fs-bar"></span>
-		  <span class="top-right fs-bar"></span>
-		  <span class="top-right-horiz fs-bar"></span>
-		  <span class="bottom-left fs-bar"></span>
-		  <span class="bottom-left-horiz fs-bar"></span>
-		  <span class="bottom-right fs-bar"></span>
-		  <span class="bottom-right-horiz fs-bar"></span>
+			<span class="top-left fs-bar"></span>
+			<span class="top-left-horiz fs-bar"></span>
+			<span class="top-right fs-bar"></span>
+			<span class="top-right-horiz fs-bar"></span>
+			<span class="bottom-left fs-bar"></span>
+			<span class="bottom-left-horiz fs-bar"></span>
+			<span class="bottom-right fs-bar"></span>
+			<span class="bottom-right-horiz fs-bar"></span>
 		  </button>    
 		  <a href="index.html" class="site-logo">
     		<span class="logo-text">Backend</span>
@@ -278,11 +278,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">Backend Roles & Rights</h2>
+				<h2 class="bh_title">Inform All Customers</h2>
 			</div>
 		</div>		
-		<!--======= Backend Roles & Rights Edit ========-->
-		<div id="rolesRightsEdit" class="roles_rights_edit content-container p-0 p-md-4 pt-lg-0 b-r-8">
+		<!--===  Inform All Customers ===-->
+		<div id="informCustomers" class="inform_customers content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -290,194 +290,54 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner pt-4">
-				<form class="roles_rightsEdit_inner">
-					<!--======Role & Informations====== -->
-					<div class="role_informations d-flex flex-column flex-sm-row flex-wrap blue_border mx-auto mt-3 mb-5">
-						<!-- Name of the role -->
-						<div class="name_role flex-grow-1">
-							<h5>Name of the Role:</h5>
-							<p><input type="text" class="roleInput d-block w-100" placeholder="Manager"></p>
-							<p class="mb-0"><textarea class="roleDesc d-block w-100" placeholder="Enter a description of the Role here"></textarea></p>
-						</div>
-						<!-- End of Name of the role -->
-						<!-- Informations -->
-						<div class="name_info">
-							<h5>Informations</h5>
-							<div class="infoInner b-r-5 bg-gray">
-								<div class="d-flex flex-wrap info_row">
-									<span class="p-2">Registered by:</span>
-									<span class="p-2">Noah Kaczmarek</span>
-								</div>
-								<div class="d-flex flex-wrap info_row">
-									<span class="p-2">Registered at:</span>
-									<span class="p-2">10.07.2020 - 15:30</span>
-								</div>
-								<div class="d-flex flex-wrap info_row">
-									<span class="p-2">Members:</span>
-									<span class="p-2">B</span>
-								</div>
-								<div class="d-flex flex-wrap info_row">
-									<span class="p-2">Permissions:</span>
-									<span class="p-2">20 / 140</span>
-								</div>
+			<div class="content-inner">                
+				<form class="informCustomers_inner p-0 p-lg-3">
+					<div class="d-flex justify-content-center justify-content-between flex-column flex-lg-row">
+						<div class="inputs_area mb-3 mr-lg-4 ">
+							<div class="inputs_row mb-4">
+								<h6>Subject of this E-Mail</h6>
+								<input type="email" placeholder="[NEW] ToS Update | UploadCommander.de">
+							</div>
+							<div class="inputs_row senderName mb-4">
+								<h6>Sender of this Mail</h6>
+								<input type="text" placeholder="Emely Gurrero | UploadCommander.de">
+							</div>
+						</div>	
+						<!-- send an expample -->
+						<div class="mb-4 mx-lg-3">
+							<div class="sendExample ml-xl-3 b-r-5">
+								<h6>Send an example</h6>
+								<p>When you click on "Send Mail", 
+									a sample e-mail will be sent 
+									to service@uploadcommander.de. </p>
+									<button type="button"  class="icon_btn_blue shadow_hover_1">
+										<span class="mdi mdi-email"></span>
+										<span>Send Mail</span>	
+									</button>
 							</div>
 						</div>
-						<!-- End of Informations -->
-					</div>
-					<!--===X==End of Role & Informations==X== -->
-
-					<!--=======Permissions============-->
-					<div class="permissions bg-gray p-3 b-r-5">						
-						<h3 class="mb-1">Permissions</h3>
-						<p class="mb-4 pl-3 pb-2">You Edit the permission of the Role <span class="text-red-light">Manager</span></p>
-						<div class="row">
-							<div class="col-12">
-								<div class="permission_checkboxes">
-									<div class="row pl-3">
-										<div class="col-lg-6 mb-5 mb-xl-0 col-xl-3">
-											<label class="checkbox-container mb-4">
-												Roles & Rights
-												<input type="checkbox">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												Edit own Backend User
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												User adminstration (Admin)
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												User adminstration (Customer)
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												Invoices
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												Customer Affiliate
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-										</div>
-										<div class="col-lg-6 mb-5 mb-xl-0 col-xl-3">
-											<label class="checkbox-container mb-4">
-												Cupons See
-												<input type="checkbox">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												open Ticketsystem
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												Answer Tickets
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												Open Ticket Archive
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit Helpdesk
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-										</div>
-										<div class="col-lg-6 mb-5 mb-xl-0 col-xl-3">
-											<label class="checkbox-container mb-4">
-												edit FAQ
-												<input type="checkbox">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit System Settings
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												etdit E-Mail Settings
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit E-Mail Templates
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit API-Settings
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit API-Settings
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-										</div>
-										<div class="col-lg-6 mb-5 mb-xl-0 col-xl-3">
-											<label class="checkbox-container mb-4">
-												edit Languages
-												<input type="checkbox">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												edit affilliate-Settings
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												other Backend Permission
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												other Backend Permission
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												other Backend Permission
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-											<label class="checkbox-container mb-4">
-												other Backend Permission
-												<input type="checkbox" checked="">
-												<span class="checkmark"></span>
-											</label>
-										</div>																	
-									</div>
-								</div>
-							</div>
-						</div>
+						<!--/send an expample -->
 					</div>
 
-					<!-- save settings -->
-					<div class="d-flex justify-content-end mt-5">
-						<button type="submit"  class="green_lime_btn shadow_hover_1">Save Settings</button>
-					</div>					
-					<!-- /save Settings -->
-					<!--=====X====Permissions====X====-->
-				</form> 
+					<div class="inform_cus_text_editor mb-5">
+						<img src="./resources/img/editior.png" class="w-100" alt="editor image">
+					</div>
+
+					<!-- Footer Buttons -->
+					<div class="emailSaveBtn d-flex justify-content-center justify-content-xl-end">
+						<a href="./index.html" class="red_gradient_btn text-center shadow_hover_1">Cancel</a>
+						<button type="submit"  class="green_lime_btn shadow_hover_1 ml-3">Save Settings</button>
+					</div>
+					<!--/Footer Buttons -->
+				</form>
 			</div>
 		</div>
-		<!--===X===== End of Backend Roles & Rights Edit ==X====-->
+		<!--=== End of Inform All Customers ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
+
 
     <!-- Script Here -->
     <!-- jQuery -->

@@ -82,7 +82,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">			
 			<div class="modal-body py-4 px-3 mx-auto">
-				<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					<span class="mdi mdi-close"></span>
 				</button>
 				<h4 class="text-center mb-4 pt-3">Change your Profile-Picture!</h4>
@@ -111,7 +111,7 @@
 			</div>
 			<!--/modal-body-collapse -->
 			<div class="modal-footer flex-column">
-				<button type="button"  type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
+				<button type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
 			</div>
 			<!--/modal-footer-collapse -->
 		</div>
@@ -183,7 +183,7 @@
 			</div>
 			<!-- Inform Customers -->
 			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<a href="./inform_customers.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 						<span class="carret-icon icon-mdi"></span>
 						<span class="nav_item_title">Inform Customers</span>
 						<span class="icon-mdi">
@@ -279,7 +279,10 @@
 	<main id="mainItem" class="main_item p-2 main_item-active">
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex">
+			<div class="d-flex align-items-center">
+				<a href="./ticketSystem.html" class="back_btn btn-transparent mr-2 shadow_hover_1">
+					<span class="mdi mdi-arrow-left"></span>
+				</a>
 				<h2 class="bh_title">Ticketsystem Detail</h2>
 			</div>
 		</div>		
@@ -295,7 +298,6 @@
 			<div class="content-inner">
 				<div class="row">
 					<div class="col-xl-7 mb-5 mb-xl-0">
-						<a href="./ticketSystem.html" class="d-block text-blue mb-3"><span class="position-relative bottom-2 pr-1">&#8592;</span>Back</a>
 						<div class="tikit__number mb-5 text-center">TICKET #DEM-10956</div>
 						<!-- Chat Container -->
 						<div class="chat__container mx-auto mx-xl-0">
@@ -410,7 +412,7 @@
 														</select>
 
 														<div class="modal-footer">
-															<button type="button"  type="button" class="saveBtn">Save this Status</button>
+															<button type="button" class="saveBtn">Save this Status</button>
 														</div>
 													</div>
 													<!--/modal-body-collapse -->													
@@ -425,6 +427,9 @@
 										<!--=========/End of Ticket Status Modal=====-->
 									</div>
 								</div>
+							</div>
+							<div class="uploaded__attached__text mt-2">
+								
 							</div>
 							<!-- /Chat Input -->
 						</div>
@@ -521,7 +526,9 @@
 							<div class="cus__attachments mt-3">
 								<h4>Attachments</h4>
 								<div id="cus_Attached_Text" class="cus__attachedText cus_gallery d-flex flex-wrap">
-									
+									<a class="c_file_links" href="./resources/img/profile-pic.png">screen.png</a>
+									<a class="c_file_links" href="./resources/pdf/Invoice-002-R1.pdf">Invoice-002-R1.pdf</a>
+									<a class="c_file_links" href="./resources/video/video-screencast.webm">video-screencast.webm</a>
 								</div>
 								<!-- start: PDF preview Modal -->
 								<div class="modal fade text-center uploaded_PDF_Modal modal-transparent pdf___viewer" tabindex="-1" role="dialog" aria-hidden="true">

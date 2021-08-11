@@ -83,7 +83,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">			
 			<div class="modal-body py-4 px-3 mx-auto">
-				<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					<span class="mdi mdi-close"></span>
 				</button>
 				<h4 class="text-center mb-4 pt-3">Change your Profile-Picture!</h4>
@@ -112,7 +112,7 @@
 			</div>
 			<!--/modal-body-collapse -->
 			<div class="modal-footer flex-column">
-				<button type="button"  type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
+				<button type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
 			</div>
 			<!--/modal-footer-collapse -->
 		</div>
@@ -184,7 +184,7 @@
 			</div>
 			<!-- Inform Customers -->
 			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<a href="./inform_customers.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 						<span class="carret-icon icon-mdi"></span>
 						<span class="nav_item_title">Inform Customers</span>
 						<span class="icon-mdi">
@@ -302,7 +302,7 @@
 					<div class="d-flex flex-wrap justify-content-between flex-wrap">
 						<ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
 							<li class="nav-item mr-3 mb-3">
-							  <a class="nav-link shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
+							  <a class="nav-link active shadow_hover_1" id="pills-userMngMnt-tab" data-toggle="pill" href="#pills-userMngMnt" role="tab" aria-controls="pills-userMngMnt" aria-selected="true">User Management</a>
 							</li>
 							<li class="nav-item mr-3 mb-3">
 							  <a class="nav-link shadow_hover_1" id="pills-packagePayment-tab" data-toggle="pill" href="#pills-packagePayment" role="tab" aria-controls="pills-packagePayment" aria-selected="false">Package & Payment</a>
@@ -311,7 +311,7 @@
 							  <a class="nav-link shadow_hover_1" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Support & History</a>
 							</li>
 							<li class="nav-item mb-3">
-							  <a class="nav-link active shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
+							  <a class="nav-link shadow_hover_1" id="pills-documentation-tab" data-toggle="pill" href="#pills-documentation" role="tab" aria-controls="pills-documentation" aria-selected="false">Documentation</a>
 							</li>
 						</ul>
 						<!-- Follow up Mail -->
@@ -323,8 +323,8 @@
 							  <!--Follow Up mail modal popup -->
 							  <div id="followUpMailModal" class="modal fade followUpMailModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered">
-									<div class="modal-content">
-										<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									<form class="modal-content">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 											<span class="mdi mdi-close"></span>
 										</button>
 										<div class="modal-body px-xl-5">
@@ -377,14 +377,14 @@
 										</div>
 										<!--/modal-body-collapse -->
 										<div class="modal-footer flex-column">
-											<button type="button"  type="button" class="sendMailBtn green_lime_btn scale_hover_half" data-dismiss="modal">Send it to the Customer</button>
+											<button type="submit" class="sendMailBtn green_lime_btn scale_hover_half" data-dismiss="modal">Send it to the Customer</button>
 											<div class="foot_text">
 												<p class="mt-3 mb-0">Please note that the salutation and footer of this email are automatically added by the system.
 													Please keep your message as short as possible.</p>
 											</div>
 										</div>
 										<!--/modal-footer-collapse -->
-									</div>
+									</form>
 									<!-- /.modal-content -->
 								</div>
 								<!-- /.modal-dialog -->
@@ -398,572 +398,576 @@
 					<!--======= Tab Contents ======-->
 					<div class="tab-content" id="pills-tabContent">
 						<!-- ====== User Management ========= -->
-						<div class="user_management tab-pane fade" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
-							<div id="userManagementAll" class="user_management_inner">
-								<!--===Account Settings=== -->
-								<div class="account_settings blue_border mb-5">	
-									<div class="d-flex justify-content-between">
-										<h3 class="mb-4">Account Settings</h3>
-										<button type="button"  id="userMngMntBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntOne" aria-expanded="true" aria-controls="userMngMntOne">
-											<span class="mdi mdi-chevron-down"></span>
-										</button>
+						<div class="user_management tab-pane fade show active" id="pills-userMngMnt" role="tabpanel" aria-labelledby="pills-userMngMnt-tab">
+							<form>
+								<div id="userManagementAll" class="user_management_inner">
+									<!--===Account Settings=== -->
+									<div class="account_settings blue_border mb-5">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">Account Settings</h3>
+											<button type="button"  id="userMngMntBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntOne" aria-expanded="true" aria-controls="userMngMntOne">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>
+	
+										<div id="userMngMntOne" class="collapse show pl-4" aria-labelledby="userMngMntBtn_1" data-parent="#userManagementAll">
+											<div class="row">
+												<div class="col-xl-2 d-flex flex-column align-items-center mb-5 mb-xl-0">
+													<div class="profile_picture">
+														<img id="userImgPic" class="profile_pic2" src="./resources/img/profile-pic.png" alt="profile pic">
+														<!-- Image Edit Button -->
+														<label class="img_edit_btn shadow_hover_1 cursor-pointer">
+															<input type="file" id="UserImgEditBtn"  class="appearance-none" accept="image/*">
+															<span class="mdi mdi-square-edit-outline"></span>
+														</label>
+														<!--/Image Edit Button -->														
+													</div>
+													<div class="switch_icon_small mt-3">
+														<label>
+															<input type="checkbox" class="appearance-none" checked>
+															<span class="switch_create"></span>
+														</label>
+														<span class="swich_text">Locked</span>
+													</div>
+												</div>
+												<div class="col-xl-6 mb-4 mb-xl-0">
+													<div class="personal_setting">
+														<h4 class="pb-3">Personal Settings</h4>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<select class="gray_select custom_select">
+																	<option>Sir or Madam</option>
+																	<option value="sir">Sir</option>
+																	<option value="sir">Madam</option>
+																</select>
+															</div>
+															<div>
+																<input type="text" placeholder="Company">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="First Name">
+															</div>
+															<div>
+																<input type="text" placeholder="Last Name">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Street">
+															</div>
+															<div>
+																<input type="text" placeholder="Number">
+															</div>
+														</div>														
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Post code">
+															</div>
+															<div>
+																<input type="text" placeholder="City">
+															</div>
+														</div>
+														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+															<div>
+																<input type="text" placeholder="Email">
+															</div>
+															<div>
+																<input type="text" placeholder="Phone">
+															</div>
+														</div>
+														<!-- Switch boxes -->
+														<div class="switch_boxes mt-4">
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none">
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+															<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+																<div class="switch_icon_small mt-1">
+																	<label>
+																		<input type="checkbox" class="appearance-none">
+																		<span class="switch_create"></span>
+																	</label>
+																	<span class="swich_text">Email notifications</span>
+																</div>
+															</div>
+														</div>
+														<!-- /Switch boxes -->
+													</div>
+												</div>
+												<div class="col-xl-4">
+													<!-- Interface Settings -->
+													<div class="interface_settings mx-auto mx-xl-0">
+														<h4 class="mb-4">Interface Settings</h4>
+														<!-- language -->
+														<select class="gray_select custom_select">
+															<option>Language</option>
+															<option value="english">English</option>
+															<option value="german">German</option>
+															<option value="bengali">Bengali</option>
+															<option value="dutch">Dutch</option>
+														</select>
+														<!-- Time Zone -->
+														<select class="gray_select custom_select">
+															<option>Time Zone</option>
+															<option value="(GMT+2)"> Germany (GMT+2)</option>
+															<option value="(GMT-4)">NY, USA (GMT-4)</option>
+															<option value="(GMT+6)">Bangladesh (GMT+6)</option>
+														</select>
+														<!-- Time Format -->
+														<select class="gray_select custom_select">
+															<option>Time Format</option>
+															<option value="24-hour">24-hour</option>
+															<option value="12-hour">12-hour</option>
+														</select>
+														<!-- Time Format -->
+														<select class="gray_select custom_select mb-4">
+															<option>Data Format</option>
+															<option value="Format-1">Format-1</option>
+															<option value="Format-2">Format-2</option>
+														</select>														
+													</div>
+													<!-- /Interface Settings -->
+													<!-- informations -->
+													<div class="informations mx-auto mx-xl-0">
+														<h4 class="mb-2">Informations</h4>
+														<div class="info_container">
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Register Date: </span>
+																<span class="info_data">20.10.2020</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Last Login: </span>
+																<span class="info_data">15.07.2020 - 15:30</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Client: </span>
+																<span class="info_data">Windows 10
+																	Mozila Firefox 12.0.0.2</span>
+															</div>
+														</div>
+													</div>
+													<!-- /informations -->
+												</div>
+											</div>
+											<!-- Reset Password & Login -->
+											<div class="d-flex flex-wrap justify-content-center justify-content-xl-end mt-4 ">
+												<button type="button"  class="resetBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Reset Password</button>
+												<button type="button"  class="loginBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Login into the Customer</button>
+											</div>
+											<!-- /Reset Password & Login -->
+										</div>
 									</div>
-
-									<div id="userMngMntOne" class="collapse show pl-4" aria-labelledby="userMngMntBtn_1" data-parent="#userManagementAll">
-										<div class="row">
-											<div class="col-xl-2 d-flex flex-column align-items-center mb-5 mb-xl-0">
-												<div class="profile_picture">
-													<img id="userImgPic" class="profile_pic2" src="./resources/img/profile-pic.png" alt="profile pic">
-													<!-- Image Edit Button -->
-													<label class="img_edit_btn shadow_hover_1 cursor-pointer">
-														<input type="file" id="UserImgEditBtn"  class="appearance-none" accept="image/*">
-														<span class="mdi mdi-square-edit-outline"></span>
-													</label>
-													<!--/Image Edit Button -->														
-												</div>
-												<div class="switch_icon_small mt-3">
-													<label>
-														<input type="checkbox" class="appearance-none" checked>
-														<span class="switch_create"></span>
-													</label>
-													<span class="swich_text">Locked</span>
-												</div>
-											</div>
-											<div class="col-xl-6 mb-4 mb-xl-0">
-												<div class="personal_setting">
-													<h4 class="pb-3">Personal Settings</h4>
-													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-														<div>
-															<select class="gray_select custom_select">
-																<option>Sir or Madam</option>
-																<option value="sir">Sir</option>
-																<option value="sir">Madam</option>
-															</select>
-														</div>
-														<div>
-															<input type="text" placeholder="Company">
-														</div>
-													</div>
-													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-														<div>
-															<input type="text" placeholder="First Name">
-														</div>
-														<div>
-															<input type="text" placeholder="Last Name">
-														</div>
-													</div>
-													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-														<div>
-															<input type="text" placeholder="Street">
-														</div>
-														<div>
-															<input type="text" placeholder="Number">
-														</div>
-													</div>														
-													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-														<div>
-															<input type="text" placeholder="Post code">
-														</div>
-														<div>
-															<input type="text" placeholder="City">
-														</div>
-													</div>
-													<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-														<div>
-															<input type="text" placeholder="Email">
-														</div>
-														<div>
-															<input type="text" placeholder="Phone">
-														</div>
-													</div>
-													<!-- Switch boxes -->
-													<div class="switch_boxes mt-4">
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-														</div>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none">
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-														</div>
-														<div class="inputs_row d-flex flex-column flex-sm-row justify-content-between">
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-															<div class="switch_icon_small mt-1">
-																<label>
-																	<input type="checkbox" class="appearance-none">
-																	<span class="switch_create"></span>
-																</label>
-																<span class="swich_text">Email notifications</span>
-															</div>
-														</div>
-													</div>
-													<!-- /Switch boxes -->
-												</div>
-											</div>
-											<div class="col-xl-4">
-												<!-- Interface Settings -->
-												<div class="interface_settings mx-auto mx-xl-0">
-													<h4 class="mb-4">Interface Settings</h4>
-													<!-- language -->
-													<select class="gray_select custom_select">
-														<option>Language</option>
-														<option value="english">English</option>
-														<option value="german">German</option>
-														<option value="bengali">Bengali</option>
-														<option value="dutch">Dutch</option>
-													</select>
-													<!-- Time Zone -->
-													<select class="gray_select custom_select">
-														<option>Time Zone</option>
-														<option value="(GMT+2)"> Germany (GMT+2)</option>
-														<option value="(GMT-4)">NY, USA (GMT-4)</option>
-														<option value="(GMT+6)">Bangladesh (GMT+6)</option>
-													</select>
-													<!-- Time Format -->
-													<select class="gray_select custom_select">
-														<option>Time Format</option>
-														<option value="24-hour">24-hour</option>
-														<option value="12-hour">12-hour</option>
-													</select>
-													<!-- Time Format -->
-													<select class="gray_select custom_select mb-4">
-														<option>Data Format</option>
-														<option value="Format-1">Format-1</option>
-														<option value="Format-2">Format-2</option>
-													</select>														
-												</div>
-												<!-- /Interface Settings -->
-												<!-- informations -->
-												<div class="informations mx-auto mx-xl-0">
-													<h4 class="mb-2">Informations</h4>
-													<div class="info_container">
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Register Date: </span>
-															<span class="info_data">20.10.2020</span>
-														</div>
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Last Login: </span>
-															<span class="info_data">15.07.2020 - 15:30</span>
-														</div>
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Client: </span>
-															<span class="info_data">Windows 10
-																Mozila Firefox 12.0.0.2</span>
-														</div>
-													</div>
-												</div>
-												<!-- /informations -->
+									<!--===end of Account Settings=== -->
+									<!--===Subuser Management=== -->
+									<div class="subuser_mngmnt blue_border">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">
+												Subuser Management 
+												<span class="d-inline-block ml-4">3/5</span>
+											</h3>
+											<button type="button"  id="userMngMntBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntTwo" aria-expanded="true" aria-controls="userMngMntTwo">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="userMngMntTwo" class="collapse show pl-4" aria-labelledby="userMngMntBtn_2" data-parent="#userManagementAll">
+											<div class="table_container">
+												<table class="w-100 text-center p-3">
+													<thead>
+														<tr>
+															<th>Name</th>
+															<th>Register Date</th>
+															<th>Mail</th>
+															<th>Status</th> 
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Adrian Schroeder</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>AdrianSchroed@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="2">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Anna Delgado</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="3">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Max Lawrence</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+														<tr data-id="4">
+															<td>
+																<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
+																<a href="#" class="pl-2 d-inline-block scale_hover_half">Liza Meyers</a>
+															</td>
+															<td>10.07.2020</td>
+															<td>EmelyGuerrero@mail.com</td>
+															<td>
+																<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
+																	<label>
+																		<input type="checkbox" class="appearance-none" checked>
+																		<span class="switch_create"></span>
+																	</label>
+																</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
 											</div>
 										</div>
-										<!-- Reset Password & Login -->
-										<div class="d-flex flex-wrap justify-content-center justify-content-xl-end mt-4 ">
-											<button type="button"  class="resetBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Reset Password</button>
-											<button type="button"  class="loginBtn b-r-5 shadow_hover_1 mx-2 mx-xl-3 mb-4">Login into the Customer</button>
-										</div>
-										<!-- /Reset Password & Login -->
 									</div>
+									<!--===end of Subuser Management=== -->
 								</div>
-								<!--===end of Account Settings=== -->
-								<!--===Subuser Management=== -->
-								<div class="subuser_mngmnt blue_border">	
-									<div class="d-flex justify-content-between">
-										<h3 class="mb-4">
-											Subuser Management 
-											<span class="d-inline-block ml-4">3/5</span>
-										</h3>
-										<button type="button"  id="userMngMntBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#userMngMntTwo" aria-expanded="true" aria-controls="userMngMntTwo">
-											<span class="mdi mdi-chevron-down"></span>
-										</button>
-									</div>	
-									<div id="userMngMntTwo" class="collapse show pl-4" aria-labelledby="userMngMntBtn_2" data-parent="#userManagementAll">
-										<div class="table_container">
-											<table class="w-100 text-center p-3">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Register Date</th>
-														<th>Mail</th>
-														<th>Status</th> 
-													</tr>
-												</thead>
-												<tbody>
-													<tr data-id="1">
-														<td>
-															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-															<a href="#" class="pl-2 d-inline-block scale_hover_half">Adrian Schroeder</a>
-														</td>
-														<td>10.07.2020</td>
-														<td>AdrianSchroed@mail.com</td>
-														<td>
-															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-															</span>
-														</td>
-													</tr>
-													<tr data-id="2">
-														<td>
-															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-															<a href="#" class="pl-2 d-inline-block scale_hover_half">Anna Delgado</a>
-														</td>
-														<td>10.07.2020</td>
-														<td>EmelyGuerrero@mail.com</td>
-														<td>
-															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-															</span>
-														</td>
-													</tr>
-													<tr data-id="3">
-														<td>
-															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-															<a href="#" class="pl-2 d-inline-block scale_hover_half">Max Lawrence</a>
-														</td>
-														<td>10.07.2020</td>
-														<td>EmelyGuerrero@mail.com</td>
-														<td>
-															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-															</span>
-														</td>
-													</tr>
-													<tr data-id="4">
-														<td>
-															<span class="mdi mdi-arrow-right-thin-circle-outline mt-2"></span>
-															<a href="#" class="pl-2 d-inline-block scale_hover_half">Liza Meyers</a>
-														</td>
-														<td>10.07.2020</td>
-														<td>EmelyGuerrero@mail.com</td>
-														<td>
-															<span class="switch_icon_small w-100 d-flex justify-content-center text-left mt-2">
-																<label>
-																	<input type="checkbox" class="appearance-none" checked>
-																	<span class="switch_create"></span>
-																</label>
-															</span>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
+								<!-- Save Setting Button for user management-->
+								<div class="mt-5 d-flex justify-content-end">
+									<button type="submit"  class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
 								</div>
-								<!--===end of Subuser Management=== -->
-							</div>
-							<!-- Save Setting Button for user management-->
-							<div class="mt-5 d-flex justify-content-end">
-								<button type="button"  class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
-							</div>
-							<!--/Save Setting Button for user management -->
+								<!--/Save Setting Button for user management -->
+							</form>
 						</div>
 						<!--===X=== end of User Management ====X====== -->
 						<!--========== Package & Payment ==============-->
 						<div class="package_payment tab-pane fade" id="pills-packagePayment" role="tabpanel" aria-labelledby="pills-packagePayment-tab">
-							<div id="packagePaymentAll" class="pkgPayment_inner">
-								<!--===Package, Limits & Features === -->
-								<div class="pkg_lmt_feturs blue_border mb-5">	
-									<div class="d-flex justify-content-between">
-										<h3 class="mb-4">Packages</h3>
-										<button type="button"  id="pkgPaymentBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentOne" aria-expanded="true" aria-controls="pkgPaymentOne">
-											<span class="mdi mdi-chevron-down"></span>
-										</button>
-									</div>
-
-									<div id="pkgPaymentOne" class="collapse show" aria-labelledby="pkgPaymentBtn_1" data-parent="#packagePaymentAll">
-										<div class="row justify-content-between">
-											<!-- software box image -->
-											<div class="col-lg-4">
-												<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
-													<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
-												</div>
-											</div>
-											<!-- /software box Image -->
-											<!-- Package Information -->
-											<div class="col-lg-4">
-												<div class="info_container mx-auto mt-4 mb-5 mb-lg-0">
-													<select class="gray_select bigger_select custom_select w-100 mb-1">
-														<option>Starter Package</option>
-														<option>Golden Package</option>
-														<option>Platinum Package</option>
-													</select>
-													<div class="info_inner">
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Last Payment: </span>
-															<span class="info_data">14.09.2020</span>
-														</div>
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Duration: </span>
-															<span class="info_data text-blue">Monthly</span>
-														</div>
-														<div class="d-flex info_row justify-content-between">
-															<span class="info_title">Payment: </span>
-															<span class="info_data text-blue">Manual</span>
-														</div>
-													</div>
-													<div class="expireDate mt-3">
-														<p class="text-red-light mb-1">Expire Date:</p>
-														<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
+							<form>
+								<div id="packagePaymentAll" class="pkgPayment_inner">
+									<!--===Package, Limits & Features === -->
+									<div class="pkg_lmt_feturs blue_border mb-5">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">Packages</h3>
+											<button type="button"  id="pkgPaymentBtn_1" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentOne" aria-expanded="true" aria-controls="pkgPaymentOne">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>
+	
+										<div id="pkgPaymentOne" class="collapse show" aria-labelledby="pkgPaymentBtn_1" data-parent="#packagePaymentAll">
+											<div class="row justify-content-between">
+												<!-- software box image -->
+												<div class="col-lg-4">
+													<div class="pkg_img_wrapper mx-auto ml-lg-0 mr-lg-0">
+														<img src="./resources/img/softwarebox.png" class="img-fluid" alt="software box pic">
 													</div>
 												</div>
-											</div>
-											<!-- /Package Information -->
-											<!-- Limits -->
-											<div class="col-lg-4">
-												<div class="limits mx-auto mr-lg-0">
-													<h3 class="mb-4">Limits</h3>
-													<div class="limits_row d-flex align-items-center">
-														<div class="texts text-center">
-															<p class="mb-0">Max. Accounts</p>
-															<p class="mb-0 show_info text-blue">Already in use: 3 </p>
+												<!-- /software box Image -->
+												<!-- Package Information -->
+												<div class="col-lg-4">
+													<div class="info_container mx-auto mt-4 mb-5 mb-lg-0">
+														<select class="gray_select bigger_select custom_select w-100 mb-1">
+															<option>Starter Package</option>
+															<option>Golden Package</option>
+															<option>Platinum Package</option>
+														</select>
+														<div class="info_inner">
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Last Payment: </span>
+																<span class="info_data">14.09.2020</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Duration: </span>
+																<span class="info_data text-blue">Monthly</span>
+															</div>
+															<div class="d-flex info_row justify-content-between">
+																<span class="info_title">Payment: </span>
+																<span class="info_data text-blue">Manual</span>
+															</div>
 														</div>
-														<div class="incrementDcrement">
-															<div class="increDecre_inner">
-																<input type="number" class="inputNumber" placeholder="20" data-max="20">
-																<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+														<div class="expireDate mt-3">
+															<p class="text-red-light mb-1">Expire Date:</p>
+															<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
+														</div>
+													</div>
+												</div>
+												<!-- /Package Information -->
+												<!-- Limits -->
+												<div class="col-lg-4">
+													<div class="limits mx-auto mr-lg-0">
+														<h3 class="mb-4">Limits</h3>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Accounts</p>
+																<p class="mb-0 show_info text-blue">Already in use: 3 </p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="20" data-max="20">
+																	<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
+															</div>
+														</div>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Subusers</p>
+																<p class="mb-0 show_info text-blue">Already in use: 5</p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="30" data-max="30">
+																	<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
+															</div>
+														</div>
+														<div class="limits_row d-flex align-items-center">
+															<div class="texts text-center">
+																<p class="mb-0">Max. Storage</p>
+																<p class="mb-0 show_info text-blue">Already in use: 100MB</p>
+															</div>
+															<div class="incrementDcrement">
+																<div class="increDecre_inner">
+																	<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
+																	<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
+																	<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+																</div>
 															</div>
 														</div>
 													</div>
-													<div class="limits_row d-flex align-items-center">
-														<div class="texts text-center">
-															<p class="mb-0">Max. Subusers</p>
-															<p class="mb-0 show_info text-blue">Already in use: 5</p>
-														</div>
-														<div class="incrementDcrement">
-															<div class="increDecre_inner">
-																<input type="number" class="inputNumber" placeholder="30" data-max="30">
-																<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+												</div>
+												<!--/Limits -->
+												
+												<!-- Features -->
+												<div class="col-12">
+													<div class="features">
+														<h3 class="mb-4">Features</h3>
+														<div class="row pl-3">
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto Like
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Follow
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Unfollow
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
 															</div>
-														</div>
-													</div>
-													<div class="limits_row d-flex align-items-center">
-														<div class="texts text-center">
-															<p class="mb-0">Max. Storage</p>
-															<p class="mb-0 show_info text-blue">Already in use: 100MB</p>
-														</div>
-														<div class="incrementDcrement">
-															<div class="increDecre_inner">
-																<input type="number" class="inputNumber" placeholder="1000" data-max="1000">
-																<button type="button"  class="increDecreBtn incrementBtn" data-increment-derement="+"></button>
-																<button type="button"  class="increDecreBtn decrementBtn" data-increment-derement="-"></button>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Picture Editor
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Comment
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Repost
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
 															</div>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto DM
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Answer
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Another Feature
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="col-lg-3 col-sm-6">
+																<label class="checkbox-container mb-4">
+																	Auto DM
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Auto Answer
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+																<label class="checkbox-container mb-4">
+																	Another Feature
+																	<input type="checkbox" checked>
+																	<span class="checkmark"></span>
+																</label>
+															</div>																	
 														</div>
 													</div>
 												</div>
+												<!-- /Features -->
 											</div>
-											<!--/Limits -->
-											
-											<!-- Features -->
-											<div class="col-12">
-												<div class="features">
-													<h3 class="mb-4">Features</h3>
-													<div class="row pl-3">
-														<div class="col-lg-3 col-sm-6">
-															<label class="checkbox-container mb-4">
-																Auto Like
-																<input type="checkbox">
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Follow
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Unfollow
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-														</div>
-														<div class="col-lg-3 col-sm-6">
-															<label class="checkbox-container mb-4">
-																Picture Editor
-																<input type="checkbox">
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Comment
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Repost
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-														</div>
-														<div class="col-lg-3 col-sm-6">
-															<label class="checkbox-container mb-4">
-																Auto DM
-																<input type="checkbox">
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Answer
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Another Feature
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-														</div>
-														<div class="col-lg-3 col-sm-6">
-															<label class="checkbox-container mb-4">
-																Auto DM
-																<input type="checkbox">
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Auto Answer
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-															<label class="checkbox-container mb-4">
-																Another Feature
-																<input type="checkbox" checked>
-																<span class="checkmark"></span>
-															</label>
-														</div>																	
-													</div>
-												</div>
-											</div>
-											<!-- /Features -->
 										</div>
 									</div>
+									<!--===X=== End of Package, Limits & Features ===X===-->
+									<!--===Payment History=== -->
+									<div id="paymentHistory" class="payment_history blue_border">	
+										<div class="d-flex justify-content-between">
+											<h3 class="mb-4">
+												Payment History
+											</h3>
+											<button type="button"  id="pkgPaymentBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentTwo" aria-expanded="true" aria-controls="pkgPaymentTwo">
+												<span class="mdi mdi-chevron-down"></span>
+											</button>
+										</div>	
+										<div id="pkgPaymentTwo" class="collapse show" aria-labelledby="pkgPaymentBtn_2" data-parent="#packagePaymentAll">
+											<div class="table_container">
+												<table class="w-100 text-center p-3">
+													<thead>
+														<tr>
+															<th>Invoice Number</th>
+															<th>Invoice Date</th>
+															<th>Amount</th>
+															<th>Payment</th> 
+															<th>Function</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>PayPal</td>
+															<td>
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="2">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>Credit Card</td>
+															<td>
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="3">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>PayPal</td>
+															<td>
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+														<tr data-id="4">
+															<td>Invoice-002-R1</td>
+															<td>10.07.2020</td>
+															<td>20.99€</td>
+															<td>Giropay</td>
+															<td>
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																	<span class="mdi mdi-file-document-outline"></span>
+																</button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- start: PDF preview Modal -->
+										<div class="modal fade text-center modalContainerPaymentHistory modal-transparent pdf___viewer"  tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered">
+												<div class="modal-content pdfViewContainer">
+													<p class="pdfName text-center">invoice.pdf</p>
+													<div id="canvasPaymentHistory"></div>					
+												</div>
+												<!-- /.modal-content -->
+											</div>
+											<!-- /.modal-dialog -->
+										</div>
+										<!-- /End PDF preview Modal -->
+									</div>
+									<!--===end of Payment History=== -->
 								</div>
-								<!--===X=== End of Package, Limits & Features ===X===-->
-								<!--===Payment History=== -->
-								<div id="paymentHistory" class="payment_history blue_border">	
-									<div class="d-flex justify-content-between">
-										<h3 class="mb-4">
-											Payment History
-										</h3>
-										<button type="button"  id="pkgPaymentBtn_2" class="collapseExpandBtn shadow_hover_1" data-toggle="collapse" data-target="#pkgPaymentTwo" aria-expanded="true" aria-controls="pkgPaymentTwo">
-											<span class="mdi mdi-chevron-down"></span>
-										</button>
-									</div>	
-									<div id="pkgPaymentTwo" class="collapse show" aria-labelledby="pkgPaymentBtn_2" data-parent="#packagePaymentAll">
-										<div class="table_container">
-											<table class="w-100 text-center p-3">
-												<thead>
-													<tr>
-														<th>Invoice Number</th>
-														<th>Invoice Date</th>
-														<th>Amount</th>
-														<th>Payment</th> 
-														<th>Function</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr data-id="1">
-														<td>Invoice-002-R1</td>
-														<td>10.07.2020</td>
-														<td>20.99€</td>
-														<td>PayPal</td>
-														<td>
-															<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																<span class="mdi mdi-file-document-outline"></span>
-															</button>
-														</td>
-													</tr>
-													<tr data-id="2">
-														<td>Invoice-002-R1</td>
-														<td>10.07.2020</td>
-														<td>20.99€</td>
-														<td>Credit Card</td>
-														<td>
-															<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																<span class="mdi mdi-file-document-outline"></span>
-															</button>
-														</td>
-													</tr>
-													<tr data-id="3">
-														<td>Invoice-002-R1</td>
-														<td>10.07.2020</td>
-														<td>20.99€</td>
-														<td>PayPal</td>
-														<td>
-															<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																<span class="mdi mdi-file-document-outline"></span>
-															</button>
-														</td>
-													</tr>
-													<tr data-id="4">
-														<td>Invoice-002-R1</td>
-														<td>10.07.2020</td>
-														<td>20.99€</td>
-														<td>Giropay</td>
-														<td>
-															<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
-																<span class="mdi mdi-file-document-outline"></span>
-															</button>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<!-- start: PDF preview Modal -->
-									<div class="modal fade text-center modalContainerPaymentHistory modal-transparent pdf___viewer"  tabindex="-1" role="dialog" aria-hidden="true">
-										<div class="modal-dialog modal-dialog-centered">
-											<div class="modal-content pdfViewContainer">
-												<p class="pdfName text-center">invoice.pdf</p>
-												<div id="canvasPaymentHistory"></div>					
-											</div>
-											<!-- /.modal-content -->
-										</div>
-										<!-- /.modal-dialog -->
-									</div>
-									<!-- /End PDF preview Modal -->
+								<!-- Save Setting Button for Package & payment-->
+								<div class="mt-5 d-flex justify-content-end">
+									<button type="submit"  class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
 								</div>
-								<!--===end of Payment History=== -->
-							</div>
-							<!-- Save Setting Button for Package & payment-->
-							<div class="mt-5 d-flex justify-content-end">
-								<button type="button"  class="green_lime_btn m-2 shadow_hover_1">Save Settings</button>
-							</div>
-							<!--/Save Setting Button for Package & payment -->
+								<!--/Save Setting Button for Package & payment -->
+							</form>
 						</div>
 						<!--======X==== End of Package & Payment =======X=======-->
 						<!--=============== Support & History================-->
@@ -1240,7 +1244,7 @@
 												</thead>
 												<tbody>
 													<tr data-id="1">
-														<td><a href="#">UCS-10957</a></td>
+														<td><a href="./ticketSystem.html">UCS-10957</a></td>
 														<td>10.07.2020</td>
 														<td>Password Reset</td>
 														<td>Tobias Schmidt-Tudl</td>
@@ -1249,7 +1253,7 @@
 														</td>
 													</tr>
 													<tr data-id="2">
-														<td><a href="#">UCS-10957</a></td>
+														<td><a href="./ticketSystem.html">UCS-10957</a></td>
 														<td>10.07.2020</td>
 														<td>Invoice Problem</td>
 														<td>Tobias Schmidt-Tudl</td>
@@ -1258,7 +1262,7 @@
 														</td>
 													</tr>
 													<tr data-id="3">
-														<td><a href="#">UCS-10957</a></td>
+														<td><a href="./ticketSystem.html">UCS-10957</a></td>
 														<td>10.07.2020</td>
 														<td>Thornton</td>
 														<td>Tobias Schmidt-Tudl</td>
@@ -1276,7 +1280,7 @@
 						</div>
 						<!--========X======= End of Support & History========X========-->
 						<!--===========Documentation==================-->
-						<div class="documentation history_support tab-pane fade show active" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
+						<div class="documentation history_support tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-documentation-tab">
 							<div class="docmentation_inner blue_border">
 								<div class="d-flex flex-wrap justify-content-between">
 									<h3 class="mb-4 pr-3">Documentation</h3>
@@ -1286,8 +1290,8 @@
 										<!-- Add Entry Dcoumentation | Modal -->
 										<div id="addEntryToDoc" class="modal fade text-center addEntryToDoc" tabindex="-1" role="dialog" aria-hidden="true">
 											<div class="modal-dialog modal-dialog-centered">
-												<div class="modal-content px-lg-4">
-													<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+												<form id="addEntry_doc_form"  class="modal-content px-lg-4">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 														<span class="mdi mdi-close"></span>
 													</button>
 													<div class="modal-body pb-4 pt-5">
@@ -1308,13 +1312,13 @@
 													</div>
 													<!--/modal-body-collapse -->
 													<div class="modal-footer flex-wrap mb-4 p-0 px-2">
-														<button type="button"  type="button" id="docSaveBtn" class="saveBtn" data-dismiss="modal">Save this Entry</button>
+														<button type="submit" id="docSaveBtn" class="saveBtn" data-dismiss="modal">Save this Entry</button>
 													</div>
 													<!--/modal-footer-collapse -->
 													<div class="modal_bg_icon">
 														<span class="mdi mdi-file-edit"></span>
 													</div>
-												</div>
+												</form>
 												<!-- /.modal-content -->
 											</div>
 											<!-- /.modal-dialog -->
@@ -1627,7 +1631,7 @@
 											<div id="showEmailModal" class="modal showEmailModal fade" tabindex="-1" role="dialog" aria-hidden="true">
 												<div class="modal-dialog modal-dialog-centered">
 													<div class="modal-content py-3 px-3 px-xl-5">
-														<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 															<span class="mdi mdi-close"></span>
 														</button>
 														<h4 class="text-center">Show Email</h4>

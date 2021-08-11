@@ -339,7 +339,7 @@ $(document).ready(function(){
   $('#docTextarea').bind('keyup click mouseover',function(){
     $('#liveEntryChar').text($(this).val().length);
   });
-  $('#docSaveBtn').click(function(){
+  $('#docSaveBtn').click(function(vent){
     var getDocSelectValues = $('.docImportancySelect').val();
     var docItemBorderColorClass;
     if(getDocSelectValues === 'green'){
@@ -518,11 +518,7 @@ $(document).ready(function(){
   /*====X===== HelpDesk =====X====== */
 
   /*=======Ticketsystem Detail========= */
-  /*----<Text area Validation>------*/
-  $('#chatTextArea').bind('keyup mouseout mouseover',function(){
-    $(this).val($(this).val().replace(/(<([^>]+)>)/ig,"").replace(/\r\n|\r|\n/g,""));
-  })
-  /*----</Text area Validation>------*/
+
   /*-------<tag Name Changer Plugin>------- */
   $.fn.renameTag = function(replaceWithTag){
     this.each(function(){
@@ -591,24 +587,20 @@ $(document).ready(function(){
 
   if($('body').find('#cusMailAttachment').length){
     $('#cusMailAttachment').on('change', function(event){
-      $('#cus_Attached_Text').empty();
+      $('.uploaded__attached__text').empty();
       var newUplodChat =  $('#cusMailAttachment');
       var newChatLengths = newUplodChat[0].files.length;
       var newChatItems = newUplodChat[0].files;
-      var newfrag = "";
-  
+      var newfrag_2="";
+      
       if(newChatLengths > 0){
         for(var i = 0; i < newChatLengths; i++){
           var newUploadName = newChatItems[i].name;        
-          var newChatFileSrc = URL.createObjectURL(event.target.files[i]);
-          newfrag += "<a class='c_file_links' data-typed='image' href='"+ newChatFileSrc +"'>" + newUploadName + "</a>"
+          newfrag_2 += "<span>"+newUploadName+", </span>"
         }
-        $('#cus_Attached_Text').append(newfrag);            
+        $('.uploaded__attached__text').append(newfrag_2);    
       }
-      /* All file finder program in this function */
-      uploadedFileViewer();
     });
-    
   }
   /*===X====Ticketsystem Detail====X===== */
 

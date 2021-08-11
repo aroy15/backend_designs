@@ -80,7 +80,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">			
 			<div class="modal-body py-4 px-3 mx-auto">
-				<button type="button"  type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					<span class="mdi mdi-close"></span>
 				</button>
 				<h4 class="text-center mb-4 pt-3">Change your Profile-Picture!</h4>
@@ -109,7 +109,7 @@
 			</div>
 			<!--/modal-body-collapse -->
 			<div class="modal-footer flex-column">
-				<button type="button"  type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
+				<button type="button" class="green_lime_btn scale_hover_half" data-dismiss="modal">Save Changes</button>
 			</div>
 			<!--/modal-footer-collapse -->
 		</div>
@@ -181,7 +181,7 @@
 			</div>
 			<!-- Inform Customers -->
 			<div class="side_nav_item mb-3">
-				<a href="#" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<a href="./inform_customers.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 						<span class="carret-icon icon-mdi"></span>
 						<span class="nav_item_title">Inform Customers</span>
 						<span class="icon-mdi">
@@ -291,7 +291,7 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">                
-				<div class="systemSettings_inner p-0 p-sm-3">
+				<form class="systemSettings_inner p-0 p-sm-3">
 					<div class="row">
 						<div class="col-lg-7">
 							<h3>Meta Informations</h3>
@@ -336,31 +336,31 @@
 								<div id="tagKeyReceiver" class="tags-area mt-2">
 									<span class="tag-item alert alert-dismissible fade show">
 									  <span class="tag-content">Help</span>
-									  <button type="button"  type="button" class="close" data-dismiss="alert" aria-label="close">
+									  <button type="button" class="close" data-dismiss="alert" aria-label="close">
 										<span aria-hidden="true">×</span>
 									 </button>
 									</span>
 									<span class="tag-item alert alert-dismissible fade show">
 									  <span class="tag-content">Login</span>
-									  <button type="button"  type="button" class="close" data-dismiss="alert" aria-label="close">
+									  <button type="button" class="close" data-dismiss="alert" aria-label="close">
 										<span aria-hidden="true">×</span>
 									 </button>
 									</span>
 									<span class="tag-item alert alert-dismissible fade show">
 										<span class="tag-content">Subuser</span>
-										<button type="button"  type="button" class="close" data-dismiss="alert" aria-label="close">
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
 										  <span aria-hidden="true">×</span>
 									   </button>
 									</span>
 									<span class="tag-item alert alert-dismissible fade show">
 										<span class="tag-content">Password</span>
-										<button type="button"  type="button" class="close" data-dismiss="alert" aria-label="close">
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
 										  <span aria-hidden="true">×</span>
 									   </button>
 									</span>
 									<span class="tag-item alert alert-dismissible fade show">
 										<span class="tag-content">Renew Password</span>
-										<button type="button"  type="button" class="close" data-dismiss="alert" aria-label="close">
+										<button type="button" class="close" data-dismiss="alert" aria-label="close">
 										  <span aria-hidden="true">×</span>
 									   </button>
 									</span>
@@ -439,10 +439,15 @@ REF: {followmail.referencenumber} 				@UploadCommander 2021"></textarea>
 								</div>
 							</div>
 						</div>
-						<div class="colg-lg-4"></div>
+						<div class="col-lg-4"></div>
 					</div>
 					<!--/Footer of the Follow-Up E-Mails -->
-				</div>
+					<!-- Save Settings Button -->
+					<div class="d-flex justify-content-end mt-5">
+						<button type="submit" class="green_lime_btn shadow_hover_1">Save Settings</button>
+					</div>
+					<!--/Save Settings Button -->
+				</form>
 			</div>
 		</div>
 		<!--=== End of API System Settings ===-->
