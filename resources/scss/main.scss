@@ -1601,12 +1601,10 @@
 				font-size:20px;
 				@include transition-all(0.3s);
 				@include transform-rotate(180deg);
+				display:flex;
+				justify-content: center;
 				&.collapsed{
 					@include transform-rotate(0deg);
-				}
-				.mdi{
-					position: relative;
-    				left: -2px;
 				}
 			}
 			.api_inputFields{

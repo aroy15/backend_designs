@@ -1,10 +1,6 @@
 /***************************/
 /*********MEDIA QUERY*******/
 /***************************/
-/* 1080px height like 1200x1080 & 1500 to 1920 x 1080px*/
-@media(min-height:1000px){
-
-}
 /** min Width 1600px for 1920px**/
 @media(min-width:1600px){
 	// Acccounting > Invoices
@@ -39,6 +35,7 @@
 				url(../img/bg_images/accounting-dashboard/5.png);
 		background-position: left 27%, 59.5% 10%, 100% 55%;
 		background-repeat:no-repeat;
+		background-color:$white-main;
 		// Target age group
 		.age_chart_container{
 			.age_target{
@@ -72,6 +69,7 @@
 				url(../img/bg_images/accounting-dashboard/5.png);
 		background-position: left 27%, left 42%, 34% 78%, 59% 10%, 100% 90%;
 		background-repeat: no-repeat;
+		background-color:$white-main;
 	}
 	// Request a Feature (details)
 	.request_feature_details .request_f_details_content .bg_lightbulb {

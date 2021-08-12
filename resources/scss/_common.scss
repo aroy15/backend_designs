@@ -80,6 +80,13 @@
 .pdf___viewer .canvas-wrapper{
 	overflow:auto;
 }
+.print-icon {
+    font-size: 30px;
+    background-color: $gray-light1;
+    @include b-radius(20px);
+    padding: 6px 11px;
+    line-height: 1;
+}
 /*==========<Colors>============*/
 .text-blue{
 	color:$blue-light;
@@ -260,12 +267,10 @@
 	font-size:20px;
 	@include transition-all(0.3s);
 	@include transform-rotate(180deg);
+	display:flex;
+	justify-content: center;
 	&.collapsed{
 		@include transform-rotate(0deg);
-	}
-	.mdi{
-		position: relative;
-		left: -2px;
 	}
 }
 /* ===X====</button design>=====X======*/
@@ -989,11 +994,11 @@
 			font-size: 35px;
 			@include transition-all(0.3s);
 			&:hover{
-				@include transform-rotate(45deg);
+				@include transform-rotate(360deg);
 			}
-			&.rotate-focus:focus{
-				@include transform-rotate(360deg);	
-			}
+			// &.rotate-focus:focus{
+			// 	@include transform-rotate(360deg);	
+			// }
 		}
 		.selectBtn{
 			position:relative;

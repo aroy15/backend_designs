@@ -14,7 +14,7 @@ $(document).ready(function(){
       $('.lgt_icons').removeClass('looping');   
     }, 2000);
   });
-  /*-----<Profile Pic max-size>-----*/
+  /*-----<Profile Pic Change>-----*/
   $('#UserImgEditBtn1').on('change', function(event){
     var userImgLength =  $('#UserImgEditBtn1')[0].files.length;
     var userImgSrc = URL.createObjectURL(event.target.files[0]);
@@ -37,7 +37,7 @@ $(document).ready(function(){
     };
   
   }); 
-  /*-----</Profile Pic max-size>-----*/
+  /*-----</Profile Pic Change>-----*/
   /* nice-select plugin activation */
   if($('body').find('select.custom_select').length){
     $('select.custom_select').niceSelect();
@@ -56,7 +56,7 @@ $(document).ready(function(){
       $(this).parents('.modalContainer').modal('hide');
     });
   /*===X== bootstrap modal common script==X===*/
-
+  
   /*===Request a Feature | modal included====== */
   if($('body').find('select#sort_requestFeature').length){
     $( "select#sort_requestFeature" )
@@ -81,9 +81,9 @@ $(document).ready(function(){
     setTimeout(function(){ $('.preloader-js').addClass('d-none'); }, 700);
   }
   /*==========Rotate Icon (Refresh Icon)============== */
-  $(".rotate_btn").hover(function(){
-    $(this).toggleClass('rotate-focus');
-    })
+  // $(".rotate_btn").hover(function(){
+  //   $(this).toggleClass('rotate-focus');
+  //   })
   /*=====X====Rotate Icon (Refresh Icon)=======X====== */
   /* Added .dahsboard class on dashboard page main element*/
   if( $('body').find('#deshboardItem').length){

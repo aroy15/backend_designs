@@ -291,6 +291,18 @@ textarea::placeholder {
   overflow: auto;
 }
 
+.print-icon {
+  font-size: 30px;
+  background-color: #FAFAFA;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 6px 11px;
+  line-height: 1;
+}
+
 /*==========<Colors>============*/
 .text-blue {
   color: #42ADE2;
@@ -614,6 +626,12 @@ textarea::placeholder {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .collapseExpandBtn.collapsed {
@@ -622,11 +640,6 @@ textarea::placeholder {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-}
-
-.collapseExpandBtn .mdi {
-  position: relative;
-  left: -2px;
 }
 
 /* ===X====</button design>=====X======*/
@@ -1584,14 +1597,6 @@ textarea::placeholder {
 }
 
 .chart_container .chart_buttons .rotate_btn:hover {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-}
-
-.chart_container .chart_buttons .rotate_btn.rotate-focus:focus {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -3972,6 +3977,12 @@ ul.pieLegend li:not(.anjon) {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn.collapsed {
@@ -3980,11 +3991,6 @@ ul.pieLegend li:not(.anjon) {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-}
-
-.api_settings .apiSettings_inner .apiSet_item .collapseExpandBtn .mdi {
-  position: relative;
-  left: -2px;
 }
 
 .api_settings .apiSettings_inner .apiSet_item .api_inputFields {
@@ -7169,7 +7175,6 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /*********MEDIA QUERY*******/
 /***************************/
-/* 1080px height like 1200x1080 & 1500 to 1920 x 1080px*/
 /** min Width 1600px for 1920px**/
 @media (min-width: 1600px) {
   .accounting_invoices .acIvoices_inner table tr td {
@@ -7186,6 +7191,7 @@ ul.pieLegend li:not(.anjon) {
     background: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png);
     background-position: left 27%, 59.5% 10%, 100% 55%;
     background-repeat: no-repeat;
+    background-color: #ffffff;
   }
   .target_group_sec .age_chart_container .age_target {
     height: 300px;
@@ -7206,6 +7212,7 @@ ul.pieLegend li:not(.anjon) {
     background: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/2.png), url(../img/bg_images/accounting-dashboard/3.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png);
     background-position: left 27%, left 42%, 34% 78%, 59% 10%, 100% 90%;
     background-repeat: no-repeat;
+    background-color: #ffffff;
   }
   .request_feature_details .request_f_details_content .bg_lightbulb {
     bottom: 92px;
