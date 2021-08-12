@@ -4280,6 +4280,13 @@
 		width:100%;
 		background-color: $gray-light1;
 	}
+	.inform_send_mail_modal{
+		.modal-dialog .modal-content .modal_bg_icon {
+			left: 16px;
+			bottom: -43px;
+			font-size: 320px;
+		}
+	}
 }
 /*==============Responsive CSS===============*/
 @import "./_responsive.scss";

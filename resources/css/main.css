@@ -7154,6 +7154,12 @@ ul.pieLegend li:not(.anjon) {
   background-color: #FAFAFA;
 }
 
+.inform_customers .inform_send_mail_modal .modal-dialog .modal-content .modal_bg_icon {
+  left: 16px;
+  bottom: -43px;
+  font-size: 320px;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
