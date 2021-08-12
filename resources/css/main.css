@@ -2598,6 +2598,11 @@ ul.pieLegend li:not(.anjon) {
   width: 0px;
 }
 
+.dashboardItem .c_service .cs_items .cs_item {
+  max-width: 155px;
+  width: 100%;
+}
+
 .dashboardItem .c_service .cs_items .cs_item .icon-bg {
   font-size: 75px;
   color: #BCF1FF;
@@ -7383,6 +7388,9 @@ ul.pieLegend li:not(.anjon) {
   }
   #bodyItem .main_item .body-header-content {
     margin-top: 150px;
+  }
+  .dashboardItem .c_service .cs_items [class*="col-"]::after {
+    display: none;
   }
   /*Language Edit/Add*/
   .language_EditAdd .languageEditAdd_inner .langNameCode .langName input {

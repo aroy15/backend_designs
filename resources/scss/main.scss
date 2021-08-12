@@ -524,7 +524,9 @@
 					}
 				}
 			}
-			.cs_item{				
+			.cs_item{
+				max-width: 155px;
+				width: 100%;
 				.icon-bg{
 					font-size:75px;
 					color:$blue-opacity;
