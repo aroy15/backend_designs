@@ -3436,26 +3436,26 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /* 5. Request A Feature Details*/
 /***************************/
-.request_feature_details .request_f_details_content .details_text {
+.request_feature_details .request_f_details_content .feature__print__text {
   position: relative;
   z-index: 1;
 }
 
-.request_feature_details .request_f_details_content .details_text h3 {
+.request_feature_details .request_f_details_content .feature__print__text h3 {
   color: #393939;
   font-size: 21px;
   margin-bottom: 0px;
 }
 
-.request_feature_details .request_f_details_content .details_text .d_text_content {
+.request_feature_details .request_f_details_content .feature__print__text .d_text_content {
   color: #666666;
 }
 
-.request_feature_details .request_f_details_content .details_text .d_text_content p {
+.request_feature_details .request_f_details_content .feature__print__text .d_text_content p {
   margin-bottom: 0;
 }
 
-.request_feature_details .request_f_details_content .details_text a {
+.request_feature_details .request_f_details_content .feature__print__text .download_idea {
   margin-top: 20px;
   font-size: 12px;
   text-decoration: underline;
@@ -3463,7 +3463,7 @@ ul.pieLegend li:not(.anjon) {
   font-weight: 400;
 }
 
-.request_feature_details .request_f_details_content .details_text a:hover {
+.request_feature_details .request_f_details_content .feature__print__text .download_idea:hover {
   color: #42ADE2;
 }
 
@@ -6002,6 +6002,25 @@ ul.pieLegend li:not(.anjon) {
   padding-left: 2px;
 }
 
+.helpDesk .choose__category {
+  color: rgba(0, 0, 0, 0.3);
+  padding-top: 200px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.helpDesk .choose__category h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.helpDesk .choose__category h2 .mdi {
+  font-size: 30px;
+}
+
 .helpDesk .articleEditSec .deleteBtnRedText {
   color: #FF4D4D;
   background: transparent;
@@ -7115,8 +7134,13 @@ ul.pieLegend li:not(.anjon) {
   font-size: 10px;
 }
 
-.package_settings_name .limits .limits_row > div.incrementDcrement {
+.package_settings_name .limits .limits_row > div.price_inputs {
   max-width: 122px;
+  width: 100%;
+}
+
+.package_settings_name .limits .limits_row > div.price_inputs input {
+  width: 100%;
 }
 
 /***************************/
@@ -7647,6 +7671,25 @@ ul.pieLegend li:not(.anjon) {
   .coupon_info .qr-code-area .qrFootText {
     font-size: 5px;
     font-weight: 300;
+  }
+  .feature__print__text {
+    position: relative;
+    z-index: 1;
+  }
+  .feature__print__text h3 {
+    color: #393939;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .feature__print__text .d_text_content {
+    color: #666666;
+  }
+  .feature__print__text .d_text_content p {
+    margin-bottom: 0;
+  }
+  .feature__print__text .download_idea {
+    display: none;
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=main.css.map */

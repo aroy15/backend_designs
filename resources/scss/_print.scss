@@ -74,4 +74,23 @@
 			}
 		}
 	}
+	.feature__print__text{
+		position:relative;
+		z-index:1;
+		h3{
+			color:$black-3939;
+			font-size:30px;
+			margin-bottom:0px;
+		}
+		.d_text_content{
+			color:$gray-666;				
+			p{
+				margin-bottom:0;
+			}
+		}
+		.download_idea{
+			display:none;
+			visibility: hidden;
+		}
+	}
 }

@@ -71,6 +71,18 @@ $(document).ready(function(){
     $('#sort_requestFeature + .nice-select .current').prepend('<span class="active_text">Sorted by category "</span>');
     $('#sort_requestFeature + .nice-select .current').append('<span class="active_qoute">"</span>');
   }
+
+  /******Reauest a Feature inner Page********/
+  if($('body').find('#feature_download_idea').length){
+    $('#feature_download_idea').click(function(){
+      $(".feature__print__text").print({
+        globalStyles : true,
+        mediaPrint : true,
+      });
+    })
+  }
+  /***X***Reauest a Feature inner Page****X****/
+
   /*==X===Request a Feature ===X=== */
 
   // preloader jquery plugin active
@@ -224,7 +236,8 @@ $(document).ready(function(){
   /*============User Adminstration Name============= */
   /*--------<Follow Up Mail>--------- */
   $('#mailAttachment').on('change', function(){
-    $('#mailAttachedText').empty();
+    var showSelector_f = '#mailAttachedText';
+    $(showSelector_f).empty();
     var mailAttachedUpload =  $('#mailAttachment');
     var mailAttachLength = mailAttachedUpload[0].files.length;
     var mailAttachItems = mailAttachedUpload[0].files;
@@ -233,9 +246,10 @@ $(document).ready(function(){
     if(mailAttachLength > 0){
       for(var i = 0; i < mailAttachLength; i++){
         var mailAttachedName = mailAttachItems[i].name;
-        mailAttachText += "<span>" + mailAttachedName + " </span>";
+        mailAttachText += "<span>" + mailAttachedName + "<i>,</i> </span>";
       }
-      $('#mailAttachedText').append(mailAttachText);
+      $(showSelector_f).append(mailAttachText);
+      $(showSelector_f + ' span:last-child i').remove();
     }
   });
   /*--------</Follow Up Mail>--------- */
@@ -276,7 +290,17 @@ $(document).ready(function(){
     /*------/PDF.js Activation------ */
    }
   /*------X---- PDF.js Library--------X------ */
-
+  /*----flatpickr Date Picker */
+  if($('body').find('.datePicker').length){
+    var date_config = {
+      enableTime:false,
+      dateFormat:"d.m.Y",
+      altInput:true,
+      altFormat: "d.m.Y"
+    }
+    $(".datePicker").flatpickr(date_config);
+  }
+    /*----/flatpickr Date Picker */
   /*------<number increment & decrement>------- */
   $(".increDecreBtn").on("click", function() {
     var $button = $(this);
@@ -297,7 +321,7 @@ $(document).ready(function(){
     var eventValue = $(this).val();
     var maxValue =  parseInt($(this).attr('data-max'));
     /* text or string not allow */
-    if(!(/^\d+$/.test(eventValue))){
+    if(!(/^\d^+$/.test(eventValue))){
       // alert('only number values is allowed');
       $(this).val("");
     }
@@ -400,13 +424,13 @@ $(document).ready(function(){
   /*=========== Add Coupons / Edit Coupons =======*/
   /*------<flatpickr Date & time picker Activation>------ */
   if($('body').find('.dateTimePicker').length){
-    var config = {
+    var date_time_config = {
       enableTime:true,
       dateFormat:"d/m/Y - h:i K",
       altInput:true,
       altFormat: "d/m/Y - h:i K"
     }
-    $(".dateTimePicker").flatpickr(config);
+    $(".dateTimePicker").flatpickr(date_time_config);
   }
    /*-----</flatpickr Date & time picker Activation>--- */
    /*-------<Coupon Code>---------- */
@@ -511,9 +535,11 @@ $(document).ready(function(){
   /*========= HelpDesk =========== */
   $('.sub_artLink').click(function(){
     $('.articleEditSec').show();
+    $('#choose__category').hide();
   });
   $('.deleteBtnRedText').click(function(){
     $(this).parents('.articleEditSec').hide();
+    $('#choose__category').show();
   })
   /*====X===== HelpDesk =====X====== */
 
@@ -630,6 +656,12 @@ $(document).ready(function(){
   });
   /*-----<Profile Pic Upload/>-------*/
   /*==========X======== User Adminstration - Administrators > Max Mustermann====X=======*/
+
+  /*=========Package Settings - STARTER-PACKAGE===========*/
+  $('.pkg__price__input').bind('keyup mouseout mouseenter mouse leave',function(){
+    $(this).val($(this).val().replace(/[^\d|^\,|^\.]/gi, '').replace('.',',')); 
+  })
+  /*=====X====Package Settings - STARTER-PACKAGE====X=======*/
 });
 
 

@@ -17,8 +17,9 @@
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
         <!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
-		<!-- perfect scrollbar -->
-		<!-- <link rel="stylesheet" href="./vendors/css/perfect-scrollbar.css"> -->
+		<!-- Date & Time Picker Css -->
+        <link rel="stylesheet" href="./vendors/css/flatpickr.min.css">
+		<!-- Jquery scrollbar -->
 		<link rel="stylesheet" href="./vendors/css/jquery.scrollbar.css">
         <!-- Main/Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css">
@@ -370,7 +371,7 @@
 													attached.pdf
 												</span>
 												<label class="scale_hover_half cursor-pointer mb-0">
-													<input id="mailAttachment" type="file" class="appearance-none" accept="image/*,.pdf,audio/*,video/*,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+													<input id="mailAttachment" type="file" class="appearance-none" accept="image/*,.pdf,audio/*,video/*,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple>
 													<span class="mdi mdi-paperclip"></span>
 												</label>
 											</div>
@@ -741,9 +742,9 @@
 																<span class="info_data text-blue">Manual</span>
 															</div>
 														</div>
-														<div class="expireDate mt-3">
+														<div class="expireDate mt-3 position-relative">
 															<p class="text-red-light mb-1">Expire Date:</p>
-															<input type="text" value="20.10.2020" placeholder="20.10.2020" class="d-block w-100 text-center">
+															<input type="text" class="datePicker text-center" placeholder="20.10.2020" class="d-block w-100 text-center">
 														</div>
 													</div>
 												</div>
@@ -1727,10 +1728,11 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- flatpickr.js for Date & Time pick  -->
+	<script src="./vendors/js/flatpickr.js"></script>
 	<!-- pdf.js for PDF preview -->
 	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
 	<!-- perfect scroll bar-->
-	<!-- <script src="./vendors/js/perfect-scrollbar.js"></script> -->
 	<script src="./vendors/js/jquery.scrollbar.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
