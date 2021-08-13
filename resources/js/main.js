@@ -658,8 +658,13 @@ $(document).ready(function(){
   /*==========X======== User Adminstration - Administrators > Max Mustermann====X=======*/
 
   /*=========Package Settings - STARTER-PACKAGE===========*/
-  $('.pkg__price__input').bind('keyup mouseout mouseenter mouse leave',function(){
-    $(this).val($(this).val().replace(/[^\d|^\,|^\.]/gi, '').replace('.',',')); 
+  $('.pkg__price__input').bind('keyup mouseout mouseenter mouseleave',function(){
+    $(this).val(
+      $(this).val()
+      .replace(/[^\d|^\,|^\.]/gi, '')
+      .replace('.',',')
+      .replace(/\,\,?\,*/gi,',')
+    );
   })
   /*=====X====Package Settings - STARTER-PACKAGE====X=======*/
 });
