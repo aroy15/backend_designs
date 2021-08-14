@@ -321,7 +321,7 @@ $(document).ready(function(){
     var eventValue = $(this).val();
     var maxValue =  parseInt($(this).attr('data-max'));
     /* text or string not allow */
-    if(!(/^\d^+$/.test(eventValue))){
+    if(!(/^\d+$/.test(eventValue))){
       // alert('only number values is allowed');
       $(this).val("");
     }
