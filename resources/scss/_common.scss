@@ -177,7 +177,8 @@
 			font-family: $font-roboto;
 			font-weight:400;
 			padding-left:20px;
-			cursor:url('../img/icons/cursor.png'), auto;
+			cursor:pointer;
+			color:$black;
 		}
 		.hover__content{
 			position:absolute;
@@ -213,16 +214,24 @@
 				margin-bottom:4px;
 			}
 		}	
-		&:hover .hover__content{
+		&:hover:not(.hover_u_c) .hover__content{
 			visibility: visible;
 			opacity:1;
 		}
 	}
 	&.hover__under_cursor{
-		.hover__inner .hover__content {			
-			top: calc(100% + 30px);
-			&::before{
-				display:none;				
+		.hover__inner.hover_u_c {
+			.hover__content {			
+				top: calc(100% + 30px);
+				&::before{
+					display:none;				
+				}
+			}
+			.hover__title{
+				&:hover ~ .hover__content{
+					visibility: visible;
+					opacity:1;
+				}
 			}
 		}
 	}
