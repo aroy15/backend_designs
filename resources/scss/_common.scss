@@ -88,7 +88,7 @@
     @include b-radius(20px);
     padding: 6px 11px;
     line-height: 1;
-}
+} 
 /*==========<Colors>============*/
 .text-blue{
 	color:$blue-light;
@@ -165,6 +165,179 @@
 		@include box-shadow(1px 1px 11px -3px rgba(0,0,0,0.5) !important);
 	}
 }
+/*-----<Hover & alert Message> Parent Class/Page .functions_animations (if you needed)-----*/
+.hover__item{
+	position:relative;
+	max-width:190px;
+	width:100%;
+	.hover__inner{
+		.hover__title{
+			font-size:15px;
+			text-decoration:underline;
+			font-family: $font-roboto;
+			font-weight:400;
+			padding-left:20px;
+			cursor:url('../img/icons/cursor.png'), auto;
+		}
+		.hover__content{
+			position:absolute;
+			visibility: hidden;
+			top:calc(100% + 10px);
+			left:0;
+			font-size:10px;
+			font-weight:300;
+			color:$black-light;
+			padding:6px 10px;
+			background: #F7F7F7;
+			width:190px;
+			border: 1px solid #F0F0F0;
+			@include b-radius(5px);
+			@include transition-all(0.3s);
+			opacity:0;
+			z-index: 9;
+			p{
+				margin-bottom:0px;
+			}
+			&::before{
+				content:'';
+				width:15px;
+				height:15px;
+				background: #F7F7F7;
+				display:block;
+				margin-top: -15px;
+				margin-left: 40%;
+				border: 1px solid #f0f0f0;
+				border-width:1px 0px 0px 1px;
+				@include transform-rotate(45deg);
+				@include b-radius(2px);
+				margin-bottom:4px;
+			}
+		}	
+		&:hover .hover__content{
+			visibility: visible;
+			opacity:1;
+		}
+	}
+	&.hover__under_cursor{
+		.hover__inner .hover__content {			
+			top: calc(100% + 30px);
+			&::before{
+				display:none;				
+			}
+		}
+	}
+	&.hover__big .hover__inner .hover__content {
+		padding: 3px 7px;
+		min-height: 55px;
+		&::before{
+			margin-top: -12px;
+			margin-left:50%;
+		}
+	}
+	&.hover__picture .hover__inner .hover__content {
+		position:relative;
+		&::before{
+			margin-left:50%;
+		}
+		.social_icon{
+			font-size:15px;
+			position:absolute;
+			top:4px;
+			right:4px;
+			&:hover{
+				color:$black-gray;
+			}
+		}
+		.h__pic__top{
+			.h__pic{
+				$h_img_height:28px;
+				width:$h_img_height;
+				min-width:$h_img_height;
+				height:$h_img_height;
+				@include b-radius(50%);
+			}
+			.h__pic__content{
+				margin-left:2px;
+				h6{
+					font-size:10px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+.alert__message__container{
+	margin:0;
+	padding:0;
+	background:transparent;
+	position:fixed;
+	bottom:50px;
+	right:20px;
+	max-width:410px;
+	width:100%;
+	.alert__message__js{
+		display:none;
+	}
+	.alert__message{
+		background-color:$black-light;
+		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+		@include b-radius(5px);
+		max-width:410px;
+		width:100%;
+		min-height:80px;
+		position:relative;
+		padding:20px;
+		margin:15px 0px;
+		display:none;
+		*{
+			color:$white-main;
+		}
+		.alert__dismiss__btn{
+			position:absolute;
+			top:5px;
+			right:5px;
+			font-size:25px;
+			line-height:1;
+			color:$white-main;
+			&:hover{
+				color:#685e5e;
+			}		
+		}
+		.alert__icon {
+			font-size: 40px;
+			line-height: 1;
+		}
+		.alert__content{
+			.alert__title{
+				font-size:22px;
+				font-family:$font-roboto;
+				font-weight: 500;
+				padding-bottom:0px;
+				margin-bottom:0px;
+			}
+			.alert__text{
+				margin-bottom:0px;
+				font-size:15px;
+			}
+		}
+		&.sucess__alert{
+			background-image: linear-gradient(180deg, #59BA47 0%, #1BD12D 100%);
+		}
+		&.warning__alert{
+			background: linear-gradient(180deg, #FFB818 0%, #FFED4D 100%);
+		}
+		&.error__alert{
+			background: linear-gradient(180deg, #D43E37 0%, #FF784D 100%);
+		}
+		&.info__alert{
+			background: linear-gradient(180deg, #177BBD 0%, #42ADE2 100%);
+		}
+	}
+}
+
+/*-----</Hover & alert Message>-----*/
+
+
 /* ===X====</Hover Design>=====X======*/
 
 /* =======</button design>===========*/
@@ -881,6 +1054,17 @@
 						background-color: rgba(0, 0, 0, 0.25);
 					}
 				}			
+			}
+		}
+	}
+	&.pdf___viewer .modal-dialog .modal-content.pdfViewContainer {
+		background: transparent;
+		@include b-radius(0px);
+		.pdf__download{
+			font-size:25px;
+			@include transition-all(0.1s);
+			&:hover{
+				@include transform-scale(1.1);
 			}
 		}
 	}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Mail Templates</title>
+    <title>Functions & Animations</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -15,7 +15,9 @@
         <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
 		<!-- select plugin -->
 		<link rel="stylesheet" href="./vendors/css/nice-select.css">
-        <!-- Booststrap 4 css -->
+		<!-- Date & Time Picker Css -->
+        <link rel="stylesheet" href="./vendors/css/flatpickr.min.css">
+		<!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
         <!-- Main/Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css">
@@ -56,7 +58,7 @@
 			</span>
 			 <span class="d-block">customers</span>
 		  </a>
-		   <a href="#helpdesk-featureModal" data-toggle="modal" class="h-icons2 h-documentation">
+		  <a href="#helpdesk-featureModal" data-toggle="modal" class="h-icons2 h-documentation">
 			<span class="icon-mdi">
 				<span class="mdi mdi-help-circle-outline"></span>
 			</span>
@@ -241,8 +243,8 @@
 					</a>
 				</div>
 				<!-- Coupons -->
-			<div class="side_nav_item mb-3">
-				<a href="./coupons.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
+				<div class="side_nav_item mb-3">
+					<a href="./coupons.html" class="item-header w-100 px-3 d-flex justify-content-between align-items-center collapsed">
 						<span class="carret-icon icon-mdi"></span>
 						<span class="nav_item_title">Coupons</span>
 						<span class="icon-mdi">
@@ -328,12 +330,12 @@
 	<main id="mainItem" class="main_item p-2 main_item-active">
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex">
-				<h2 class="bh_title">E-Mail Templates</h2>
+			<div class="d-flex align-items-center">
+				<h2 class="bh_title">Functions & Animations</h2>
 			</div>
 		</div>		
-		<!--=== Request a Feature ===-->
-		<div id="emailTamplates" class="email_templates content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== Functions & Animations ===-->
+		<div id="functions_animations" class="functions_animations content-container p-0 p-md-4 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -341,152 +343,147 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner">                
-				<div class="email_temp_inner p-3">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center align-items-lg-start">
-						<div class="selectBtn order-2 order-lg-1">
-							<!-- sorting email templates -->
-							<select class="emailTempHeaderSelect custom_select">
-								<option selected>Sorted by Template-ID</option>
-								<option>Sorted by Template-ID-2</option>
-							</select>
-							<!--/sorting email templates  -->
-						</div>
-						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="./emailTemplatesEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Template</a>
-							</div>
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
-					</div>
-					<div class="table_container request_fea_table">
-						<table class="w-100 text-center">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Status</th>
-									<th>Function</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1">
-									<td>1</td>
-									<td>Account expired in 10 days</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2">
-									<td>2</td>
-									<td>Verify your E-Mail Adress</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="red_alert">inactive</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3">
-									<td>3</td>
-									<td>Thanks for your Order</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4">
-									<td>4</td>
-									<td>You got a new Message from the Support</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between mt-4">
-							<div>&nbsp;</div>
-							<div class="entries text-center pl-lg-5">
-								<p class="mb-0 pl-lg-5 ml-xl-5">1042 entries in total</p>
-							</div>						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select class="white_select custom_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
+			<div class="content-inner">   
+				<div class="func_anim_inner">
+					<h3 class="mb-5">Hover-Animations</h3>
+					<!-- Hover Section -->
+					<div class="row">
+						<div class="col-lg-6 col-xl-3 mb-5">
+							<div class="hover__item mx-auto mx-lg-0">
+								<div class="hover__inner">
+									<h4 class="hover__title">Normal Hover</h4>
+									<div class="hover__content">
+										 <p>This is a normal Hover animation</p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>					
+						<div class="col-lg-6 col-xl-3 mb-5">
+							<div class="hover__item hover__under_cursor mx-auto mx-lg-0 mx-xl-auto">
+								<div class="hover__inner">
+									<h4 class="hover__title">Hover under the Courser</h4>
+									<div class="hover__content">
+										 <p>This is a normal Hover animation</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-xl-3 mb-5">
+							<div class="hover__item hover__big mx-auto mx-lg-0 mx-xl-auto">
+								<div class="hover__inner">
+									<h4 class="hover__title text-center">Big Hover</h4>
+									<div class="hover__content">
+										 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra integer volutpat non posuere pharetra etiam. 
+											Sed viverra integer volutpat non posuere pharetra etiam non posuere.</p>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="col-lg-6 col-xl-3 mb-5">
+							<div class="hover__item hover__picture  mx-auto mx-lg-0">
+								<div class="hover__inner">
+									<h4 class="hover__title text-left">Hover with Picture</h4>
+									<div class="hover__content">
+										<a href="#" class="social_icon"><span class="mdi mdi-facebook"></span></a>
+										<div class="d-flex h__pic__top">
+											<div>
+												<img class="h__pic" src="./resources/img/users/hover-pic.png" alt="image">
+											</div>
+											<div class="h__pic__content">
+												<h6 class="mb-0 pb-0">Marting Govnow</h6>
+												<span>@martinggovw</span>
+												<p class="my-1">12 Postings | 20.561 Follower</p>
+											</div>	
+										</div>
+										 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra integer volutpat non posuere pharetra etiam. 
+											Sed viverra integer volutpat non posuere pharetra etiam non posuere.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/Hover Section -->
+					<!-- documentation section for hover-->
+					<div class="h__a__doc__text mb-5 pb-4 text-center mx-auto">
+						<p>Normal Hover, Big Hover and Hover with Picture should be displayed when hovering the mouse over the respective text.
+							However, "Hover under mouse" should not be bound to the text itself, but should hang under the mouse's courser.</p>
+					</div>
+					<!--/documentation section for hover-->
+					<!-- Feedback Messages: -->
+					<div class="feedback__messages">
+						<h3 class="mb-3">Feedback Messages:</h3>
+						<div class="buttons__area d-flex flex-wrap mb-5">
+							<button type="button" class="sucess__tab__btn feed_msg_btn_js shadow_hover_1 white_hover mb-3" data-alertbtn="sucess">Sucess</button>
+							<button type="button" class="error__tab__btn feed_msg_btn_js shadow_hover_1 white_hover mb-3" data-alertbtn="error">Error</button>
+							<button type="button" class="warning__tab__btn feed_msg_btn_js shadow_hover_1 white_hover mb-3" data-alertbtn="warning">Warning</button>
+							<button type="button" class="info__tab__btn feed_msg_btn_js shadow_hover_1 white_hover mb-3" data-alertbtn="info">Information</button>
+						</div>
+						<div class="alert__message__container">
+							<div class="alert__message__js" data-alerting="sucess">
+								<div class="alert__message sucess__alert d-flex align-items-center">
+									<button type="button" class="alert__dismiss__btn btn-transparent">&times;</button>
+									<div class="alert__icon mr-2 mr-sm-4">
+										<span class="mdi mdi-checkbox-marked-circle-outline"></span>
+									</div>
+									<div class="alert__content">
+										<h4 class="alert__title">Successfully saved!</h4>
+										<p class="alert__text">Your changes have been successfully applied.</p>
+									</div>
+								</div>
+							</div>
+							<div class="alert__message__js" data-alerting="warning">
+								<div class="alert__message warning__alert d-flex align-items-center">
+									<button type="button" class="alert__dismiss__btn btn-transparent">&times;</button>
+									<div class="alert__icon mr-2 mr-sm-4">
+										<span class="mdi mdi-shield-alert-outline"></span>
+									</div>
+									<div class="alert__content">
+										<h4 class="alert__title">Warning message</h4>
+										<p class="alert__text">Its’ a warning message</p>
+									</div>
+								</div>
+							</div>
+							<div class="alert__message__js" data-alerting="error">
+								<div class="alert__message error__alert d-flex align-items-center">
+									<button type="button" class="alert__dismiss__btn btn-transparent">&times;</button>
+									<div class="alert__icon mr-2 mr-sm-4">
+										<span class="mdi mdi-close-circle-outline"></span>
+									</div>
+									<div class="alert__content">
+										<h4 class="alert__title">Error message!</h4>
+										<p class="alert__text">Your account has been Error</p>
+									</div>
+								</div>
+							</div>
+							<div class="alert__message__js" data-alerting="info">
+								<div class="alert__message info__alert d-flex align-items-center">
+									<button type="button" class="alert__dismiss__btn btn-transparent">&times;</button>
+									<div class="alert__icon mr-2 mr-sm-4">
+										<span class="mdi mdi-information-outline"></span>
+									</div>
+									<div class="alert__content">
+										<h4 class="alert__title">Info message!</h4>
+										<p class="alert__text">Your account has been Info</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/Feedback Messages: -->
+					<!-- documentation section for alert message-->
+					<div class="h__a__doc__text mb-5 pb-4 text-center mx-auto mt-5">
+						<p>When you click on one of the respective buttons, this message should appear at the bottom right corner of the screen and disappear there after 5 seconds.</p>
+						<p>several messages are triggered at the same time, the newest message should always appear at the bottom and the other messages should be pushed up.</p>
+					</div>
+					<!--/documentation section for alert message-->
 				</div>
 			</div>
 		</div>
-		<!--=== End of Request a Feature ===-->
+		<!--=== Functions & Animations ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
-<!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content px-lg-4 px-xl-5">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				<span class="mdi mdi-close"></span>
-			</button>
-            <div class="modal-body pb-4 pt-5">
-                 <h4 class="pb-4"> Are you sure?</h4>
-				 <p>Deleted Document-Templates are irrevocably deleted and cannot be restored at a later time.</p>
-            </div>
-            <!--/modal-body-collapse -->
-            <div class="modal-footer mb-4">
-                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
-            </div>
-            <!--/modal-footer-collapse -->
-			<div class="modal_bg_icon">
-				<span class="mdi mdi-delete-empty"></span>
-			</div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
 
     <!-- Script Here -->
     <!-- jQuery -->
@@ -503,6 +500,10 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- flatpickr.js for Date & Time pick  -->
+	<script src="./vendors/js/flatpickr.js"></script>
+	<!-- jQuery Print Plugin -->
+	<script src="./vendors/js/jQuery.print.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

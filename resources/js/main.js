@@ -37,6 +37,22 @@ $(document).ready(function(){
     };
   
   }); 
+  /*---<alert Message>-----*/
+  
+  $('.feed_msg_btn_js').click(function(){
+    var get_alertbtnData = $(this).data('alertbtn');
+    var show__alertData = $("[data-alerting="+get_alertbtnData+"]");
+    $('.alert__message__js').insertBefore(show__alertData);
+    show__alertData.fadeIn(300);
+    setTimeout(function() {
+      show__alertData.fadeOut(300);
+    }, 5000)
+  })
+
+  $('.alert__dismiss__btn').click(function(){
+    $(this).parents('.alert__message__js').fadeOut(300);
+  });
+  /*---</alert Message>-----*/
   /*-----</Profile Pic Change>-----*/
   /* nice-select plugin activation */
   if($('body').find('select.custom_select').length){
@@ -210,7 +226,7 @@ $(document).ready(function(){
   
       PDFJS.disableWorker = true;
       PDFJS.getDocument(url).then(renderPages);
-  
+      $('.canvas-wrapper').remove();
     }
   }  
   /********X****************X**********X********
@@ -667,6 +683,26 @@ $(document).ready(function(){
     );
   })
   /*=====X====Package Settings - STARTER-PACKAGE====X=======*/
+
+  /*========= Accounting > Social-Media-Strategy=========== */
+  /*---------- PDF.js Library-------------- */
+  if($('body').find('#socialMediaStrategy').length){
+    /*----PDF Modal preview---- */
+      $('.invoicePreviewBtn').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).closest('tr').data('id');
+        var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
+        $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
+        $('.socialMediaModal_pdf').data('id', id).modal('show');
+        /*------PDF.js Activation------ */   
+        renderPDF($(this).data('pdfsrc'), document.getElementById('cavaContainer'));
+        $('.pdf__download').attr('href',$(this).data('pdfsrc'));
+        /*------/PDF.js Activation------ */
+      });
+    /*----/PDF Modal preview---- */
+   }
+  /*------X---- PDF.js Library--------X------ */
+  /*========= Accounting > Social-Media-Strategy=========== */
 });
 
 

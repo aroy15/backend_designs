@@ -416,6 +416,15 @@
 			}		
 		}
 	}
+	/*-----<Hover Animations>-----*/
+	.hover__item{
+		.hover__inner{
+			.hover__title{
+				text-align:center !important;
+			}
+		}
+	}
+	/*-----</Hover Animations>-----*/
 }
 @media (max-width: 767px) {
 	#bodyItem{

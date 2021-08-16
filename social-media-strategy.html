@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Mail Templates</title>
+    <title>Accounting &gt; Social-Media-Strategy</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -329,11 +329,11 @@
         <!--==*******All Frame setup on this here*********== -->
 		<div class="body-header-content mb-3 p-3 pl-xl-5">
 			<div class="d-flex">
-				<h2 class="bh_title">E-Mail Templates</h2>
+				<h2 class="bh_title">Accounting &gt; Social-Media-Strategy</h2>
 			</div>
 		</div>		
-		<!--=== Request a Feature ===-->
-		<div id="emailTamplates" class="email_templates content-container p-0 p-md-4 px-xl-5 pt-lg-2 b-r-8">
+		<!--=== Accounting > Social-Media-Strategy ===-->
+		<div id="socialMediaStrategy" class="social_media_strategy content-container p-0 p-md-4 pt-lg-2 b-r-8">
 			<!-- preloader container -->
 			<div class="preloader-js">
 				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
@@ -341,152 +341,167 @@
 				</div>
 			</div>
 			<!--x- End of preloader container -x-->
-			<div class="content-inner">                
-				<div class="email_temp_inner p-3">
-					<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center align-items-lg-start">
-						<div class="selectBtn order-2 order-lg-1">
-							<!-- sorting email templates -->
-							<select class="emailTempHeaderSelect custom_select">
-								<option selected>Sorted by Template-ID</option>
-								<option>Sorted by Template-ID-2</option>
-							</select>
-							<!--/sorting email templates  -->
-						</div>
-						<div class="search_box order-1 order-lg-2 mx-auto mx-md-0 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-							<div class="mb-4 mb-lg-0">
-								<a href="./emailTemplatesEdit.html" class="blue_btn mx-3 shadow_hover_1">+ Add Template</a>
+			<div class="content-inner">     
+				<ul class="nav nav-pills" id="pills-tab" role="tablist">
+					<li class="nav-item mr-3 mb-4">
+					  <a class="nav-link active shadow_hover_half" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+					</li>
+					<li class="nav-item mr-3 mb-4">
+					  <a class="nav-link shadow_hover_half" id="pills-analytics-tab" data-toggle="pill" href="#pills-analytics" role="tab" aria-controls="pills-analytics" aria-selected="false">Analytics</a>
+					</li>
+				  </ul>   				
+				  <div class="tab-content" id="pills-tabContent">
+					  <!-- ======<Social overview>====-->
+					  <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+						<div class="social_overview bg-gray b-r-5 p-3">	
+							<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
+								<div class="selectBtn order-2 order-lg-1">
+									<select class="custom_select big_select">
+										<option value="">Sorted by Date</option>
+										<option value="22.10.2021">22.10.2021</option>
+										<option value="07.12.2020">07.12.2020</option>
+										<option value="10.08.2020">10.08.2020</option>
+									</select>
+								</div>
+								<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
+									<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
+										<input type="text" class="search form-control" placeholder="Search">
+										<button type="submit" class="search_btn">
+										  <img src="./resources/img/icons/search-icon.png" alt="Search">
+										</button>
+									</form>
+								</div>
 							</div>
-							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-								<input type="text" class="search form-control" placeholder="Search">
-								<button type="submit" class="search_btn">
-								  <img src="./resources/img/icons/search-icon.png" alt="Search">
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="responsive_alert text-center py-3 text-dark">
-						If table are not fully showing please swipe the table left-right
-					</div>
-					<div class="table_container request_fea_table">
-						<table class="w-100 text-center">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Status</th>
-									<th>Function</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1">
-									<td>1</td>
-									<td>Account expired in 10 days</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="edit t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="2">
-									<td>2</td>
-									<td>Verify your E-Mail Adress</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="red_alert">inactive</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="3">
-									<td>3</td>
-									<td>Thanks for your Order</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-								<tr data-id="4">
-									<td>4</td>
-									<td>You got a new Message from the Support</td>
-									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</td>
-									<td><span class="green_alert">active</span></td>
-									<td>
-										<a href="./emailTemplatesEdit.html" class="view t_shadow_scale_1">
-											<span class="mdi mdi-file-edit-outline"></span>
-										</a>
-										<button type="button"  class="delete btn-transparent t_shadow_scale_1">
-											<span class="mdi mdi-trash-can-outline"></span>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>						
-						<div class="table_bottom d-flex justify-content-between mt-4">
-							<div>&nbsp;</div>
-							<div class="entries text-center pl-lg-5">
-								<p class="mb-0 pl-lg-5 ml-xl-5">1042 entries in total</p>
-							</div>						
-							<div class="show_entries d-flex justify-content-between align-items-center">
-								<span>Show Entries :</span>
-								<select class="white_select custom_select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
+							<div class="responsive_alert text-center py-3 text-dark">
+								If table are not fully showing please swipe on table left-right
 							</div>
+							<div class="table_container request_fea_table">
+								<table class="w-100 text-center">
+									<thead>
+										<tr>
+											<th>Letter No.</th>
+											<th>checkout Date</th>
+											<th>Customer</th>
+											<th>Customer E-Mail</th>
+											<th>Amount</th>
+											<th>Status</th>
+											<th>Function</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-id="1">
+											<td>SMS-002-R1</td>
+											<td>22.10.2021</td>
+											<td>20014</td>
+											<td>Tobias@gmail.com </td>
+											<td>39,99 €</td>
+											<td>
+												<span class="green_alert">delivered</span>
+											</td>
+											<td>
+												<a href="./resources/pdf/Invoice-002-R1.pdf"></a>
+												<a href="./resources/pdf/task.pdf"></a>
+												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
+													<span class="mdi mdi-file-document-outline"></span>
+												</button>
+											</td>
+										</tr>
+										<tr data-id="2">
+											<td>SMS-003-R1</td>
+											<td>07.12.2020</td>
+											<td>20045</td>
+											<td>Mustermann@Mustermann.de</td>
+											<td>39,99 €</td>
+											<td>
+												<span class="green_alert">delivered</span>
+											</td>
+											<td>
+												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
+													<span class="mdi mdi-file-document-outline"></span>
+												</button>
+											</td>
+										</tr>
+										<tr data-id="3">
+											<td>SMS-004-R1</td>
+											<td>10.08.2020</td>
+											<td>20074</td>
+											<td>Schmidt.Josef@schreinerei-josef.de</td>
+											<td>32,54 €</td>
+											<td>
+												<span class="red_alert">pending</span>
+											</td>
+											<td>
+												<button type="button" class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
+													<span class="mdi mdi-file-document-outline"></span>
+												</button>
+											</td>
+										</tr>
+										<tr data-id="4">
+											<td>SMS-005-R1</td>
+											<td>09.02.2020</td>
+											<td>20057</td>
+											<td>HildegardBecker@Beckermoebel.com</td>
+											<td>39,99 €</td> 
+											<td>
+												<span class="green_alert">delivered</span>
+											</td>
+											<td>
+												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1"  data-pdfsrc="./resources/pdf/task.pdf">
+													<span class="mdi mdi-file-document-outline"></span>
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>						
+								<div class="table_bottom d-flex justify-content-between">
+									<a href="#" class="file_btn shadow_hover_1">
+										<span class="mdi mdi-file-document"></span>
+									</a>
+									<div class="entries pl-lg-5">
+										<p class="mb-0">1042 entries in total</p>
+									</div>
+								
+									<div class="show_entries d-flex justify-content-between align-items-center">
+										<span>Show Entries :</span>
+										<select id="" class="white_select custom_select">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+							</div>					
 						</div>
-					</div>					
-				</div>
+					  </div>
+					  <!-- ===X===</Social overview>==X==-->
+					  <div class="tab-pane fade" id="pills-analytics" role="tabpanel" aria-labelledby="pills-analytics-tab">...</div>
+				  </div>        
+				
 			</div>
+			<!-- start: PDF preview Modal -->
+			<div class="modal fade text-center socialMediaModal_pdf pdf___viewer"  tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content pdfViewContainer">
+						<div class="pdf__header d-flex flex-wrap justify-content-center align-items-center">
+							<p class="pdfName text-center mb-0">invoice.pdf</p>
+							<!-- pdf__download Source link will automatically filled form table preview button data-pdfsrc -->
+							<a href="#" target="_blank" class="pdf__download ml-4"><span class="mdi mdi-download"></span></a>
+						</div>
+						<div id="cavaContainer"></div>					
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /End PDF preview Modal -->
 		</div>
-		<!--=== End of Request a Feature ===-->
+		<!--=== End of Accounting > Invoices ===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
-<!-- start: Delete Coupon Modal -->
-<div class="modal fade text-center modalContainer" id="docTempModal" tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content px-lg-4 px-xl-5">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				<span class="mdi mdi-close"></span>
-			</button>
-            <div class="modal-body pb-4 pt-5">
-                 <h4 class="pb-4"> Are you sure?</h4>
-				 <p>Deleted Document-Templates are irrevocably deleted and cannot be restored at a later time.</p>
-            </div>
-            <!--/modal-body-collapse -->
-            <div class="modal-footer mb-4">
-                <button type="button" class="cancelBtn" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleteYesBtn" id="btnDelteYes" href="#">Yes</button>
-            </div>
-            <!--/modal-footer-collapse -->
-			<div class="modal_bg_icon">
-				<span class="mdi mdi-delete-empty"></span>
-			</div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+
 
     <!-- Script Here -->
     <!-- jQuery -->
@@ -503,6 +518,8 @@
     <script src="./vendors/js/currencyFormatter.min.js"></script>
 	<!-- Nice select plugin -->
 	<script src="./vendors/js/jquery.nice-select.min.js"></script>
+	<!-- pdf.js for PDF preview -->
+	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->
