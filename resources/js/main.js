@@ -37,22 +37,7 @@ $(document).ready(function(){
     };
   
   }); 
-  /*---<alert Message>-----*/
-  
-  $('.feed_msg_btn_js').click(function(){
-    var get_alertbtnData = $(this).data('alertbtn');
-    var show__alertData = $("[data-alerting="+get_alertbtnData+"]");
-    $('.alert__message__js').insertBefore(show__alertData);
-    show__alertData.fadeIn(300);
-    setTimeout(function() {
-      show__alertData.fadeOut(300);
-    }, 5000)
-  })
 
-  $('.alert__dismiss__btn').click(function(){
-    $(this).parents('.alert__message__js').fadeOut(300);
-  });
-  /*---</alert Message>-----*/
   /*-----</Profile Pic Change>-----*/
   /* nice-select plugin activation */
   if($('body').find('select.custom_select').length){
@@ -702,7 +687,41 @@ $(document).ready(function(){
     /*----/PDF Modal preview---- */
    }
   /*------X---- PDF.js Library--------X------ */
-  /*========= Accounting > Social-Media-Strategy=========== */
+  /*=====X==== Accounting > Social-Media-Strategy====X======= */
+  /*=========Functions & Animations=========== */  
+    /*----<hover effect>---- */
+    $('.hover__over__title').mouseover(function(){
+      var hoverMovable = $(this).parent().find('.hover__movable__content');
+      hoverMovable.css('position','fixed');
+      hoverMovable.fadeIn(100);
+       $(this).mousemove(function(e){
+              var y = e.pageY+25;
+              var x = e.pageX+15;
+              hoverMovable.css('top', y).css('left', x);
+        });
+    });
+    $('.hover__over__title').mouseout(function(){
+      var hoverMovable = $(this).parent().find('.hover__movable__content');
+      hoverMovable.css('position','fixed');
+      hoverMovable.fadeOut(100);
+    });
+    /*----</hover effect>---- */
+    /*---<alert Message>-----*/  
+    $('.feed_msg_btn_js').click(function(){
+      var get_alertbtnData = $(this).data('alertbtn');
+      var show__alertData = $("[data-alerting="+get_alertbtnData+"]");
+      $('.alert__message__js').insertBefore(show__alertData);
+      show__alertData.fadeIn(300);
+      setTimeout(function() {
+        show__alertData.fadeOut(300);
+      }, 5000)
+    })
+  
+    $('.alert__dismiss__btn').click(function(){
+      $(this).parents('.alert__message__js').fadeOut(300);
+    });
+    /*---</alert Message>-----*/
+  /*=====X====Functions & Animations=====X====== */
 });
 
 
