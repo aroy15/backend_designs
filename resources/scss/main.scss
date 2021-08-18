@@ -4449,6 +4449,7 @@
 .social_media_strategy{
 	.content-inner{
 		padding:20px 20px 40px 20px;
+		max-width: 1185px;
 	}
 	.nav-pills .nav-link.active, .user_admin_name .nav-pills .show > .nav-link {
 		background-color: $blue-light;
@@ -4462,40 +4463,150 @@
 		min-width: 170px;
 		text-align: center;
 	}
-	.table_container{
-		table{
-			tr{
-				th,td{				
-					height: 63px;
+	// Overview
+	.social_overview{
+		.table_container{
+			table{
+				tr{
+					th,td{				
+						height: 63px;
+						font-weight:300;
+						&:nth-child(1){
+							width:15%;
+						}
+						&:nth-child(2){
+							width: 15%;
+						} 
+						
+						&:nth-child(3){
+							width: 10%;
+						} 
+						&:nth-child(4){
+							width:35%;
+						}					
+						&:nth-child(5){
+							width:15%;
+						}
+						&:nth-child(6){
+							width:10%;
+						}
+						&:nth-child(7){
+							width:70px;
+						}
+					}
+					th{
+						font-size:15px;
+					}
+					td:nth-child(4){
+						text-align:left;
+					}
+				}
+			}
+		}
+	}
+	.social_analytics{
+		// Where is the target group of our customers located? | bar chart
+		.t_g_c_l_chart_container{
+			> p{
+				font-size:14px;
+				color:$gray;
+				padding-left:10px;
+				padding-bottom:10px;
+
+			}		
+			.tgcl_chart_inner{
+				height:343px;
+			}
+
+		}
+		//How many hours a week do you want to spend on marketing? | pie chart
+		.h_w_s_m_chart_container{
+			.hwsm_chart_inner{
+				height:281px;
+			}			
+			.chart_hws_marketing_legend{
+				margin-top:10px;			
+				@include ordering_html_legend_6();
+			}
+		}
+		// How many posts do you plan to publish per week per network? |  pie chart
+		.plan_pub_chart_container{
+			.plan_publish_chart_inner{
+				height:281px;
+			}
+			.plan_publish_chart_legend{
+				margin-top:10px;			
+				@include ordering_html_legend_6();
+			}
+		}
+		// From which country do our customers come? | bar chart
+		.w_country_cus_chart_container{
+			.w_country_cus_chart_inner{
+				height:343px;
+			}
+		}
+		// Solid Plans
+		.solid_plans{
+			background-color: $white-main;
+			.user_circle{
+				width:138px;
+				height:138px;
+				margin:20px auto;
+				border:5px solid $blue-sky;
+				@include b-radius(50%);
+				.user_icon{
+					color:$blue-light;
+					font-size:43px;
+					position: relative;
+					top: 14px;
+					margin-top: 3px;
+					.mdi-currency-usd{
+						color:$blue-opacity;
+						font-size: 22px;
+						margin-left: -30px;
+						position: relative;
+						top: 2px;
+					}
+				}
+				.u_amount{
+					font-size:25px;
+					letter-spacing: -0.0105px;
+				}
+			}
+			p{
+				font-size:16px;
+			}
+		}
+		// Registered users
+		.reg_users{
+			background-color: $white-main;
+			h3{
+				line-height:1;
+			}
+			.reg_user_icon{
+				font-size:53px;
+				width:76px;
+				height:76px;
+				@include b-radius(50%);
+				border:3px solid $blue-opacity;
+				color:$blue-light;			
+				text-align:center;
+				line-height:76px;
+			}
+			.reg_text{
+				h3{
+					font-size:18px;
+					span{
+						font-size:30px;
+					}
+				}
+				p{
+					font-size: 15px;
+					line-height: 1;
+				}
+				.u_f_text{
+					font-size:12px;
 					font-weight:300;
-					&:nth-child(1){
-						width:15%;
-					}
-					&:nth-child(2){
-						width: 15%;
-					} 
-					
-					&:nth-child(3){
-						width: 10%;
-					} 
-					&:nth-child(4){
-						width:35%;
-					}					
-					&:nth-child(5){
-						width:15%;
-					}
-					&:nth-child(6){
-						width:10%;
-					}
-					&:nth-child(7){
-						width:70px;
-					}
-				}
-				th{
-					font-size:15px;
-				}
-				td:nth-child(4){
-					text-align:left;
 				}
 			}
 		}

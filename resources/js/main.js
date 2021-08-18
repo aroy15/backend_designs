@@ -690,21 +690,31 @@ $(document).ready(function(){
   /*=====X==== Accounting > Social-Media-Strategy====X======= */
   /*=========Functions & Animations=========== */  
     /*----<hover effect>---- */
-    $('.hover__over__title').mouseover(function(){
+    $('.hover__over__title').mouseover(function(e){
       var hoverMovable = $(this).parent().find('.hover__movable__content');
-      hoverMovable.css('position','fixed');
-      hoverMovable.fadeIn(100);
+      hoverMovable.css({
+        "position":"fixed",
+        "opacity":"1",
+        "z-index":"99"
+      });
+      var y="";
+      if($(this).offset().top+$(this).height()+45 > hoverMovable.scrollTop()){
+         y = (e.pageY+25)-$(window).scrollTop();
+      }else{
+        y=e.pageY+25;
+      }
        $(this).mousemove(function(e){
-              var y = e.pageY+25;
-              var x = e.pageX+15;
+        var x = e.pageX+25;
               hoverMovable.css('top', y).css('left', x);
+      });
+      $(this).mouseout(function(){
+        hoverMovable.css({
+          "opacity":"0",
+          "z-index":"-1"
         });
+      });
     });
-    $('.hover__over__title').mouseout(function(){
-      var hoverMovable = $(this).parent().find('.hover__movable__content');
-      hoverMovable.css('position','fixed');
-      hoverMovable.fadeOut(100);
-    });
+    
     /*----</hover effect>---- */
     /*---<alert Message>-----*/  
     $('.feed_msg_btn_js').click(function(){
@@ -1694,12 +1704,244 @@ if($('body').find('#answered_ticket_chart').length){
   .trigger( "change" );
 }
 /*=======X========*Ref = #anjon#09 | Answered tickets Bar chart ==========X======== */
+/*==========*Ref = #anjon#10 | Where is the target group of our customers located? |Bar chart ======= */
+if( $('body').find('#target_group_customer_loacated').length) {
+  var target_g_cus_located = document.getElementById('target_group_customer_loacated').getContext('2d');
+  var t_g_c_l_background = target_g_cus_located.createLinearGradient(0, 0, 0, 300);
+  t_g_c_l_background.addColorStop(0.3, '#42ADE2');
+  t_g_c_l_background.addColorStop(1, '#177BBD');
 
+  var t_g_cus_located_data = {
+    labels:['Regional', 'National', 'D-A-CH', 'International', 'other'],
+    datasets: [{
+        label: 'number of user',
+        data: [200 , 2100, 2600, 3000, 3300],
+        backgroundColor: t_g_c_l_background,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius:2,
+    }]
+  }
+
+  var target_group_customer_loacated = new Chart(target_g_cus_located, {
+      type: 'bar',
+      data: t_g_cus_located_data,
+      options: {
+        maintainAspectRatio:false,
+          layout:{
+              padding:10,
+          },
+          plugins:{
+              legend:{
+                display:false,              
+              }
+          },       
+          scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                      stepSize:1000,
+                      callback: numberSuffixK,
+                  },
+                  suggestedMin: 0,
+                  suggestedMax:4000,
+                  grid: {
+                    display: false
+                  }
+              },
+              x: {
+                  title: {
+                    display: false,
+                  },               
+                  grid: {
+                    display: false
+                  },
+                  ticks:{
+                    font:{
+                      size:10
+                    }  
+                  }            
+              }
+          },
+          maxBarThickness: 54,
+          minBarLength: 10,
+      },    
+  });
+}
+/*====X=====*Ref = #anjon#10 | Where is the target group of our customers located? |Bar chart =====X=== */
+/*==========*Ref = #anjon#11 | How many hours a week do you want to spend on marketing? | Pie Chart ======== */
+/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
+if( $('body').find('#chart_hws_marketing').length) {
+  var hws_marketing_data = {
+    labels:['25 Hours','20 Hours','2 Hours','10 Hours','5 Hours','more than 25 Hours'],
+    datasets: [{
+        label: 'subscription cancel',
+        data: [15,10,12,13,20,30],
+        backgroundColor: ['#2AB8FF','#009EEC','#008ACF','#0B71B4','#115A8A','#60C4F6'],
+        borderColor: 'transparent',
+        borderWidth: 0,
+    }]
+  }
+  var hws_marketing_init = document.getElementById('chart_hws_marketing').getContext('2d');
+  var chart_hws_marketing = new Chart(hws_marketing_init, {
+    type: 'pie',
+    data: hws_marketing_data,  
+    plugins: [htmlLegendPlugin, ChartDataLabels],
+    options: {
+      maintainAspectRatio:false, 
+      rotation:-15,
+      plugins: {
+        htmlLegend: {
+          // ID of the container to put the legend in
+          containerID: 'chart_hws_marketing_legend',
+        },
+        legend: {
+          display: false,
+        },
+        datalabels:{
+          color:'#ffffff',
+          align:'center',
+          anchor:'center',
+          padding: {top: 0, left: 10, right: 0, bottom: 0},
+          font:{
+            size:17
+          },
+          formatter: function(value, context){
+            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
+          }
+        }
+      }
+    }
+  });
+  const get_hws_data = chart_hws_marketing.data.datasets[0].data;
+  const chart_hws_marketing_legend = $('.chart_hws_marketing_legend .chart-data');
+  chart_hws_marketing_legend.each((index,element)=>{  
+    element.innerHTML = " (" + get_hws_data[index] + "%)";
+   });
+}
+ /*======X====*Ref = #anjon#11 | How many hours a week do you want to spend on marketing? | Pie Chart ====X==== */
+
+ /*==========*Ref = #anjon#12 | How many posts do you plan to publish per week per network? | Pie Chart ======== */
+/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
+if( $('body').find('#plan_publish_chart').length) {
+  var plan_publish_data = {
+    labels:['25 Postings','20 Postings','2 Postings','10 Postings','5 Postings','more than 25 Posts'],
+    datasets: [{
+        label: 'subscription cancel',
+        data: [15,10,12,13,20,30],
+        backgroundColor: ['#2AB8FF','#009EEC','#008ACF','#0B71B4','#115A8A','#60C4F6'],
+        borderColor: 'transparent',
+        borderWidth: 0,
+    }]
+  }
+  var plan_publish_init = document.getElementById('plan_publish_chart').getContext('2d');
+  var plan_publish_chart = new Chart(plan_publish_init, {
+    type: 'pie',
+    data: plan_publish_data,  
+    plugins: [htmlLegendPlugin, ChartDataLabels],
+    options: {
+      maintainAspectRatio:false, 
+      rotation:-15,
+      plugins: {
+        htmlLegend: {
+          // ID of the container to put the legend in
+          containerID: 'plan_publish_chart_legend',
+        },
+        legend: {
+          display: false,
+        },
+        datalabels:{
+          color:'#ffffff',
+          align:'center',
+          anchor:'center',
+          padding: {top: 0, left: 10, right: 0, bottom: 0},
+          font:{
+            size:17
+          },
+          formatter: function(value, context){
+            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
+          }
+        }
+      }
+    }
+  });
+  const get_plan_publish_data = plan_publish_chart.data.datasets[0].data;
+  const plan_publish_chart_legend = $('.plan_publish_chart_legend .chart-data');
+  plan_publish_chart_legend.each((index,element)=>{  
+    element.innerHTML = " (" + get_plan_publish_data[index] + "%)";
+   });
+}
+ /*======X====*Ref = #anjon#12 | How many posts do you plan to publish per week per network? | Pie Chart ====X==== */
+ /*==========*Ref = #anjon#13 | From which country do our customers come? |Bar chart ======= */
+if( $('body').find('#w_country_cus_chart').length) {
+  var w_country_cus_chart = document.getElementById('w_country_cus_chart').getContext('2d');
+  var w_c_f_c_background = w_country_cus_chart.createLinearGradient(0, 0, 0, 300);
+  w_c_f_c_background.addColorStop(0.3, '#42ADE2');
+  w_c_f_c_background.addColorStop(1, '#177BBD');
+
+  var w_c_f_c_data = {
+    labels:['Germany', 'Austria', 'Switzerland', 'Luxemburg', 'Other'],
+    datasets: [{
+        label: 'number of user',
+        data: [3600 , 1300, 600, 150, 400],
+        backgroundColor: w_c_f_c_background,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius:2,
+    }]
+  }
+
+  var w_country_cus_chart = new Chart(w_country_cus_chart, {
+      type: 'bar',
+      data: w_c_f_c_data,
+      options: {
+        maintainAspectRatio:false,
+          layout:{
+              padding:10,
+          },
+          plugins:{
+              legend:{
+                display:false,              
+              }
+          },       
+          scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                      stepSize:1000,
+                      callback: numberSuffixK,
+                  },
+                  suggestedMin: 0,
+                  suggestedMax:4000,
+                  grid: {
+                    display: false
+                  }
+              },
+              x: {
+                  title: {
+                    display: false,
+                  },               
+                  grid: {
+                    display: false
+                  },
+                  ticks:{
+                    font:{
+                      size:10
+                    }  
+                  }            
+              }
+          },
+          maxBarThickness: 54,
+          minBarLength: 10,
+      },    
+  });
+}
+/*====X=====*Ref = #anjon#13 | From which country do our customers come? |Bar chart =====X=== */
 /* ==========*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data ============== */
 /* Connnected with Ref = #anjon#01, #anjon#04*/
 var stayData = $('.pieLegend li').addClass('anjon');
 $(stayData).click(function(){ 
   $(this).toggleClass("line-through");
-    $(".pieLegend li:not(.anjon)").remove();
+  $(".pieLegend li:not(.anjon)").remove();
 });
 /* ======X====*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data=======X======= */

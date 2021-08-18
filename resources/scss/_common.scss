@@ -224,8 +224,9 @@
 			.hover__content {			
 				top: auto;
 				visibility: visible;
-				opacity:1;
-				display:none;
+				opacity:0;
+				z-index: -1;
+				// display:none;
 				@include transition-all(0s);
 				&::before{
 					display:none;				
@@ -1229,6 +1230,9 @@
 			}			
 		}		
 	}	
+	canvas{
+		max-width:100%;
+	}
 }
 ul.pieLegend{
 	padding:10px 10px 0px 10px;
