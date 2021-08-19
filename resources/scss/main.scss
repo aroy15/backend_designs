@@ -4447,6 +4447,22 @@
 /* 34. Accounting > Social-Media-Strategy */
 /***************************/
 .social_media_strategy{
+	background-image: none;
+	transition:0.1s;	
+	&.social_analytics_bg{
+		background-image: 	url(../img/bg_images/accounting-dashboard/1.png), 
+							url(../img/bg_images/accounting-dashboard/4.png), 
+							url(../img/bg_images/accounting-dashboard/5.png), 
+							url(../img/bg_images/accounting-dashboard/5.png), 
+							url(../img/bg_images/effect-180.png),
+							url(../img/bg_images/accounting-dashboard/1.png),
+							url(../img/bg_images/bg-circle.png),
+							url(../img/bg_images/bg-circle.png);
+		background-position: left 27%, 57.3% 10%, 100% 43%, 57% 73%, 45% bottom, left 88%, 43% 27.7%, 85.5% calc(100% - 300px);
+		background-size:auto,auto,auto,68px 96px,140px 70px,auto,auto,auto;
+		background-repeat: no-repeat;
+		background-color: #ffffff;
+	}
 	.content-inner{
 		padding:20px 20px 40px 20px;
 		max-width: 1185px;
@@ -4504,7 +4520,10 @@
 			}
 		}
 	}
-	.social_analytics{
+	.social_analytics{	
+		.chart_container,.blue_border{
+			background-color:$white-main;
+		}
 		// Where is the target group of our customers located? | bar chart
 		.t_g_c_l_chart_container{		
 			.tgcl_chart_inner{
@@ -4602,11 +4621,13 @@
 				}
 			}
 		}
+		// Which customers should be addressed? | Horizontal Bar Chart
 		.w_cus_addressed_chart_container{
 			.w_cus_addressed_chart_inner{
 				height:198px;
 			}
 		}
+		// What goal are you pursuing with your measures? | Pie Chart
 		.w_g_p_measures_chart_container{
 			.wgpm_chart_inner{
 				height:281px;
@@ -4642,13 +4663,33 @@
 				}
 			}
 		}
-		
+		// On which network do you want to be active? | Bar Chart (Multiple Gradient)
 		.w_network_a_chart_container{
 			.left-axis{
-				font-size:9px;
+				font-size:9px; 
 			}
 			.w_network_a_chart_inner{
 				height:295px;
+			}
+		}
+		// What is the gender of strategy planning clients? | Horizontal Bar Chart
+		.w_gender_p_chart_container{
+			.w_gender_p_chart_inner{
+				height:199px;
+			}
+		}
+		// Top 6 myths
+		.top_6_myths{
+			ol{
+				padding-left:20px;
+				padding-top:5px;
+				margin-bottom:0px;
+				li{
+					list-style-type:decimal;
+					padding-top:5px;
+					font-size:18px;
+					font-weight: 300;
+				}
 			}
 		}
 	}

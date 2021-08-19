@@ -267,7 +267,7 @@
 						<li><a href="./ticketArchive.html">Ticket Archive</a></li>
 						<li><a href="./helpDesk.html">Helpdesk</a></li>
 						<li><a href="#">Questions & Answers (FAQ)</a></li>
-						<li><a href="./feature _requests.html">Feature Requests</a></li>
+						<li><a href="./feature_requests.html">Feature Requests</a></li>
 					</ul>
 				</div>
 			</div>
@@ -390,7 +390,7 @@
 										</span>
 									</td>
 									<td>
-										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
 											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
@@ -407,7 +407,7 @@
 										</span>
 									</td>
 									<td>
-										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
 											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
@@ -424,7 +424,7 @@
 										</span>
 									</td>
 									<td>
-										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
 											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
@@ -441,7 +441,7 @@
 										</span>
 									</td>
 									<td>
-										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+										<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
 											<span class="mdi mdi-file-document-outline"></span>
 										</button>
 									</td>
@@ -470,14 +470,15 @@
 				</div>
 			</div>
 			<!-- start: PDF preview Modal -->
-			<div class="modal fade text-center modalContainer pdf___viewer"  tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+			<div id="accounting_invoice_PDF_modal" class="modal fade text-center modalContainer pdf___viewer"  tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content pdfViewContainer">
-						<p class="pdfName text-center">invoice.pdf</p>
-						<div id="cavaContainer">
-							<!-- <canvas id="acccountingInvocePDFPreview"></canvas> -->
-
-						</div>					
+						<div class="pdf__header d-flex flex-wrap justify-content-center align-items-center">
+							<p class="pdfName text-center mb-0">invoice.pdf</p>
+							<!-- pdf__download Source link will automatically filled form table preview button data-pdfsrc -->
+							<a href="#" target="_blank" class="pdf__download ml-4"><span class="mdi mdi-download"></span></a>
+						</div>
+						<div id="cavaContainer"></div>					
 					</div>
 					<!-- /.modal-content -->
 				</div>

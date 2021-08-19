@@ -1122,7 +1122,9 @@
 				font-size:15px;
 				border: 2px solid $gray-light1;				
 				@include transition-all(0.3s);
-				// .mdi means material design icon
+				.t_shadow_scale_1{
+					@include transition-all(0.1s);
+				}
 				.mdi{
 					font-size:20px;
 					color:$blue-black;

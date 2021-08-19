@@ -220,17 +220,18 @@ $(document).ready(function(){
   /*===========Accounting Invoices | PDF.js Library========= */
   if($('body').find('#accountingInvoices').length){
     /*----PDF Modal preview---- */
-      $('.invoicePreviewBtn').on('click', function (e) {
-        e.preventDefault();
-        var id = $(this).closest('tr').data('id');
-        var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
-        $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
-        $('.modalContainer').data('id', id).modal('show');
-      });
-    /*----/PDF Modal preview---- */
-      /*------PDF.js Activation------ */ 
-    renderPDF('./resources/pdf/task.pdf', document.getElementById('cavaContainer'));
-    /*------/PDF.js Activation------ */
+    $('.invoicePreviewBtn').on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).closest('tr').data('id');
+      var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
+      $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
+      $('#accounting_invoice_PDF_modal').data('id', id).modal('show');
+      /*------PDF.js Activation------ */   
+      renderPDF($(this).data('pdfsrc'), document.getElementById('cavaContainer'));
+      $('.pdf__download').attr('href',$(this).data('pdfsrc'));
+      /*------/PDF.js Activation------ */
+    });
+  /*----/PDF Modal preview---- */
   }
   /*======X=====Accounting Invoices====X===== */
 
@@ -276,20 +277,19 @@ $(document).ready(function(){
   /**********Package & Payment tab*********/
    /*---------- PDF.js Library-------------- */
    if($('body').find('#paymentHistory').length){
-    /*----PDF Modal preview---- */
+     /*----PDF Modal preview---- */
       $('.invoicePreviewBtn').on('click', function (e) {
         e.preventDefault();
         var id = $(this).closest('tr').data('id');
         var getPDFName = $(this).closest('tr').find('td:nth-child(1)').text();
         $('.pdfName').text(getPDFName + ".pdf");/* showing PDF Name */
         $('.modalContainerPaymentHistory').data('id', id).modal('show');
+        /*------PDF.js Activation------ */   
+        renderPDF($(this).data('pdfsrc'), document.getElementById('cavaContainer'));
+        $('.pdf__download').attr('href',$(this).data('pdfsrc'));
+        /*------/PDF.js Activation------ */
       });
-    /*----/PDF Modal preview---- */
-
-      /*------PDF.js Activation------ */   
-    renderPDF('./resources/pdf/Invoice-002-R1.pdf', document.getElementById('canvasPaymentHistory'));
-    /*------/PDF.js Activation------ */
-   }
+    }
   /*------X---- PDF.js Library--------X------ */
   /*----flatpickr Date Picker */
   if($('body').find('.datePicker').length){
@@ -687,6 +687,17 @@ $(document).ready(function(){
     /*----/PDF Modal preview---- */
    }
   /*------X---- PDF.js Library--------X------ */
+  $('#pills-social-overview-tab').click(function(){
+    $('#socialMediaStrategy').removeClass('social_analytics_bg');
+    $('#social_analytics_print').hide(0);
+  });
+  $('#pills-social-analytics-tab').click(function(){
+    window.setTimeout(function(){
+      $('#socialMediaStrategy').addClass('social_analytics_bg');
+      $('#social_analytics_print').show(0);
+  }, 300);
+  })
+  
   /*=====X==== Accounting > Social-Media-Strategy====X======= */
   /*=========Functions & Animations=========== */  
     /*----<hover effect>---- */
@@ -1938,59 +1949,8 @@ if( $('body').find('#w_country_cus_chart').length) {
 }
 /*====X=====*Ref = #anjon#13 | From which country do our customers come? |Bar chart =====X=== */
 
- /*==========*Ref = #anjon#14 | What goal are you pursuing with your measures? | Pie Chart ======== */
-/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
-if( $('body').find('#chart_wgp_measures').length) {
-  var wgp_measures_data = {
-    labels:['Image change','More traffic','More requests','Website views','Brand awareness','New customers'],
-    datasets: [{
-        label: 'subscription cancel',
-        data: [15,10,12,13,20,30],
-        backgroundColor: ['#2AB8FF','#009EEC','#008ACF','#0B71B4','#115A8A','#60C4F6'],
-        borderColor: 'transparent',
-        borderWidth: 0,
-    }]
-  }
-  var wgp_measures_init = document.getElementById('chart_wgp_measures').getContext('2d');
-  var chart_wgp_measures = new Chart(wgp_measures_init, {
-    type: 'pie',
-    data: wgp_measures_data,  
-    plugins: [htmlLegendPlugin, ChartDataLabels],
-    options: {
-      maintainAspectRatio:false, 
-      rotation:-15,
-      plugins: {
-        htmlLegend: {
-          // ID of the container to put the legend in
-          containerID: 'chart_wgp_measures_legend',
-        },
-        legend: {
-          display: false,
-        },
-        datalabels:{
-          color:'#ffffff',
-          align:'center',
-          anchor:'center',
-          padding: {top: 0, left: 10, right: 0, bottom: 0},
-          font:{
-            size:17
-          },
-          formatter: function(value, context){
-            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
-          }
-        }
-      }
-    }
-  });
-  const get_wgp_measures_data = chart_wgp_measures.data.datasets[0].data;
-  const chart_wgp_measures_legend = $('.chart_wgp_measures_legend .chart-data');
-  chart_wgp_measures_legend.each((index,element)=>{  
-    element.innerHTML = " (" + get_wgp_measures_data[index] + "%)";
-   });
-}
- /*======X====*Ref = #anjon#14 | What goal are you pursuing with your measures? | Pie Chart ====X==== */
  
- /*==========*Ref = #anjon#15 | From which country do our customers come? |Bar chart ======= */
+ /*==========*Ref = #anjon#14 | Which customers should be addressed? | Horizontal Bar chart ======= */
  if( $('body').find('#w_cus_addressed_chart').length) {
   var w_cus_addressed_chart = document.getElementById('w_cus_addressed_chart').getContext('2d');
   var w_c_addressed_background = w_cus_addressed_chart.createLinearGradient(300, 0, 0, 0);
@@ -2062,9 +2022,61 @@ if( $('body').find('#chart_wgp_measures').length) {
       },    
   });
 }
-/*====X=====*Ref = #anjon#15 | From which country do our customers come? |Bar chart =====X=== */
+/*====X=====*Ref = #anjon#14 | Which customers should be addressed? | Horizontal Bar chart =====X=== */
 
-/*=============*Ref = #anjon#03 | On which network do you want to be active?| Bar Chart (muliple gradient) ============ */
+ /*==========*Ref = #anjon#15 | What goal are you pursuing with your measures? | Pie Chart ======== */
+/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
+if( $('body').find('#chart_wgp_measures').length) {
+  var wgp_measures_data = {
+    labels:['Image change','More traffic','More requests','Website views','Brand awareness','New customers'],
+    datasets: [{
+        label: 'subscription cancel',
+        data: [15,10,12,13,20,30],
+        backgroundColor: ['#2AB8FF','#009EEC','#008ACF','#0B71B4','#115A8A','#60C4F6'],
+        borderColor: 'transparent',
+        borderWidth: 0,
+    }]
+  }
+  var wgp_measures_init = document.getElementById('chart_wgp_measures').getContext('2d');
+  var chart_wgp_measures = new Chart(wgp_measures_init, {
+    type: 'pie',
+    data: wgp_measures_data,  
+    plugins: [htmlLegendPlugin, ChartDataLabels],
+    options: {
+      maintainAspectRatio:false, 
+      rotation:-15,
+      plugins: {
+        htmlLegend: {
+          // ID of the container to put the legend in
+          containerID: 'chart_wgp_measures_legend',
+        },
+        legend: {
+          display: false,
+        },
+        datalabels:{
+          color:'#ffffff',
+          align:'center',
+          anchor:'center',
+          padding: {top: 0, left: 10, right: 0, bottom: 0},
+          font:{
+            size:17
+          },
+          formatter: function(value, context){
+            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
+          }
+        }
+      }
+    }
+  });
+  const get_wgp_measures_data = chart_wgp_measures.data.datasets[0].data;
+  const chart_wgp_measures_legend = $('.chart_wgp_measures_legend .chart-data');
+  chart_wgp_measures_legend.each((index,element)=>{  
+    element.innerHTML = " (" + get_wgp_measures_data[index] + "%)";
+   });
+}
+ /*======X====*Ref = #anjon#15 | What goal are you pursuing with your measures? | Pie Chart ====X==== */
+
+/*=============*Ref = #anjon#16 | On which network do you want to be active?| Bar Chart (muliple gradient) ============ */
 if( $('body').find('#w_network_a_chart').length){
   var w_network_a_chart = document.getElementById('w_network_a_chart').getContext('2d');
 
@@ -2077,7 +2089,7 @@ if( $('body').find('#w_network_a_chart').length){
   w_net_a_instagram.addColorStop(1, '#FFDC7D');
   
   /* Google Mybusiness Gradient color */
-  var w_net_a_google = w_network_a_chart.createLinearGradient(0, 100, 0, 250);
+  var w_net_a_google = w_network_a_chart.createLinearGradient(0, 70, 0, 250);
   w_net_a_google.addColorStop(0, '#4285F4');
   w_net_a_google.addColorStop(0.1562, '#4683EF');
   w_net_a_google.addColorStop(0.2188, '#D7463C');
@@ -2094,7 +2106,7 @@ if( $('body').find('#w_network_a_chart').length){
     labels:['Twitter', 'Pinterest', 'Facebook', 'Instagram', 'LinkedIn', 'Whatsapp', 'Google Mybusiness', 'Youtube', 'Telegram'],
     datasets: [{
         label: 'Network',
-        data: [1600, 2100, 2600, 2800, 3900, 4200, 3000, 4200,1800],
+        data: [1600, 2100, 2600, 2800, 3800, 4000, 3000, 4000,1800],
         backgroundColor: ['#1DA1F2','#E60023','#1877F2',w_net_a_instagram,'#0E76A8','#25D366',w_net_a_google,'#FF0000','#0088CC'],
         borderColor: 'transparent',
         borderWidth: 0,
@@ -2162,7 +2174,81 @@ if( $('body').find('#w_network_a_chart').length){
       },    
   });
 }
-/*=====X=======*Ref = #anjon#03 | On which network do you want to be active? | Bar Chart ===X======== */
+/*=====X=======*Ref = #anjon#16 | On which network do you want to be active? | Bar Chart ===X======== */
+
+ /*==========*Ref = #anjon#17 | What is the gender of strategy planning clients? | Horizontal Bar chart ======= */
+ if( $('body').find('#w_gender_p_chart').length) {
+  var w_gender_p_chart = document.getElementById('w_gender_p_chart').getContext('2d');
+  var w_gender_p_chart_background = w_gender_p_chart.createLinearGradient(300, 0, 0, 0);
+  w_gender_p_chart_background.addColorStop(0.3, '#42ADE2');
+  w_gender_p_chart_background.addColorStop(1, '#177BBD');
+
+  var w_gender_p_chart_data = {
+    labels:['Man','Woman','Other'],
+    datasets: [{
+        label: 'parcent:',
+        data: [48,68,10],
+        backgroundColor: w_gender_p_chart_background,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius:2,
+    }]
+  }
+
+  var w_gender_p_chart_apply = new Chart(w_gender_p_chart, {
+      type: 'bar',
+      data: w_gender_p_chart_data,
+      options: {
+        indexAxis: 'y',
+        maintainAspectRatio:false,
+          layout:{
+              padding:10,
+          },
+          plugins:{
+              legend:{
+                display:false,              
+              }
+          },       
+          scales: {
+              x: {
+                  beginAtZero: true,
+                  ticks: {
+                      stepSize:10,
+                      callback: function(value, index, values) {
+                        return value + '%';
+                      },
+                      font:{
+                        size:9.5
+                      },
+                      color:'#A3A3A3'
+                  },
+                  suggestedMin: 0,
+                  suggestedMax:100,
+                  grid: {
+                    display: false
+                  }
+              },
+              y: {
+                  title: {
+                    display: false,
+                  },               
+                  grid: {
+                    display: false
+                  },
+                  ticks:{
+                    font:{
+                      size:10
+                    },
+                    color:'#A3A3A3'  
+                  }            
+              }
+          },
+          maxBarThickness: 37,
+          minBarLength: 10,
+      },    
+  });
+}
+/*====X=====*Ref = #anjon#17 | What is the gender of strategy planning clients? | Horizontal Bar chart =====X=== */
 
 /* ==========*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data ============== */
 /* Connnected with Ref = #anjon#01, #anjon#04*/

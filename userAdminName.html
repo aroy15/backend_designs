@@ -271,7 +271,7 @@
 						<li><a href="./ticketArchive.html">Ticket Archive</a></li>
 						<li><a href="./helpDesk.html">Helpdesk</a></li>
 						<li><a href="#">Questions & Answers (FAQ)</a></li>
-						<li><a href="./feature _requests.html">Feature Requests</a></li>
+						<li><a href="./feature_requests.html">Feature Requests</a></li>
 					</ul>
 				</div>
 			</div>
@@ -957,7 +957,7 @@
 															<td>20.99€</td>
 															<td>PayPal</td>
 															<td>
-																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
 																	<span class="mdi mdi-file-document-outline"></span>
 																</button>
 															</td>
@@ -968,7 +968,7 @@
 															<td>20.99€</td>
 															<td>Credit Card</td>
 															<td>
-																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
 																	<span class="mdi mdi-file-document-outline"></span>
 																</button>
 															</td>
@@ -979,7 +979,7 @@
 															<td>20.99€</td>
 															<td>PayPal</td>
 															<td>
-																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
 																	<span class="mdi mdi-file-document-outline"></span>
 																</button>
 															</td>
@@ -990,7 +990,7 @@
 															<td>20.99€</td>
 															<td>Giropay</td>
 															<td>
-																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1">
+																<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
 																	<span class="mdi mdi-file-document-outline"></span>
 																</button>
 															</td>
@@ -1003,8 +1003,12 @@
 										<div class="modal fade text-center modalContainerPaymentHistory modal-transparent pdf___viewer"  tabindex="-1" role="dialog" aria-hidden="true">
 											<div class="modal-dialog modal-dialog-centered">
 												<div class="modal-content pdfViewContainer">
-													<p class="pdfName text-center">invoice.pdf</p>
-													<div id="canvasPaymentHistory"></div>					
+													<div class="pdf__header d-flex flex-wrap justify-content-center align-items-center">
+														<p class="pdfName text-center mb-0">invoice.pdf</p>
+														<!-- pdf__download Source link will automatically filled form table preview button data-pdfsrc -->
+														<a href="#" target="_blank" class="pdf__download ml-4"><span class="mdi mdi-download"></span></a>
+													</div>
+													<div id="cavaContainer"></div>					
 												</div>
 												<!-- /.modal-content -->
 											</div>

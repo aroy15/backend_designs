@@ -267,7 +267,7 @@
 						<li><a href="./ticketArchive.html">Ticket Archive</a></li>
 						<li><a href="./helpDesk.html">Helpdesk</a></li>
 						<li><a href="#">Questions & Answers (FAQ)</a></li>
-						<li><a href="./feature _requests.html">Feature Requests</a></li>
+						<li><a href="./feature_requests.html">Feature Requests</a></li>
 					</ul>
 				</div>
 			</div>
@@ -342,265 +342,301 @@
 			</div>
 			<!--x- End of preloader container -x-->
 			<div class="content-inner">     
-				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					<li class="nav-item mr-3 mb-4">
-					  <a class="nav-link shadow_hover_half" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
-					</li>
-					<li class="nav-item mr-3 mb-4">
-					  <a class="nav-link active shadow_hover_half" id="pills-analytics-tab" data-toggle="pill" href="#pills-analytics" role="tab" aria-controls="pills-analytics" aria-selected="false">Analytics</a>
-					</li>
-				  </ul>   				
-				  <div class="tab-content" id="pills-tabContent">
-					  <!-- ======<Social overview>====-->
-					  <div class="tab-pane fade" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
-						<div class="social_overview bg-gray b-r-5 p-3">	
-							<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
-								<div class="selectBtn order-2 order-lg-1">
-									<select class="custom_select big_select">
-										<option value="">Sorted by Date</option>
-										<option value="22.10.2021">22.10.2021</option>
-										<option value="07.12.2020">07.12.2020</option>
-										<option value="10.08.2020">10.08.2020</option>
+				<div class="d-flex flex-wrap justify-content-between">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item mr-3 mb-4">
+							<a class="nav-link active shadow_hover_half" id="pills-social-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+						</li>
+						<li class="nav-item mr-3 mb-4">
+							<a class="nav-link shadow_hover_half" id="pills-social-analytics-tab" data-toggle="pill" href="#pills-analytics" role="tab" aria-controls="pills-analytics" aria-selected="false">Analytics</a>
+						</li>
+					</ul>
+					<!-- Print Icon -->
+					<div>
+						<button type="button" id="social_analytics_print" onclick="window.print()" class="print-icon shadow_hover_half text-blue display-none ml-auto mb-3">
+							<span class="mdi mdi-printer"></span>
+						</button>
+					</div>
+					<!--/Print Icon -->  
+				</div>   				
+				<div class="tab-content" id="pills-tabContent">
+					<!-- ======<Social overview>====-->
+					<div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-social-overview-tab">
+					<div class="social_overview bg-gray b-r-5 p-3">	
+						<div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
+							<div class="selectBtn order-2 order-lg-1">
+								<select class="custom_select big_select">
+									<option value="">Sorted by Date</option>
+									<option value="22.10.2021">22.10.2021</option>
+									<option value="07.12.2020">07.12.2020</option>
+									<option value="10.08.2020">10.08.2020</option>
+								</select>
+							</div>
+							<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
+								<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
+									<input type="text" class="search form-control" placeholder="Search">
+									<button type="submit" class="search_btn">
+										<img src="./resources/img/icons/search-icon.png" alt="Search">
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="responsive_alert text-center py-3 text-dark">
+							If table are not fully showing please swipe on table left-right
+						</div>
+						<div class="table_container">
+							<table class="w-100 text-center">
+								<thead>
+									<tr>
+										<th>Letter No.</th>
+										<th>checkout Date</th>
+										<th>Customer</th>
+										<th>Customer E-Mail</th>
+										<th>Amount</th>
+										<th>Status</th>
+										<th>Function</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-id="1">
+										<td>SMS-002-R1</td>
+										<td>22.10.2021</td>
+										<td>20014</td>
+										<td>Tobias@gmail.com </td>
+										<td>39,99 €</td>
+										<td>
+											<span class="green_alert">delivered</span>
+										</td>
+										<td>
+											<a href="./resources/pdf/Invoice-002-R1.pdf"></a>
+											<a href="./resources/pdf/task.pdf"></a>
+											<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
+												<span class="mdi mdi-file-document-outline"></span>
+											</button>
+										</td>
+									</tr>
+									<tr data-id="2">
+										<td>SMS-003-R1</td>
+										<td>07.12.2020</td>
+										<td>20045</td>
+										<td>Mustermann@Mustermann.de</td>
+										<td>39,99 €</td>
+										<td>
+											<span class="green_alert">delivered</span>
+										</td>
+										<td>
+											<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
+												<span class="mdi mdi-file-document-outline"></span>
+											</button>
+										</td>
+									</tr>
+									<tr data-id="3">
+										<td>SMS-004-R1</td>
+										<td>10.08.2020</td>
+										<td>20074</td>
+										<td>Schmidt.Josef@schreinerei-josef.de</td>
+										<td>32,54 €</td>
+										<td>
+											<span class="red_alert">pending</span>
+										</td>
+										<td>
+											<button type="button" class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
+												<span class="mdi mdi-file-document-outline"></span>
+											</button>
+										</td>
+									</tr>
+									<tr data-id="4">
+										<td>SMS-005-R1</td>
+										<td>09.02.2020</td>
+										<td>20057</td>
+										<td>HildegardBecker@Beckermoebel.com</td>
+										<td>39,99 €</td> 
+										<td>
+											<span class="green_alert">delivered</span>
+										</td>
+										<td>
+											<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1"  data-pdfsrc="./resources/pdf/task.pdf">
+												<span class="mdi mdi-file-document-outline"></span>
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>						
+							<div class="table_bottom d-flex justify-content-between">
+								<a href="#" class="file_btn shadow_hover_1">
+									<span class="mdi mdi-file-document"></span>
+								</a>
+								<div class="entries pl-lg-5">
+									<p class="mb-0">1042 entries in total</p>
+								</div>
+							
+								<div class="show_entries d-flex justify-content-between align-items-center">
+									<span>Show Entries :</span>
+									<select id="" class="white_select custom_select">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
 									</select>
 								</div>
-								<div class="search_box order-1 order-lg-2 mx-auto mx-lg-0">
-									<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0">
-										<input type="text" class="search form-control" placeholder="Search">
-										<button type="submit" class="search_btn">
-										  <img src="./resources/img/icons/search-icon.png" alt="Search">
-										</button>
-									</form>
-								</div>
 							</div>
-							<div class="responsive_alert text-center py-3 text-dark">
-								If table are not fully showing please swipe on table left-right
-							</div>
-							<div class="table_container request_fea_table">
-								<table class="w-100 text-center">
-									<thead>
-										<tr>
-											<th>Letter No.</th>
-											<th>checkout Date</th>
-											<th>Customer</th>
-											<th>Customer E-Mail</th>
-											<th>Amount</th>
-											<th>Status</th>
-											<th>Function</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr data-id="1">
-											<td>SMS-002-R1</td>
-											<td>22.10.2021</td>
-											<td>20014</td>
-											<td>Tobias@gmail.com </td>
-											<td>39,99 €</td>
-											<td>
-												<span class="green_alert">delivered</span>
-											</td>
-											<td>
-												<a href="./resources/pdf/Invoice-002-R1.pdf"></a>
-												<a href="./resources/pdf/task.pdf"></a>
-												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
-													<span class="mdi mdi-file-document-outline"></span>
-												</button>
-											</td>
-										</tr>
-										<tr data-id="2">
-											<td>SMS-003-R1</td>
-											<td>07.12.2020</td>
-											<td>20045</td>
-											<td>Mustermann@Mustermann.de</td>
-											<td>39,99 €</td>
-											<td>
-												<span class="green_alert">delivered</span>
-											</td>
-											<td>
-												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/task.pdf">
-													<span class="mdi mdi-file-document-outline"></span>
-												</button>
-											</td>
-										</tr>
-										<tr data-id="3">
-											<td>SMS-004-R1</td>
-											<td>10.08.2020</td>
-											<td>20074</td>
-											<td>Schmidt.Josef@schreinerei-josef.de</td>
-											<td>32,54 €</td>
-											<td>
-												<span class="red_alert">pending</span>
-											</td>
-											<td>
-												<button type="button" class="invoicePreviewBtn btn-transparent t_shadow_scale_1" data-pdfsrc="./resources/pdf/Invoice-002-R1.pdf">
-													<span class="mdi mdi-file-document-outline"></span>
-												</button>
-											</td>
-										</tr>
-										<tr data-id="4">
-											<td>SMS-005-R1</td>
-											<td>09.02.2020</td>
-											<td>20057</td>
-											<td>HildegardBecker@Beckermoebel.com</td>
-											<td>39,99 €</td> 
-											<td>
-												<span class="green_alert">delivered</span>
-											</td>
-											<td>
-												<button type="button"  class="invoicePreviewBtn btn-transparent t_shadow_scale_1"  data-pdfsrc="./resources/pdf/task.pdf">
-													<span class="mdi mdi-file-document-outline"></span>
-												</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>						
-								<div class="table_bottom d-flex justify-content-between">
-									<a href="#" class="file_btn shadow_hover_1">
-										<span class="mdi mdi-file-document"></span>
-									</a>
-									<div class="entries pl-lg-5">
-										<p class="mb-0">1042 entries in total</p>
-									</div>
-								
-									<div class="show_entries d-flex justify-content-between align-items-center">
-										<span>Show Entries :</span>
-										<select id="" class="white_select custom_select">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
+						</div>					
+					</div>
+					</div>
+					<!-- ===X===</Social overview>==X==-->
+					<!-- ======Analytics========== -->
+					<div class="tab-pane fade" id="pills-analytics" role="tabpanel" aria-labelledby="pills-social-analytics-tab">
+						<div class="social_analytics">
+						<div class="row">
+							<!-- Where is the target group of our customers located? | Bar chart -->
+							<div class="col-xl-7 mb-4 d-flex">
+								<div class="t_g_c_l_chart_container chart_container flex-grow-1">
+									<h3>Where is the target group of our customers located?</h3>
+									<p class="mb-0 left-axis">Amount</p>
+									<div class="tgcl_chart_inner">
+										<canvas id="target_group_customer_loacated"></canvas>
 									</div>
 								</div>
-							</div>					
+							</div>
+							<!-- /Where is the target group of our customers located? -->
+							<!-- How many hours a week do you want to spend on marketing? | Pie chart -->
+							<div class="col-xl-5 mb-4 d-flex">
+								<div class="h_w_s_m_chart_container chart_container flex-grow-1">
+									<h3>How many hours a week do you want to spend on marketing?</h3>
+									<div class="hwsm_chart_inner">
+										<canvas id="chart_hws_marketing"></canvas>
+									</div>
+									<div id="chart_hws_marketing_legend" class="chart_hws_marketing_legend"></div>
+								</div>
+							</div>
+							<!-- /How many hours a week do you want to spend on marketing? -->
 						</div>
-					  </div>
-					  <!-- ===X===</Social overview>==X==-->
-					  <!-- ======Analytics========== -->
-					  <div class="tab-pane fade show active" id="pills-analytics" role="tabpanel" aria-labelledby="pills-analytics-tab">
-						  <div class="social_analytics">
-							<div class="row">
-								<!-- Where is the target group of our customers located? | Bar chart -->
-								<div class="col-xl-7 mb-4 d-flex">
-									<div class="t_g_c_l_chart_container chart_container flex-grow-1">
-										<h3>Where is the target group of our customers located?</h3>
-										<p class="mb-0 left-axis">Amount</p>
-										<div class="tgcl_chart_inner">
-											<canvas id="target_group_customer_loacated"></canvas>
-										</div>
+						<div class="row">
+							<!-- How many posts do you plan to publish per week per network? | Pie Chart -->
+							<div class="col-xl-5 mb-4 d-flex">
+								<div class="plan_pub_chart_container chart_container flex-grow-1">
+									<h3>How many posts do you plan to publish per week per network?</h3>
+									<div class="plan_publish_chart_inner">
+										<canvas id="plan_publish_chart"></canvas>
 									</div>
+									<div id="plan_publish_chart_legend" class="plan_publish_chart_legend"></div>
 								</div>
-								<!-- /Where is the target group of our customers located? -->
-								<!-- How many hours a week do you want to spend on marketing? | Pie chart -->
-								<div class="col-xl-5 mb-4 d-flex">
-									<div class="h_w_s_m_chart_container chart_container flex-grow-1">
-										<h3>How many hours a week do you want to spend on marketing?</h3>
-										<div class="hwsm_chart_inner">
-											<canvas id="chart_hws_marketing"></canvas>
-										</div>
-										<div id="chart_hws_marketing_legend" class="chart_hws_marketing_legend"></div>
-									</div>
-								</div>
-								<!-- /How many hours a week do you want to spend on marketing? -->
 							</div>
-							<div class="row">
-								<!-- How many posts do you plan to publish per week per network? | Pie Chart -->
-								<div class="col-xl-5 mb-4 d-flex">
-									<div class="plan_pub_chart_container chart_container flex-grow-1">
-										<h3>How many posts do you plan to publish per week per network?</h3>
-										<div class="plan_publish_chart_inner">
-											<canvas id="plan_publish_chart"></canvas>
-										</div>
-										<div id="plan_publish_chart_legend" class="plan_publish_chart_legend"></div>
+							<!-- /How many posts do you plan to publish per week per network? -->
+							<!-- From which country do our customers come? | Bar Chart -->
+							<div class="col-xl-7 mb-4 d-flex">
+								<div class="w_country_cus_chart_container chart_container flex-grow-1">
+									<h3>From which country do our customers come?</h3>
+									<p class="mb-0 left-axis">Amount</p>
+									<div class="w_country_cus_chart_inner">
+										<canvas id="w_country_cus_chart"></canvas>
 									</div>
 								</div>
-								<!-- /How many posts do you plan to publish per week per network? -->
-								<!-- From which country do our customers come? | Bar Chart -->
-								<div class="col-xl-7 mb-4 d-flex">
-									<div class="w_country_cus_chart_container chart_container flex-grow-1">
-										<h3>From which country do our customers come?</h3>
-										<p class="mb-0 left-axis">Amount</p>
-										<div class="w_country_cus_chart_inner">
-											<canvas id="w_country_cus_chart"></canvas>
-										</div>
-									</div>
-								</div>
-								<!-- /From which country do our customers come? -->
 							</div>
-							<div class="row">
-								<div class="col-xl-7">
-									<div class="row">
-										<div class="col-lg-7 d-flex flex-grow-1 mb-4">
-											<div class="solid_plans blue_border text-center w-100 mx-auto mx-xl-0">
-												<h3>Solid Plans</h3>
-												<div class="user_circle">
-													<span class="user_icon d-block">
-														<span class="mdi mdi-account"></span>
-														<span class="mdi mdi-currency-usd"></span>
-													</span>
-													<span class="u_amount d-block">4325</span>
-												</div>
-												<p class="mb-0">This is the number of strategies already sold</p>
+							<!-- /From which country do our customers come? -->
+						</div>
+						<div class="row">
+							<div class="col-xl-7 d-flex">
+								<div class="row flex-grow-1">
+									<div class="col-lg-7 d-flex flex-grow-1 mb-4">
+										<div class="solid_plans blue_border text-center w-100 mx-auto mx-xl-0">
+											<h3>Solid Plans</h3>
+											<div class="user_circle">
+												<span class="user_icon d-block">
+													<span class="mdi mdi-account"></span>
+													<span class="mdi mdi-currency-usd"></span>
+												</span>
+												<span class="u_amount d-block">4325</span>
 											</div>
+											<p class="mb-0">This is the number of strategies already sold</p>
 										</div>
-										<div class="col-lg-5 d-flex flex-grow-1 mb-4">
-											<div class="reg_users blue_border w-100 mx-auto mx-xl-0 text-center">
-												<div class="reg_user_icon mx-auto mt-3">
-													<span class="mdi mdi-human"></span>
-												</div>
-												<div class="reg_text">
-													<h3 class="mt-4 mb-2"><span>1251</span> Users</h3> 
-													<p class="mb-0">Customers of which currently have an active subscription</p>
-													<span class="u_f_text d-block">This represents approx. 75%</span>
-												</div>
+									</div>
+									<div class="col-lg-5 d-flex flex-grow-1 mb-4">
+										<div class="reg_users blue_border w-100 mx-auto mx-xl-0 text-center">
+											<div class="reg_user_icon mx-auto mt-3">
+												<span class="mdi mdi-human"></span>
+											</div>
+											<div class="reg_text">
+												<h3 class="mt-4 mb-2"><span>1251</span> Users</h3> 
+												<p class="mb-0">Customers of which currently have an active subscription</p>
+												<span class="u_f_text d-block">This represents approx. 75%</span>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- Which customers should be addressed? | Horizontal Bar Chart -->
-								<div class="col-xl-5 mb-4 d-flex">
-									<div class="w_cus_addressed_chart_container chart_container flex-grow-1">
-										<h3>Which customers should be addressed?</h3>
-										<p class="mb-0 left-axis">type</p>
-										<div class="w_cus_addressed_chart_inner">
-											<canvas id="w_cus_addressed_chart"></canvas>
-										</div>
-									</div>
-								</div>
-								<!-- /Which customers should be addressed? -->
 							</div>
-							<div class="row">
-								<div class="col-xl-7 mb-4 d-flex">
-									<div class="w_g_p_measures_chart_container chart_container flex-grow-1 pb-3">
-										<h3>What goal are you pursuing with your measures?</h3>
-										<div class="d-flex flex-column flex-sm-row align-items-center">
-											<div class="wgpm_chart_inner flex-grow-1">
-												<canvas id="chart_wgp_measures"></canvas>
-											</div>
-											<div id="chart_wgp_measures_legend" class="chart_wgp_measures_legend"></div>
-										</div>
+							<!-- Which customers should be addressed? | Horizontal Bar Chart -->
+							<div class="col-xl-5 mb-4 d-flex">
+								<div class="w_cus_addressed_chart_container chart_container flex-grow-1">
+									<h3>Which customers should be addressed?</h3>
+									<p class="mb-0 left-axis">type</p>
+									<div class="w_cus_addressed_chart_inner">
+										<canvas id="w_cus_addressed_chart"></canvas>
 									</div>
 								</div>
-								<!-- On which network do you want to be active? | bar chart (multiple gradient) -->
-								<div class="col-xl-5 mb-4 d-flex">
-									<div class="w_network_a_chart_container chart_container flex-grow-1">
-										<h3>On which network do you want to be active?</h3>
-										<p class="mb-0 left-axis">Connected <br>
-											Channels</p>
-										<div class="w_network_a_chart_inner">
-											<canvas id="w_network_a_chart"></canvas>
-										</div>
-									</div>
-								</div>
-								<!-- /On which network do you want to be active? -->
 							</div>
-						  </div>
-					  </div>
-					  <!-- ==X====Analytics=====X===== -->
-				  </div>        
-				
+							<!-- /Which customers should be addressed? -->
+						</div>
+						<div class="row">
+							<div class="col-xl-7 mb-4 d-flex">
+								<div class="w_g_p_measures_chart_container chart_container flex-grow-1 pb-3">
+									<h3>What goal are you pursuing with your measures?</h3>
+									<div class="d-flex flex-column flex-sm-row align-items-center">
+										<div class="wgpm_chart_inner flex-grow-1">
+											<canvas id="chart_wgp_measures"></canvas>
+										</div>
+										<div id="chart_wgp_measures_legend" class="chart_wgp_measures_legend"></div>
+									</div>
+								</div>
+							</div>
+							<!-- On which network do you want to be active? | bar chart (multiple gradient) -->
+							<div class="col-xl-5 mb-4 d-flex">
+								<div class="w_network_a_chart_container chart_container flex-grow-1">
+									<h3>On which network do you want to be active?</h3>
+									<p class="mb-0 left-axis">Connected <br>
+										Channels</p>
+									<div class="w_network_a_chart_inner">
+										<canvas id="w_network_a_chart"></canvas>
+									</div>
+								</div>
+							</div>
+							<!-- /On which network do you want to be active? -->
+						</div>
+						<div class="row">
+							<!-- What is the gender of strategy planning clients? | Horizontal Bar Chart -->
+							<div class="col-xl-5 mb-4 d-flex">
+								<div class="w_gender_p_chart_container chart_container flex-grow-1">
+									<h3>What is the gender of strategy planning clients?</h3>
+									<p class="mb-0 left-axis">type</p>
+									<div class=" ">
+										<canvas id="w_gender_p_chart"></canvas>
+									</div>
+								</div>
+							</div>
+							<!-- /What is the gender of strategy planning clients? -->
+							<!-- Top 6 myths -->
+							<div class="col-xl-7 d-flex mb-4">
+								<div class="top_6_myths blue_border flex-grow-1">
+									<h3>Top 6 myths</h3>
+									<ol>
+										<li>Viele Follower zu haben, bedeutet eine hohe Relevanz!</li>
+										<li>Follower zu Kaufen kann ein effektives Mittel sein, um den [...]</li>
+										<li>Social-Media kann man mal so nebenbei erstellen!</li>
+										<li>Den Algorythmus kann man nicht beeinflussen!</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+									</ol>
+								</div>
+							</div>
+							<!-- /Top 6 myths -->
+						</div>
+						</div>
+					</div>
+					<!-- ==X====Analytics=====X===== -->
+				</div>  
 			</div>
 			<!-- start: PDF preview Modal -->
-			<div class="modal fade text-center socialMediaModal_pdf pdf___viewer"  tabindex="-1" role="dialog" aria-labelledby="modal_requestFeatureLabel" aria-hidden="true">
+			<div class="modal fade text-center socialMediaModal_pdf pdf___viewer"  tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content pdfViewContainer">
 						<div class="pdf__header d-flex flex-wrap justify-content-center align-items-center">

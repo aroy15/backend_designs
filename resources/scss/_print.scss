@@ -1,4 +1,44 @@
 @media print{
+	.print-icon{
+		display:none!important;
+	}
+    header{
+		display: none;		
+	}
+	nav#sidebarNav{
+		display:none !important;
+	}
+	#bodyItem .main_item{
+		&.main_item-active {
+			width: 100%;
+		}
+		.body-header-content {
+			margin-top: 0px;
+		}
+	}
+	.accounting_Dashboard{
+		.sales_figure_chart_container{
+			margin-top:480px;
+		}
+		.user_growth{
+			margin-top:400px;
+		}
+	}
+	.social_media_strategy{
+		padding-top:0px;
+		.content-inner{
+			padding-top:0px;
+		}
+		.nav-pills{
+			display:none;
+		}
+		.plan_pub_chart_container .plan_publish_chart_inner{
+			height:250px;
+		}
+		.w_cus_addressed_chart_container{
+			margin-bottom:250px;
+		}		
+	}
 	
     .coupon_info{
         margin-top:200px;

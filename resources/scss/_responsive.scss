@@ -147,6 +147,25 @@
 			}
 		}
 	}
+	//Accounting > Social-Media-Strategy
+	.social_media_strategy{
+		background-image: none;
+		transition:0.1s;	
+		&.social_analytics_bg{
+			background-image: 	url(../img/bg_images/accounting-dashboard/1.png), 
+								url(../img/bg_images/accounting-dashboard/4.png), 
+								url(../img/bg_images/accounting-dashboard/5.png), 
+								url(../img/bg_images/accounting-dashboard/5.png), 
+								url(../img/bg_images/effect-180.png),
+								url(../img/bg_images/accounting-dashboard/1.png),
+								url(../img/bg_images/bg-circle.png),
+								url(../img/bg_images/bg-circle.png);
+			background-position: left 27%, 60% 10%, 100% 43%, 57% 73%, 45% bottom, left 88%, 40% 27.7%, 85.5% calc(100% - 300px);
+			background-size:auto,auto,auto,68px 96px,140px 70px,auto,auto,auto;
+			background-repeat: no-repeat;
+			background-color: #ffffff;
+		}
+	}
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -337,6 +356,66 @@
 			}
 		}
 	}
+	//Accounting > Social-Media-Strategy
+	.social_media_strategy{	
+		&.social_analytics_bg{
+			background-image:none;
+		}
+		.social_overview .table_container {
+			table,.table_bottom{
+				min-width:890px;
+			}
+		}
+		.col-xl-7,.col-xl-5{
+			justify-content:center;
+			.chart_container{
+				width:100%;
+				margin-left:auto;
+				margin-right:auto;				
+			}
+		}
+		.col-xl-7,.col-xl-5{
+			.chart_container{
+				max-width:595px;			
+			}
+		}
+		.col-xl-5{
+			.chart_container{
+				max-width:471px;
+			}
+		}
+		.social_analytics{
+			.h_w_s_m_chart_container{
+				.hwsm_chart_inner{
+					height:260px;
+				}
+			}
+			.plan_pub_chart_container .plan_publish_chart_inner{
+				height:260px;
+			}
+		}	
+		
+	}
+	.target_group_sec{
+		.col-xl-7,.col-xl-5{
+			justify-content:center;
+			.chart_container{
+				width:100%;
+				margin-left:auto;
+				margin-right:auto;				
+			}
+		}
+		.col-xl-7,.col-xl-5{
+			.chart_container{
+				max-width:595px;			
+			}
+		}
+		.col-xl-5{
+			.chart_container{
+				max-width:471px;
+			}
+		}
+	}
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {
@@ -457,7 +536,7 @@
 				width:100%;
 			}
 		}
-	}
+	}	
 }
 @media (max-width: 575px) {
 	#headerMenu{
@@ -566,6 +645,14 @@
 					}
 				}
 			}		
+		}
+	}
+	//Accounting > Social-Media-Strategy
+	.social_media_strategy{
+		.col-xl-7,.col-xl-5{
+			.chart_container{
+				max-width:100%;			
+			}
 		}
 	}
 }

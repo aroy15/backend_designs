@@ -1758,6 +1758,14 @@ textarea::placeholder {
   -o-transition: 0.3s;
 }
 
+.table_container table tr td .t_shadow_scale_1 {
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
 .table_container table tr td .mdi {
   font-size: 20px;
   color: #334A80;
@@ -7609,6 +7617,20 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /* 34. Accounting > Social-Media-Strategy */
 /***************************/
+.social_media_strategy {
+  background-image: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.social_media_strategy.social_analytics_bg {
+  background-image: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png), url(../img/bg_images/accounting-dashboard/5.png), url(../img/bg_images/effect-180.png), url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/bg-circle.png), url(../img/bg_images/bg-circle.png);
+  background-position: left 27%, 57.3% 10%, 100% 43%, 57% 73%, 45% bottom, left 88%, 43% 27.7%, 85.5% calc(100% - 300px);
+  background-size: auto,auto,auto,68px 96px,140px 70px,auto,auto,auto;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
 .social_media_strategy .content-inner {
   padding: 20px 20px 40px 20px;
   max-width: 1185px;
@@ -7671,6 +7693,10 @@ ul.pieLegend li:not(.anjon) {
 
 .social_media_strategy .social_overview .table_container table tr td:nth-child(4) {
   text-align: left;
+}
+
+.social_media_strategy .social_analytics .chart_container, .social_media_strategy .social_analytics .blue_border {
+  background-color: #ffffff;
 }
 
 .social_media_strategy .social_analytics .t_g_c_l_chart_container .tgcl_chart_inner {
@@ -7923,6 +7949,23 @@ ul.pieLegend li:not(.anjon) {
   height: 295px;
 }
 
+.social_media_strategy .social_analytics .w_gender_p_chart_container .w_gender_p_chart_inner {
+  height: 199px;
+}
+
+.social_media_strategy .social_analytics .top_6_myths ol {
+  padding-left: 20px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+}
+
+.social_media_strategy .social_analytics .top_6_myths ol li {
+  list-style-type: decimal;
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 /*==============Responsive CSS===============*/
 /***************************/
 /*********MEDIA QUERY*******/
@@ -8002,6 +8045,18 @@ ul.pieLegend li:not(.anjon) {
   }
   .ticketsystem_detail_closed .chat__container .ticket__closed {
     max-width: 480px;
+  }
+  .social_media_strategy {
+    background-image: none;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+  }
+  .social_media_strategy.social_analytics_bg {
+    background-image: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png), url(../img/bg_images/accounting-dashboard/5.png), url(../img/bg_images/effect-180.png), url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/bg-circle.png), url(../img/bg_images/bg-circle.png);
+    background-position: left 27%, 60% 10%, 100% 43%, 57% 73%, 45% bottom, left 88%, 40% 27.7%, 85.5% calc(100% - 300px);
+    background-size: auto,auto,auto,68px 96px,140px 70px,auto,auto,auto;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
   }
 }
 
@@ -8134,6 +8189,50 @@ ul.pieLegend li:not(.anjon) {
   }
   .ticket_archive .table_container table, .ticket_archive .table_container .table_bottom {
     min-width: 800px;
+  }
+  .social_media_strategy.social_analytics_bg {
+    background-image: none;
+  }
+  .social_media_strategy .social_overview .table_container table, .social_media_strategy .social_overview .table_container .table_bottom {
+    min-width: 890px;
+  }
+  .social_media_strategy .col-xl-7, .social_media_strategy .col-xl-5 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social_media_strategy .col-xl-7 .chart_container, .social_media_strategy .col-xl-5 .chart_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social_media_strategy .col-xl-7 .chart_container, .social_media_strategy .col-xl-5 .chart_container {
+    max-width: 595px;
+  }
+  .social_media_strategy .col-xl-5 .chart_container {
+    max-width: 471px;
+  }
+  .social_media_strategy .social_analytics .h_w_s_m_chart_container .hwsm_chart_inner {
+    height: 260px;
+  }
+  .social_media_strategy .social_analytics .plan_pub_chart_container .plan_publish_chart_inner {
+    height: 260px;
+  }
+  .target_group_sec .col-xl-7, .target_group_sec .col-xl-5 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .target_group_sec .col-xl-7 .chart_container, .target_group_sec .col-xl-5 .chart_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .target_group_sec .col-xl-7 .chart_container, .target_group_sec .col-xl-5 .chart_container {
+    max-width: 595px;
+  }
+  .target_group_sec .col-xl-5 .chart_container {
+    max-width: 471px;
   }
 }
 
@@ -8274,6 +8373,9 @@ ul.pieLegend li:not(.anjon) {
     width: 100%;
     max-width: 100% !important;
   }
+  .social_media_strategy .col-xl-7 .chart_container, .social_media_strategy .col-xl-5 .chart_container {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -8327,6 +8429,42 @@ ul.pieLegend li:not(.anjon) {
 
 /*==============Print CSS===============*/
 @media print {
+  .print-icon {
+    display: none !important;
+  }
+  header {
+    display: none;
+  }
+  nav#sidebarNav {
+    display: none !important;
+  }
+  #bodyItem .main_item.main_item-active {
+    width: 100%;
+  }
+  #bodyItem .main_item .body-header-content {
+    margin-top: 0px;
+  }
+  .accounting_Dashboard .sales_figure_chart_container {
+    margin-top: 480px;
+  }
+  .accounting_Dashboard .user_growth {
+    margin-top: 400px;
+  }
+  .social_media_strategy {
+    padding-top: 0px;
+  }
+  .social_media_strategy .content-inner {
+    padding-top: 0px;
+  }
+  .social_media_strategy .nav-pills {
+    display: none;
+  }
+  .social_media_strategy .plan_pub_chart_container .plan_publish_chart_inner {
+    height: 250px;
+  }
+  .social_media_strategy .w_cus_addressed_chart_container {
+    margin-bottom: 250px;
+  }
   .coupon_info {
     margin-top: 200px;
     max-width: 378px;
