@@ -665,7 +665,7 @@ textarea::placeholder {
 }
 
 .alert__message__container .alert__message .alert__content .alert__title {
-  font-size: 20px;
+  font-size: 19px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   padding-bottom: 0px;
