@@ -1891,7 +1891,7 @@ if( $('body').find('#w_country_cus_chart').length) {
     }]
   }
 
-  var w_country_cus_chart = new Chart(w_country_cus_chart, {
+  var w_country_cus_chart_apply = new Chart(w_country_cus_chart, {
       type: 'bar',
       data: w_c_f_c_data,
       options: {
@@ -1937,6 +1937,233 @@ if( $('body').find('#w_country_cus_chart').length) {
   });
 }
 /*====X=====*Ref = #anjon#13 | From which country do our customers come? |Bar chart =====X=== */
+
+ /*==========*Ref = #anjon#14 | What goal are you pursuing with your measures? | Pie Chart ======== */
+/* Connnected with Ref = #anjon#01 and #ChartLiDelete */
+if( $('body').find('#chart_wgp_measures').length) {
+  var wgp_measures_data = {
+    labels:['Image change','More traffic','More requests','Website views','Brand awareness','New customers'],
+    datasets: [{
+        label: 'subscription cancel',
+        data: [15,10,12,13,20,30],
+        backgroundColor: ['#2AB8FF','#009EEC','#008ACF','#0B71B4','#115A8A','#60C4F6'],
+        borderColor: 'transparent',
+        borderWidth: 0,
+    }]
+  }
+  var wgp_measures_init = document.getElementById('chart_wgp_measures').getContext('2d');
+  var chart_wgp_measures = new Chart(wgp_measures_init, {
+    type: 'pie',
+    data: wgp_measures_data,  
+    plugins: [htmlLegendPlugin, ChartDataLabels],
+    options: {
+      maintainAspectRatio:false, 
+      rotation:-15,
+      plugins: {
+        htmlLegend: {
+          // ID of the container to put the legend in
+          containerID: 'chart_wgp_measures_legend',
+        },
+        legend: {
+          display: false,
+        },
+        datalabels:{
+          color:'#ffffff',
+          align:'center',
+          anchor:'center',
+          padding: {top: 0, left: 10, right: 0, bottom: 0},
+          font:{
+            size:17
+          },
+          formatter: function(value, context){
+            return context.chart.data.datasets[0].data[context.dataIndex] + "%";
+          }
+        }
+      }
+    }
+  });
+  const get_wgp_measures_data = chart_wgp_measures.data.datasets[0].data;
+  const chart_wgp_measures_legend = $('.chart_wgp_measures_legend .chart-data');
+  chart_wgp_measures_legend.each((index,element)=>{  
+    element.innerHTML = " (" + get_wgp_measures_data[index] + "%)";
+   });
+}
+ /*======X====*Ref = #anjon#14 | What goal are you pursuing with your measures? | Pie Chart ====X==== */
+ 
+ /*==========*Ref = #anjon#15 | From which country do our customers come? |Bar chart ======= */
+ if( $('body').find('#w_cus_addressed_chart').length) {
+  var w_cus_addressed_chart = document.getElementById('w_cus_addressed_chart').getContext('2d');
+  var w_c_addressed_background = w_cus_addressed_chart.createLinearGradient(300, 0, 0, 0);
+  w_c_addressed_background.addColorStop(0.3, '#42ADE2');
+  w_c_addressed_background.addColorStop(1, '#177BBD');
+
+  var w_c_addressed_data = {
+    labels:['B2B','B2C'],
+    datasets: [{
+        label: 'parcent:',
+        data: [48,68],
+        backgroundColor: w_c_addressed_background,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius:2,
+    }]
+  }
+
+  var w_cus_addressed_chart_apply = new Chart(w_cus_addressed_chart, {
+      type: 'bar',
+      data: w_c_addressed_data,
+      options: {
+        indexAxis: 'y',
+        maintainAspectRatio:false,
+          layout:{
+              padding:10,
+          },
+          plugins:{
+              legend:{
+                display:false,              
+              }
+          },       
+          scales: {
+              x: {
+                  beginAtZero: true,
+                  ticks: {
+                      stepSize:10,
+                      callback: function(value, index, values) {
+                        return value + '%';
+                      },
+                      font:{
+                        size:10
+                      },
+                      color:'#A3A3A3'
+                  },
+                  suggestedMin: 0,
+                  suggestedMax:100,
+                  grid: {
+                    display: false
+                  }
+              },
+              y: {
+                  title: {
+                    display: false,
+                  },               
+                  grid: {
+                    display: false
+                  },
+                  ticks:{
+                    font:{
+                      size:10
+                    },
+                    color:'#A3A3A3'  
+                  }            
+              }
+          },
+          maxBarThickness: 37,
+          minBarLength: 10,
+      },    
+  });
+}
+/*====X=====*Ref = #anjon#15 | From which country do our customers come? |Bar chart =====X=== */
+
+/*=============*Ref = #anjon#03 | On which network do you want to be active?| Bar Chart (muliple gradient) ============ */
+if( $('body').find('#w_network_a_chart').length){
+  var w_network_a_chart = document.getElementById('w_network_a_chart').getContext('2d');
+
+  /* Instagram Gradient Color */
+  var w_net_a_instagram = w_network_a_chart.createLinearGradient(0, 100, 0, 250);
+  w_net_a_instagram.addColorStop(0.0865, '#4C5FD7');
+  w_net_a_instagram.addColorStop(0.2841, '#7232BD');
+  w_net_a_instagram.addColorStop(0.4926, '#C32AA3');
+  w_net_a_instagram.addColorStop(0.7693, '#F46F30');
+  w_net_a_instagram.addColorStop(1, '#FFDC7D');
+  
+  /* Google Mybusiness Gradient color */
+  var w_net_a_google = w_network_a_chart.createLinearGradient(0, 100, 0, 250);
+  w_net_a_google.addColorStop(0, '#4285F4');
+  w_net_a_google.addColorStop(0.1562, '#4683EF');
+  w_net_a_google.addColorStop(0.2188, '#D7463C');
+  w_net_a_google.addColorStop(0.3594, '#DB4437');
+  w_net_a_google.addColorStop(0.5052, '#DC4935');
+  w_net_a_google.addColorStop(0.5885, '#F3AF02');
+  w_net_a_google.addColorStop(0.724, '#F4B400');
+  w_net_a_google.addColorStop(0.8281, '#F4B400');
+  w_net_a_google.addColorStop(0.9427, '#47A343');
+  w_net_a_google.addColorStop(1, '#0F9D58');
+  
+  
+  var w_network_a_chartData = {
+    labels:['Twitter', 'Pinterest', 'Facebook', 'Instagram', 'LinkedIn', 'Whatsapp', 'Google Mybusiness', 'Youtube', 'Telegram'],
+    datasets: [{
+        label: 'Network',
+        data: [1600, 2100, 2600, 2800, 3900, 4200, 3000, 4200,1800],
+        backgroundColor: ['#1DA1F2','#E60023','#1877F2',w_net_a_instagram,'#0E76A8','#25D366',w_net_a_google,'#FF0000','#0088CC'],
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius:2,
+    }]
+  }
+  
+  var w_network_a_chart_apply = new Chart(w_network_a_chart, {
+      type: 'bar',
+      data: w_network_a_chartData,
+      plugins:[ChartDataLabels],
+      options: {
+        maintainAspectRatio:false,
+          layout:{
+              padding:10,
+          },
+          plugins:{
+              legend:{
+                 display:false,              
+              },
+              datalabels:{
+                color:'#ffffff',
+                 rotation:-90,
+                 font:{
+                   size:12,
+                   stretch: 'ultra-expand'
+                 },
+                 align:'end',
+                 anchor:'start',
+                 padding: {top: 0, left: 10, right: 0, bottom: 0},
+                 formatter: function(value, context){
+                     return context.chart.data.labels[context.dataIndex];
+                 },
+             }   
+          },   
+          scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                      stepSize:1000,
+                      callback: numberSuffixK,
+                  },
+                  suggestedMin: 0,
+                  suggestedMax:4000,
+                  grid: {
+                    display: false
+                  }
+              },
+               x: {
+                  title: {
+                    display: true,
+                    text:'Networks',
+                    color:'#A3A3A3'
+                  },               
+                  grid: {
+                    display: false
+                  },
+                  ticks:{
+                    display:false,
+                  }            
+              }
+          },
+          maxBarThickness: 25,
+          minBarLength: 2,
+      },    
+  });
+}
+/*=====X=======*Ref = #anjon#03 | On which network do you want to be active? | Bar Chart ===X======== */
+
 /* ==========*Ref = #ChartLiDelete | Remove Additional Pie Chart Legend li Data ============== */
 /* Connnected with Ref = #anjon#01, #anjon#04*/
 var stayData = $('.pieLegend li').addClass('anjon');

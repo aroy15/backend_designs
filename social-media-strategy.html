@@ -479,18 +479,18 @@
 					  <div class="tab-pane fade show active" id="pills-analytics" role="tabpanel" aria-labelledby="pills-analytics-tab">
 						  <div class="social_analytics">
 							<div class="row">
-								<!-- Where is the target group of our customers located? -->
+								<!-- Where is the target group of our customers located? | Bar chart -->
 								<div class="col-xl-7 mb-4 d-flex">
 									<div class="t_g_c_l_chart_container chart_container flex-grow-1">
 										<h3>Where is the target group of our customers located?</h3>
-										<p class="mb-0">Amount</p>
+										<p class="mb-0 left-axis">Amount</p>
 										<div class="tgcl_chart_inner">
 											<canvas id="target_group_customer_loacated"></canvas>
 										</div>
 									</div>
 								</div>
 								<!-- /Where is the target group of our customers located? -->
-								<!-- How many hours a week do you want to spend on marketing? -->
+								<!-- How many hours a week do you want to spend on marketing? | Pie chart -->
 								<div class="col-xl-5 mb-4 d-flex">
 									<div class="h_w_s_m_chart_container chart_container flex-grow-1">
 										<h3>How many hours a week do you want to spend on marketing?</h3>
@@ -503,7 +503,7 @@
 								<!-- /How many hours a week do you want to spend on marketing? -->
 							</div>
 							<div class="row">
-								<!-- How many posts do you plan to publish per week per network? -->
+								<!-- How many posts do you plan to publish per week per network? | Pie Chart -->
 								<div class="col-xl-5 mb-4 d-flex">
 									<div class="plan_pub_chart_container chart_container flex-grow-1">
 										<h3>How many posts do you plan to publish per week per network?</h3>
@@ -514,11 +514,11 @@
 									</div>
 								</div>
 								<!-- /How many posts do you plan to publish per week per network? -->
-								<!-- From which country do our customers come? -->
+								<!-- From which country do our customers come? | Bar Chart -->
 								<div class="col-xl-7 mb-4 d-flex">
 									<div class="w_country_cus_chart_container chart_container flex-grow-1">
 										<h3>From which country do our customers come?</h3>
-										<p class="mb-0">users</p>
+										<p class="mb-0 left-axis">Amount</p>
 										<div class="w_country_cus_chart_inner">
 											<canvas id="w_country_cus_chart"></canvas>
 										</div>
@@ -529,7 +529,7 @@
 							<div class="row">
 								<div class="col-xl-7">
 									<div class="row">
-										<div class="col-lg-7 d-flex flex-grow-1">
+										<div class="col-lg-7 d-flex flex-grow-1 mb-4">
 											<div class="solid_plans blue_border text-center w-100 mx-auto mx-xl-0">
 												<h3>Solid Plans</h3>
 												<div class="user_circle">
@@ -539,10 +539,10 @@
 													</span>
 													<span class="u_amount d-block">4325</span>
 												</div>
-												<p>This is the number of strategies already sold</p>
+												<p class="mb-0">This is the number of strategies already sold</p>
 											</div>
 										</div>
-										<div class="col-lg-5 d-flex flex-grow-1">
+										<div class="col-lg-5 d-flex flex-grow-1 mb-4">
 											<div class="reg_users blue_border w-100 mx-auto mx-xl-0 text-center">
 												<div class="reg_user_icon mx-auto mt-3">
 													<span class="mdi mdi-human"></span>
@@ -556,7 +556,42 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-xl-5"></div>
+								<!-- Which customers should be addressed? | Horizontal Bar Chart -->
+								<div class="col-xl-5 mb-4 d-flex">
+									<div class="w_cus_addressed_chart_container chart_container flex-grow-1">
+										<h3>Which customers should be addressed?</h3>
+										<p class="mb-0 left-axis">type</p>
+										<div class="w_cus_addressed_chart_inner">
+											<canvas id="w_cus_addressed_chart"></canvas>
+										</div>
+									</div>
+								</div>
+								<!-- /Which customers should be addressed? -->
+							</div>
+							<div class="row">
+								<div class="col-xl-7 mb-4 d-flex">
+									<div class="w_g_p_measures_chart_container chart_container flex-grow-1 pb-3">
+										<h3>What goal are you pursuing with your measures?</h3>
+										<div class="d-flex flex-column flex-sm-row align-items-center">
+											<div class="wgpm_chart_inner flex-grow-1">
+												<canvas id="chart_wgp_measures"></canvas>
+											</div>
+											<div id="chart_wgp_measures_legend" class="chart_wgp_measures_legend"></div>
+										</div>
+									</div>
+								</div>
+								<!-- On which network do you want to be active? | bar chart (multiple gradient) -->
+								<div class="col-xl-5 mb-4 d-flex">
+									<div class="w_network_a_chart_container chart_container flex-grow-1">
+										<h3>On which network do you want to be active?</h3>
+										<p class="mb-0 left-axis">Connected <br>
+											Channels</p>
+										<div class="w_network_a_chart_inner">
+											<canvas id="w_network_a_chart"></canvas>
+										</div>
+									</div>
+								</div>
+								<!-- /On which network do you want to be active? -->
 							</div>
 						  </div>
 					  </div>

@@ -4506,18 +4506,10 @@
 	}
 	.social_analytics{
 		// Where is the target group of our customers located? | bar chart
-		.t_g_c_l_chart_container{
-			> p{
-				font-size:14px;
-				color:$gray;
-				padding-left:10px;
-				padding-bottom:10px;
-
-			}		
+		.t_g_c_l_chart_container{		
 			.tgcl_chart_inner{
 				height:343px;
 			}
-
 		}
 		//How many hours a week do you want to spend on marketing? | pie chart
 		.h_w_s_m_chart_container{
@@ -4608,6 +4600,55 @@
 					font-size:12px;
 					font-weight:300;
 				}
+			}
+		}
+		.w_cus_addressed_chart_container{
+			.w_cus_addressed_chart_inner{
+				height:198px;
+			}
+		}
+		.w_g_p_measures_chart_container{
+			.wgpm_chart_inner{
+				height:281px;
+			}
+			.chart_wgp_measures_legend{
+				margin-top:10px;			
+			}
+			ul.pieLegend{
+				padding:0px 20px;
+				display:block;
+				display:flex;
+				flex-direction:column;
+				li{
+					max-width:100%;
+					&:nth-child(6){
+						order:6
+					}
+					&:nth-child(5){
+						order:1
+					}
+					&:nth-child(4){
+						order:2
+					}
+					&:nth-child(3){
+						order:3
+					}
+					&:nth-child(2){
+						order:4
+					}
+					&:nth-child(1){
+						order:5
+					}
+				}
+			}
+		}
+		
+		.w_network_a_chart_container{
+			.left-axis{
+				font-size:9px;
+			}
+			.w_network_a_chart_inner{
+				height:295px;
 			}
 		}
 	}
