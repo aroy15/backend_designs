@@ -419,17 +419,26 @@
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991px) {
+	$menu_height:150px;
 	#headerMenu{		
-		height:150px;
+		height:$menu_height;
 	}
 	#bodyItem{
 		.sidebar_nav{
-			margin-top:150px;
-			// height: calc(100% - 150px);
+			margin-top:$menu_height;
+			// height: calc(100% - $menu_height);
 		}
 		.main_item{			
 			.body-header-content{
-				margin-top:150px;
+				margin-top:$menu_height;
+			}
+		}
+		&.doc_pages{
+			.sidebar_nav{
+				height:calc(100% - $menu_height);
+			}
+			.doc_wrapper{			
+				margin-top:$menu_height;
 			}
 		}
 	}
@@ -504,6 +513,18 @@
 		}
 	}
 	/*-----</Hover Animations>-----*/
+	// Documentation pages
+	.doc_inner{
+		.doc_aside{
+			max-width:100%;
+			flex-basis:100%;
+			width:100%;
+			padding-bottom:100px;
+		}
+		.doc_main{
+			width:100%;
+		}
+	}
 }
 @media (max-width: 767px) {
 	#bodyItem{
@@ -526,6 +547,17 @@
 				width:100%;
 			}
 		}
+		&.doc_pages{
+			.sidebar_nav{
+				margin-left:-250px;
+				opacity:0;
+				&.nav-active{
+					margin-left:0px;
+					opacity:1;
+					color:$white-main;
+				}
+			}
+		}
 	}
 	// Accounting > Invoices
 	.nice-select.big_select,
@@ -539,8 +571,9 @@
 	}	
 }
 @media (max-width: 575px) {
+	$menu_height:180px;
 	#headerMenu{
-		height:180px;
+		height:$menu_height;
 	 .h-icons2 {
 			padding-left: 15px;
 			font-size: 2.8vw;
@@ -556,12 +589,20 @@
 	}
 	#bodyItem{
 		.sidebar_nav{
-			margin-top:180px;
-			// height: calc(100vh - 180px);
+			margin-top:$menu_height;
+			// height: calc(100vh - $menu_height);
 		}
 		.main_item{			
 			.body-header-content{
-				margin-top:180px; 
+				margin-top:$menu_height; 
+			}
+		}
+		&.doc_pages{
+			.sidebar_nav{
+				height:calc(100% - $menu_height);
+			}
+			.doc_wrapper{			
+				margin-top:$menu_height;
 			}
 		}
 	}

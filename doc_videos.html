@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticketsystem Detail</title>
+    <title>Videos</title>
         <!-- Fav Icon -->
 		<link rel="icon" href="./resources/img/fav.png" type="image/png" sizes="32x32">
 		<!-- Google Font -->
@@ -13,10 +13,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- Material Design Iccons -->
         <link rel="stylesheet" href="./vendors/font/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
-		<!-- Magnific-popup plugin -->
-		<link rel="stylesheet" href="./vendors/css/magnific-popup.css">
-		<!-- select plugin -->
-		<link rel="stylesheet" href="./vendors/css/nice-select.css">
         <!-- Booststrap 4 css -->
         <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
         <!-- Main/Custom CSS -->
@@ -170,10 +166,19 @@
     </div>
   </div>
 <!--====X==== Documentation Modal====X===== -->
+
+	
 <!--=== Body Item  ===-->
-<div id="bodyItem" class="body-item position-relative d-flex">
+<div id="bodyItem" class="doc_pages body-item position-relative d-flex">
+	<!-- preloader container -->
+	<div class="preloader-js">
+		<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
+			<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
+		</div>
+	</div>
+	<!-- /Preloader container -->
 	<!--=== Side bar ===-->
-	<nav id="sidebarNav" class="sidebar_nav nav-active d-flex flex-row flex-wrap align-content-between justify-content-center">
+	<nav id="sidebarNav" class="sidebar_nav d-flex flex-row flex-wrap align-content-between justify-content-center">
 		<!-- Categories -->
 		<div id="navAccordion" class="d-flex flex-column transition-5">
 			<!-- Dashboard -->
@@ -327,284 +332,185 @@
 	</nav>
 	<!--=== End of Side bar ===-->
 	<!--=== Main Items ===-->
-	<main id="mainItem" class="main_item p-2 main_item-active">
-        <!--==*******All Frame setup on this here*********== -->
-		<div class="body-header-content mb-3 p-3 pl-xl-5">
-			<div class="d-flex align-items-center">
-				<a href="./ticketSystem.html" class="back_btn btn-transparent mr-2 shadow_hover_1">
-					<span class="mdi mdi-arrow-left"></span>
+	<main id="docWrapper" class="doc_wrapper flex-grow-1 d-flex">
+		<!--=== End of doc-Videos ===-->
+		<div class="doc_inner doc_video_page d-flex flex-column flex-lg-row flex-grow-1">
+			 <aside class="doc_aside">
+				<a href="#" class="doc_a_logo d-block my-5 text-center mx-auto">
+					<img src="./resources/img/logo-short-bigger.png" class="w-100 mx-auto" alt="Logo">
 				</a>
-				<h2 class="bh_title">Ticketsystem Detail</h2>
-			</div>
-		</div>		
-		<!--=== ticketsystem Overview ===-->
-		<div id="ticketsystem_detail" class="ticketsystem_detail content-container p-0 p-md-3 pt-lg-2 b-r-8">
-			<!-- preloader container -->
-			<div class="preloader-js">
-				<div class="preloader-area d-flex justify-content-center mt-5 pt-5">
-					<div class="preloader_img mt-5 pt-5"> <img src="./resources/img/icons/loading.png" alt="loading image"> </div>
-				</div>
-			</div>
-			<!--x- End of preloader container -x-->
-			<div class="content-inner">
-				<div class="row">
-					<div class="col-xl-7 mb-5 mb-xl-0">
-						<div class="tikit__number mb-5 text-center">TICKET #DEM-10956</div>
-						<!-- Chat Container -->
-						<div class="chat__container mx-auto mx-xl-0">
-							<!-- chat Messege -->
-							<div class="chat__inner">
-								<div class="msg__row cutomer__msg my-3 mr-auto">
-									<div class="d-flex justify-content-start">
-										<div class="profilePic mr-2 mt-2">
-											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
-										</div>
-										<div class="msg__area">
-											<p class="msg__text">Hello, i want get known about my package.</p>
-											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
-										</div>
-									</div>
-								</div>
-								<div class="msg__row support__msg my-3 ml-auto">
-									<div class="d-flex justify-content-end">									
-										<div class="msg__area">
-											<p class="msg__text">Hello Michael, which is you package?</p>
-											<span class="msg__info text-right">Emely Gurrero | Aug 15 2020 15:13</span>
-										</div>
-										<div class="profilePic ml-2 mt-2">
-											<img class="profile__img" src="./resources/img/profile-pic.png" alt="pic">
-										</div>
-									</div>
-								</div>
-								<div class="msg__row cutomer__msg my-3 mr-auto">
-									<div class="d-flex justify-content-start">
-										<div class="profilePic mr-2 mt-2">
-											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
-										</div>
-										<div class="msg__area">
-											<p class="msg__text">My current package is basic.</p>
-											<span class="msg__info">Michael Doe | Aug 15 2020 15:11</span>
-										</div>
-									</div>
-								</div>
-								<div class="msg__row cutomer__msg my-3 mr-auto">
-									<div class="d-flex justify-content-start">
-										<div class="profilePic mr-2 mt-2">
-											<img class="profile__img" src="./resources/img/customer-2.png" alt="pic">
-										</div>
-										<div class="msg__area">
-											<p class="msg__text">Which one is better for my<br>
-												accounts? As i have many<br>
-												accounts on social media!</p>
-											<span class="msg__info">Michael Doe | Aug 15 2020 15:17</span>
-										</div>
-									</div>
-								</div>
-								<!-- typing Messege -->
-								<div class="msg__row support__msg typing__msg my-3 ml-auto">
-									<div class="d-flex justify-content-end">									
-										<div class="msg__area">
-											<p class="msg__text">Typing...</p>
-											<span class="msg__info text-right"></span>
-										</div>
-										<div class="profilePic ml-2 mt-2">
-											<img class="profile__img" src="./resources/img/profile-pic.png" alt="pic">
-										</div>
-									</div>
-								</div>
-								<!-- /typing Messege -->
-							</div>
-							<!-- /Chat Messege -->
-							<!-- Chat Input -->
-							<div class="chat_input_area">
-								<textarea id="chatTextArea" class="custom-scroll-bar-8" placeholder="Text here.."></textarea>
-								<div class="buttons_area d-flex justify-content-end">
-									<div>
-										<label class="scale_hover_half cursor-pointer mb-0 mr-3 position-relative top-2">
-											<input id="cusMailAttachment" type="file" multiple class="appearance-none" accept="image/*,.pdf,video/*">
-											<span class="mdi mdi-paperclip"></span>
-										</label>
-										<button type="button"  class="sendBtn shadow_hover_1" data-toggle="modal" data-target="#tikitStatusModal">Send</button>
-										<!--========start: Ticket Status Modal=======-->
-										<div class="modal fade text-center" id="tikitStatusModal" data-backdrop="static"  tabindex="-1" role="dialog" aria-hidden="true">
-											<div class="modal-dialog modal-dialog-centered">
-												<div class="modal-content px-lg-4">
-													<div class="modal-body pt-5">
-														<h4 class="pb-4">Please choose a status for this ticket</h4>
-														<p>Thank you for answering this ticket.<br>
-														Please select now in which status the ticket is:</p>
-														<div class="tikit_statusContent text-left">
-															<div class="d-flex tsc_row mb-3">
-																<span class="tsc_title">Pending</span>
-																<span class="tsc_text pl-2 pl-lg-3">
-																	The ticket is assigned to a supporter and is currently being processed. You can choose this status if,
-																	for example, you need to do some research before you can respond.
-																</span>
-															</div>
-															<div class="d-flex tsc_row mb-3">
-																<span class="tsc_title">Waiting:</span>
-																<span class="tsc_text pl-2 pl-lg-3">
-																	You still need more information from the customer and have to wait for this before you can finally process the ticket.																	
-																</span>
-															</div>
-															<div class="d-flex tsc_row mb-3">
-																<span class="tsc_title">Pending</span>
-																<span class="tsc_text pl-2 pl-lg-3">
-																	You have completely processed the customer's request.
-																	Closed tickets cannot be reopened.
-																</span>
-															</div>
-														</div>
-
-														<select class="custom_select big_select mt-5 mb-3 mx-auto">
-															<option>WAITING FOR INFORMATIONS</option>
-															<option>WAITING FOR INFORMATIONS-2</option>
-															<option>WAITING FOR INFORMATIONS-3</option>
-														</select>
-
-														<div class="modal-footer">
-															<button type="button" class="saveBtn">Save this Status</button>
-														</div>
-													</div>
-													<!--/modal-body-collapse -->													
-													<div class="modal_bg_icon">
-														<span class="mdi mdi-headset"></span>
-													</div>
-												</div>
-												<!-- /.modal-content -->
-											</div>
-											<!-- /.modal-dialog -->
-										</div>
-										<!--=========/End of Ticket Status Modal=====-->
-									</div>
-								</div>
-							</div>
-							<div class="uploaded__attached__text mt-2">
-								
-							</div>
-							<!-- /Chat Input -->
+				<div id="docAsideAccordion" class="doc_aside_accordion">
+					<!-- Management-->
+					<div class="side_nav_item mb-3">
+						<div id="docNavHeadingOne">
+							<button type="button"  class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#docNavCollapseOne" aria-expanded="true" aria-controls="docNavCollapseOne">
+								<span></span>
+								<span class="nav_item_title">Management</span>
+								<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							</button>
 						</div>
-						<!-- /Chat Container -->
-					</div>
-					<div class="col-xl-5">
-						<!-- Customer Information -->
-						<div class="customer__info mx-auto b-r-5 bg-gray">
-							<div class="tikit__no text-center">#DEM-10956</div>
-							<div class="wait__reply text-center mx-auto mb-4">Waiting for customer reply</div>
-							<!-- customer profile info -->
-							<div class="cust_profile_info">
-								<div class="d-flex main__info">
-									<div class="cus_profileImg">
-										<img src="./resources/img/customer-2.png" alt="image">
-									</div>
-									<div class="pl-3 flex-grow-1">
-										<div class="d-flex justify-content-between">
-											<p class="cus_name">Mr. Michael Doe</p>
-											<p class="cus_no pl-3 text-right">#20214</p>
-										</div>
-										<p class="cus_nameInfo"><span class="mdi mdi-email"></span> michael.doe@doeservice.com</p>
-										<p class="cus_nameInfo"><span class="mdi mdi-phone"></span> 017655458227</p>
-									</div>
-								</div>
-								<div class="cus_extraInfo mt-3 d-flex justify-content-between">
-									<div class="cus_address mr-3">
-										Mesen & Doe GmbH<br>
-										Streetstreet 12<br>
-										59379 City
-									</div>
-									<div class="cus_loginInfo text-center">
-										<p>Last Login</p>
-										<p>15.12.2020 - 07:33</p>
-										<a href="#" class="d-block mt-3">Open Customer</a>
-									</div>
-								</div>
-							</div>
-							<!-- /Customer profile info -->
-							<!-- Ticket History -->
-							<div class="ticket__history mt-3">
-								<h4 class="mb-2">Ticket History</h4>
-								<table class="d-block">
-									<thead>
-										<th>Date</th>
-										<th>Entry</th>
-									</thead>
-									<tbody>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Ticket created successfully by Customer</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Ticket Status Changed to (Pending)</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Emely Gurrero answered the Ticket</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Ticket Status Changed to (waiting for customer reply)</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>The Customer replied to this Ticket</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Supporter changed to Tobias Schmidt-Tudl | Admin</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Tobias Schmidt-Tudl answered the Ticket</td>
-										</tr>
-										<tr>
-											<td>20.10.2020 - 09:33</td>
-											<td>Ticket Status Changed to (waiting for customer reply)</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="change_supporter mx-auto mt-4">
-									<p class="mb-0">Change Suporter:</p>
-									<select class="custom_select gray_select">
-										<option>Tobias Schmidt-Tudl | Admin</option>
-										<option>example-1</option>
-										<option>example-2</option>
-									</select>
-								</div>
-							</div>
-							<!-- /Ticket History -->
-							<!-- Attachments -->
-							<div class="cus__attachments mt-3">
-								<h4>Attachments</h4>
-								<div id="cus_Attached_Text" class="cus__attachedText cus_gallery d-flex flex-wrap">
-									<a class="c_file_links" href="./resources/img/profile-pic.png">screen.png</a>
-									<a class="c_file_links" href="./resources/pdf/Invoice-002-R1.pdf">Invoice-002-R1.pdf</a>
-									<a class="c_file_links" href="./resources/video/video-screencast.webm">video-screencast.webm</a>
-								</div>
-								<!-- start: PDF preview Modal -->
-								<div class="modal fade text-center uploaded_PDF_Modal modal-transparent pdf___viewer" tabindex="-1" role="dialog" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered">
-										<div class="modal-content pdfViewContainer">
-											<div id="canvasUploadedPDF"></div>					
-										</div>
-										<!-- /.modal-content -->
-									</div>
-									<!-- /.modal-dialog -->
-								</div>
-								<!-- /End PDF preview Modal -->
-							</div>
-							<!-- /Attachments -->
+						<div id="docNavCollapseOne" class="collapse" aria-labelledby="docNavHeadingOne" data-parent="#docAsideAccordion">
+							<ul class="itemss">
+								<li><a href="./index.html">Dashboard</a></li>
+								<li><a href="#">Workflow Management</a></li>
+								<li><a href="#">Campaign Management</a></li>
+							</ul>
 						</div>
-						<!-- /Customer Information -->
 					</div>
+					<!-- Content-Create -->
+					<div class="side_nav_item mb-3">
+						<div id="docNavHeadingTwo">
+							<button type="button"  class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#docNavCollapseTwo" aria-expanded="true" aria-controls="docNavCollapseTwo">
+								<span></span>
+								<span class="nav_item_title">Content-Create</span>
+								<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							</button>
+						</div>
+						<div id="docNavCollapseTwo" class="collapse" aria-labelledby="docNavHeadingTwo" data-parent="#docAsideAccordion">
+							<ul class="itemss">
+								<li><a href="#">Content Create Panel</a></li>
+								<li><a href="#">PhotoEditor</a></li>
+								<li><a href="#">MediaCenter</a></li>
+								<li><a href="#">Social-Media Templates</a></li>
+								<li><a href="#">E-Mail Templates</a></li>
+								<li><a href="#">Caption Template</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Settings -->
+					<div class="side_nav_item mb-3">
+						<div id="docNavHeadingThree">
+							<button type="button"  class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#docNavCollapseThree" aria-expanded="true" aria-controls="docNavCollapseThree">
+								<span></span>
+								<span class="nav_item_title">Settings</span>
+								<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							</button>
+						</div>
+						<div id="docNavCollapseThree" class="collapse" aria-labelledby="docNavHeadingThree" data-parent="#docAsideAccordion">
+							<ul class="itemss">
+								<li><a href="#">Channels</a></li>
+								<li><a href="#">Security</a></li>
+								<li><a href="#">Profiles</a></li>
+								<li><a href="#">Guidelines</a></li>
+								<li><a href="#">Affiliate Settings</a></li>
+								<li><a href="#">Contract Details</a></li>
+								<li><a href="#">user management</a></li>
+								<li><a href="#">Request a feature</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Payment -->
+					<div class="side_nav_item mb-3">
+						<div id="docNavHeadingFour">
+							<button type="button"  class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#docNavCollapseFour" aria-expanded="true" aria-controls="docNavCollapseFour">
+								<span></span>
+								<span class="nav_item_title">Payment</span>
+								<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							</button>
+						</div>
+						<div id="docNavCollapseFour" class="collapse" aria-labelledby="docNavHeadingFour" data-parent="#docAsideAccordion">
+							<ul class="itemss">
+								<li><a href="#">Global favs</a></li>
+								<li><a href="#">My favs</a></li>
+								<li><a href="#">Team favs</a></li>
+								<li><a href="#">Settings</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Profile -->
+					<div class="side_nav_item mb-3">
+						<div id="docNavHeadingFive">
+							<button type="button"  class="item-header collapsed w-100 px-3 d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#docNavCollapseFive" aria-expanded="true" aria-controls="docNavCollapseFive">
+								<span></span>
+								<span class="nav_item_title">Profile</span>
+								<span class="carret-icon icon-mdi"><span class="mdi mdi-chevron-down"></span></span>
+							</button>
+						</div>
+						<div id="docNavCollapseFive" class="collapse" aria-labelledby="docNavHeadingFive" data-parent="#docAsideAccordion">
+							<ul class="itemss">
+								<li><a href="#">Global favs</a></li>
+								<li><a href="#">My favs</a></li>
+								<li><a href="#">Team favs</a></li>
+							</ul>
+						</div>
+					</div>						
 				</div>
-			</div>
+			 </aside>
+			 <div class="doc_main doc_video_area flex-grow-1">
+				<!-- Showcase-Banner -->
+				 <div class="showcase text-center d-flex justify-content-center align-items-center">
+					<div class="showcase_inner flex-grow-1">
+						<h2>Videos</h2>
+						<div class="search_box mx-auto">
+							<form action="" class="search_area form-group d-flex justify-content-between mb-4 mb-xl-0 px-3">
+								<input type="text" class="search form-controln flex-grow-1" placeholder="Search">
+								<button type="submit" class="search_btn">
+								<img src="./resources/img/icons/search-icon.png" alt="Search">
+								</button>
+							</form>
+						</div>
+					</div>
+				 </div>
+				<!-- /Showcase-Banner -->
+				<div class="doc_content_area doc_video_area px-3 px-md-4 px-xl-5 py-4">
+					<a href="#" class="link-tab id_tab">Management</a>
+					<div class="row">
+						<div class="col-md-6 mt-4">
+							<div class="video_container" data-toggle="modal" data-target="#video_show_modal">
+								<img src="resources/img/doc-video-image.png" class="w-100 d-block" alt="image">
+								<span class="pulse-button"><img src="resources/img/shop/play.png" alt="image" class="play"></span>
+								<h5>How to Setup your Account</h5>
+							</div>
+						</div>
+						<div class="col-md-6 mt-4">
+							<div class="video_container" data-toggle="modal" data-target="#video_show_modal">
+								<img src="resources/img/doc-video-image.png" class="w-100 d-block" alt="image">
+								<span class="pulse-button"><img src="resources/img/shop/play.png" alt="image" class="play"></span>
+								<h5>How to Setup your Account</h5>
+							</div>
+						</div>
+						<div class="col-md-6 mt-4">
+							<div class="video_container" data-toggle="modal" data-target="#video_show_modal">
+								<img src="resources/img/doc-video-image.png" class="w-100 d-block" alt="image">
+								<span class="pulse-button"><img src="resources/img/shop/play.png" alt="image" class="play"></span>
+								<h5>How to Setup your Account</h5>
+							</div>
+						</div>
+						<div class="col-md-6 mt-4">
+							<div class="video_container" data-toggle="modal" data-target="#video_show_modal">
+								<img src="resources/img/doc-video-image.png" class="w-100 d-block" alt="image">
+								<span class="pulse-button"><img src="resources/img/shop/play.png" alt="image" class="play"></span>
+								<h5>How to Setup your Account</h5>
+							</div>
+						</div>
+					</div>
+
+					<!-- start: Video Viewer Modal -->
+					<div id="video_show_modal" class="modal fade text-center video_show_modal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content px-lg-2">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									<span class="mdi mdi-close"></span>
+								</button>
+								<h2 class="pt-4 pb-3 my-0">How to Setup your Account</h2>
+								<div class="modal-body pb-4 pt-0">
+									<iframe id="help-video-frame" src="https://www.youtube.com/embed/P90I9LX7y9Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog -->
+					</div>
+					<!-- /.modal -->
+				</div>
+			 </div>
 		</div>
-		<!--=== End of ticketsystem Overview ===-->
+		<!--=== End of doc-Videos===-->
 	</main>
 	<!--=== End of Main Items ===-->
 </div>
 <!--=== End of  Body Item ===-->
+
 
     <!-- Script Here -->
     <!-- jQuery -->
@@ -613,18 +519,6 @@
     <script src="./vendors/js/popper.min.js"></script>
 	<!-- bootstrap js -->
     <script src="./vendors/js/bootstrap.min.js"></script>
-    <!-- chart js -->
-    <script src="./vendors/js/chart.min.js"></script>
-    <!-- chart js datalabels plugin -->
-    <script src="./vendors/js/chartjs-plugin-datalabels.min.js"></script>
-	<!-- Currency formatter plugin -->
-    <script src="./vendors/js/currencyFormatter.min.js"></script>
-	<!-- Magnific popup plugin-->
-	<script src="./vendors/js/jquery.magnific-popup.min.js"></script>
-	<!-- Nice select plugin -->
-	<script src="./vendors/js/jquery.nice-select.min.js"></script>
-	<!-- pdf.js for PDF preview -->
-	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js"></script>
 	<!-- Full Screen Plugin -->
     <script src="./vendors/js/jquery.fullscreen-min.js"></script>
 	<!-- Preloader plugin -->

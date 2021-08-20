@@ -39,7 +39,20 @@
 			margin-bottom:250px;
 		}		
 	}
-	
+	.target_group_sec {
+		.age_chart_container .age_target {
+			height: 400px;
+		}
+		.sub_can_container {
+			margin-bottom:400px;
+			.chart_sub_cancel {
+				height: 300px;
+			}
+		}
+		.payment_chart_container {
+			margin-bottom:80px;
+		}
+	}
     .coupon_info{
         margin-top:200px;
 		max-width:378px;
