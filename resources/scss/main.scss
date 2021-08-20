@@ -4837,7 +4837,7 @@
 		}
 	}
 }
-/*=======Documentation Video Page=========*/
+/*=======Documentation: Video Page=========*/
 .doc_video_area{
 	.video_container {
 		width: 100%;
@@ -4889,6 +4889,33 @@
 		}
 	}
 	
+}
+/*========Documenttion: Documentation page*/
+.doc_documentation_main{
+	.link_tabs{
+		.link-tab{
+			padding:3px 20px;
+			&:first-child{
+				padding-right:30px;
+			}
+			&:last-child{
+				margin-left:-25px;
+				background:#61BDEB;
+			}
+		}
+	}
+	.doc_doc_content{
+		max-width:635px;
+		width:100%;
+		h3{
+			font-size: 25px;
+			color:$blue-bold;
+		}
+		p{
+			color: rgba(0, 0, 0, 0.8);
+			font-size:15px;
+		}
+	}
 }
   @keyframes pulse {
 	0% {
