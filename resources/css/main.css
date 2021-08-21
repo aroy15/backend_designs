@@ -8377,15 +8377,18 @@ ul.pieLegend li:not(.anjon) {
     max-width: 100%;
     margin-left: 40px !important;
   }
+  .ticketsystem_detail .customer__info .cust_profile_info .cus_address, .ticketsystem_detail .customer__info .ticketsystem_detail .customer__info .cust_profile_info .cus_loginInfo {
+    font-size: 14px;
+  }
   .ticketsystem_detail .customer__info .ticket__history table tr th, .ticketsystem_detail .customer__info .ticket__history table tr td {
     font-size: 13px;
     line-height: 15px;
   }
   .ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(1), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(1) {
-    width: 30%;
+    width: 130px;
   }
   .ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(2), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(2) {
-    width: 70%;
+    width: 78%;
   }
   .ticketsystem_detail .customer__info .ticket__history .change_supporter {
     max-width: 230px;

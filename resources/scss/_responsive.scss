@@ -81,6 +81,9 @@
 		.customer__info{
 			max-width:100%;
 			margin-left:40px !important;
+			.cust_profile_info .cus_address, .ticketsystem_detail .customer__info .cust_profile_info .cus_loginInfo {
+				font-size: 14px;
+			}
 			// Ticket history
 			.ticket__history{
 				table{
@@ -89,10 +92,10 @@
 							font-size:13px;
 							line-height:15px;
 							&:nth-child(1){
-								width:30%;
+								width:130px;
 							}
 							&:nth-child(2){
-								width:70%;
+								width:78%;
 							}
 						}
 					}
