@@ -8375,7 +8375,8 @@ ul.pieLegend li:not(.anjon) {
   }
   .ticketsystem_detail .customer__info {
     max-width: 500px;
-    margin-left: 50px !important;
+    margin-left: auto !important;
+    margin-right: 0px !important;
   }
   .ticketsystem_detail .customer__info .cust_profile_info .cus_address, .ticketsystem_detail .customer__info .ticketsystem_detail .customer__info .cust_profile_info .cus_loginInfo {
     font-size: 14px;
