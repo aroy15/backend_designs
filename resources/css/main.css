@@ -4970,18 +4970,22 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3) {
-  width: 17%;
+  width: 13%;
 }
 
 .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(4), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4) {
-  width: 35%;
+  width: 17%;
 }
 
 .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5) {
-  width: 100px;
+  width: 35%;
 }
 
 .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(6), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(6) {
+  width: 100px;
+}
+
+.user_admin_customer .userAdminCustomer_inner table tr th:nth-child(7), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(7) {
   width: 90px;
 }
 
@@ -4989,7 +4993,7 @@ ul.pieLegend li:not(.anjon) {
   font-size: 15px;
 }
 
-.user_admin_customer .userAdminCustomer_inner table tr td:nth-child(2), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4) {
+.user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5) {
   text-align: left;
 }
 
@@ -6544,29 +6548,33 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(1), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(1) {
-  width: 112px;
+  width: 15%;
 }
 
 .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(2), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(2) {
-  width: 90px;
+  width: 15%;
 }
 
 .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(3), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(3) {
-  width: 117px;
+  width: 20%;
 }
 
 .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(4) {
+  width: 15%;
+}
+
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(5) {
   width: 56%;
   text-align: left;
   padding-left: 15px;
 }
 
-.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(5) {
-  width: 96px;
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(6) {
+  width: 10%;
 }
 
-.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(6) {
-  width: 56px;
+.ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(7), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(7) {
+  width: 8%;
 }
 
 .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4) {
@@ -6586,22 +6594,26 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(4) {
-  width: 117px;
+  width: 35%;
 }
 
 .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
-  width: 20%;
+  width: 117px;
 }
 
 .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(6) {
-  width: 90px;
+  width: 20%;
 }
 
 .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(7), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(7) {
+  width: 90px;
+}
+
+.ticketsystem_overview .overview_tableArea .table_container table th:nth-child(8), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(8) {
   width: 70px;
 }
 
-.ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
+.ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(4) {
   text-align: left;
   padding-left: 15px;
 }
@@ -7001,7 +7013,7 @@ ul.pieLegend li:not(.anjon) {
   width: 55px;
 }
 
-.ticket_archive .table_container table tr td:nth-child(3), .ticket_archive .table_container table tr td:nth-child(5) {
+.ticket_archive .table_container table tr td:nth-child(3), .ticket_archive .table_container table tr td:nth-child(4), .ticket_archive .table_container table tr td:nth-child(5) {
   text-align: left;
   padding-left: 14px;
 }
@@ -7334,7 +7346,6 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .admin_max_mustermann .personal_setting {
-  max-width: 520px;
   width: 100%;
 }
 
@@ -7400,7 +7411,6 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .admin_max_mustermann .ans_tikit_chart_container {
-  max-width: 687px;
   width: 100%;
 }
 
@@ -7494,7 +7504,6 @@ ul.pieLegend li:not(.anjon) {
 }
 
 .package_settings_name .width_area {
-  max-width: 928px;
   width: 100%;
 }
 
@@ -8323,18 +8332,120 @@ ul.pieLegend li:not(.anjon) {
 /***************************/
 /*********MEDIA QUERY*******/
 /***************************/
-/** min Width 1600px for 1920px**/
-@media (min-width: 1600px) {
+/** min Width 1500px for 1920px**/
+@media (min-width: 1500px) {
   .accounting_invoices .acIvoices_inner table tr td {
     padding: 13px 13px 13px 18px;
   }
   .user_admin_customer .userAdminCustomer_inner table tr td {
     padding: 13px 13px 13px 18px;
   }
+  .ticketsystem_overview .content-inner,
+  .user_admin_customer .content-inner,
+  .admin_max_mustermann .content-inner,
+  .package_settings_name .content-inner,
+  .ticket_archive .content-inner,
+  .ticketsystem_detail .content-inner,
+  .helpDesk .content-inner,
+  .user_admin_name .content-inner {
+    max-width: 100%;
+  }
+  .package_settings_name .limits {
+    padding-right: 50px;
+    max-width: 100%;
+  }
+  .package_settings_name .limits .limits_row > div.price_inputs {
+    max-width: 100%;
+  }
+  .ticket_archive .table_container table tr th:nth-child(1) {
+    width: 130px;
+  }
+  .ticket_archive .table_container table tr th:nth-child(2) {
+    width: 110px;
+  }
+  .ticket_archive .table_container table tr th:nth-child(6) {
+    width: 80px;
+  }
+  .ticketsystem_detail .content-inner {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .ticketsystem_detail .chat__container {
+    max-width: 100%;
+  }
+  .ticketsystem_detail .customer__info {
+    max-width: 100%;
+    margin-left: 40px !important;
+  }
+  .ticketsystem_detail .customer__info .ticket__history table tr th, .ticketsystem_detail .customer__info .ticket__history table tr td {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(1), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(1) {
+    width: 30%;
+  }
+  .ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(2), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(2) {
+    width: 70%;
+  }
+  .ticketsystem_detail .customer__info .ticket__history .change_supporter {
+    max-width: 230px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .ticketsystem_detail .customer__info .ticket__history .change_supporter > p {
+    font-size: 13px;
+  }
+  .ticketsystem_detail .customer__info .ticket__history .change_supporter .custom_select {
+    margin-top: 8px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+  }
+  .helpDesk .helpDesk_category {
+    max-width: 450px;
+  }
+  .helpDesk .articleEditSec .articleEditor {
+    height: auto;
+  }
+  .user_admin_name .user_management .user_management_inner,
+  .user_admin_name .package_payment .pkgPayment_inner,
+  .user_admin_name .package_payment .features,
+  .user_admin_name .history_support .historySupport_inner,
+  .user_admin_name .documentation.history_support .docmentation_inner {
+    max-width: calc(100% - 100px);
+  }
+  .user_admin_name .package_payment .info_container {
+    max-width: 330px;
+    width: 100%;
+  }
+  .user_admin_name .package_payment .limits {
+    max-width: 100%;
+  }
+  .user_admin_name .package_payment .limits .limits_row > div.incrementDcrement {
+    max-width: 100%;
+  }
+  .user_admin_name .history_support .historyFilter .filter_inner {
+    max-width: 300px;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItemInner {
+    max-width: 100%;
+  }
+  .user_admin_name .history_support .historyItemContainer .historyItemInner .historyItem {
+    padding: 12px 10px;
+    max-width: calc(100% - 30px);
+  }
+  .user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItemInner {
+    max-width: 100%;
+  }
+  .user_admin_name .documentation.history_support .docItemContainer.historyItemContainer .historyItem {
+    max-width: calc(100% - 30px);
+    padding: 8.5px 10px;
+    margin-bottom: 10px;
+  }
 }
 
 /*Laptop*/
-@media (max-width: 1366px) {
+@media (max-width: 1449px) {
   .target_group_sec {
     background: url(../img/bg_images/accounting-dashboard/1.png), url(../img/bg_images/accounting-dashboard/4.png), url(../img/bg_images/accounting-dashboard/5.png);
     background-position: left 27%, 59.5% 10%, 100% 55%;
@@ -8410,6 +8521,81 @@ ul.pieLegend li:not(.anjon) {
     background-size: auto,auto,auto,68px 96px,140px 70px,auto,auto,auto;
     background-repeat: no-repeat;
     background-color: #ffffff;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(1), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(1) {
+    width: 112px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(2), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(2) {
+    width: 90px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(3), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(3) {
+    display: none;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(4) {
+    width: 117px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(5) {
+    width: 56%;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(6) {
+    width: 96px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(7), .ticketsystem_overview .assigned_tableArea .table_container table td:nth-child(7) {
+    width: 56px;
+  }
+  .ticketsystem_overview .assigned_tableArea .table_container table th:nth-child(4) {
+    text-align: center;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(1), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(1) {
+    width: 112px;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(2), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(2) {
+    width: 90px;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3) {
+    width: 25%;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(4), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(4) {
+    display: none;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(5), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
+    width: 117px;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(6), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(6) {
+    width: 20%;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(7), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(7) {
+    width: 90px;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table th:nth-child(8), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(8) {
+    width: 70px;
+  }
+  .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(3), .ticketsystem_overview .overview_tableArea .table_container table td:nth-child(5) {
+    text-align: left;
+    padding-left: 15px;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(1), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(1) {
+    width: 104px;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(2), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(2) {
+    display: none;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(3), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(3) {
+    width: 13%;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(4), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(4) {
+    width: 17%;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(5), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(5) {
+    width: 35%;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(6), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(6) {
+    width: 100px;
+  }
+  .user_admin_customer .userAdminCustomer_inner table tr th:nth-child(7), .user_admin_customer .userAdminCustomer_inner table tr td:nth-child(7) {
+    width: 90px;
   }
 }
 
@@ -8860,6 +9046,9 @@ ul.pieLegend li:not(.anjon) {
   }
   .target_group_sec .payment_chart_container {
     margin-bottom: 80px;
+  }
+  .target_group_sec .bg_icon_div .bg_icon {
+    color: #eafbff;
   }
   .coupon_info {
     margin-top: 200px;

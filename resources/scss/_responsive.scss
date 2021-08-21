@@ -1,8 +1,8 @@
 /***************************/
 /*********MEDIA QUERY*******/
 /***************************/
-/** min Width 1600px for 1920px**/
-@media(min-width:1600px){
+/** min Width 1500px for 1920px**/
+@media(min-width:1500px){
 	// Acccounting > Invoices
 	.accounting_invoices{
 		.acIvoices_inner{
@@ -26,9 +26,156 @@
 			}
 		}
 	}
+	.ticketsystem_overview,
+	.user_admin_customer,
+	.admin_max_mustermann,
+	.package_settings_name,
+	.ticket_archive,
+	.ticketsystem_detail,
+	.helpDesk,
+	.user_admin_name{
+		.content-inner{
+			max-width:100%;
+		}
+	}
+	.package_settings_name {
+		.limits{
+			padding-right:50px;
+			max-width:100%;
+			.limits_row > div.price_inputs {
+				max-width: 100%;
+			}
+		}
+	}
+	// 24. Ticketsystem Archive 
+	.ticket_archive{
+		.table_container{
+			table{
+				tr{
+					th{
+						&:nth-child(1){
+							width:130px;
+						}
+						&:nth-child(2){
+							width:110px;
+						}
+						&:nth-child(6){
+							width:80px;
+						}
+					}
+				}
+			}
+		}
+	}
+	// 23. Ticketsystem Detail 
+	.ticketsystem_detail{
+		.content-inner{
+			padding-left:70px;
+			padding-right:70px;
+		}
+		// Chat Container
+		.chat__container{
+			max-width:100%;
+		}
+		// Customer Information
+		.customer__info{
+			max-width:100%;
+			margin-left:40px !important;
+			// Ticket history
+			.ticket__history{
+				table{
+					tr{
+						th,td{
+							font-size:13px;
+							line-height:15px;
+							&:nth-child(1){
+								width:30%;
+							}
+							&:nth-child(2){
+								width:70%;
+							}
+						}
+					}
+				}
+				.change_supporter{
+					max-width:230px;
+					font-size:13px;
+					line-height:15px;
+					> p{
+						font-size:13px;			
+					}
+					.custom_select{
+						margin-top:8px;
+						$height:40px;
+						height:$height;
+						line-height:$height;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+	// 21. HelpDesk 
+	.helpDesk{
+		// Category Section
+		.helpDesk_category{
+			max-width:450px;
+		}
+		// Article Edit Section
+		.articleEditSec{
+			.articleEditor{
+				height:auto;
+			}
+		}
+	}
+	.user_admin_name {
+		.user_management .user_management_inner,
+		.package_payment .pkgPayment_inner,
+		.package_payment .features,
+		.history_support .historySupport_inner,
+		.documentation.history_support .docmentation_inner{
+			max-width: calc(100% - 100px);
+		}
+		.package_payment {
+			.info_container {
+				max-width: 330px;
+				width: 100%;
+			}
+			.limits {
+				max-width: 100%;
+				.limits_row > div.incrementDcrement {
+					max-width: 100%;
+				}
+			}
+		}
+		.history_support {
+			.historyFilter .filter_inner {
+				max-width: 300px;
+			}
+			.historyItemContainer {
+				.historyItemInner {
+					max-width: 100%;
+					.historyItem {
+						padding:12px 10px;
+						max-width: calc(100% - 30px);
+					}
+				}
+			}
+		}		
+		.documentation.history_support .docItemContainer.historyItemContainer {
+			.historyItemInner{
+				max-width: 100%;
+			}
+			.historyItem {
+				max-width:calc(100% - 30px);
+				padding: 8.5px 10px;
+				margin-bottom: 10px;
+			}
+		}
+	}
 }
 /*Laptop*/
-@media(max-width:1366px){
+@media(max-width:1449px){
 	.target_group_sec{
 		background: url(../img/bg_images/accounting-dashboard/1.png),
 				url(../img/bg_images/accounting-dashboard/4.png),
@@ -166,6 +313,117 @@
 			background-color: #ffffff;
 		}
 	}
+	// Ticketsystem Overview 
+	.ticketsystem_overview{
+		// Assigned to you
+		.assigned_tableArea{
+			.table_container{
+				table{
+					th,td{
+						&:nth-child(1){
+							width:112px;
+						}
+						&:nth-child(2){
+							width:90px;
+						}
+						&:nth-child(3){ 
+							display:none;
+						}
+						&:nth-child(4){ 
+							width:117px;
+						}
+						&:nth-child(5){ 
+							width:56%;
+							text-align:left;
+							padding-left:15px;
+						}
+						&:nth-child(6){ 
+							width:96px;
+						}
+						&:nth-child(7){ 
+							width:56px;
+						}
+					}
+					th{
+						&:nth-child(4){ 
+							text-align:center;
+						}
+					}
+				}
+			}
+		}
+		// Overview
+		.overview_tableArea{
+			.table_container{
+				table{
+					th,td{
+						&:nth-child(1){
+							width:112px;
+						}
+						&:nth-child(2){
+							width:90px;
+						}
+						&:nth-child(3){ 
+							width:25%; 
+						} 
+						&:nth-child(4){ 
+							display:none;
+						}
+						&:nth-child(5){ 
+							width:117px;;
+						}
+						&:nth-child(6){ 
+							width:20%;
+						}
+						&:nth-child(7){ 
+							width:90px;
+						}
+						&:nth-child(8){ 
+							width:70px;
+						}
+					}
+					td{
+						&:nth-child(3), &:nth-child(5){ 
+							text-align:left;
+							padding-left:15px
+						}
+					}
+				}
+			}
+		}
+	}
+	// 17. User Adminstration - Customer
+	.user_admin_customer{
+		.userAdminCustomer_inner{
+			table{
+				tr{
+					th,td{				
+						&:nth-child(1){
+							width:104px;
+						}
+						&:nth-child(2){
+							display:none;
+						} 
+						&:nth-child(3){
+							width: 13%;
+						} 
+						&:nth-child(4){
+							width: 17%;
+						} 
+						&:nth-child(5){
+							width:35%;
+						}					
+						&:nth-child(6){
+							width:100px;
+						}	
+						&:nth-child(7){
+							width:90px;
+						}
+					}
+				}
+			}
+		}
+	} 
 }
 /*Medium devices (laptop, less than 1300px)*/
 @media(max-width: 1350px){
@@ -346,7 +604,7 @@
 			table, .table_bottom {
 				min-width:900px;
 			}
-		}
+		}		
 	}
 	//ticketsystem Archive
 	.ticket_archive{
