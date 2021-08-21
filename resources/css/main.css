@@ -8374,11 +8374,16 @@ ul.pieLegend li:not(.anjon) {
     max-width: 100%;
   }
   .ticketsystem_detail .customer__info {
-    max-width: 100%;
+    max-width: 530px;
     margin-left: 40px !important;
   }
   .ticketsystem_detail .customer__info .cust_profile_info .cus_address, .ticketsystem_detail .customer__info .ticketsystem_detail .customer__info .cust_profile_info .cus_loginInfo {
     font-size: 14px;
+  }
+  .ticketsystem_detail .customer__info .cus_extraInfo {
+    max-width: 403px;
+    width: 100%;
+    margin-left: auto;
   }
   .ticketsystem_detail .customer__info .ticket__history table tr th, .ticketsystem_detail .customer__info .ticket__history table tr td {
     font-size: 13px;
@@ -8388,7 +8393,7 @@ ul.pieLegend li:not(.anjon) {
     width: 130px;
   }
   .ticketsystem_detail .customer__info .ticket__history table tr th:nth-child(2), .ticketsystem_detail .customer__info .ticket__history table tr td:nth-child(2) {
-    width: 78%;
+    width: 75%;
   }
   .ticketsystem_detail .customer__info .ticket__history .change_supporter {
     max-width: 230px;

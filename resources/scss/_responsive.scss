@@ -79,10 +79,15 @@
 		}
 		// Customer Information
 		.customer__info{
-			max-width:100%;
+			max-width:530px;
 			margin-left:40px !important;
 			.cust_profile_info .cus_address, .ticketsystem_detail .customer__info .cust_profile_info .cus_loginInfo {
 				font-size: 14px;
+			}
+			.cus_extraInfo {
+				max-width: 403px;
+				width: 100%;
+				margin-left: auto;
 			}
 			// Ticket history
 			.ticket__history{
@@ -95,7 +100,7 @@
 								width:130px;
 							}
 							&:nth-child(2){
-								width:78%;
+								width:75%;
 							}
 						}
 					}
